@@ -15,8 +15,8 @@
 {% include "index/cover.xml" %}
 
 	<variables>
-{% include "index/variablegroup-colorscheme-light.xml" %}
-{% include "index/variablegroup-colorscheme-dark.xml" %}
+{% include "color-scheme/variablegroup-colorscheme-light.xml" %}
+{% include "color-scheme/variablegroup-colorscheme-dark.xml" %}
 {% include "index/variablegroup-zzz.xml" %}
 	</variables>
 
