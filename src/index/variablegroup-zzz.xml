@@ -28,13 +28,7 @@
 				<type>BOOL</type>
 				<default><![CDATA[true]]></default>
 			</variable>
-			<variable>
-				<name>checkDeletePost</name>
-				<label>게시글 삭제 추가확인</label>
-				<description>게시글 삭제시 확인 단계를 하나 더 덧붙인다.</description>
-				<type>BOOL</type>
-				<default><![CDATA[false]]></default>
-			</variable>
+{% include "extentions/checkDeletePost/index_variable.xml" %}
 		</variablegroup>
 
 		<variablegroup name="그밖에">

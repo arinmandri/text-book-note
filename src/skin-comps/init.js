@@ -37,3 +37,5 @@ const param = getParameters()
     document.documentElement.setAttribute('data-theme', 'light');
   }
 })();
+
+//{% include "extentions/checkDeletePost/script.js" %}
