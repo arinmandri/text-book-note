@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Text, Book and Clear Note</name>
-		<version>1.0</version>
+		<name>Text, Book, Note</name>
+		<version>1.0.0-SNAPSHOT</version>
 		<description>
 			<![CDATA[책책 책기라욷]]>
 		</description>
@@ -10,11 +10,13 @@
 			<![CDATA[아직 만드는 중]]>
 		</license>
 	</information>
+
 	<author>
 		<name>김영선</name>
 		<homepage>https://peekabook.tistory.com</homepage>
 		<email>arinmandri@gmail.com</email>
 	</author>
+
 	<default>
 		<entriesOnPage>20</entriesOnPage><!-- 홈 화면 글 수 -->
 		<entriesOnList>30</entriesOnList><!-- 글 목록 글 수 -->
@@ -74,6 +76,7 @@
 	</cover>
 
 	<variables>
+
 		<variablegroup name="빛깔 (라이트모드)">
 			<variable>
 				<name>backCol_light</name>
@@ -362,6 +365,7 @@
 			</variable>
 		</variablegroup>
 	</variables>
+
 
 	<liststyle>
 		<item>

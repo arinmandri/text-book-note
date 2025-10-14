@@ -34,5 +34,5 @@ pip install -r requirements.txt
 
 ## …
 
-[jinja docs](https://jinja.palletsprojects.com/en/stable/)
-
+- [티스토리 스킨 가이드](https://tistory.github.io/document-tistory-skin/)
+- [jinja docs](https://jinja.palletsprojects.com/en/stable/)
