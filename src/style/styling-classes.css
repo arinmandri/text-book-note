@@ -1,0 +1,53 @@
+
+body:not(.login-owner) .onlyForOwner {
+  display: none !important;
+}
+body:not(#tt-body-index) .onlyOnPage-index {
+  display: none !important;
+}
+body:not(#tt-body-page) .onlyOnPage-page {
+  display: none !important;
+}
+
+/* 숨김 */
+.hidden {
+  display: none !important;
+}
+/* 텍스트 */
+._textCenter {
+  text-align: center;
+}
+._textRight {
+  text-align: right;
+}
+._textLeft {
+  text-align: left;
+}
+._fontSmaller {
+  font-size: 75%;
+}
+._fontBold {
+  font-weight: bold;
+}
+._fontSans {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+._fontSerif {
+  font-family: 'Noto Serif KR', serif;
+}
+._fontCursive {
+  font-family: 'Gaegu', cursive;
+}
+/* 글자색 */
+.red        { color:            #d04 }
+.redBack    { background-color: #d044 }
+.yellow     { color:            #a80 }
+.yellowBack { background-color: #a804 }
+.green      { color:            #2a0 }
+.greenBack  { background-color: #2a04 }
+.blue       { color:            #07e }
+.blueBack   { background-color: #07e4 }
+.purple     { color:            #93f }
+.purpleBack { background-color: #81f4 }
+.grey       { color:            #888 }
+.bold       { font-weight:      bold; }

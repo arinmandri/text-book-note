@@ -1,0 +1,9 @@
+
+/**#### 비밀글 비밀번호 제출 */
+.protectedPassForm {
+  text-align: center;
+}
+.protectedPassForm .submit {
+  padding: 10px;
+  border-radius: 20px;
+}

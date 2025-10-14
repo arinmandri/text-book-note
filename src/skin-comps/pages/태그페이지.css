@@ -1,0 +1,46 @@
+
+/**### 태그 페이지 */
+/* 태그 클래스별 스타일은 랜덤태그 모듈과 같은 스타일 */
+#tagBox {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 200%;/* 모듈에서보단 좀 크게 보이기 */
+  text-align: center;
+  line-height: 1.9;
+}
+#tagBox li {
+  display: inline-block;
+}
+#tagBox a {
+  margin: 5px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+#main4.tagBoxOrdered {
+  font-size: 150%;/* 모듈에서보단 좀 크게 보이기 */
+}
+#main4.tagBoxOrdered .bucket {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+#main4.tagBoxOrdered h4 {
+  font-size: 200%;
+  border-bottom: 3px dashed #ddd;
+  border-bottom: 3px dashed var(--borderCol);
+  font-family: 'Noto Serif KR', serif;
+}
+#main4.tagBoxOrdered .list {
+  padding: 10px;
+  list-style: disc;
+  color: #000;
+  color: var(--bonmunTextCol);
+}
+#main4.tagBoxOrdered li {
+  margin: 10px;
+}

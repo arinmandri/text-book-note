@@ -1,0 +1,310 @@
+
+/**##### 본문 */
+.bonmun {
+  padding: 20px 3%;
+  color: #000;
+  color: var(--bonmunTextCol);
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1.8;
+}
+/* a */
+.bonmun a[target]::after {/* 외부 링크 (외부링크인 경우 새 페이지에서 열리게 target속성을 스크립트에서 조작함) */
+  content: "\2934";
+}
+/* 여백 */
+.pmargin > * {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.lessermargin > * {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* 경계선 */
+.bonmun hr {
+  margin: 100px auto;
+  width: 50%;
+  border-top: 4px dashed #ddd;
+  border-top: 4px dashed var(--borderCol);
+}
+/* 소제목들 */
+.pmargin .hn {
+  font-size: 0.6em;
+  font-family: 'Jua';
+  font-weight: bold;
+  color: #cba;
+  color: var(--bonmunForm);
+}
+.pmargin > h2 , 
+.pmargin > h3 , 
+.pmargin > h4 , 
+.pmargin > h5 , 
+.pmargin > h6 /*(h1은 포스트 제목이라 본문엔 안 씀)*/{
+  border-width: 0px;
+  border-color: #114;
+  border-color: var(--frameBack);
+}
+.pmargin > h3 , 
+.pmargin > h4 , 
+.pmargin > h5 , 
+.pmargin > h6 {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+/* 위 여백 */
+.pmargin > h2:not(:first-child) { margin-top: 190px; }
+.pmargin > h3:not(:first-child) { margin-top: 100px; }
+.pmargin > h4:not(:first-child) { margin-top:  75px; }
+.pmargin > h2 {/* H2: frameBack색 상자, */
+  border-style: none;/* 테두리 없음 */
+  border-radius: 10px;/* 부드러운 모서리 */
+  background-color: #114;/* 배경색 */
+  background-color: var(--frameBack);
+  color: #fff;/* 글자색 */
+  color: var(--frameFore);
+  text-align: center;/* 글자 가운데 */
+  font-size: 179%;/* 글자 크기 */
+  font-family: 'Noto Serif KR', serif;
+  letter-spacing: 0.1em;
+  padding: 3px;
+}
+.pmargin > h3 {/* H3: 굵은 밑줄, 텍스트 가운데 */
+  border-bottom: 5px solid #114;/* 밑줄 */
+  border-bottom: 5px solid var(--frameBack);
+  text-align: center;/* 글자 가운데 */
+  font-size: 161%;/* 글자 크기 */
+}
+.pmargin > h3::before {
+  content:'\259E\259E\00a0';
+  color: #114;
+  color: var(--frameBack);
+  float: left;
+}
+.pmargin > h3::after  {
+  content:'\00a0\259E\259E';
+  color: #114;
+  color: var(--frameBack);
+  float: right;
+}
+.pmargin > h4 {/* H4: 점선밑줄 */
+  border-bottom: 3px dashed #114;/* 밑줄 */
+  border-bottom: 3px dashed var(--frameBack);
+  font-size: 144%;/* 글자 크기 */
+}
+.pmargin > h5 {/* H5: 왼쪽 작은 장식 */
+  margin-top: 52px;/* 위 여백 */
+  border-left: 12px solid #114;/* 왼쪽 장식 */
+  border-left: 12px solid var(--frameBack);
+  padding: 3px 0px 1px 12px;
+  font-size: 118%;
+}
+.pmargin > h6 {/* H6 */
+  margin-top: 40px;/* 위 여백 */
+  font-size: 100%;
+}
+.pmargin > h6::before {/* H6 */
+  content: '● ';
+  color: #114;
+  color: var(--frameBack);
+}
+/* 목록 */
+.bonmun li {
+  position: relative;
+  margin-left: 27px;
+  padding-left: 8px;
+}
+.bonmun ul {/* ul 마커 */
+  list-style-type: '\2756';
+}
+.bonmun ul > li::marker {
+  color: #cba;
+  color: var(--bonmunForm);
+}
+.bonmun ol {/* ol 마커 */
+  list-style-type: none;
+}
+.olliMarker {/* 순서있는 목록 스타일: 동글뱅이 숫자 … 원하는 옵션이 css에 없어서 걍 스크립트로 만듦 */
+  /* 위치 */
+  position: absolute;
+  left: -1.2em;
+  top: 0.3em;
+  /* 크기 */
+  font-size: 0.8em;
+  width: 1.32em;/* 0.8의 역수..보다 쫌 큼 */
+  height: 1.32em;
+  border-radius: 50px;
+  /* 내부 */
+  font-family: 'Jua', sans-serif;
+  background-color: #cba;
+  background-color: var(--bonmunForm);
+  color: #fff;
+  color: var(--backCol);
+  cursor: default;
+}
+.bonmun dt {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.bonmun dd::before {
+  content: '\270D\0020';
+  color: var(--bonmunForm);
+  font-weight: bold;
+  margin-left: -23px;
+}
+.bonmun dd {
+  margin-left: 27px;
+}
+/* 코드 */
+body.theme-light .bonmun *:not(pre) > code {
+  border: #ddd solid 1px;
+  background-color: #ddd;
+  color: black;
+  padding: 1px 3px;
+  border-radius: 4px;
+}
+body.theme-dark .bonmun *:not(pre) > code {
+  border: #777 solid 1px;
+  background-color: #333;
+  color: white;
+  padding: 1px 3px;
+  border-radius: 4px;
+}
+div > dt {
+  font-size: 105%;
+  font-weight: bold;
+}
+li > dl > dd ,
+li > dl > dt ,
+.lineDl > div > * {
+  display: inline;
+}
+/** 본문 커스텀 요소 ... TODO 이것도 html 편집 노가다 말고 걍 커스텀 문법으로 쓴 다음 스크립트로 자동으로 태그에 넣어주게 그래야 쓸만할 듯. */
+/*이미지 가로크기 제한*/
+.width700 {
+  max-width: 700px;
+  margin-right: auto;  margin-left: auto;
+}
+.width500 {
+  max-width: 500px;
+  margin-right: auto;  margin-left: auto;
+}
+.width300 {
+  max-width: 300px;
+  margin-right: auto;  margin-left: auto;
+}
+/* 숨김글귀 */
+.hidingPhrase:not(:hover):not(.fixed) {/* 마우스 안 올리면 안 보임 */
+  font-size: 0px;
+}
+.hidingPhrase:not(:hover):not(.fixed) * {
+  display: none;
+}
+.hidingPhrase:not(.fixed)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
+  content: '\203B\0020';/*※ */
+  font-size: 1rem;
+}
+/* 강조 상자 */
+.definitionBox {
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px solid #cba;
+  border: 2px solid var(--bonmunForm);
+}
+.conclusionBox {
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px dashed #cba;
+  border: 2px dashed var(--bonmunForm);
+}
+.highlightBox {
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px dotted #cba;
+  border: 2px dotted var(--bonmunForm);
+}
+.codeResult {
+  padding: 5px 5px;
+  background-color: #ddd;
+  color: black;
+}
+/* 배치 상자 */
+.layoutBox_garo_exp {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.layoutBox_garo_fit {
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* 숨김상자 */
+.hidingBox.open > .hidingPreview {/* 열린 상자의 미리보기 숨김 */
+  display: none;
+}
+.hidingBox:not(.open) > .hiddenBox {/* 안 열린 상자의 숨은부분 숨김 */
+  display: none;
+}
+.hidingPreview::before {/* 여기 숨김상자 있음을 표시 */
+  content: '\00B6';/*¶*/
+}
+.hidingPreview {/* 미리보기는 눌러짐을 표시 */
+  cursor: pointer;
+}
+/* 연관글 */
+.linkBefore ,
+.linkAfter ,
+.linkRelated ,
+.linkReference {
+  width: 80%;
+  margin-left: auto;
+  display: block;
+  padding: 10px;
+  border-left: 60px solid;
+  text-align: right;
+  background-color: #fff;
+  background-color: var(--backCol);
+  box-shadow: 1px 1px 3px #0004;
+}
+.linkBefore    {border-left-color: #46f8}
+.linkAfter     {border-left-color: #f468;}
+.linkRelated   {border-left-color: #be08}
+.linkReference {border-left-color: #aaa8}
+.innerLink { display: none }
+/* 코드 */
+.pseudocode {
+  text-align: left;
+  padding: 8px;
+  color: #333;
+  background-color: #eee;
+}
+.littlecode {
+  text-align: left;
+  padding: 8px;
+  color: #111;
+  background-color: #eee;
+}
+/* 상호작용 강조색  */
+.bonmun a ,/* 하이퍼링크 */
+.hidingPreview::before ,/* 숨김상자 있음을 표시하는 문자 */
+.hidingPostview ,/* 숨은상자가 있음을 표시하는 버튼 */
+.hidingPhrase:not(:hover)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
+  color: #66aa00;
+  color: var(--bonmunActing);
+}
+.bonmun a {
+  transition: background-position 0.5s ease;
+}
+
+.bonmun a:hover ,
+.bonmun a:hover * {
+  animation: rainbowLink 1s linear infinite;
+}
+@keyframes rainbowLink {
+ 0% { color: #e44; }
+ 16% { color: #dd0; }
+ 33% { color: #4e4; }
+ 50% { color: #0dd; }
+ 66% { color: #44e; }
+ 83% { color: #d0d; } 
+ 100% { color: #e44; }
+}

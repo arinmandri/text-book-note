@@ -1,0 +1,43 @@
+
+/**### 최근공지 목록 */
+#recentNotice .pushpin {
+  position: absolute;
+  top: 8px;
+  right: 26px;
+}
+#recentNoticeListBox {
+  margin: 16px 10px 16px auto;
+  max-width: 800px;
+  padding: 20px 60px 20px 20px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  text-align: right;
+}
+#recentNoticeList {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#recentNoticeList li {
+  opacity: 1%;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  transition: top 1s ease, opacity 1s linear;/* 이건 진짜 버그가 맞다. 항목이 아래에서 등장하는 애니메이션의 구현을 animation을 이용한 것, transition을 이용하여 javascript에서 클래스 부여, javascript에서 직접 스타일 변경(꼭지점만)을 다 시도해봐도 첫 프레임이 목록 아래가 아니라 중간에서 순간 번쩍이는 게 시발 절대 안 사라진다고 그래서 투명도를 추가함. 투명한 상태에서 나와도 안 보이니까. */
+  /* 긴 것을 '…'로 줄임' */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#recentNoticeList li.prev {
+  opacity: 1%;
+  top: -100%;
+}
+#recentNoticeList li.curr {
+  opacity: 100%;
+  position: relative;
+  top: 0%;
+}

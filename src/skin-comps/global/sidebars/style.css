@@ -1,0 +1,525 @@
+
+/* ## 사이드바 */
+/*
+사이드바1, 사이드바2 의 상태
+- 접힘 .fold
+- 펼침 .fold.open
+- 열림 .flat
+화면이 좁으면 접힘. 화면이 넓으면 열림.
+접힘 상태에서 사용자 동작에 따라 펼침-접힘 상태 전환.
+html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에 따라 스타일링.
+*/
+.sidebarBox.open .sidebar ,
+.sidebar:hover ,
+#sidebar3 {
+  background-color: #ffffff;
+  background-color: var(--backCol);
+}
+.sidebarBox:hover ,
+.sidebarBox.open ,
+.sidebarBox.fold {
+  z-index: 30;
+  overflow: visible;
+}
+.sidebarBox ,
+.sidebar {
+  scrollbar-width: none;/* Firefox 스크롤바 숨기기 */
+}
+.sidebarBox::-webkit-scrollbar ,
+.sidebar::-webkit-scrollbar {/* Chrome, Edge 등 스크롤바 숨기기 */
+  display: none;
+}
+#main2 {
+  margin: 0 auto;
+}
+/**### 사이드바1 */
+#sidebarBox1 {
+  left: -304px;/* 사이드바너비 + 경계선 */
+  border-right: 4px double #ddd;
+  border-right: 4px double var(--borderCol);
+}
+#sidebarBox1.open ,
+#sidebarBox1.flat {
+  left: 0px;
+  overflow: visible;
+}
+#sidebarBox1 > .sidebarBtn {
+  position: fixed;
+  display: block;
+  width: 30px;
+  height: 50px;
+  transition: left 0.12s ease-out, right 0.12s ease-out;
+  top: 150px;
+  left: 0px;
+  border-radius: 0 12px 12px 0;
+  border-left-width: 0;
+}
+#sidebarBox1.open > .sidebarBtn {/* >>themeBtn:hover */
+  left: 300px;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
+}
+#sidebarBox1.flat > .sidebarBtn {
+  display: none;
+}
+
+/**### 사이드바2 */
+/* 넓은 화면: 펴진채 */
+#sidebarBox2.sidebarBoxV {
+  right: 0px;
+}
+#sidebarBox2.open ,
+#sidebarBox2.flat {
+  overflow: visible;
+}
+#sidebarBox2.flat #sidebar2Remocon {
+  display: none;
+}
+/* 좁은화면: 작은 단추만으로 표현. 단추를 누르면 모달창에 해당 요소만 표시. */
+/*
+사이드바2리모콘 #sidebar2Remocon : 축소된 사이드바2의 각 아이템을 여닫는 버튼들 모음.
+html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립트를 이용해서 그 중에 사이드바2의 것만 여기로 모아오고 나머진 삭제.
+*/
+#sidebarBox2.flat {
+  right: 0px;
+}
+#sidebarBox2.fold {
+  position: fixed;/* 호환 */
+  position: sticky;
+  bottom: 0px;
+  right: 0;
+  z-index: 20;
+  margin-left: auto;
+  width: 350px;
+  max-height: 60vh;
+  overflow: scroll;
+  text-align: center;
+}
+#sidebarBox2.fold #sidebar2 {
+  position: relative;
+  margin: 20px 23px 0 23px;
+  border: 2px solid #dddddd;
+  border: 2px solid var(--borderCol);
+  border-radius: 8px;
+  height: unset;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 20px #0004;
+  background-color: #ffffff;
+  background-color: var(--backCol);
+  overflow: scroll;
+}
+#sidebarBox2.fold #sidebar2:not(.open) {
+  display: none;
+}
+#sidebarBox2.fold #sidebar2 > .sidebar_element {
+  margin-bottom: 0;
+}
+#sidebarBox2.fold #sidebar2 > .sidebar_element:not(.open) {
+  display: none;
+}
+#sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
+#sidebarBox2.fold #sidebar2X {
+  display: inline-block;
+  padding: 6px 10px;
+  border-bottom-width: 0px;
+  border-top-left-radius: 10px 100%;
+  border-top-right-radius: 10px 100%;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#sidebarBox2.fold #sidebar2Remocon {
+  position: fixed;/*호환*/
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+  z-index: 20;
+  text-align: right;
+}
+#sidebarBox2.fold #sidebar2Remocon > * {
+  margin: 10px 0 0 10px;
+}
+@media (max-width: 800px) {/* 걍 적당히 잡은 크기 */
+  #sidebar2Remocon > * {
+    margin: 5px 0 0 5px;
+  }
+}
+/* 가로로 길면 사이드바2 세로길이 꽉참 */
+@media (min-aspect-ratio: 2/1) {
+  #sidebarBox2.fold {
+    max-height: 100vh;
+  }
+}
+
+#sidebar1 .bubbleBtn ,
+#sidebar3 .bubbleBtn {
+  display: none;
+}
+
+/**### 세로 사이드바 스크롤 */
+.sidebarBoxV {
+  /* 위치 크기 */
+  position: absolute;
+  top: 0px;
+  box-sizing: border-box;
+  min-width: 300px;
+  height: 100%;
+  min-height: 100vh;
+  /* 내부 */
+  text-align: center;
+  transition: left 0.12s ease-out, width 0.12s ease-out;
+  overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
+}
+.sidebarBoxV.fold {
+  background-color: #ffffff;
+  background-color: var(--backCol);
+}
+.sidebarBoxV.flat ,
+.sidebarBoxV.open {
+  position: absolute;
+  overflow: visible;/* visible이어야 자식에서 sticky 적용 됨  */
+}
+.sidebarV {
+  position: fixed;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+}
+.sidebarV > .sidebar_element {
+  display: block;/* 세로로 쌓기 */
+  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
+}
+.sidebarV > *:first-child {
+  margin-top: 20px;
+}
+.sidebarBoxV:hover .sidebarV {
+  overflow: auto;
+}
+
+/**### 사이드바3 */
+#sidebar3 {
+  position: relative;
+  border-top: 5px double #ddd;
+  border-top: 5px double var(--borderCol);
+  padding-top: 20px;
+  text-align: center;
+}
+#sidebar3 > * {
+  display: inline-block;
+  margin: 30px 2px;
+  vertical-align: top;
+}
+
+/**### 사이드바아이템 - 공통
+사이드바 div.sidebar
+├사이드바아이템 div.sidebar_element.각자
+│├X 버블버튼(optional) button.bubbleBtn html 파일에는 이렇게 돼있지만 스크립트를 이용해서 다른 곳으로 수거해감.
+│├사이드바아이템본체 div.sidebar_elementMain.각자
+│└캡션(optional) span.caption
+...
+*/
+.sidebar > * {
+  width: 300px;
+}
+.sidebar .caption {/* ▴ figure 0: blahblah 이거 */
+  display: block;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+.sidebar .caption .semo {
+  color: #ff6644;
+  color: var(--pointCol);
+}
+.sidebar .bubbleBtn {
+  display: none;
+}
+.sidebar .padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sidebar .strong {
+  color: #ff6644;
+  color: var(--pointCol);
+  font-size: 150%;
+  font-weight: bold;
+}
+.sidebar .line-out {
+  margin: 6px auto;
+}
+.sidebar .line-in {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
+
+  /* 긴 것을 '…'로 줄임' */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/**### 사이드바아이템 - 메뉴
+메뉴 nav#navMenu ─ ul ─ li ─ a
+*/
+#navMenu {
+  padding: 10px 10px;
+}
+#navMenu li {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+}
+#navMenu li > a {
+  display: block;
+  padding: 10px 15px 10px 20px;
+  border-radius: 0;
+}
+#navMenu li::before {/* 왼쪽장식 */
+  content: '';
+  height: 90%; width: 0;
+  position: absolute;
+  top: 5%; left: -1px;
+  border-left: 4px dotted #fff;
+  border-left: 4px dotted var(--backCol);
+}
+/**### 사이드바아이템 - 카테고리
+카테고리 nav#navCat
+└카테고리 ul.tt_category ─ li
+　├분류전체보기 a.link_tit
+　└상위카테고리 ul.category_list ─ li 여럿
+　　├해당 a.link_item
+　　└하위카테고리 ul.sub_category_list (없으면 없음) ─ li ─ a.link_sub_item
+*/
+#navCat {
+  text-align: left;/* 왼쪽정렬 */
+  padding: 0;
+}
+#navCat .tt_category li {
+  margin: 15px auto;
+}
+#navCat .tt_category a {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
+  transition: background-color 1s;
+}
+#navCat .tt_category a:hover {
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  border-color: #ff6644;
+  border-color: var(--pointCol);
+  color: black;
+  font-weight: bold;
+  transition-duration: 0s;
+}
+#navCat .category_list > li > button {
+  float: left;
+  width: 1.6em;
+  height: 1.6em;
+  background-color: transparent;
+}
+#navCat .category_list > li > button::after {
+  content: '\1F4C1';
+}
+#navCat .category_list > li.open > button::after {
+  content: '\1F4C2';
+}
+#navCat .category_list > li.lonely > button::after {
+  content: '\1F4CB';
+}
+#navCat .category_list > li:not(.open) > .sub_category_list {
+  display: none;
+}
+#navCat .link_sub_item::before {
+  content: '\1F4CE ';
+  color: #ff6644;
+  color: var(--pointCol);
+}
+#navCat .c_cnt {
+  font-size: 90%;
+  font-family: Gaegu, cursive;
+  color: grey;
+}
+/**### 목차 */
+#bonmunHeadingList .num {
+  font-weight: bold;
+}
+#bonmunHeadingList .numBlank {
+  display: inline-block;
+  height: 1em;
+}
+#bonmunHeadingList .numBlank2 {
+  width: 0px;
+}
+#bonmunHeadingList .numBlank3 {
+  width: 1em;
+}
+#bonmunHeadingList .numBlank4 {
+  width: 2em;
+}
+#bonmunHeadingList .h2 .num {
+  color: #ff6644;
+  color: var(--pointCol);
+}
+#bonmunHeadingList .h4 {
+  font-size: 0.8em;
+}
+#bonmunHeadingList .current {
+  font-weight: bold;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
+}
+/**### 사이드바아이템 - 랜덤태그 */
+.randomtag .tagcloud::before {
+  content: '#';
+  color: #dddddd;
+  color: var(--borderCol);
+}
+.randomtag .tagcloud {
+  margin: 1px 3px;
+  word-break: keep-all;
+}
+.randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
+  color: #ff6644;
+  color: var(--pointCol);
+}
+.randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}
+.randomtag .tagcloud3 {font-size: 120%; font-weight: bold;}
+.randomtag .tagcloud4 {font-size: 100%;}
+.randomtag .tagcloud5 {font-size: 75%;}
+.randomtag .tagcloud1::after ,
+.randomtag .tagcloud2::after {
+  content: '★';
+}
+/**### 검색창 */
+.sidebar_elementMain.search > form {
+  padding: 10px;
+}
+/**### 블로그 description */
+.sidebar_elementMain.description > .box {
+  margin: 20px;
+  padding: 10px 12px 25px 12px;
+  border: 1px solid #dddddd;
+  border: 1px solid var(--borderCol);
+  box-shadow: 1px 1px 4px #0004;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+}
+.sidebar_elementMain.description > .box > * {
+  margin: 30px 0;
+}
+.sidebar_elementMain.description > .box > *:first-child {
+  margin-top: 0;
+}
+.sidebar_elementMain.description > .box > *:last-child {
+  margin-bottom: 0;
+}
+.sidebar_elementMain.description .head > * {
+  margin: 10px 0;
+}
+.sidebar_elementMain.description .img {
+  position: relative;
+}
+.sidebar_elementMain.description .img > .blog_image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.sidebar_elementMain.description .img > .blog_image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 5em;
+  max-height: 3.5em;
+  border: 2px solid #000000;
+  border: 2px solid var(--bonmunTextCol);
+  border-radius: 50%;
+}
+.sidebar_elementMain.description .img > .ribbon {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 108px;
+}
+.sidebar_elementMain.description .desc {
+  margin-top: 30px;
+}
+.sidebar_elementMain.description .linksBox {
+  position: relative;
+}
+.sidebar_elementMain.description .linksBox > hr {
+  margin: 10px 0;
+  border: 2px dotted #ddd;
+  border: 2px dotted var(--borderCol);
+}
+.sidebar_elementMain.description .linksBox > span {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  padding: 7px;
+  font-size: 75%;
+  color: grey;
+}
+.sidebar_elementMain.description .links > * {
+  margin: 8px 4px;
+}
+.sidebar_elementMain.description .links a {
+  display: inline-block;
+}
+.sidebar_elementMain.description .links img {
+  height: 1em;
+  vertical-align: text-bottom;
+}
+/* 설정 */
+.sidebar_elementMain.settings > * {
+  margin: 15px 8px;
+}
+#darkmodeBtn {
+  width: 1.1em;
+  height: 1.1em;
+  border-color: #ddd;
+  border-color: var(--borderCol);
+  border-width: 2px;
+  border-radius: 10px;
+  font-size: 360%;
+  color: #f64;
+  color: var(--pointCol);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+}
+.fontsizeBtn {
+  padding: 7px;
+}
+/* 인기글 최근글 최근댓글 */
+.sidebar_elementMain.popularpost a::before {
+  content: "hot";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.sidebar_elementMain.recentpost a::before {
+  content: "new";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+.sidebar_elementMain.recentcomment a::before {
+  content: "\1F4AC";
+  font-size: 80%;
+}

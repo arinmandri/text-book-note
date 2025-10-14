@@ -1,0 +1,29 @@
+
+/**#### 관련글
+관련글영역 div.relatedSec
+├"카테고리 다른 글" h1.areaTitle
+└관련글목록 ul.relatedList ─ li 여럿 ─ a
+*/
+.relatedList {
+  width: 90%;
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 20px 10px;
+}
+.relatedList > * {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  border-left-width: 0px;
+  background-color: #ffffff;
+  background-color: var(--backCol);
+}
+.relatedList > *:hover {
+  box-shadow: 0px 0px 3px #0004;
+}
+.relatedList > * a {
+  display: block;
+  padding: 12px;
+  border-left: 4px solid #ff6644;
+  border-left: 4px solid var(--pointCol);
+}

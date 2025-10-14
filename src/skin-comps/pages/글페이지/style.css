@@ -1,0 +1,130 @@
+
+/**### 메인 - 글보기 페이지 */
+/*
+main
+├게시글 article#postPagePost
+│
+├분리꾸밈 hr.areaSeparator
+│
+├[티스토리] 네임카드 div[data-tistory-react-app='Namecard']
+│
+├[티스토리]div#entry158Comment
+│└댓글영역 div#commentSec
+│
+├분리꾸밈 hr.areaSeparator
+│
+└관련글영역 div.relatedSec
+*/
+.areaTitle {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 120%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+/**#### 게시글
+게시글 article#postPagePost
+├헤더 div.head
+│├제목상자 div.titleBox
+││├썸네일 div.decoBox
+││└제목 h1.title
+│├정보 div.info
+│└관리기능 div.func
+│　├a 여럿
+│　└hr
+│
+└본문 div.bonmun // 이 하위는 티스토리 자동생성 
+　├div.contents_style.pmargin
+　└등등
+*/
+#postPagePost .titleBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+#postPagePost .decoBox {/* 꾸밈상자 */
+  width: 320px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px #0008;
+  background-color: #fdfdfd;
+  background-color: var(--listBack);
+  transform: rotate(-5deg);
+}
+#postPagePost .titleBox .image {
+  display: block;
+  margin: 0 auto;
+  max-height: 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
+}
+#postPagePost .tape {
+  width: 100px; height: 30px;
+  transform: rotate(-35deg);
+}
+#postPagePost .tape1 {top:    8px;   left: -27px;}
+#postPagePost .tape2 {bottom: 8px;  right: -27px;}
+#postPagePost .head {
+  padding: 20px 0;
+}
+#postPagePost .title {/* 제목 */
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+#postPagePost .title:first-letter {/* 제목 첫글자 꾸밈  */
+  font-size: 135%;
+}
+#postPagePost .info {/* 정보  */
+  margin: 10px 5%;
+  text-align: right;
+}
+#postPagePost .info .date ,
+#postPagePost .info .author {
+  display: inline-block;
+  font-size: 1rem;
+  transform: translateY(-0.2em);
+}
+#postPagePost .tags a {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+#postPagePost .tags a::before {
+  content: '\266F';/*#*/
+  color: #f64;
+  color: var(--pointCol);
+  font-weight: 900;
+}
+#postPagePost .func {/* 기능  */
+  position: relative;
+  text-align: center;
+}
+#postPagePost .func > a {
+  margin: 3px;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+}
+#postPagePost .underHeader {/* 헤더 아래 구분선 */
+  margin: 0 auto;
+  position: relative;
+  border-top: 6px solid #ddd;
+  border-top: 6px solid var(--borderCol);
+  width: 90%;
+  transform: translateY(1.5em);
+}
+#postPagePost .postbtn_like {/* 본문 밑에 공감 등 있는 그거 */
+  margin: 0 auto;
+}
+
+{% include "skin-comps/pages/글페이지/본문.css" %}
+{% include "skin-comps/pages/글페이지/댓글.css" %}
+{% include "skin-comps/pages/글페이지/카테고리다른글.css" %}
+{% include "skin-comps/pages/글페이지/보호글.css" %}

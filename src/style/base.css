@@ -1,0 +1,58 @@
+
+*/*div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, figure, p, button */{
+  margin: 0;
+  padding: 0;
+  border: solid 0px #0000;
+}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+  display: block;
+}
+button, input[type=submit], input[type=reset], input[type=button] {
+  overflow: visible;
+  cursor: pointer;
+  line-height: 1;
+}
+label {
+  word-break: keep-all;
+}
+button, input, textarea {
+  font-size: inherit;
+  background-color: #fff;
+  background-color: var(--backCol);
+  color: #333;
+  color: var(--baseTextCol);
+  font-family: inherit;
+}
+button {
+  color: inherit;
+}
+ol , ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover , a:hover * {
+  text-decoration: underline;
+}
+b {
+  font-weight: bold;
+}
+small {
+  font-size: 0.8em;
+  color: grey;
+}
+strong {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bold;
+}
+pre , code {
+  font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
+  word-break: keep-all;
+}
+::selection {/* 커서로 긁은 부분 텍스트 색 */
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
+}

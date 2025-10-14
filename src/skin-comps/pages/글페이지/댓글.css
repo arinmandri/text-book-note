@@ -1,0 +1,159 @@
+
+/**#### 댓글 */
+/*
+댓글영역 div#commentSec
+├"댓글" h1.areaTitle
+├댓글목록 ul.commentList
+├댓글없음안내 p.listMsg
+├댓글입력폼 div.formBox
+└댓글비허용안내 p.formMsg
+*/
+/*
+댓글 목록 ul.commentList.comment1List ─ 댓글 li 여럿
+│
+├댓글 div.comment.comment1.스킨치환자가지정하는클래스
+│├영역1 div.area1
+││├프사 img.propic
+││└닉네임 span.writer
+││
+│├영역2 div.area2
+││└내용 span.content
+││
+│└영역3 div.area3
+│　├날짜 span.date
+│　├답글 button
+│　└수정삭제 button
+│
+└답글목록 ul.commentList.comment2List ─ 답글 li 여럿
+　└답글 div.comment.comment2
+  ├장식 span.tape
+  └…(그외에 댓글과 마찬가지)
+*/
+.comment1List {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 14px;
+}
+.comment1List > * {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.comment2 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+  margin-right: auto;
+}
+.comment {
+  position: relative;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #fff;
+  background-color: var(--backCol);
+  padding: 10px;
+}
+.comment.rp_secret ,
+.comment.guest_secret {
+  border-left-style: dashed;
+}
+.comment .tape {
+  width: 30px;
+  height: 45px;
+  top: -35px;
+  left: 20px;
+  transform: rotate(7deg);
+}
+.commentList > li:nth-child(10n) .tape {
+  left: 30px;
+  transform: rotate(-7deg);
+}
+.comment .area1 {
+  text-align: left;
+}
+.comment1 img ,/* 프사 */
+.comment2 img {
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  transform: rotate(-5deg) translateX(-5px);
+}
+.comment1 img {/* 댓글 프사 크기 */
+  height: 1.8em;
+  width: 1.8em;
+}
+.comment2 img {/* 답글 프사 크기 */
+  height: 1.5em;
+  width: 1.5em;
+}
+.comment .writer {/* 글쓴이 */
+  font-weight: bold;
+  font-family: Gaegu, cursive;
+  vertical-align: middle;
+}
+.comment .area2 {/* 댓글 내용 */
+  padding: 5px 10px;
+  line-height: 1.4;
+}
+.comment .area3 {
+  text-align: right;
+}
+.comment .date {/* 날짜 */
+  font-size: 0.8em;
+  font-family: Gaegu, cursive;
+}
+.comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.comment .themeBtn {/* 버튼 */
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  border-radius: 20px;
+  margin: 0 3px;
+}
+.rp_admin .writer::before ,
+.guest_admin .writer::before {
+  content: '\269C\FE0F';/*왕관*/
+}
+.rp_secret .writer::before ,
+.guest_secret .writer::before {
+  content: '\1F512';/*자물쇠 */
+  font-size: 65%;
+}
+
+/*
+댓글or방명록 폼 div.formBox
+├비로그인용서식 p.guest
+├내용입력란 textarea.commentInput
+└div.submitBox
+　├귓속말로 input#commentInput_secret
+　├label
+　└제출버튼 input.commentBtn
+*/
+#commentSec .formBox {
+  max-width: 800px;
+  margin-left: auto; margin-right: auto;
+}
+#commentSec .guest ,
+#commentSec .submitBox {
+  margin: 15px;
+}
+#commentSec .commentInput {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: auto; margin-right: auto;
+  resize: vertical;
+}
+#commentSec .submitBox {
+  text-align: right;
+}
+#commentSec .commentBtn {
+  padding: 10px;
+}
+#commentSec .listMsg ,
+#commentSec .formMsg {
+  margin: 40px 0;
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
+}

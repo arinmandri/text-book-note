@@ -1,0 +1,75 @@
+
+/**#### 글목록 제목 (카테고리명 등)
+머리부분 div#listHead
+├제목등 div.titleBox
+│├제목 h1.title
+│└페이지종류 div.subtitle
+│
+├분리꾸밈 hr.areaSeparator
+│
+└꾸밈상자 div.decoBox
+　├대표이미지 img
+　├카테고리설명 p
+　└꾸밈용테이프 span.tape 2개
+*/
+#listHead {
+  margin: 60px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+@media (max-width: 800px) {/* 좁은 화면에서는 꾸밈상자를 제목 아래에 배치 */
+  #listHead .title {
+    margin: 50px auto;
+  }
+  #listHead {
+    flex-direction: column;
+  }
+}
+#listHead .titleBox  {/* 제목등 */
+  margin: 0 auto;
+  text-align: center;
+}
+#listHead .subtitle {
+  margin-top: 15px;
+  font-family: 'Gaegu', cursive;
+}
+#listHead .postNum {
+  color: #ff6644;
+  color: var(--pointCol);
+  font-weight: bold;
+  font-size: 120%;
+}
+#listHead .decoBox {/* 꾸밈상자 */
+  margin: 20px 50px;
+  max-width: 280px;
+  padding: 10px;
+  box-shadow: 1px 1px 6px #0004;
+  background-color: #fdfdfd;
+  background-color: var(--listBack);
+  transform: rotate(10deg);
+  position: relative;
+}
+#listHead .image {
+  display: block;
+  margin: 0 auto;
+  max-height: 210px;
+  max-width: 280px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
+}
+#listHead .description {
+  margin-top: 10px;
+  max-height: 5em;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+#listHead .tape {
+  width: 100px; height: 30px;
+  transform: rotate(-35deg);
+}
+#listHead .tape1 {top:    8px;   left: -27px;}
+#listHead .tape2 {bottom: 8px;  right: -27px;}

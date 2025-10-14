@@ -37,103 +37,103 @@ body {
 	color: var(--baseTextCol);
 }
 
-/********** 기본 설정 **********/
+
 */*div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, figure, p, button */{
-	margin: 0;
-	padding: 0;
-	border: solid 0px #0000;
+  margin: 0;
+  padding: 0;
+  border: solid 0px #0000;
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
-	display: block;
+  display: block;
 }
 button, input[type=submit], input[type=reset], input[type=button] {
-	overflow: visible;
-	cursor: pointer;
-	line-height: 1;
+  overflow: visible;
+  cursor: pointer;
+  line-height: 1;
 }
 label {
-	word-break: keep-all;
+  word-break: keep-all;
 }
 button, input, textarea {
-	font-size: inherit;
-	background-color: #fff;
-	background-color: var(--backCol);
-	color: #333;
-	color: var(--baseTextCol);
-	font-family: inherit;
+  font-size: inherit;
+  background-color: #fff;
+  background-color: var(--backCol);
+  color: #333;
+  color: var(--baseTextCol);
+  font-family: inherit;
 }
 button {
-	color: inherit;
+  color: inherit;
 }
 ol , ul {
-	list-style: none;
+  list-style: none;
 }
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 a:hover , a:hover * {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 b {
-	font-weight: bold;
+  font-weight: bold;
 }
 small {
-	font-size: 0.8em;
-	color: grey;
+  font-size: 0.8em;
+  color: grey;
 }
 strong {
-	font-family: 'Nanum Gothic', sans-serif;
-	font-weight: bold;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bold;
 }
 pre , code {
-	font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
-	word-break: keep-all;
+  font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
+  word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	color: black;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
 }
 
 body:not(.login-owner) .onlyForOwner {
-	display: none !important;
+  display: none !important;
 }
 body:not(#tt-body-index) .onlyOnPage-index {
-	display: none !important;
+  display: none !important;
 }
 body:not(#tt-body-page) .onlyOnPage-page {
-	display: none !important;
+  display: none !important;
 }
 
 /* 숨김 */
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 /* 텍스트 */
 ._textCenter {
-	text-align: center;
+  text-align: center;
 }
 ._textRight {
-	text-align: right;
+  text-align: right;
 }
 ._textLeft {
-	text-align: left;
+  text-align: left;
 }
 ._fontSmaller {
-	font-size: 75%;
+  font-size: 75%;
 }
 ._fontBold {
-	font-weight: bold;
+  font-weight: bold;
 }
 ._fontSans {
-	font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 ._fontSerif {
-	font-family: 'Noto Serif KR', serif;
+  font-family: 'Noto Serif KR', serif;
 }
 ._fontCursive {
-	font-family: 'Gaegu', cursive;
+  font-family: 'Gaegu', cursive;
 }
 /* 글자색 */
 .red        { color:            #d04 }
@@ -150,77 +150,69 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .bold       { font-weight:      bold; }
 
 
-
 hr.areaSeparator {
-	width: 60%;
-	margin: 60px auto;
-	border-top: 4px dashed #ddd;
-	border-top: 4px dashed var(--borderCol);
+  width: 60%;
+  margin: 60px auto;
+  border-top: 4px dashed #ddd;
+  border-top: 4px dashed var(--borderCol);
 }
 
 .themeBtn {
-	border-width: 1px;
-	border-radius: 8px;
-	background-color: #111144;
-	background-color: var(--frameBack);
-	color: #ffffff;
-	color: var(--frameFore);
-	font-family: 'Jua', sans-serif;
-	transition: background-color 1.5s;
-	line-height: 1;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: #111144;
+  background-color: var(--frameBack);
+  color: #ffffff;
+  color: var(--frameFore);
+  font-family: 'Jua', sans-serif;
+  transition: background-color 1.5s;
+  line-height: 1;
 }
 body.theme-light .themeBtn {
-	border-color: #0000;
+  border-color: #0000;
 }
 body.theme-dark .themeBtn {
-	border-color: 1px solid #ffffff;
-	border-color: 1px solid var(--frameFore);
+  border-color: 1px solid #ffffff;
+  border-color: 1px solid var(--frameFore);
 }
 .themeBtn:hover {
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	color: black;
-	transition: background-color 0s;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
+  transition: background-color 0s;
 }
 .themeInput {
-	border-bottom: 7px solid #111144;
-	border-bottom: 7px solid var(--frameBack);
-	border-radius: 4px;
-	padding: 5px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
+  border-bottom: 7px solid #111144;
+  border-bottom: 7px solid var(--frameBack);
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
 }
 
 .decoBox {
-	z-index: 10;
+  z-index: 10;
 }
 .tape {
-	position: absolute;
-	display: block;
-	background-color: #fff4;
-	border: 1px solid #0003;
-	pointer-events: none;
+  position: absolute;
+  display: block;
+  background-color: #fff4;
+  border: 1px solid #0003;
+  pointer-events: none;
 }
 
 .pageTitle {
-	margin: 40px auto;
-	font-family: 'Noto Serif KR', serif;
-	font-size: 250%;
-	font-weight: 600;
-	color: #000;
-	color: var(--bonmunTextCol);
-	text-align: center;
+  margin: 40px auto;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 250%;
+  font-weight: 600;
+  color: #000;
+  color: var(--bonmunTextCol);
+  text-align: center;
 }
-/********** 간단히 보는 html 구조 메모 **********/
-/*
-부모요소 tagname#id.class
-├자식요소
-└자식요소 (똑같은 거 반복이면 "여럿")
 
-부모요소 tagname#id.class ─ (아래에 표시할 항목이 하나뿐일 때 간략히 적으려고)
-└그 자식의 자식요소
 
-*/
+
 
 /**# 전체
 body
@@ -247,106 +239,106 @@ body
 */
 /* 배경 그림 */
 #backImgBox .backImg {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
 }
 body:not(.theme-light) .backImg.light {
-	display: none;
+  display: none;
 }
 body:not(.theme-dark) .backImg.dark {
-	display: none;
+  display: none;
 }
 #backImgBox .backImgType_cover {
-	background-position: center;
-	background-size: cover;
+  background-position: center;
+  background-size: cover;
 }
 #backImgBox .backImgType_stretch {
-	background-size: 100vw 100vh;
+  background-size: 100vw 100vh;
 }
 #backImgBox .backImgType_VH {
-	background-position: center;
-	background-repeat: repeat;
+  background-position: center;
+  background-repeat: repeat;
 }
 #backImgBox .backImgType_HT {
-	background-position: top;
-	background-repeat: repeat-x;
+  background-position: top;
+  background-repeat: repeat-x;
 }
 #backImgBox .backImgType_HB {
-	background-position: bottom;
-	background-repeat: repeat-x;
+  background-position: bottom;
+  background-repeat: repeat-x;
 }
 #backImgBox .backImgType_VL {
-	background-position: left;
-	background-repeat: repeat-y;
+  background-position: left;
+  background-repeat: repeat-y;
 }
 #backImgBox .backImgType_VR {
-	background-position: right;
-	background-repeat: repeat-y;
+  background-position: right;
+  background-repeat: repeat-y;
 }
 #backImgBox .backImgType_X1 {
-	background-position: top 0px left 0px;
-	background-repeat: no-repeat;
+  background-position: top 0px left 0px;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X2 {
-	background-position: top;
-	background-repeat: no-repeat;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X3 {
-	background-position: top 0px right 0px;
-	background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X4 {
-	background-position: left;
-	background-repeat: no-repeat;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X5 {
-	background-position: center;
-	background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X6 {
-	background-position: right;
-	background-repeat: no-repeat;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X7 {
-	background-position: top 0px right 0px;
-	background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X8 {
-	background-position: bottom;
-	background-repeat: no-repeat;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 #backImgBox .backImgType_X9 {
-	background-position: bottom 0px right 0px;
-	background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  background-repeat: no-repeat;
 }
 /**# 헤더, 푸터 */
 header , footer {
-	position: relative;
+  position: relative;
 
-	width: 100%;
-	box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 
-	text-align: center;
-	background-color: #114;
-	background-color: var(--frameBack);
-	color: #fff;
-	color: var(--frameFore);
-	font-family: 'Jua', sans-serif;
-	font-weight: 100;
+  text-align: center;
+  background-color: #114;
+  background-color: var(--frameBack);
+  color: #fff;
+  color: var(--frameFore);
+  font-family: 'Jua', sans-serif;
+  font-weight: 100;
 }
 header {
-	border-bottom-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
+  border-bottom-left-radius: 50px 100%;
+  border-bottom-right-radius: 50px 100%;
 }
 header a {
-	display: block;
-	padding: 30px 10%;
+  display: block;
+  padding: 30px 10%;
 }
 footer {
-	padding: 42px 50px;
-	border-top-left-radius: 50px 100%;
-	border-top-right-radius: 50px 100%;
+  padding: 42px 50px;
+  border-top-left-radius: 50px 100%;
+  border-top-right-radius: 50px 100%;
 }
 
 /**# 메인영역1
@@ -369,20 +361,20 @@ footer {
 　└사이드바2리모콘 div#sidebar2Remocon
 */
 #main1 {
-	width: 100%;
-	position: relative;
-	padding-bottom: 120px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 120px;
 }
 #main2 {
-	display: flex;
-	flex-flow: column nowrap;
-	min-height: 100vh;
-	padding-bottom: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 @media (max-width: 500px) {
-	#main2 {
-		overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
-	}
+  #main2 {
+    overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
+  }
 }
 
 /* ## 사이드바 */
@@ -398,69 +390,69 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 .sidebarBox.open .sidebar ,
 .sidebar:hover ,
 #sidebar3 {
-	background-color: #ffffff;
-	background-color: var(--backCol);
+  background-color: #ffffff;
+  background-color: var(--backCol);
 }
 .sidebarBox:hover ,
 .sidebarBox.open ,
 .sidebarBox.fold {
-	z-index: 30;
-	overflow: visible;
+  z-index: 30;
+  overflow: visible;
 }
 .sidebarBox ,
 .sidebar {
-	scrollbar-width: none;/* Firefox 스크롤바 숨기기 */
+  scrollbar-width: none;/* Firefox 스크롤바 숨기기 */
 }
 .sidebarBox::-webkit-scrollbar ,
 .sidebar::-webkit-scrollbar {/* Chrome, Edge 등 스크롤바 숨기기 */
-	display: none;
+  display: none;
 }
 #main2 {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 /**### 사이드바1 */
 #sidebarBox1 {
-	left: -304px;/* 사이드바너비 + 경계선 */
-	border-right: 4px double #ddd;
-	border-right: 4px double var(--borderCol);
+  left: -304px;/* 사이드바너비 + 경계선 */
+  border-right: 4px double #ddd;
+  border-right: 4px double var(--borderCol);
 }
 #sidebarBox1.open ,
 #sidebarBox1.flat {
-	left: 0px;
-	overflow: visible;
+  left: 0px;
+  overflow: visible;
 }
 #sidebarBox1 > .sidebarBtn {
-	position: fixed;
-	display: block;
-	width: 30px;
-	height: 50px;
-	transition: left 0.12s ease-out, right 0.12s ease-out;
-	top: 150px;
-	left: 0px;
-	border-radius: 0 12px 12px 0;
-	border-left-width: 0;
+  position: fixed;
+  display: block;
+  width: 30px;
+  height: 50px;
+  transition: left 0.12s ease-out, right 0.12s ease-out;
+  top: 150px;
+  left: 0px;
+  border-radius: 0 12px 12px 0;
+  border-left-width: 0;
 }
 #sidebarBox1.open > .sidebarBtn {/* >>themeBtn:hover */
-	left: 300px;
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	color: black;
+  left: 300px;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
 }
 #sidebarBox1.flat > .sidebarBtn {
-	display: none;
+  display: none;
 }
 
 /**### 사이드바2 */
 /* 넓은 화면: 펴진채 */
 #sidebarBox2.sidebarBoxV {
-	right: 0px;
+  right: 0px;
 }
 #sidebarBox2.open ,
 #sidebarBox2.flat {
-	overflow: visible;
+  overflow: visible;
 }
 #sidebarBox2.flat #sidebar2Remocon {
-	display: none;
+  display: none;
 }
 /* 좁은화면: 작은 단추만으로 표현. 단추를 누르면 모달창에 해당 요소만 표시. */
 /*
@@ -468,134 +460,134 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립트를 이용해서 그 중에 사이드바2의 것만 여기로 모아오고 나머진 삭제.
 */
 #sidebarBox2.flat {
-	right: 0px;
+  right: 0px;
 }
 #sidebarBox2.fold {
-	position: fixed;/* 호환 */
-	position: sticky;
-	bottom: 0px;
-	right: 0;
-	z-index: 20;
-	margin-left: auto;
-	width: 350px;
-	max-height: 60vh;
-	overflow: scroll;
-	text-align: center;
+  position: fixed;/* 호환 */
+  position: sticky;
+  bottom: 0px;
+  right: 0;
+  z-index: 20;
+  margin-left: auto;
+  width: 350px;
+  max-height: 60vh;
+  overflow: scroll;
+  text-align: center;
 }
 #sidebarBox2.fold #sidebar2 {
-	position: relative;
-	margin: 20px 23px 0 23px;
-	border: 2px solid #dddddd;
-	border: 2px solid var(--borderCol);
-	border-radius: 8px;
-	height: unset;
-	padding: 10px 0px;
-	box-shadow: 0px 0px 20px #0004;
-	background-color: #ffffff;
-	background-color: var(--backCol);
-	overflow: scroll;
+  position: relative;
+  margin: 20px 23px 0 23px;
+  border: 2px solid #dddddd;
+  border: 2px solid var(--borderCol);
+  border-radius: 8px;
+  height: unset;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 20px #0004;
+  background-color: #ffffff;
+  background-color: var(--backCol);
+  overflow: scroll;
 }
 #sidebarBox2.fold #sidebar2:not(.open) {
-	display: none;
+  display: none;
 }
 #sidebarBox2.fold #sidebar2 > .sidebar_element {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 #sidebarBox2.fold #sidebar2 > .sidebar_element:not(.open) {
-	display: none;
+  display: none;
 }
 #sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
 #sidebarBox2.fold #sidebar2X {
-	display: inline-block;
-	padding: 6px 10px;
-	border-bottom-width: 0px;
-	border-top-left-radius: 10px 100%;
-	border-top-right-radius: 10px 100%;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+  display: inline-block;
+  padding: 6px 10px;
+  border-bottom-width: 0px;
+  border-top-left-radius: 10px 100%;
+  border-top-right-radius: 10px 100%;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 #sidebarBox2.fold #sidebar2Remocon {
-	position: fixed;/*호환*/
-	position: sticky;
-	bottom: 0px;
-	right: 0px;
-	z-index: 20;
-	text-align: right;
+  position: fixed;/*호환*/
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+  z-index: 20;
+  text-align: right;
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
-	margin: 10px 0 0 10px;
+  margin: 10px 0 0 10px;
 }
 @media (max-width: 800px) {/* 걍 적당히 잡은 크기 */
-	#sidebar2Remocon > * {
-		margin: 5px 0 0 5px;
-	}
+  #sidebar2Remocon > * {
+    margin: 5px 0 0 5px;
+  }
 }
 /* 가로로 길면 사이드바2 세로길이 꽉참 */
 @media (min-aspect-ratio: 2/1) {
-	#sidebarBox2.fold {
-		max-height: 100vh;
-	}
+  #sidebarBox2.fold {
+    max-height: 100vh;
+  }
 }
 
 #sidebar1 .bubbleBtn ,
 #sidebar3 .bubbleBtn {
-	display: none;
+  display: none;
 }
 
 /**### 세로 사이드바 스크롤 */
 .sidebarBoxV {
-	/* 위치 크기 */
-	position: absolute;
-	top: 0px;
-	box-sizing: border-box;
-	min-width: 300px;
-	height: 100%;
-	min-height: 100vh;
-	/* 내부 */
-	text-align: center;
-	transition: left 0.12s ease-out, width 0.12s ease-out;
-	overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
+  /* 위치 크기 */
+  position: absolute;
+  top: 0px;
+  box-sizing: border-box;
+  min-width: 300px;
+  height: 100%;
+  min-height: 100vh;
+  /* 내부 */
+  text-align: center;
+  transition: left 0.12s ease-out, width 0.12s ease-out;
+  overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
 }
 .sidebarBoxV.fold {
-	background-color: #ffffff;
-	background-color: var(--backCol);
+  background-color: #ffffff;
+  background-color: var(--backCol);
 }
 .sidebarBoxV.flat ,
 .sidebarBoxV.open {
-	position: absolute;
-	overflow: visible;/* visible이어야 자식에서 sticky 적용 됨  */
+  position: absolute;
+  overflow: visible;/* visible이어야 자식에서 sticky 적용 됨  */
 }
 .sidebarV {
-	position: fixed;
-	position: sticky;
-	top: 0px;
-	height: 100vh;
-	max-height: 100%;
-	overflow: hidden;
+  position: fixed;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
 }
 .sidebarV > .sidebar_element {
-	display: block;/* 세로로 쌓기 */
-	margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
+  display: block;/* 세로로 쌓기 */
+  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
 }
 .sidebarV > *:first-child {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 .sidebarBoxV:hover .sidebarV {
-	overflow: auto;
+  overflow: auto;
 }
 
 /**### 사이드바3 */
 #sidebar3 {
-	position: relative;
-	border-top: 5px double #ddd;
-	border-top: 5px double var(--borderCol);
-	padding-top: 20px;
-	text-align: center;
+  position: relative;
+  border-top: 5px double #ddd;
+  border-top: 5px double var(--borderCol);
+  padding-top: 20px;
+  text-align: center;
 }
 #sidebar3 > * {
-	display: inline-block;
-	margin: 30px 2px;
-	vertical-align: top;
+  display: inline-block;
+  margin: 30px 2px;
+  vertical-align: top;
 }
 
 /**### 사이드바아이템 - 공통
@@ -607,70 +599,70 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 ...
 */
 .sidebar > * {
-	width: 300px;
+  width: 300px;
 }
 .sidebar .caption {/* ▴ figure 0: blahblah 이거 */
-	display: block;
-	text-align: center;
-	font-family: 'Gaegu', cursive;
-	margin-top: 12px;
-	padding-bottom: 10px;
-	font-size: 0.8em;
+  display: block;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
 }
 .sidebar .caption .semo {
-	color: #ff6644;
-	color: var(--pointCol);
+  color: #ff6644;
+  color: var(--pointCol);
 }
 .sidebar .bubbleBtn {
-	display: none;
+  display: none;
 }
 .sidebar .padding {
-	padding-left: 10px;
-	padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .sidebar .strong {
-	color: #ff6644;
-	color: var(--pointCol);
-	font-size: 150%;
-	font-weight: bold;
+  color: #ff6644;
+  color: var(--pointCol);
+  font-size: 150%;
+  font-weight: bold;
 }
 .sidebar .line-out {
-	margin: 6px auto;
+  margin: 6px auto;
 }
 .sidebar .line-in {
-	display: block;
-	border-bottom: 1px solid #ddd;
-	border-bottom: 1px solid var(--borderCol);
-	padding: 3px 12px;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
 
-	/* 긴 것을 '…'로 줄임' */
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+  /* 긴 것을 '…'로 줄임' */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 /**### 사이드바아이템 - 메뉴
 메뉴 nav#navMenu ─ ul ─ li ─ a
 */
 #navMenu {
-	padding: 10px 10px;
+  padding: 10px 10px;
 }
 #navMenu li {
-	display: inline-block;
-	margin: 5px;
-	position: relative;
+  display: inline-block;
+  margin: 5px;
+  position: relative;
 }
 #navMenu li > a {
-	display: block;
-	padding: 10px 15px 10px 20px;
-	border-radius: 0;
+  display: block;
+  padding: 10px 15px 10px 20px;
+  border-radius: 0;
 }
 #navMenu li::before {/* 왼쪽장식 */
-	content: '';
-	height: 90%; width: 0;
-	position: absolute;
-	top: 5%; left: -1px;
-	border-left: 4px dotted #fff;
-	border-left: 4px dotted var(--backCol);
+  content: '';
+  height: 90%; width: 0;
+  position: absolute;
+  top: 5%; left: -1px;
+  border-left: 4px dotted #fff;
+  border-left: 4px dotted var(--backCol);
 }
 /**### 사이드바아이템 - 카테고리
 카테고리 nav#navCat
@@ -681,99 +673,99 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 　　└하위카테고리 ul.sub_category_list (없으면 없음) ─ li ─ a.link_sub_item
 */
 #navCat {
-	text-align: left;/* 왼쪽정렬 */
-	padding: 0;
+  text-align: left;/* 왼쪽정렬 */
+  padding: 0;
 }
 #navCat .tt_category li {
-	margin: 15px auto;
+  margin: 15px auto;
 }
 #navCat .tt_category a {
-	display: block;
-	border-bottom: 1px solid #ddd;
-	border-bottom: 1px solid var(--borderCol);
-	padding: 3px 12px;
-	transition: background-color 1s;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
+  transition: background-color 1s;
 }
 #navCat .tt_category a:hover {
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	border-color: #ff6644;
-	border-color: var(--pointCol);
-	color: black;
-	font-weight: bold;
-	transition-duration: 0s;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  border-color: #ff6644;
+  border-color: var(--pointCol);
+  color: black;
+  font-weight: bold;
+  transition-duration: 0s;
 }
 #navCat .category_list > li > button {
-	float: left;
-	width: 1.6em;
-	height: 1.6em;
-	background-color: transparent;
+  float: left;
+  width: 1.6em;
+  height: 1.6em;
+  background-color: transparent;
 }
 #navCat .category_list > li > button::after {
-	content: '\1F4C1';
+  content: '\1F4C1';
 }
 #navCat .category_list > li.open > button::after {
-	content: '\1F4C2';
+  content: '\1F4C2';
 }
 #navCat .category_list > li.lonely > button::after {
-	content: '\1F4CB';
+  content: '\1F4CB';
 }
 #navCat .category_list > li:not(.open) > .sub_category_list {
-	display: none;
+  display: none;
 }
 #navCat .link_sub_item::before {
-	content: '\1F4CE ';
-	color: #ff6644;
-	color: var(--pointCol);
+  content: '\1F4CE ';
+  color: #ff6644;
+  color: var(--pointCol);
 }
 #navCat .c_cnt {
-	font-size: 90%;
-	font-family: Gaegu, cursive;
-	color: grey;
+  font-size: 90%;
+  font-family: Gaegu, cursive;
+  color: grey;
 }
 /**### 목차 */
 #bonmunHeadingList .num {
-	font-weight: bold;
+  font-weight: bold;
 }
 #bonmunHeadingList .numBlank {
-	display: inline-block;
-	height: 1em;
+  display: inline-block;
+  height: 1em;
 }
 #bonmunHeadingList .numBlank2 {
-	width: 0px;
+  width: 0px;
 }
 #bonmunHeadingList .numBlank3 {
-	width: 1em;
+  width: 1em;
 }
 #bonmunHeadingList .numBlank4 {
-	width: 2em;
+  width: 2em;
 }
 #bonmunHeadingList .h2 .num {
-	color: #ff6644;
-	color: var(--pointCol);
+  color: #ff6644;
+  color: var(--pointCol);
 }
 #bonmunHeadingList .h4 {
-	font-size: 0.8em;
+  font-size: 0.8em;
 }
 #bonmunHeadingList .current {
-	font-weight: bold;
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	color: black;
+  font-weight: bold;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
 }
 /**### 사이드바아이템 - 랜덤태그 */
 .randomtag .tagcloud::before {
-	content: '#';
-	color: #dddddd;
-	color: var(--borderCol);
+  content: '#';
+  color: #dddddd;
+  color: var(--borderCol);
 }
 .randomtag .tagcloud {
-	margin: 1px 3px;
-	word-break: keep-all;
+  margin: 1px 3px;
+  word-break: keep-all;
 }
 .randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
-	color: #ff6644;
-	color: var(--pointCol);
+  color: #ff6644;
+  color: var(--pointCol);
 }
 .randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}
 .randomtag .tagcloud3 {font-size: 120%; font-weight: bold;}
@@ -781,133 +773,133 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .randomtag .tagcloud5 {font-size: 75%;}
 .randomtag .tagcloud1::after ,
 .randomtag .tagcloud2::after {
-	content: '★';
+  content: '★';
 }
 /**### 검색창 */
 .sidebar_elementMain.search > form {
-	padding: 10px;
+  padding: 10px;
 }
 /**### 블로그 description */
 .sidebar_elementMain.description > .box {
-	margin: 20px;
-	padding: 10px 12px 25px 12px;
-	border: 1px solid #dddddd;
-	border: 1px solid var(--borderCol);
-	box-shadow: 1px 1px 4px #0004;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
+  margin: 20px;
+  padding: 10px 12px 25px 12px;
+  border: 1px solid #dddddd;
+  border: 1px solid var(--borderCol);
+  box-shadow: 1px 1px 4px #0004;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
 }
 .sidebar_elementMain.description > .box > * {
-	margin: 30px 0;
+  margin: 30px 0;
 }
 .sidebar_elementMain.description > .box > *:first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 .sidebar_elementMain.description > .box > *:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 .sidebar_elementMain.description .head > * {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 .sidebar_elementMain.description .img {
-	position: relative;
+  position: relative;
 }
 .sidebar_elementMain.description .img > .blog_image {
-	display: block;
-	margin: 0 auto;
-	border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 .sidebar_elementMain.description .img > .blog_image img {
-	display: block;
-	margin: 0 auto;
-	max-width: 5em;
-	max-height: 3.5em;
-	border: 2px solid #000000;
-	border: 2px solid var(--bonmunTextCol);
-	border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  max-width: 5em;
+  max-height: 3.5em;
+  border: 2px solid #000000;
+  border: 2px solid var(--bonmunTextCol);
+  border-radius: 50%;
 }
 .sidebar_elementMain.description .img > .ribbon {
-	position: absolute;
-	bottom: -10px;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 30px;
-	width: 108px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 108px;
 }
 .sidebar_elementMain.description .desc {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .sidebar_elementMain.description .linksBox {
-	position: relative;
+  position: relative;
 }
 .sidebar_elementMain.description .linksBox > hr {
-	margin: 10px 0;
-	border: 2px dotted #ddd;
-	border: 2px dotted var(--borderCol);
+  margin: 10px 0;
+  border: 2px dotted #ddd;
+  border: 2px dotted var(--borderCol);
 }
 .sidebar_elementMain.description .linksBox > span {
-	position: absolute;
-	top: 0px;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	padding: 7px;
-	font-size: 75%;
-	color: grey;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  padding: 7px;
+  font-size: 75%;
+  color: grey;
 }
 .sidebar_elementMain.description .links > * {
-	margin: 8px 4px;
+  margin: 8px 4px;
 }
 .sidebar_elementMain.description .links a {
-	display: inline-block;
+  display: inline-block;
 }
 .sidebar_elementMain.description .links img {
-	height: 1em;
-	vertical-align: text-bottom;
+  height: 1em;
+  vertical-align: text-bottom;
 }
 /* 설정 */
 .sidebar_elementMain.settings > * {
-	margin: 15px 8px;
+  margin: 15px 8px;
 }
 #darkmodeBtn {
-	width: 1.1em;
-	height: 1.1em;
-	border-color: #ddd;
-	border-color: var(--borderCol);
-	border-width: 2px;
-	border-radius: 10px;
-	font-size: 360%;
-	color: #f64;
-	color: var(--pointCol);
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
+  width: 1.1em;
+  height: 1.1em;
+  border-color: #ddd;
+  border-color: var(--borderCol);
+  border-width: 2px;
+  border-radius: 10px;
+  font-size: 360%;
+  color: #f64;
+  color: var(--pointCol);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
 }
 .fontsizeBtn {
-	padding: 7px;
+  padding: 7px;
 }
 /* 인기글 최근글 최근댓글 */
 .sidebar_elementMain.popularpost a::before {
-	content: "hot";
-	padding: 1px 3px;
-	border-radius: 3px;
-	font-size: 60%;
-	background-color: red;
-	color: white;
-	font-weight: bold;
+  content: "hot";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
 }
 .sidebar_elementMain.recentpost a::before {
-	content: "new";
-	padding: 1px 3px;
-	border-radius: 3px;
-	font-size: 60%;
-	background-color: orange;
-	color: white;
-	font-weight: bold;
+  content: "new";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
 }
 .sidebar_elementMain.recentcomment a::before {
-	content: "\1F4AC";
-	font-size: 80%;
+  content: "\1F4AC";
+  font-size: 80%;
 }
 
 
@@ -917,49 +909,46 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 
 /**### 최근공지 목록 */
 #recentNotice .pushpin {
-	position: absolute;
-	top: 8px;
-	right: 26px;
+  position: absolute;
+  top: 8px;
+  right: 26px;
 }
 #recentNoticeListBox {
-	margin: 16px 10px 16px auto;
-	max-width: 800px;
-	padding: 20px 60px 20px 20px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	text-align: right;
+  margin: 16px 10px 16px auto;
+  max-width: 800px;
+  padding: 20px 60px 20px 20px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  text-align: right;
 }
 #recentNoticeList {
-	position: relative;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 #recentNoticeList li {
-	opacity: 1%;
-	position: absolute;
-	width: 100%;
-	top: 100%;
-	right: 0;
-	transition: top 1s ease, opacity 1s linear;/* 이건 진짜 버그가 맞다. 항목이 아래에서 등장하는 애니메이션의 구현을 animation을 이용한 것, transition을 이용하여 javascript에서 클래스 부여, javascript에서 직접 스타일 변경(꼭지점만)을 다 시도해봐도 첫 프레임이 목록 아래가 아니라 중간에서 순간 번쩍이는 게 시발 절대 안 사라진다고 그래서 투명도를 추가함. 투명한 상태에서 나와도 안 보이니까. */
-	/* 긴 것을 '…'로 줄임' */
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+  opacity: 1%;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  transition: top 1s ease, opacity 1s linear;/* 이건 진짜 버그가 맞다. 항목이 아래에서 등장하는 애니메이션의 구현을 animation을 이용한 것, transition을 이용하여 javascript에서 클래스 부여, javascript에서 직접 스타일 변경(꼭지점만)을 다 시도해봐도 첫 프레임이 목록 아래가 아니라 중간에서 순간 번쩍이는 게 시발 절대 안 사라진다고 그래서 투명도를 추가함. 투명한 상태에서 나와도 안 보이니까. */
+  /* 긴 것을 '…'로 줄임' */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #recentNoticeList li.prev {
-	opacity: 1%;
-	top: -100%;
+  opacity: 1%;
+  top: -100%;
 }
 #recentNoticeList li.curr {
-	opacity: 100%;
-	position: relative;
-	top: 0%;
+  opacity: 100%;
+  position: relative;
+  top: 0%;
 }
-
-
-
 
 
 /**### 페이징
@@ -970,41 +959,31 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 빡치게도, 다른 요소는 그거 하나 하자고 쓰자니 너무 거창한 것 같은 기분이 드는 채신기술 flex등을 안 쓰면 그런 설정 할 방법이 아예 없는데 button이랑 input 얘네만 지 알아서 안에 글자를 세로 가운데 정렬을 시키므로, a 안의 글자를 button 태그로 감쌈
 */
 .paging {
-	margin: 80px auto;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
-	font-size: 0.7em;
-	font-weight: 900;
-	font-family: 'Jua', sans-serif;
+  margin: 80px auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+  font-weight: 900;
+  font-family: 'Jua', sans-serif;
 }
 .paging > * {
-	display: block;
-	margin: 7px 5px;
+  display: block;
+  margin: 7px 5px;
 }
 .paging button {
-	width: 36px;
-	height: 36px;
+  width: 36px;
+  height: 36px;
 }
 .paging a:not([href]) > button {
-	background-color: transparent;
-	color: #333;
-	color: var(--baseTextCol);
+  background-color: transparent;
+  color: #333;
+  color: var(--baseTextCol);
 }
 .no-more-prev , .no-more-next {
-	display: none !important;
+  display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1012,6 +991,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #main4 {
 	backdrop-filter: blur(5px);
 }
+
 
 /**### 메인 - 글보기 페이지 */
 /*
@@ -1030,14 +1010,14 @@ main
 └관련글영역 div.relatedSec
 */
 .areaTitle {
-	margin-top: 30px;
-	margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
-	text-align: center;
-	font-family: 'Noto Serif KR', serif;
-	font-size: 120%;
-	font-weight: bold;
-	letter-spacing: 0.2em;
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 120%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
 }
 /**#### 게시글
 게시글 article#postPagePost
@@ -1055,353 +1035,355 @@ main
 　└등등
 */
 #postPagePost .titleBox {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	margin-top: 20px;
-	margin-bottom: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 #postPagePost .decoBox {/* 꾸밈상자 */
-	width: 320px;
-	padding: 10px;
-	box-shadow: 1px 1px 3px #0008;
-	background-color: #fdfdfd;
-	background-color: var(--listBack);
-	transform: rotate(-5deg);
+  width: 320px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px #0008;
+  background-color: #fdfdfd;
+  background-color: var(--listBack);
+  transform: rotate(-5deg);
 }
 #postPagePost .titleBox .image {
-	display: block;
-	margin: 0 auto;
-	max-height: 300px;
-	max-width: 300px;
-	box-sizing: border-box;
-	border: 2px solid #ddd;
-	border: 2px solid var(--borderCol);
+  display: block;
+  margin: 0 auto;
+  max-height: 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
 }
 #postPagePost .tape {
-	width: 100px; height: 30px;
-	transform: rotate(-35deg);
+  width: 100px; height: 30px;
+  transform: rotate(-35deg);
 }
 #postPagePost .tape1 {top:    8px;   left: -27px;}
 #postPagePost .tape2 {bottom: 8px;  right: -27px;}
 #postPagePost .head {
-	padding: 20px 0;
+  padding: 20px 0;
 }
 #postPagePost .title {/* 제목 */
-	text-align: center;
-	letter-spacing: 0.1em;
+  text-align: center;
+  letter-spacing: 0.1em;
 }
 #postPagePost .title:first-letter {/* 제목 첫글자 꾸밈  */
-	font-size: 135%;
+  font-size: 135%;
 }
 #postPagePost .info {/* 정보  */
-	margin: 10px 5%;
-	text-align: right;
+  margin: 10px 5%;
+  text-align: right;
 }
 #postPagePost .info .date ,
 #postPagePost .info .author {
-	display: inline-block;
-	font-size: 1rem;
-	transform: translateY(-0.2em);
+  display: inline-block;
+  font-size: 1rem;
+  transform: translateY(-0.2em);
 }
 #postPagePost .tags a {
-	display: inline-block;
-	border-radius: 3px;
-	padding: 1px 5px;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 5px;
 }
 #postPagePost .tags a::before {
-	content: '\266F';/*#*/
-	color: #f64;
-	color: var(--pointCol);
-	font-weight: 900;
+  content: '\266F';/*#*/
+  color: #f64;
+  color: var(--pointCol);
+  font-weight: 900;
 }
 #postPagePost .func {/* 기능  */
-	position: relative;
-	text-align: center;
+  position: relative;
+  text-align: center;
 }
 #postPagePost .func > a {
-	margin: 3px;
-	padding: 10px;
-	display: inline-block;
-	position: relative;
+  margin: 3px;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
 }
 #postPagePost .underHeader {/* 헤더 아래 구분선 */
-	margin: 0 auto;
-	position: relative;
-	border-top: 6px solid #ddd;
-	border-top: 6px solid var(--borderCol);
-	width: 90%;
-	transform: translateY(1.5em);
+  margin: 0 auto;
+  position: relative;
+  border-top: 6px solid #ddd;
+  border-top: 6px solid var(--borderCol);
+  width: 90%;
+  transform: translateY(1.5em);
 }
 #postPagePost .postbtn_like {/* 본문 밑에 공감 등 있는 그거 */
-	margin: 0 auto;
+  margin: 0 auto;
 }
+
+
 /**##### 본문 */
 .bonmun {
-	padding: 20px 3%;
-	color: #000;
-	color: var(--bonmunTextCol);
-	font-family: 'Noto Serif KR', serif;
-	line-height: 1.8;
+  padding: 20px 3%;
+  color: #000;
+  color: var(--bonmunTextCol);
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1.8;
 }
 /* a */
 .bonmun a[target]::after {/* 외부 링크 (외부링크인 경우 새 페이지에서 열리게 target속성을 스크립트에서 조작함) */
-	content: "\2934";
+  content: "\2934";
 }
 /* 여백 */
 .pmargin > * {
-	margin-top: 30px;
-	margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .lessermargin > * {
-	margin-top: 15px;
-	margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 /* 경계선 */
 .bonmun hr {
-	margin: 100px auto;
-	width: 50%;
-	border-top: 4px dashed #ddd;
-	border-top: 4px dashed var(--borderCol);
+  margin: 100px auto;
+  width: 50%;
+  border-top: 4px dashed #ddd;
+  border-top: 4px dashed var(--borderCol);
 }
 /* 소제목들 */
 .pmargin .hn {
-	font-size: 0.6em;
-	font-family: 'Jua';
-	font-weight: bold;
-	color: #cba;
-	color: var(--bonmunForm);
+  font-size: 0.6em;
+  font-family: 'Jua';
+  font-weight: bold;
+  color: #cba;
+  color: var(--bonmunForm);
 }
 .pmargin > h2 , 
 .pmargin > h3 , 
 .pmargin > h4 , 
 .pmargin > h5 , 
 .pmargin > h6 /*(h1은 포스트 제목이라 본문엔 안 씀)*/{
-	border-width: 0px;
-	border-color: #114;
-	border-color: var(--frameBack);
+  border-width: 0px;
+  border-color: #114;
+  border-color: var(--frameBack);
 }
 .pmargin > h3 , 
 .pmargin > h4 , 
 .pmargin > h5 , 
 .pmargin > h6 {
-	font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 /* 위 여백 */
 .pmargin > h2:not(:first-child) { margin-top: 190px; }
 .pmargin > h3:not(:first-child) { margin-top: 100px; }
 .pmargin > h4:not(:first-child) { margin-top:  75px; }
 .pmargin > h2 {/* H2: frameBack색 상자, */
-	border-style: none;/* 테두리 없음 */
-	border-radius: 10px;/* 부드러운 모서리 */
-	background-color: #114;/* 배경색 */
-	background-color: var(--frameBack);
-	color: #fff;/* 글자색 */
-	color: var(--frameFore);
-	text-align: center;/* 글자 가운데 */
-	font-size: 179%;/* 글자 크기 */
-	font-family: 'Noto Serif KR', serif;
-	letter-spacing: 0.1em;
-	padding: 3px;
+  border-style: none;/* 테두리 없음 */
+  border-radius: 10px;/* 부드러운 모서리 */
+  background-color: #114;/* 배경색 */
+  background-color: var(--frameBack);
+  color: #fff;/* 글자색 */
+  color: var(--frameFore);
+  text-align: center;/* 글자 가운데 */
+  font-size: 179%;/* 글자 크기 */
+  font-family: 'Noto Serif KR', serif;
+  letter-spacing: 0.1em;
+  padding: 3px;
 }
 .pmargin > h3 {/* H3: 굵은 밑줄, 텍스트 가운데 */
-	border-bottom: 5px solid #114;/* 밑줄 */
-	border-bottom: 5px solid var(--frameBack);
-	text-align: center;/* 글자 가운데 */
-	font-size: 161%;/* 글자 크기 */
+  border-bottom: 5px solid #114;/* 밑줄 */
+  border-bottom: 5px solid var(--frameBack);
+  text-align: center;/* 글자 가운데 */
+  font-size: 161%;/* 글자 크기 */
 }
 .pmargin > h3::before {
-	content:'\259E\259E\00a0';
-	color: #114;
-	color: var(--frameBack);
-	float: left;
+  content:'\259E\259E\00a0';
+  color: #114;
+  color: var(--frameBack);
+  float: left;
 }
 .pmargin > h3::after  {
-	content:'\00a0\259E\259E';
-	color: #114;
-	color: var(--frameBack);
-	float: right;
+  content:'\00a0\259E\259E';
+  color: #114;
+  color: var(--frameBack);
+  float: right;
 }
 .pmargin > h4 {/* H4: 점선밑줄 */
-	border-bottom: 3px dashed #114;/* 밑줄 */
-	border-bottom: 3px dashed var(--frameBack);
-	font-size: 144%;/* 글자 크기 */
+  border-bottom: 3px dashed #114;/* 밑줄 */
+  border-bottom: 3px dashed var(--frameBack);
+  font-size: 144%;/* 글자 크기 */
 }
 .pmargin > h5 {/* H5: 왼쪽 작은 장식 */
-	margin-top: 52px;/* 위 여백 */
-	border-left: 12px solid #114;/* 왼쪽 장식 */
-	border-left: 12px solid var(--frameBack);
-	padding: 3px 0px 1px 12px;
-	font-size: 118%;
+  margin-top: 52px;/* 위 여백 */
+  border-left: 12px solid #114;/* 왼쪽 장식 */
+  border-left: 12px solid var(--frameBack);
+  padding: 3px 0px 1px 12px;
+  font-size: 118%;
 }
 .pmargin > h6 {/* H6 */
-	margin-top: 40px;/* 위 여백 */
-	font-size: 100%;
+  margin-top: 40px;/* 위 여백 */
+  font-size: 100%;
 }
 .pmargin > h6::before {/* H6 */
-	content: '● ';
-	color: #114;
-	color: var(--frameBack);
+  content: '● ';
+  color: #114;
+  color: var(--frameBack);
 }
 /* 목록 */
 .bonmun li {
-	position: relative;
-	margin-left: 27px;
-	padding-left: 8px;
+  position: relative;
+  margin-left: 27px;
+  padding-left: 8px;
 }
 .bonmun ul {/* ul 마커 */
-	list-style-type: '\2756';
+  list-style-type: '\2756';
 }
 .bonmun ul > li::marker {
-	color: #cba;
-	color: var(--bonmunForm);
+  color: #cba;
+  color: var(--bonmunForm);
 }
 .bonmun ol {/* ol 마커 */
-	list-style-type: none;
+  list-style-type: none;
 }
 .olliMarker {/* 순서있는 목록 스타일: 동글뱅이 숫자 … 원하는 옵션이 css에 없어서 걍 스크립트로 만듦 */
-	/* 위치 */
-	position: absolute;
-	left: -1.2em;
-	top: 0.3em;
-	/* 크기 */
-	font-size: 0.8em;
-	width: 1.32em;/* 0.8의 역수..보다 쫌 큼 */
-	height: 1.32em;
-	border-radius: 50px;
-	/* 내부 */
-	font-family: 'Jua', sans-serif;
-	background-color: #cba;
-	background-color: var(--bonmunForm);
-	color: #fff;
-	color: var(--backCol);
-	cursor: default;
+  /* 위치 */
+  position: absolute;
+  left: -1.2em;
+  top: 0.3em;
+  /* 크기 */
+  font-size: 0.8em;
+  width: 1.32em;/* 0.8의 역수..보다 쫌 큼 */
+  height: 1.32em;
+  border-radius: 50px;
+  /* 내부 */
+  font-family: 'Jua', sans-serif;
+  background-color: #cba;
+  background-color: var(--bonmunForm);
+  color: #fff;
+  color: var(--backCol);
+  cursor: default;
 }
 .bonmun dt {
-	font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .bonmun dd::before {
-	content: '\270D\0020';
-	color: var(--bonmunForm);
-	font-weight: bold;
-	margin-left: -23px;
+  content: '\270D\0020';
+  color: var(--bonmunForm);
+  font-weight: bold;
+  margin-left: -23px;
 }
 .bonmun dd {
-	margin-left: 27px;
+  margin-left: 27px;
 }
 /* 코드 */
 body.theme-light .bonmun *:not(pre) > code {
-	border: #ddd solid 1px;
-	background-color: #ddd;
-	color: black;
-	padding: 1px 3px;
-	border-radius: 4px;
+  border: #ddd solid 1px;
+  background-color: #ddd;
+  color: black;
+  padding: 1px 3px;
+  border-radius: 4px;
 }
 body.theme-dark .bonmun *:not(pre) > code {
-	border: #777 solid 1px;
-	background-color: #333;
-	color: white;
-	padding: 1px 3px;
-	border-radius: 4px;
+  border: #777 solid 1px;
+  background-color: #333;
+  color: white;
+  padding: 1px 3px;
+  border-radius: 4px;
 }
 div > dt {
-	font-size: 105%;
-	font-weight: bold;
+  font-size: 105%;
+  font-weight: bold;
 }
 li > dl > dd ,
 li > dl > dt ,
 .lineDl > div > * {
-	display: inline;
+  display: inline;
 }
 /** 본문 커스텀 요소 ... TODO 이것도 html 편집 노가다 말고 걍 커스텀 문법으로 쓴 다음 스크립트로 자동으로 태그에 넣어주게 그래야 쓸만할 듯. */
 /*이미지 가로크기 제한*/
 .width700 {
-	max-width: 700px;
-	margin-right: auto;  margin-left: auto;
+  max-width: 700px;
+  margin-right: auto;  margin-left: auto;
 }
 .width500 {
-	max-width: 500px;
-	margin-right: auto;  margin-left: auto;
+  max-width: 500px;
+  margin-right: auto;  margin-left: auto;
 }
 .width300 {
-	max-width: 300px;
-	margin-right: auto;  margin-left: auto;
+  max-width: 300px;
+  margin-right: auto;  margin-left: auto;
 }
 /* 숨김글귀 */
 .hidingPhrase:not(:hover):not(.fixed) {/* 마우스 안 올리면 안 보임 */
-	font-size: 0px;
+  font-size: 0px;
 }
 .hidingPhrase:not(:hover):not(.fixed) * {
-	display: none;
+  display: none;
 }
 .hidingPhrase:not(.fixed)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
-	content: '\203B\0020';/*※ */
-	font-size: 1rem;
+  content: '\203B\0020';/*※ */
+  font-size: 1rem;
 }
 /* 강조 상자 */
 .definitionBox {
-	padding: 30px 10px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	border: 2px solid #cba;
-	border: 2px solid var(--bonmunForm);
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px solid #cba;
+  border: 2px solid var(--bonmunForm);
 }
 .conclusionBox {
-	padding: 30px 10px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	border: 2px dashed #cba;
-	border: 2px dashed var(--bonmunForm);
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px dashed #cba;
+  border: 2px dashed var(--bonmunForm);
 }
 .highlightBox {
-	padding: 30px 10px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	border: 2px dotted #cba;
-	border: 2px dotted var(--bonmunForm);
+  padding: 30px 10px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px dotted #cba;
+  border: 2px dotted var(--bonmunForm);
 }
 .codeResult {
-	padding: 5px 5px;
-	background-color: #ddd;
-	color: black;
+  padding: 5px 5px;
+  background-color: #ddd;
+  color: black;
 }
 /* 배치 상자 */
 .layoutBox_garo_exp {
-	display: flex;
-	flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
 .layoutBox_garo_fit {
-	display: flex;
-	flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
 }
 /* 숨김상자 */
 .hidingBox.open > .hidingPreview {/* 열린 상자의 미리보기 숨김 */
-	display: none;
+  display: none;
 }
 .hidingBox:not(.open) > .hiddenBox {/* 안 열린 상자의 숨은부분 숨김 */
-	display: none;
+  display: none;
 }
 .hidingPreview::before {/* 여기 숨김상자 있음을 표시 */
-	content: '\00B6';/*¶*/
+  content: '\00B6';/*¶*/
 }
 .hidingPreview {/* 미리보기는 눌러짐을 표시 */
-	cursor: pointer;
+  cursor: pointer;
 }
 /* 연관글 */
 .linkBefore ,
 .linkAfter ,
 .linkRelated ,
 .linkReference {
-	width: 80%;
-	margin-left: auto;
-	display: block;
-	padding: 10px;
-	border-left: 60px solid;
-	text-align: right;
-	background-color: #fff;
-	background-color: var(--backCol);
-	box-shadow: 1px 1px 3px #0004;
+  width: 80%;
+  margin-left: auto;
+  display: block;
+  padding: 10px;
+  border-left: 60px solid;
+  text-align: right;
+  background-color: #fff;
+  background-color: var(--backCol);
+  box-shadow: 1px 1px 3px #0004;
 }
 .linkBefore    {border-left-color: #46f8}
 .linkAfter     {border-left-color: #f468;}
@@ -1410,34 +1392,34 @@ li > dl > dt ,
 .innerLink { display: none }
 /* 코드 */
 .pseudocode {
-	text-align: left;
-	padding: 8px;
-	color: #333;
-	background-color: #eee;
+  text-align: left;
+  padding: 8px;
+  color: #333;
+  background-color: #eee;
 }
 .littlecode {
-	text-align: left;
-	padding: 8px;
-	color: #111;
-	background-color: #eee;
+  text-align: left;
+  padding: 8px;
+  color: #111;
+  background-color: #eee;
 }
 /* 상호작용 강조색  */
 .bonmun a ,/* 하이퍼링크 */
 .hidingPreview::before ,/* 숨김상자 있음을 표시하는 문자 */
 .hidingPostview ,/* 숨은상자가 있음을 표시하는 버튼 */
 .hidingPhrase:not(:hover)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
-	color: #66aa00;
-	color: var(--bonmunActing);
+  color: #66aa00;
+  color: var(--bonmunActing);
 }
 .bonmun a {
-	transition: background-position 0.5s ease;
+  transition: background-position 0.5s ease;
 }
 
 .bonmun a:hover ,
 .bonmun a:hover * {
-	animation: rainbowLink 1s linear infinite;
+  animation: rainbowLink 1s linear infinite;
 }
-@keyframes rainbowLink {     
+@keyframes rainbowLink {
  0% { color: #e44; }
  16% { color: #dd0; }
  33% { color: #4e4; }
@@ -1474,99 +1456,99 @@ li > dl > dt ,
 │
 └답글목록 ul.commentList.comment2List ─ 답글 li 여럿
 　└답글 div.comment.comment2
-	├장식 span.tape
-	└…(그외에 댓글과 마찬가지)
+  ├장식 span.tape
+  └…(그외에 댓글과 마찬가지)
 */
 .comment1List {
-	max-width: 800px;
-	margin: 30px auto;
-	padding: 14px;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 14px;
 }
 .comment1List > * {
-	margin-top: 30px;
-	margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .comment2 {
-	margin-top: 7px;
-	margin-bottom: 7px;
-	margin-left: 20px;
-	margin-right: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+  margin-right: auto;
 }
 .comment {
-	position: relative;
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	background-color: #fff;
-	background-color: var(--backCol);
-	padding: 10px;
+  position: relative;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #fff;
+  background-color: var(--backCol);
+  padding: 10px;
 }
 .comment.rp_secret ,
 .comment.guest_secret {
-	border-left-style: dashed;
+  border-left-style: dashed;
 }
 .comment .tape {
-	width: 30px;
-	height: 45px;
-	top: -35px;
-	left: 20px;
-	transform: rotate(7deg);
+  width: 30px;
+  height: 45px;
+  top: -35px;
+  left: 20px;
+  transform: rotate(7deg);
 }
 .commentList > li:nth-child(10n) .tape {
-	left: 30px;
-	transform: rotate(-7deg);
+  left: 30px;
+  transform: rotate(-7deg);
 }
 .comment .area1 {
-	text-align: left;
+  text-align: left;
 }
 .comment1 img ,/* 프사 */
 .comment2 img {
-	vertical-align: middle;
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	transform: rotate(-5deg) translateX(-5px);
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  transform: rotate(-5deg) translateX(-5px);
 }
 .comment1 img {/* 댓글 프사 크기 */
-	height: 1.8em;
-	width: 1.8em;
+  height: 1.8em;
+  width: 1.8em;
 }
 .comment2 img {/* 답글 프사 크기 */
-	height: 1.5em;
-	width: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
 }
 .comment .writer {/* 글쓴이 */
-	font-weight: bold;
-	font-family: Gaegu, cursive;
-	vertical-align: middle;
+  font-weight: bold;
+  font-family: Gaegu, cursive;
+  vertical-align: middle;
 }
 .comment .area2 {/* 댓글 내용 */
-	padding: 5px 10px;
-	line-height: 1.4;
+  padding: 5px 10px;
+  line-height: 1.4;
 }
 .comment .area3 {
-	text-align: right;
+  text-align: right;
 }
 .comment .date {/* 날짜 */
-	font-size: 0.8em;
-	font-family: Gaegu, cursive;
+  font-size: 0.8em;
+  font-family: Gaegu, cursive;
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
-	font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .comment .themeBtn {/* 버튼 */
-	display: inline-block;
-	height: 26px;
-	width: 26px;
-	border-radius: 20px;
-	margin: 0 3px;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  border-radius: 20px;
+  margin: 0 3px;
 }
 .rp_admin .writer::before ,
 .guest_admin .writer::before {
-	content: '\269C\FE0F';/*왕관*/
+  content: '\269C\FE0F';/*왕관*/
 }
 .rp_secret .writer::before ,
 .guest_secret .writer::before {
-	content: '\1F512';/*자물쇠 */
-	font-size: 65%;
+  content: '\1F512';/*자물쇠 */
+  font-size: 65%;
 }
 
 /*
@@ -1579,31 +1561,31 @@ li > dl > dt ,
 　└제출버튼 input.commentBtn
 */
 #commentSec .formBox {
-	max-width: 800px;
-	margin-left: auto; margin-right: auto;
+  max-width: 800px;
+  margin-left: auto; margin-right: auto;
 }
 #commentSec .guest ,
 #commentSec .submitBox {
-	margin: 15px;
+  margin: 15px;
 }
 #commentSec .commentInput {
-	display: block;
-	box-sizing: border-box;
-	width: 100%;
-	margin-left: auto; margin-right: auto;
-	resize: vertical;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: auto; margin-right: auto;
+  resize: vertical;
 }
 #commentSec .submitBox {
-	text-align: right;
+  text-align: right;
 }
 #commentSec .commentBtn {
-	padding: 10px;
+  padding: 10px;
 }
 #commentSec .listMsg ,
 #commentSec .formMsg {
-	margin: 40px 0;
-	text-align: center;
-	font-family: 'Noto Serif KR', serif;
+  margin: 40px 0;
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
 }
 
 /**#### 관련글
@@ -1612,38 +1594,37 @@ li > dl > dt ,
 └관련글목록 ul.relatedList ─ li 여럿 ─ a
 */
 .relatedList {
-	width: 90%;
-	max-width: 700px;
-	margin: 10px auto;
-	padding: 20px 10px;
+  width: 90%;
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 20px 10px;
 }
 .relatedList > * {
-	margin: 10px;
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	border-left-width: 0px;
-	background-color: #ffffff;
-	background-color: var(--backCol);
+  margin: 10px;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  border-left-width: 0px;
+  background-color: #ffffff;
+  background-color: var(--backCol);
 }
 .relatedList > *:hover {
-	box-shadow: 0px 0px 3px #0004;
+  box-shadow: 0px 0px 3px #0004;
 }
 .relatedList > * a {
-	display: block;
-	padding: 12px;
-	border-left: 4px solid #ff6644;
-	border-left: 4px solid var(--pointCol);
+  display: block;
+  padding: 12px;
+  border-left: 4px solid #ff6644;
+  border-left: 4px solid var(--pointCol);
 }
+
 /**#### 비밀글 비밀번호 제출 */
 .protectedPassForm {
-	text-align: center;
+  text-align: center;
 }
 .protectedPassForm .submit {
-	padding: 10px;
-	border-radius: 20px;
+  padding: 10px;
+  border-radius: 20px;
 }
-
-
 
 
 /**### 글목록 페이지 */
@@ -1655,6 +1636,7 @@ main
 ├상단페이징 div#pagingCopy
 └목록 div
 */
+
 /**#### 글목록 제목 (카테고리명 등)
 머리부분 div#listHead
 ├제목등 div.titleBox
@@ -1669,63 +1651,63 @@ main
 　└꾸밈용테이프 span.tape 2개
 */
 #listHead {
-	margin: 60px 0;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
+  margin: 60px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 @media (max-width: 800px) {/* 좁은 화면에서는 꾸밈상자를 제목 아래에 배치 */
-	#listHead .title {
-		margin: 50px auto;
-	}
-	#listHead {
-		flex-direction: column;
-	}
+  #listHead .title {
+    margin: 50px auto;
+  }
+  #listHead {
+    flex-direction: column;
+  }
 }
 #listHead .titleBox  {/* 제목등 */
-	margin: 0 auto;
-	text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 #listHead .subtitle {
-	margin-top: 15px;
-	font-family: 'Gaegu', cursive;
+  margin-top: 15px;
+  font-family: 'Gaegu', cursive;
 }
 #listHead .postNum {
-	color: #ff6644;
-	color: var(--pointCol);
-	font-weight: bold;
-	font-size: 120%;
+  color: #ff6644;
+  color: var(--pointCol);
+  font-weight: bold;
+  font-size: 120%;
 }
 #listHead .decoBox {/* 꾸밈상자 */
-	margin: 20px 50px;
-	max-width: 280px;
-	padding: 10px;
-	box-shadow: 1px 1px 6px #0004;
-	background-color: #fdfdfd;
-	background-color: var(--listBack);
-	transform: rotate(10deg);
-	position: relative;
+  margin: 20px 50px;
+  max-width: 280px;
+  padding: 10px;
+  box-shadow: 1px 1px 6px #0004;
+  background-color: #fdfdfd;
+  background-color: var(--listBack);
+  transform: rotate(10deg);
+  position: relative;
 }
 #listHead .image {
-	display: block;
-	margin: 0 auto;
-	max-height: 210px;
-	max-width: 280px;
-	box-sizing: border-box;
-	border: 2px solid #ddd;
-	border: 2px solid var(--borderCol);
+  display: block;
+  margin: 0 auto;
+  max-height: 210px;
+  max-width: 280px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
 }
 #listHead .description {
-	margin-top: 10px;
-	max-height: 5em;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	overflow: hidden;
-	font-size: 0.9rem;
+  margin-top: 10px;
+  max-height: 5em;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  overflow: hidden;
+  font-size: 0.9rem;
 }
 #listHead .tape {
-	width: 100px; height: 30px;
-	transform: rotate(-35deg);
+  width: 100px; height: 30px;
+  transform: rotate(-35deg);
 }
 #listHead .tape1 {top:    8px;   left: -27px;}
 #listHead .tape2 {bottom: 8px;  right: -27px;}
@@ -1739,12 +1721,12 @@ main
 */
 /* 보기형식 변경 버튼 */
 #listStyleBtns {
-	margin-right: 10%;
-	margin-bottom: 20px;
-	text-align: right;
+  margin-right: 10%;
+  margin-bottom: 20px;
+  text-align: right;
 }
 #listStyleBtns button {
-	padding: 8px;
+  padding: 8px;
 }
 /*
 ul#postList ─ li 여럿
@@ -1767,236 +1749,236 @@ ul#postList ─ li 여럿
 정의된 스타일: 크게 한 줄 train, 썸네일만 album, 썸네일 및 제목 card, 간략 목록 simple, 복잡 목록 detailed
 */
 #postList > */*li*/ {
-	position: relative;
+  position: relative;
 }
 /**##### 크게 한 줄 train */
 /* 상단 페이징과 보기형식 변경 버튼을 표시하지 않는다 ???*/
 /*#postList.train .paging ,
 #listStyleBtns {
-	display: none;
+  display: none;
 }*/
 #postList.train > */*li*/ {/* 항목의 바깥쪽 스타일 */
-	margin: 80px auto;
-	max-width: 900px;
-	position: relative;
+  margin: 80px auto;
+  max-width: 900px;
+  position: relative;
 }
 #postList.train > */*li*/ > a {/* 항목의 안쪽 스타일 */
-	padding: 15px 20px 30px 20px;
-	border: 2px solid #8880;
-	transition: box-shadow 0.6s linear, border-color 0.2s linear;
+  padding: 15px 20px 30px 20px;
+  border: 2px solid #8880;
+  transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 #postList.train > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-	border-color: #ddd;
-	border-color: var(--borderCol);
-	box-shadow: 0px 0px 10px #ddd;
-	box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
-	transition-duration: 0s;
+  border-color: #ddd;
+  border-color: var(--borderCol);
+  box-shadow: 0px 0px 10px #ddd;
+  box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
+  transition-duration: 0s;
 }
 #postList.train .postListItem > * {/* 썸네일, 제목등, 본문등 */
-	margin: 22px 0;
-	max-height: 100vw;
-	overflow: hidden;
+  margin: 22px 0;
+  max-height: 100vw;
+  overflow: hidden;
 }
 #postList.train .thumbnail img {/* 썸네일 */
-	width: 100%;
-	display: block;
-	margin: 0 auto;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 #postList.train .thumbnail img.noThumbnail {/* 없는 썸네일 */
-	display: none;
+  display: none;
 }
 #postList.train .title {/* 제목 */
-	display: inline-block;
-	font-size: 1.8em;
+  display: inline-block;
+  font-size: 1.8em;
 }
 #postList.train .category::before {
-	content: '/';
+  content: '/';
 }
 #postList.train .itemBody {/* 본문 크기 제한 */
-	max-height: 6.6em;
-	overflow: hidden;
+  max-height: 6.6em;
+  overflow: hidden;
 }
 #postList.train .content {/* 본문 */
-	font-family: 'Noto Serif KR', serif;
-	font-size: 1.1em;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.1em;
 }
 #postList.train .itemTail {/* 날짜등 */
-	font-family: 'Gaegu', cursive;
-	position: absolute;
-	right: 2px;
-	bottom: 2px;
+  font-family: 'Gaegu', cursive;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
 }
 /**##### 썸네일만 album */
 #postList.album .itemHead ,
 #postList.album .category ,
 #postList.album .itemBody ,
 #postList.album .tape {
-	display: none;
+  display: none;
 }
 #postList.album {
-	text-align: center;
+  text-align: center;
 }
 #postList.album > */*li*/ {
-	margin: 1%;
-	display: inline-block;
-	border: 2px solid #f4f4f4;
-	border: 2px solid var(--listBack);
-	box-shadow: -1px 2px 5px #ddd;
-	box-shadow: -1px 2px 5px var(--borderCol);
-	background-color: #fff;
-	background-color: var(--backCol);
+  margin: 1%;
+  display: inline-block;
+  border: 2px solid #f4f4f4;
+  border: 2px solid var(--listBack);
+  box-shadow: -1px 2px 5px #ddd;
+  box-shadow: -1px 2px 5px var(--borderCol);
+  background-color: #fff;
+  background-color: var(--backCol);
 }
 #postList.album > */*li*/:hover {/* 테두리: 마우스 올렸을 때만 */
-	border-color: #ddd;
-	border-color: var(--borderCol);
+  border-color: #ddd;
+  border-color: var(--borderCol);
 }
 /* 썸네일 */
 #postList.album .thumbnail {
-	padding: 5px;
-	width: 28vw;
-	height: 28vw;
-	max-width: 250px;
-	max-height: 250px;
-	overflow: hidden;
-	/* 또 고작 아이템 하나 가운데 오게 하겠다고 거창하게 플렉스를 씁니다~~ 그냥 시벌 세로든 가로든 가운데정렬 속성이나 만들어 줄 것이지. 왜 또 크기가 작은 건 가운데 오게 할 수 있지만 똑같은 요소인데 크기가 크면 그게 안되고 시발 css는 아주 좃갔습니다. */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  padding: 5px;
+  width: 28vw;
+  height: 28vw;
+  max-width: 250px;
+  max-height: 250px;
+  overflow: hidden;
+  /* 또 고작 아이템 하나 가운데 오게 하겠다고 거창하게 플렉스를 씁니다~~ 그냥 시벌 세로든 가로든 가운데정렬 속성이나 만들어 줄 것이지. 왜 또 크기가 작은 건 가운데 오게 할 수 있지만 똑같은 요소인데 크기가 크면 그게 안되고 시발 css는 아주 좃갔습니다. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 900px) {
-	#postList.album .thumbnail {
-		padding: 1px;
-	}
+  #postList.album .thumbnail {
+    padding: 1px;
+  }
 }
 #postList.album .thumbnail img {
-	height: 100%;
+  height: 100%;
 }
 #postList.album .itemHead {
-	position: absolute;
-	box-sizing: border-box;
-	width: 100%;
-	bottom: 0px;
-	padding: 5px;
-	background-color: #0008;
-	transition-duration: 2s;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+  background-color: #0008;
+  transition-duration: 2s;
 }
 #postList.album > */*li*/:hover .itemHead {/* 제목: 마우스 올렸을 때만 나타난다 */
-	display: block;
+  display: block;
 }
 #postList.album .itemHead h2 {
-	font-family: 'Noto Serif KR', serif;
-	font-size: 120%;
-	font-weight: 600;
-	color: white;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 120%;
+  font-weight: 600;
+  color: white;
 }
 @media (max-width: 900px) {
-	#postList.album .itemHead h2 {
-		font-size: 100%;
-	}
+  #postList.album .itemHead h2 {
+    font-size: 100%;
+  }
 }
 /**##### 썸네일 및 제목 card */
 #postList.card .category ,/* 나머지 요소 숨김 */
 #postList.card .writer ,
 #postList.card .content {
-	display: none;
+  display: none;
 }
 #postList.card {
-	text-align: center;
+  text-align: center;
 }
 #postList.card > */*li*/ {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 40px 12px;/* 간격 */
-	box-shadow: 1px 1px 4px #0008;/* 그림자 */
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 40px 12px;/* 간격 */
+  box-shadow: 1px 1px 4px #0008;/* 그림자 */
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  text-align: left;
 }
 #postList.card > */*li*/ > */*a*/ {
-	padding: 20px 10px;
-	box-sizing: content-box;
+  padding: 20px 10px;
+  box-sizing: content-box;
 }
 #postList.card .thumbnail {/* 썸네일 경계선 */
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	background-color: #ddd;
-	background-color: var(--borderCol);
-	overflow: hidden;
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #ddd;
+  background-color: var(--borderCol);
+  overflow: hidden;
 }
 #postList.card .thumbnail img {/* 썸네일 */
-	max-height: 200px;
-	max-width: 300px;
-	display: block;
-	margin: 0 auto;
-	transition-duration: 0.5s;
+  max-height: 200px;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  transition-duration: 0.5s;
 }
 @media (max-width: 600px) {/* 이유는 모르겠는데 딴데서는 안 그러고 모바일 삼성인터넷에서만 얘 땜에 가로스크롤 생김  */
-	#postList.card .thumbnail img {
-		max-width: 100%;
-	}
+  #postList.card .thumbnail img {
+    max-width: 100%;
+  }
 }
 #postList.card .itemHead {
-	margin-top: 5px;
-	max-width: 300px;
+  margin-top: 5px;
+  max-width: 300px;
 }
 #postList.card .title {
-	font-size: 110%;
-	font-weight: normal;
+  font-size: 110%;
+  font-weight: normal;
 }
 #postList.card .itemBody {/* 날짜 */
-	position: absolute;
-	bottom: 1px;
-	right: 5px;
-	text-align: right;
-	font-family: 'Gaegu', cursive;
-	font-size: 0.9em;
-	line-height: 1;
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  text-align: right;
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9em;
+  line-height: 1;
 }
 #postList.card .tape {/* 테이프 장식 */
-	height: 65px;
-	width: 35px;
-	top: -30px;
-	left: 45%;
-	transform: rotate(10deg);
+  height: 65px;
+  width: 35px;
+  top: -30px;
+  left: 45%;
+  transform: rotate(10deg);
 }
 #postList.card > */*li*/:hover .thumbnail img {/* 마우스 올리면 그림 확대 */
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 /**##### 간략 목록 simple */
 #postList.simple {
-	width: 94%;
-	max-width: 700px;
-	margin: 50px auto;
+  width: 94%;
+  max-width: 700px;
+  margin: 50px auto;
 }
 #postList.simple .thumbnail ,/* 나머지 요소 숨김 */
 #postList.simple .content ,
 #postList.simple .writer {
-	display: none;
+  display: none;
 }
 #postList.simple > */*li*/ {
-	margin: 15px auto;/* 간격 */
-	box-shadow: 1px 1px 7px var(--borderCol);/* 그림자 */
-	position: relative;/* 날짜 위치잡기용 */
-	background-color: #fff;
-	background-color: var(--backCol);
+  margin: 15px auto;/* 간격 */
+  box-shadow: 1px 1px 7px var(--borderCol);/* 그림자 */
+  position: relative;/* 날짜 위치잡기용 */
+  background-color: #fff;
+  background-color: var(--backCol);
 }
 #postList.simple .tape {/* 왼쪽장식 */
-	width: 12px;
-	height: 100%;
-	top: 0px;
-	left: -10px;
-	border-width: 0px;
-	transition-duration: 0.5s;
+  width: 12px;
+  height: 100%;
+  top: 0px;
+  left: -10px;
+  border-width: 0px;
+  transition-duration: 0.5s;
 }
 #postList.simple > *:hover .tape {/* 마우스 올린 항목 장식 늘어남 */
-	width: 52px;
-	left: -50px;
-	transition-duration: 0.1s;
+  width: 52px;
+  left: -50px;
+  transition-duration: 0.1s;
 }
 #postList.simple > */*li*/ > */*a*/ {
-	padding: 20px 10px;
+  padding: 20px 10px;
 }
 /* 왼쪽장식 무지개 색 */
 #postList.simple > *:nth-child(8n+1) .tape {background-color: hsl(10, 100%, 60%, 50%);}
@@ -2008,123 +1990,111 @@ ul#postList ─ li 여럿
 #postList.simple > *:nth-child(8n+7) .tape {background-color: hsl(266, 100%, 55%, 50%);}
 #postList.simple > *:nth-child(8n)   .tape {background-color: hsl(315, 100%, 50%, 50%);}
 #postList.simple .itemBody {/* 날짜 위치: 바닥 오른쪽 */
-	position: absolute;
-	bottom: 1px;
-	right: 5px;
-	font-size: 0.8em;/* 날짜 작게 */
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  font-size: 0.8em;/* 날짜 작게 */
 }
 #postList.simple .title {/* 제목 */
-	display: inline;
-	font-size: 120%;
-	font-weight: normal;
-	font-family: 'Noto Serif KR', serif;
+  display: inline;
+  font-size: 120%;
+  font-weight: normal;
+  font-family: 'Noto Serif KR', serif;
 }
 #postList.simple .category {/* 카테고리 */
-	font-family: 'Gaegu', cursive;
-	font-size: 90%;
+  font-family: 'Gaegu', cursive;
+  font-size: 90%;
 }
 #postList.simple .category::before {
-	content: '~';
+  content: '~';
 }
 /**##### 복잡 목록 detailed */
 #postList.detailed > */*li*/ {
-	margin: 10px 0;
-	border-bottom: 3px double #ddd;
-	border-bottom: 3px double var(--borderCol);
+  margin: 10px 0;
+  border-bottom: 3px double #ddd;
+  border-bottom: 3px double var(--borderCol);
 }
 #postList.detailed > */*li*/ > */*a*/ {
-	padding: 10px 10px;
-	min-height: 98px;
+  padding: 10px 10px;
+  min-height: 98px;
 }
 #postList.detailed .thumbnail ,/* 줄줄이 다 inline */
 #postList.detailed .itemHead , 
 #postList.detailed .title , 
 #postList.detailed .itemBody {
-	display: inline;
+  display: inline;
 }
 #postList.detailed .thumbnail {/* 썸네일 */
-	display: inline-block;
-	padding: 2px 10px;
-	float: left;
+  display: inline-block;
+  padding: 2px 10px;
+  float: left;
 }
 #postList.detailed .thumbnail img {
-	height: 90px;
-	max-width: 180px;
+  height: 90px;
+  max-width: 180px;
 }
 #postList.detailed .category::before {
-	content: '\007E';/* ~ */
+  content: '\007E';/* ~ */
 }
 #postList.detailed .category ,
 #postList.detailed .date ,
 #postList.detailed .writer {
-	font-family: 'Gaegu', cursive;
-	font-size: 0.8em;
-	margin: 0px 10px;
+  font-family: 'Gaegu', cursive;
+  font-size: 0.8em;
+  margin: 0px 10px;
 }
 #postList.detailed .searchword {/* 검색어 강조 */
-	background-color: #f0ff40;
-	background-color: var(--highlight);
-	color: black;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
 }
 
 
 /**### 태그 페이지 */
-/*
-h1
-hr
-div#tagBox
-├
-└
-*/
 /* 태그 클래스별 스타일은 랜덤태그 모듈과 같은 스타일 */
 #tagBox {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	font-size: 200%;/* 모듈에서보단 좀 크게 보이기 */
-	text-align: center;
-	line-height: 1.9;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 200%;/* 모듈에서보단 좀 크게 보이기 */
+  text-align: center;
+  line-height: 1.9;
 }
 #tagBox li {
-	display: inline-block;
+  display: inline-block;
 }
 #tagBox a {
-	margin: 5px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	border: 2px solid #ddd;
-	border: 2px solid var(--borderCol);
-	border-radius: 4px;
-	padding: 2px 5px;
+  margin: 5px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  border: 2px solid #ddd;
+  border: 2px solid var(--borderCol);
+  border-radius: 4px;
+  padding: 2px 5px;
 }
 #main4.tagBoxOrdered {
-	font-size: 150%;/* 모듈에서보단 좀 크게 보이기 */
+  font-size: 150%;/* 모듈에서보단 좀 크게 보이기 */
 }
 #main4.tagBoxOrdered .bucket {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 #main4.tagBoxOrdered h4 {
-	font-size: 200%;
-	border-bottom: 3px dashed #ddd;
-	border-bottom: 3px dashed var(--borderCol);
-	font-family: 'Noto Serif KR', serif;
+  font-size: 200%;
+  border-bottom: 3px dashed #ddd;
+  border-bottom: 3px dashed var(--borderCol);
+  font-family: 'Noto Serif KR', serif;
 }
 #main4.tagBoxOrdered .list {
-	padding: 10px;
-	list-style: disc;
-	color: #000;
-	color: var(--bonmunTextCol);
+  padding: 10px;
+  list-style: disc;
+  color: #000;
+  color: var(--bonmunTextCol);
 }
 #main4.tagBoxOrdered li {
-	margin: 10px;
+  margin: 10px;
 }
-
-
-
-
-
 
 
 
@@ -2135,51 +2105,51 @@ div#tagBox
 
 /* 첨부파일 */
 figure.fileblock, #tt-body-page figure.fileblock {
-	border: 1px solid #ddd;
-	border: 1px solid var(--borderCol);
-	border-right-width: 0px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  border-right-width: 0px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
 }
 figure.fileblock a, #tt-body-page figure.fileblock a {
-	border-right: 8px solid #66aa00;
-	border-right: 8px solid var(--bonmunActing);
+  border-right: 8px solid #66aa00;
+  border-right: 8px solid var(--bonmunActing);
 }
 figure.fileblock .filename, #tt-body-page figure.fileblock .filename {
-	color: var(--bonmunTextCol);
+  color: var(--bonmunTextCol);
 }
 figure.fileblock a::after, #tt-body-page figure.fileblock a::after {/* 다운로드 아이콘 */
-	background-image: unset;
+  background-image: unset;
 }
 figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 아이콘 */
-	background-image: url('./images/bonmun-file.png');
-	background-size: 30px 30px;
+  background-image: url('./images/bonmun-file.png');
+  background-size: 30px 30px;
 }
 
 
 /* 네임카드 */
 .tt_box_namecard {
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	max-width: 500px;
-	min-height: 160px;
-	background-color: #f4f4f4;
-	background-color: var(--listBack);
-	color: #333;
-	color: var(--baseTextCol);
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 500px;
+  min-height: 160px;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  color: #333;
+  color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_tit_cont {
-	color: #333;
-	color: var(--baseTextCol);
+  color: #333;
+  color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g {
-	color: #333;
-	color: var(--baseTextCol);
+  color: #333;
+  color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g::after {
-	content: " +";
+  content: " +";
 }
 .tt_img_area_reply {
-	display: none;
+  display: none;
 }

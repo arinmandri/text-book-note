@@ -1,0 +1,12 @@
+
+/**### 글목록 페이지 */
+/*
+main
+├머리부분 div#listHead
+├분리꾸밈 hr.areaSeparator
+├상단잡영역 div#upper
+├상단페이징 div#pagingCopy
+└목록 div
+*/
+{% include "skin-comps/pages/글목록페이지/머리.css" %}
+{% include "skin-comps/pages/글목록페이지/목록.css" %}

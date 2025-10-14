@@ -1,0 +1,34 @@
+
+/**### 페이징
+페이징상자 div.paging
+├이전 a.no-more-prev 혹은 클래스없음
+├숫자 a.num 여럿
+└다음 a.no-more-next 혹은 클래스없음
+빡치게도, 다른 요소는 그거 하나 하자고 쓰자니 너무 거창한 것 같은 기분이 드는 채신기술 flex등을 안 쓰면 그런 설정 할 방법이 아예 없는데 button이랑 input 얘네만 지 알아서 안에 글자를 세로 가운데 정렬을 시키므로, a 안의 글자를 button 태그로 감쌈
+*/
+.paging {
+  margin: 80px auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+  font-weight: 900;
+  font-family: 'Jua', sans-serif;
+}
+.paging > * {
+  display: block;
+  margin: 7px 5px;
+}
+.paging button {
+  width: 36px;
+  height: 36px;
+}
+.paging a:not([href]) > button {
+  background-color: transparent;
+  color: #333;
+  color: var(--baseTextCol);
+}
+.no-more-prev , .no-more-next {
+  display: none !important;
+}
