@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<information>
+		<name>Text, Book and Clear Note</name>
+		<version>1.0</version>
+		<description>
+			<![CDATA[책책 책기라욷]]>
+		</description>
+		<license>
+			<![CDATA[아직 만드는 중]]>
+		</license>
+	</information>
+	<author>
+		<name>김영선</name>
+		<homepage>https://peekabook.tistory.com</homepage>
+		<email>arinmandri@gmail.com</email>
+	</author>
+	<default>
+		<entriesOnPage>20</entriesOnPage><!-- 홈 화면 글 수 -->
+		<entriesOnList>30</entriesOnList><!-- 글 목록 글 수 -->
+
+		<itemsOnGuestbook>100</itemsOnGuestbook><!-- 한페이지에 표시될 방명록 갯수 -->
+
+		<recentEntries>7</recentEntries><!-- 사이드바의 최근글 표시 갯수 -->
+		<lengthOfRecentEntry>50</lengthOfRecentEntry><!-- 최근 글 표현될 글자수 -->
+		<recentComments>7</recentComments><!-- 사이드바의 최근 댓글 표시 갯수 -->
+		<lengthOfRecentComment>50</lengthOfRecentComment><!-- 최근 댓글에 표현될 글자수 -->
+		<recentTrackbacks>7</recentTrackbacks><!-- 사이드바의 최근 트랙백 표시 갯수 -->
+		<lengthOfRecentTrackback>50</lengthOfRecentTrackback><!-- 최근 트랙백에 표현될 글자수 -->
+
+		<lengthOfRecentNotice>127</lengthOfRecentNotice><!-- 최근 공지 표현될 글자수 -->
+
+		<tagsInCloud>25</tagsInCloud><!-- 127 넘으면 스킨 적용이 안 되는데 그 원인을 알려주지도 않아서 노가다로 찾음 -->
+		<sortInCloud>1</sortInCloud><!-- 태그 클라우드 표현 방식 (1:인기도순, 2:이름순, 3:랜덤) -->
+
+		<expandComment>1</expandComment><!-- 댓글영역 표현 방식 (0:감추기, 1:펼치기) -->
+		<expandTrackback>0</expandTrackback><!-- 트랙백영역 표현 방식 (0:감추기, 1:펼치기) -->
+		<lengthOfLink>30</lengthOfLink><!-- 링크에 표현될 글자수 --><!-- 뭔 링크 ??? -->
+
+		<showListOnCategory>1</showListOnCategory><!-- 커버 미사용 홈에서 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
+		<showListOnArchive>1</showListOnArchive><!-- ??? -->
+		<showListLock>0</showListLock><!-- 홈 설정과 기본 설정에서 '목록 구성 요소' 항목의 노출 여부 결정 (0: 노출, 1: 노출 안 함) -->
+		<commentMessage>
+			<none>댓글이 없습니다.</none>
+			<single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>받은 트랙백이 없고</none>
+			<single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+		</trackbackMessage>
+
+		<tree><!-- ??? -->
+			<color>ff0000</color>
+			<bgColor>ff0000</bgColor>
+			<activeColor>ff0000</activeColor>
+			<activeBgColor>ff0000</activeBgColor>
+			<labelLength>50</labelLength>
+			<showValue>1</showValue>
+		</tree>
+
+		<liststyle>card</liststyle>
+	</default>
+
+	<cover>
+		<item>
+			<name></name>
+			<label>
+				<![CDATA[ 홈커버 아직 없음 ]]>
+			</label>
+			<description>
+				<![CDATA[ 아리랑 아리랑 아라리요 ]]>
+			</description>
+		</item>
+	</cover>
+
+	<variables>
+		<variablegroup name="빛깔 (라이트모드)">
+			<variable>
+				<name>backCol_light</name>
+				<label>바닥색</label>
+				<description><![CDATA[기본값은 #ffffff]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ffffff]]></default>
+			</variable>
+			<variable>
+				<name>backImg_light</name>
+				<label>바닥 그림</label>
+				<description>바닥 그림</description>
+				<type>IMAGE</type>
+			</variable>
+			<variable>
+				<name>backImgType_light</name>
+				<label>바닥 그림 놓임새</label>
+				<description>썸네일이 없는 게시글의 썸네일 표시</description>
+				<type>SELECT</type>
+				<option><![CDATA[[
+				    {"name":"backImgType_cover", "value":"backImgType_cover", "label":"가득덮기"},
+				    {"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
+				    {"name":"backImgType_VH", "value":"backImgType_VH", "label":"바둑판식 배열"},
+				    {"name":"backImgType_HT", "value":"backImgType_HT", "label":"위 가로 반복"},
+				    {"name":"backImgType_HB", "value":"backImgType_HB", "label":"아래 가로 반복"},
+				    {"name":"backImgType_VL", "value":"backImgType_VL", "label":"왼쪽 세로 반복"},
+				    {"name":"backImgType_VR", "value":"backImgType_VR", "label":"오른쪽 세로 반복"},
+				    {"name":"backImgType_X1", "value":"backImgType_X1", "label":"↖"},
+				    {"name":"backImgType_X2", "value":"backImgType_X2", "label":"↑"},
+				    {"name":"backImgType_X3", "value":"backImgType_X3", "label":"↗"},
+				    {"name":"backImgType_X4", "value":"backImgType_X4", "label":"←"},
+				    {"name":"backImgType_X5", "value":"backImgType_X5", "label":"한가운데"},
+				    {"name":"backImgType_X6", "value":"backImgType_X6", "label":"→"},
+				    {"name":"backImgType_X7", "value":"backImgType_X7", "label":"↙"},
+				    {"name":"backImgType_X8", "value":"backImgType_X8", "label":"↓"},
+				    {"name":"backImgType_X9", "value":"backImgType_X9", "label":"↘"}
+				]]]></option>
+				<default>backImgType_VH</default>
+			</variable>
+			<variable>
+				<name>baseTextCol_light</name>
+				<label>본문외 글자색</label>
+				<description><![CDATA[기본값은 #666666]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#666666]]></default>
+			</variable>
+			<variable>
+				<name>listBack_light</name>
+				<label>항목 바닥색</label>
+				<description><![CDATA[기본값은 #f4f4f4]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#f4f4f4]]></default>
+			</variable>
+			<variable>
+				<name>borderCol_light</name>
+				<label>경계선색</label>
+				<description><![CDATA[기본값은 #dddddd]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#dddddd]]></default>
+			</variable>
+			<variable>
+				<name>frameBack_light</name>
+				<label>헤더, 푸터, 버튼 등</label>
+				<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #111144]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#111144]]></default>
+			</variable>
+			<variable>
+				<name>frameFore_light</name>
+				<label>헤더, 푸터, 버튼 등 글자</label>
+				<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ffffff]]></default>
+			</variable>
+			<variable>
+				<name>pointCol_light</name>
+				<label>강조 요소</label>
+				<description><![CDATA[기본값은 #ff6644]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ff6644]]></default>
+			</variable>
+			<variable>
+				<name>bonmunTextCol_light</name>
+				<label>본문 글자</label>
+				<description><![CDATA[기본값은 #000000]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#000000]]></default>
+			</variable>
+			<variable>
+				<name>bonmunForm_light</name>
+				<label>본문 서식강조</label>
+				<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ccbbaa]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ccbbaa]]></default>
+			</variable>
+			<variable>
+				<name>bonmunActing_light</name>
+				<label>본문 상호작용</label>
+				<description><![CDATA[a태그 등. 기본값은 #66aa00]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#66aa00]]></default>
+			</variable>
+			<variable>
+				<name>highlight_light</name>
+				<label>형광펜</label>
+				<description><![CDATA[기본값은 #f0ff40]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#f0ff40]]></default>
+			</variable>
+		</variablegroup>
+
+		<variablegroup name="빛깔 (다크모드)">
+			<variable>
+				<name>backCol_dark</name>
+				<label>바닥색</label>
+				<description><![CDATA[기본값은 #000000]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#000000]]></default>
+			</variable>
+			<variable>
+				<name>backImg_dark</name>
+				<label>바닥 그림</label>
+				<description>바닥 그림</description>
+				<type>IMAGE</type>
+			</variable>
+			<variable>
+				<name>backImgType_dark</name>
+				<label>바닥 그림 놓임새</label>
+				<description>썸네일이 없는 게시글의 썸네일 표시</description>
+				<type>SELECT</type>
+				<option><![CDATA[[
+				    {"name":"backImgType_cover", "value":"backImgType_cover", "label":"가득덮기"},
+				    {"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
+				    {"name":"backImgType_VH", "value":"backImgType_VH", "label":"바둑판식 배열"},
+				    {"name":"backImgType_HT", "value":"backImgType_HT", "label":"위 가로 반복"},
+				    {"name":"backImgType_HB", "value":"backImgType_HB", "label":"아래 가로 반복"},
+				    {"name":"backImgType_VL", "value":"backImgType_VL", "label":"왼쪽 세로 반복"},
+				    {"name":"backImgType_VR", "value":"backImgType_VR", "label":"오른쪽 세로 반복"},
+				    {"name":"backImgType_X1", "value":"backImgType_X1", "label":"↖"},
+				    {"name":"backImgType_X2", "value":"backImgType_X2", "label":"↑"},
+				    {"name":"backImgType_X3", "value":"backImgType_X3", "label":"↗"},
+				    {"name":"backImgType_X4", "value":"backImgType_X4", "label":"←"},
+				    {"name":"backImgType_X5", "value":"backImgType_X5", "label":"한가운데"},
+				    {"name":"backImgType_X6", "value":"backImgType_X6", "label":"→"},
+				    {"name":"backImgType_X7", "value":"backImgType_X7", "label":"↙"},
+				    {"name":"backImgType_X8", "value":"backImgType_X8", "label":"↓"},
+				    {"name":"backImgType_X9", "value":"backImgType_X9", "label":"↘"}
+				]]]></option>
+				<default>backImgType_VH</default>
+			</variable>
+			<variable>
+				<name>baseTextCol_dark</name>
+				<label>본문외 글자색</label>
+				<description><![CDATA[기본값은 #bbbbbb]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#bbbbbb]]></default>
+			</variable>
+			<variable>
+				<name>listBack_dark</name>
+				<label>항목 바닥색</label>
+				<description><![CDATA[기본값은 #333]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#333]]></default>
+			</variable>
+			<variable>
+				<name>borderCol_dark</name>
+				<label>경계선색</label>
+				<description><![CDATA[기본값은 #444444]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#444444]]></default>
+			</variable>
+			<variable>
+				<name>frameBack_dark</name>
+				<label>헤더, 푸터, 버튼 등</label>
+				<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #666666aa]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#666666aa]]></default>
+			</variable>
+			<variable>
+				<name>frameFore_dark</name>
+				<label>헤더, 푸터, 버튼 등 글자</label>
+				<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ffffff]]></default>
+			</variable>
+			<variable>
+				<name>pointCol_dark</name>
+				<label>강조 요소</label>
+				<description><![CDATA[기본값은 #ffee00]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ffee00]]></default>
+			</variable>
+			<variable>
+				<name>bonmunTextCol_dark</name>
+				<label>본문 글자</label>
+				<description><![CDATA[기본값은 #fffafa]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#fffafa]]></default>
+			</variable>
+			<variable>
+				<name>bonmunForm_dark</name>
+				<label>본문 서식강조</label>
+				<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ffdd44]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ffdd44]]></default>
+			</variable>
+			<variable>
+				<name>bonmunActing_dark</name>
+				<label>본문 상호작용</label>
+				<description><![CDATA[a태그 등. 기본값은 #ff6655]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#ff6655]]></default>
+			</variable>
+			<variable>
+				<name>highlight_dark</name>
+				<label>형광펜</label>
+				<description><![CDATA[기본값은 #00ccff]]></description>
+				<type>COLOR</type>
+				<default><![CDATA[#00ccff]]></default>
+			</variable>
+		</variablegroup>
+
+		<variablegroup name="놓임새">
+			<variable>
+				<name>maxWidthOfMain2</name>
+				<label>중앙 영역 최대 너비 (1000 이상 숫자만)</label>
+				<type>STRING</type>
+				<default><![CDATA[1500]]></default>
+			</variable>
+			<variable>
+				<name>minWidthToOpenSidebar1</name>
+				<label>사이드바1 펼접 기준 (1000 이상 숫자만)</label>
+				<type>STRING</type>
+				<default><![CDATA[1800]]></default>
+			</variable>
+			<variable>
+				<name>minWidthToOpenSidebar2</name>
+				<label>사이드바2 펼접 기준 (1000 이상 숫자만)</label>
+				<type>STRING</type>
+				<default><![CDATA[1500]]></default>
+			</variable>
+		</variablegroup>
+
+		<variablegroup name="본문">
+			<variable>
+				<name>headingNumbering</name>
+				<label>본문 목차 번호 삽입</label>
+				<description>본문 내 h2, h3, h4 태그 앞에 자동으로 번호를 붙인다.</description>
+				<type>BOOL</type>
+				<default><![CDATA[true]]></default>
+			</variable>
+			<variable>
+				<name>checkDeletePost</name>
+				<label>게시글 삭제 추가확인</label>
+				<description>게시글 삭제시 확인 단계를 하나 더 덧붙인다.</description>
+				<type>BOOL</type>
+				<default><![CDATA[false]]></default>
+			</variable>
+		</variablegroup>
+
+		<variablegroup name="그밖에">
+			<variable>
+				<name>catOpenLevel</name>
+				<label>카테고리 초기 열림 상태</label>
+				<description>썸네일이 없는 게시글의 썸네일 표시</description>
+				<type>SELECT</type>
+				<option><![CDATA[[
+				    {"name":"collapse", "value":"collapse", "label":"모두 닫기"},
+				    {"name":"openCurr", "value":"openCurr", "label":"현재 카테고리만 열기"},
+				    {"name":"openAll",  "value":"openAll",  "label":"모두 열기"}
+				]]]></option>
+				<default>openCurr</default>
+			</variable>
+			<variable>
+				<name>footerText</name>
+				<label>하단문구</label>
+				<description>블로그 바닥에 표시할 문구</description>
+				<type>STRING</type>
+				<default><![CDATA[개발자: arinmandri@gmail.com]]></default>
+			</variable>
+			<variable>
+				<name>noThumbnail</name>
+				<label>없는 썸네일</label>
+				<description>썸네일이 없는 게시글의 썸네일 표시</description>
+				<type>IMAGE</type>
+			</variable>
+		</variablegroup>
+	</variables>
+
+	<liststyle>
+		<item>
+			<label>큼직 한 줄</label>
+			<value>train</value>
+		</item>
+		<item>
+			<label>썸네일만</label>
+			<value>album</value>
+		</item>
+		<item>
+			<label>썸네일 및 제목</label>
+			<value>card</value>
+		</item>
+		<item>
+			<label>간략 목록</label>
+			<value>simple</value>
+		</item>
+		<item>
+			<label>복잡 목록</label>
+			<value>detailed</value>
+		</item>
+	</liststyle>
+</skin>

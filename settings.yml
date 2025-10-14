@@ -1,0 +1,11 @@
+project:
+  name: 'Text, Book, Note'
+
+src:
+  targets:
+    - index.xml
+    - skin.html
+    - style.css
+
+prod:
+  dir: production
