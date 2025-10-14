@@ -345,36 +345,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   font-family: Gaegu, cursive;
   color: grey;
 }
-/**### 목차 */
-#bonmunHeadingList .num {
-  font-weight: bold;
-}
-#bonmunHeadingList .numBlank {
-  display: inline-block;
-  height: 1em;
-}
-#bonmunHeadingList .numBlank2 {
-  width: 0px;
-}
-#bonmunHeadingList .numBlank3 {
-  width: 1em;
-}
-#bonmunHeadingList .numBlank4 {
-  width: 2em;
-}
-#bonmunHeadingList .h2 .num {
-  color: #ff6644;
-  color: var(--pointCol);
-}
-#bonmunHeadingList .h4 {
-  font-size: 0.8em;
-}
-#bonmunHeadingList .current {
-  font-weight: bold;
-  background-color: #f0ff40;
-  background-color: var(--highlight);
-  color: black;
-}
+{% include "extentions/bonmunHeading/style.css" %}
 /**### 사이드바아이템 - 랜덤태그 */
 .randomtag .tagcloud::before {
   content: '#';

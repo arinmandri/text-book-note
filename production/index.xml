@@ -321,13 +321,14 @@
 		</variablegroup>
 
 		<variablegroup name="본문">
-			<variable>
-				<name>headingNumbering</name>
-				<label>본문 목차 번호 삽입</label>
-				<description>본문 내 h2, h3, h4 태그 앞에 자동으로 번호를 붙인다.</description>
-				<type>BOOL</type>
-				<default><![CDATA[true]]></default>
-			</variable>
+
+<variable>
+	<name>bonmunHeadingNumbering</name>
+	<label>본문 목차 번호 삽입</label>
+	<description>본문 내 h2, h3, h4 태그 앞에 자동으로 번호를 붙인다.</description>
+	<type>BOOL</type>
+	<default><![CDATA[true]]></default>
+</variable>
 
 <variable>
 	<name>checkDeletePost</name>
