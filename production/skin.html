@@ -12,35 +12,37 @@
 <!-- 사용자 지정 색 -->
 <style>
 html[data-theme="light"] {
-    --backCol: [##_var_backCol_light_##];
-    --baseTextCol: [##_var_baseTextCol_light_##];
-    --listBack: [##_var_listBack_light_##];
-    --borderCol: [##_var_borderCol_light_##];
-    --frameBack: [##_var_frameBack_light_##];
-    --frameFore: [##_var_frameFore_light_##];
-    --pointCol: [##_var_pointCol_light_##];
-    --bonmunTextCol: [##_var_bonmunTextCol_light_##];
-    --bonmunForm: [##_var_bonmunForm_light_##];
-    --bonmunActing: [##_var_bonmunActing_light_##];
-    --highlight: [##_var_highlight_light_##];
+  --backCol: [##_var_backCol_light_##];
+  --baseTextCol: [##_var_baseTextCol_light_##];
+  --listBack: [##_var_listBack_light_##];
+  --borderCol: [##_var_borderCol_light_##];
+  --frameBack: [##_var_frameBack_light_##];
+  --frameFore: [##_var_frameFore_light_##];
+  --pointCol: [##_var_pointCol_light_##];
+  --bonmunTextCol: [##_var_bonmunTextCol_light_##];
+  --bonmunForm: [##_var_bonmunForm_light_##];
+  --bonmunActing: [##_var_bonmunActing_light_##];
+  --highlight: [##_var_highlight_light_##];
 }
 
 html[data-theme="dark"] {
-    --backCol: [##_var_backCol_dark_##];
-    --baseTextCol: [##_var_baseTextCol_dark_##];
-    --listBack: [##_var_listBack_dark_##];
-    --borderCol: [##_var_borderCol_dark_##];
-    --frameBack: [##_var_frameBack_dark_##];
-    --frameFore: [##_var_frameFore_dark_##];
-    --pointCol: [##_var_pointCol_dark_##];
-    --bonmunTextCol: [##_var_bonmunTextCol_dark_##];
-    --bonmunForm: [##_var_bonmunForm_dark_##];
-    --bonmunActing: [##_var_bonmunActing_dark_##];
-    --highlight: [##_var_highlight_dark_##];
+  --backCol: [##_var_backCol_dark_##];
+  --baseTextCol: [##_var_baseTextCol_dark_##];
+  --listBack: [##_var_listBack_dark_##];
+  --borderCol: [##_var_borderCol_dark_##];
+  --frameBack: [##_var_frameBack_dark_##];
+  --frameFore: [##_var_frameFore_dark_##];
+  --pointCol: [##_var_pointCol_dark_##];
+  --bonmunTextCol: [##_var_bonmunTextCol_dark_##];
+  --bonmunForm: [##_var_bonmunForm_dark_##];
+  --bonmunActing: [##_var_bonmunActing_dark_##];
+  --highlight: [##_var_highlight_dark_##];
 }</style>
 
 <script>
 //
+const thisHostname = new URL(window.location.href).hostname;
+
 const gt0 = Date.now();
 
 //// url의 파라미터 가져오기
@@ -85,6 +87,21 @@ const param = getParameters()
 <body id="[##_body_id_##]"><s_t3>
 <script>
 //
+//// 블로그 주인 로그인 확인
+document.body.classList.add('login-' + T.config.ROLE);
+
+(function(){
+  //// 리스트 페이지들 공통 body 클래스 (카테고리 글 리스트, 보관함 글 리스트, 태그 리스트, 검색결과 리스트) (스타일 공통적용 목적)
+  let                 _body = document.getElementById('tt-body-category');
+  if( _body == null ) _body = document.getElementById('tt-body-tag');
+  if( _body == null ) _body = document.getElementById('tt-body-archive');
+  if( _body == null ) _body = document.getElementById('tt-body-search');
+  if( _body == null ) _body = document.getElementById('tt-body-index');
+
+  const body = _body;
+  if( body != null ) body.className = 'tt-body-list';
+})();
+//
 //// 다크모드 - body
 (function(){
   const isDark = document.getElementsByTagName('html')[0].dataset.theme === 'dark';
@@ -99,9 +116,6 @@ const param = getParameters()
 
 
 
-
-//// 기본값
-const thisHostname = new URL( window.location.href ).hostname;
 
 let noThumbnail = "[##_var_noThumbnail_##]";
 if( noThumbnail === "" )
@@ -133,17 +147,7 @@ function getOptionValue( optionValueString, minVal, defaultVal ) {
 
 
 
-(function(){ 
-  //// 리스트 페이지들 공통 body 클래스 (카테고리 글 리스트, 보관함 글 리스트, 태그 리스트, 검색결과 리스트) (스타일 공통적용 목적)
-  let                 _body = document.getElementById('tt-body-category');
-  if( _body == null ) _body = document.getElementById('tt-body-tag');
-  if( _body == null ) _body = document.getElementById('tt-body-archive');
-  if( _body == null ) _body = document.getElementById('tt-body-search');
-  if( _body == null ) _body = document.getElementById('tt-body-index');
-
-  const body = _body;
-  if( body != null ) body.className = 'tt-body-list';
-
+(function(){
   //// 설정값
   /*
    * settingForm
@@ -263,9 +267,6 @@ function setSettingFixCbox( settingName, checked ){
   fixCbox.checked = checked;
   fixCbox.dispatchEvent(new Event('change'));
 }
-
-//// 블로그 주인 로그인 확인
-document.body.classList.add('login-' + T.config.ROLE);
 </script>
 
 <div id="backImgBox">

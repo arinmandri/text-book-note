@@ -1,4 +1,6 @@
 
+const thisHostname = new URL(window.location.href).hostname;
+
 const gt0 = Date.now();
 
 //// url의 파라미터 가져오기
