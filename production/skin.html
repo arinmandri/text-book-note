@@ -11,53 +11,54 @@
 <link rel="stylesheet" type='text/css' href="./style.css">
 <!-- 사용자 지정 색 -->
 <style>
-  html[data-theme="light"]{
-    --backCol:       [##_var_backCol_light_##];
-    --baseTextCol:   [##_var_baseTextCol_light_##];
-    --listBack:      [##_var_listBack_light_##];
-    --borderCol:     [##_var_borderCol_light_##];
-    --frameBack:     [##_var_frameBack_light_##];
-    --frameFore:     [##_var_frameFore_light_##];
-    --pointCol:      [##_var_pointCol_light_##];
+html[data-theme="light"] {
+    --backCol: [##_var_backCol_light_##];
+    --baseTextCol: [##_var_baseTextCol_light_##];
+    --listBack: [##_var_listBack_light_##];
+    --borderCol: [##_var_borderCol_light_##];
+    --frameBack: [##_var_frameBack_light_##];
+    --frameFore: [##_var_frameFore_light_##];
+    --pointCol: [##_var_pointCol_light_##];
     --bonmunTextCol: [##_var_bonmunTextCol_light_##];
-    --bonmunForm:    [##_var_bonmunForm_light_##];
-    --bonmunActing:  [##_var_bonmunActing_light_##];
-    --highlight:     [##_var_highlight_light_##];
-  }
+    --bonmunForm: [##_var_bonmunForm_light_##];
+    --bonmunActing: [##_var_bonmunActing_light_##];
+    --highlight: [##_var_highlight_light_##];
+}
 
-  html[data-theme="dark"]{
-    --backCol:       [##_var_backCol_dark_##];
-    --baseTextCol:   [##_var_baseTextCol_dark_##];
-    --listBack:      [##_var_listBack_dark_##];
-    --borderCol:     [##_var_borderCol_dark_##];
-    --frameBack:     [##_var_frameBack_dark_##];
-    --frameFore:     [##_var_frameFore_dark_##];
-    --pointCol:      [##_var_pointCol_dark_##];
+html[data-theme="dark"] {
+    --backCol: [##_var_backCol_dark_##];
+    --baseTextCol: [##_var_baseTextCol_dark_##];
+    --listBack: [##_var_listBack_dark_##];
+    --borderCol: [##_var_borderCol_dark_##];
+    --frameBack: [##_var_frameBack_dark_##];
+    --frameFore: [##_var_frameFore_dark_##];
+    --pointCol: [##_var_pointCol_dark_##];
     --bonmunTextCol: [##_var_bonmunTextCol_dark_##];
-    --bonmunForm:    [##_var_bonmunForm_dark_##];
-    --bonmunActing:  [##_var_bonmunActing_dark_##];
-    --highlight:     [##_var_highlight_dark_##];
-  }
-</style>
+    --bonmunForm: [##_var_bonmunForm_dark_##];
+    --bonmunActing: [##_var_bonmunActing_dark_##];
+    --highlight: [##_var_highlight_dark_##];
+}</style>
 
 <script>
+//
 const gt0 = Date.now();
 
 //// url의 파라미터 가져오기
 function getParameters() {
-  var param = new Array();// 파라미터가 담길 배열
-  var url = decodeURIComponent(decodeURIComponent(location.href));// url이 encodeURIComponent 로 인코딩 되었을때는 다시 디코딩 해준다.
-  var params = url.substring( url.indexOf('?')+1, url.length ).split('&');// url에서 '?' 이후의 문자열까지 자르고 '&'로 분리
+  let param = new Array();// 파라미터가 담길 배열
+  const url = decodeURIComponent(decodeURIComponent(location.href));// url이 encodeURIComponent 로 인코딩 되었을때는 다시 디코딩 해준다.
+  const params = url.substring(url.indexOf('?') + 1, url.length).split('&');// url에서 '?' 이후의 문자열까지 자르고 '&'로 분리
   //// params 배열을 '='로 쪼개 param 배열에 key=value 로 담기
-  var key, value;
-  for( var i=0 ; i < params.length ; i++ ) {
-    var temp = params[i].split('=')
+  let key, value;
+  for (let i = 0; i < params.length; i++) {
+    let temp = params[i].split('=')
     key = temp[0];
     value = temp[1];
     param[key] = value;
   }
   return param;
 }
+const param = getParameters()
 
 //// 다크모드 - html
 (function(){
@@ -83,6 +84,7 @@ function getParameters() {
 
 <body id="[##_body_id_##]"><s_t3>
 <script>
+//
 //// 다크모드 - body
 (function(){
   const isDark = document.getElementsByTagName('html')[0].dataset.theme === 'dark';
@@ -264,7 +266,6 @@ function setSettingFixCbox( settingName, checked ){
 
 //// 블로그 주인 로그인 확인
 document.body.classList.add('login-' + T.config.ROLE);
-
 </script>
 
 <div id="backImgBox">
@@ -272,10 +273,12 @@ document.body.classList.add('login-' + T.config.ROLE);
   <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
 </div>
 
+
 <!--# 헤더 -->
 <header>
   <a href="/" style="display: block">[##_title_##]</a>
 </header>
+
 <!--# 메인영역1 -->
 <div id="main1">
 
@@ -444,17 +447,9 @@ document.body.classList.add('login-' + T.config.ROLE);
         <!-- TODO -->
       </s_cover_group>
 
-
-
-
-
-
       <s_page_rep><!--◆ 페이지 페이지 -->
         ??? 페이지 페이지 아직 없음
       </s_page_rep>
-
-
-
 
       <s_notice_rep><!--◆ 공지 페이지 -->
         <div class="noticePost onlyOnPage-index">
@@ -588,12 +583,9 @@ document.body.classList.add('login-' + T.config.ROLE);
         </div>
       </s_notice_rep>
 
-
-
-
-
       <s_article_rep>
         <s_index_article_rep></s_index_article_rep>
+
         <s_article_protected>
           <div class="protectedPost onlyOnPage-page">
             <h1 class="title pageTitle">[##_article_rep_title_##]</h1>
@@ -608,6 +600,7 @@ document.body.classList.add('login-' + T.config.ROLE);
         </s_article_protected>
 
         <s_permalink_article_rep><!--◆ 글보기 페이지 -->
+
           <!--▶ 게시글 -->
           <article id="postPagePost" class="post">
             <div class="head">
@@ -746,17 +739,7 @@ document.body.classList.add('login-' + T.config.ROLE);
         </s_permalink_article_rep>
       </s_article_rep>
 
-
-
-
-
-
-
-
-
       <s_list><!--◆ 글목록 페이지 -->
-        <link rel="stylesheet" type='text/css' href="./images/style_postList.css">
-        <!-- TODO 대?표?문서?? 파이썬 /22 -->
 
         <!--▶ 머리 부분 -->
         <div id="listHead">
@@ -804,7 +787,7 @@ document.body.classList.add('login-' + T.config.ROLE);
 
         <hr class="areaSeparator">
 
-        <!--▶ 상단 잡영역 -->
+        <!--▶ 상단 광고 -->
         <div id="upper">[##_revenue_list_upper_##]</div>
 
         <!--▶ 상단 페이징 -->
@@ -899,10 +882,6 @@ document.body.classList.add('login-' + T.config.ROLE);
         </div>
       </s_list>
 
-
-
-
-
       <s_tag><!--◆ 태그 페이지 -->
         <link rel="stylesheet" type='text/css' href="./images/style_tag.css">
 
@@ -984,10 +963,6 @@ document.body.classList.add('login-' + T.config.ROLE);
         </script>
       </s_tag>
 
-
-
-
-
       <s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
         <h1 class="areaTitle">누구누구 왔다감</h1>
 
@@ -1066,8 +1041,8 @@ document.body.classList.add('login-' + T.config.ROLE);
           }
         </script>
       </div></s_guest>
-
-    </main><!-- 메인 ###--><script>
+    </main><!-- 메인 ###-->
+    <script>//
       function checkDeletePost(){
         if( '[##_var_checkDeletePost_##]' == true ){
           const checkCode = Math.floor(Math.random() * 90) + 10 + '';
@@ -1139,9 +1114,7 @@ document.body.classList.add('login-' + T.config.ROLE);
           olli.prepend(temp);
           i+=1;
       } }
-    })()</script><!-- script for main -->
-
-
+    })()</script>
 
 
 
@@ -1174,8 +1147,7 @@ document.body.classList.add('login-' + T.config.ROLE);
       })();</script>
     </s_paging>
 
-
-    <!--### 하단 잡영역 -->
+    <!--### 하단 광고 -->
     <div id="under">[##_revenue_list_lower_##]</div>
 
   </div></div><!-- 메인영역2 ##--><script type="text/javascript">
@@ -1183,11 +1155,6 @@ document.body.classList.add('login-' + T.config.ROLE);
     const main2    = document.getElementById('main2');
     main2.style.maxWidth = maxWidthOfMain2 + 'px';
   </script>
-
-
-
-
-
 
   <!--## 사이드바상자2 : 오른쪽 사이드바 영역 -->
   <div id="sidebarBox2" class="sidebarBox fold"><!-- 클래스 초기상태: 모두 접힘 -->
@@ -1517,6 +1484,7 @@ document.body.classList.add('login-' + T.config.ROLE);
   </div><!-- 사이드바상자2 ##-->
 </div><!-- 메인영역1 #-->
 
+
 <!--### 사이드바3 -->
 <aside id="sidebar3" class="sidebar sidebarH">
   <s_sidebar>
@@ -1573,7 +1541,9 @@ document.body.classList.add('login-' + T.config.ROLE);
     </div></s_sidebar_element>
   </s_sidebar>
 </aside><!-- 사이드바3 ###-->
-<script>// script for sidebars
+
+<script>
+//
   const sidebarBox1     = document.getElementById('sidebarBox1');
   const sidebarBox2     = document.getElementById('sidebarBox2');
   const sidebar2        = document.getElementById('sidebar2');
@@ -1683,19 +1653,11 @@ document.body.classList.add('login-' + T.config.ROLE);
       return true;
     return false;
   }
-</script><!-- script for sidebars -->
+</script>
+
 
 <!--## 푸터 -->
 <footer id="footer">[##_var_footerText_##]</footer>
 
-
-
-<script src="./images/script.js"></script>
 </s_t3></body>
 </html>
-
-
-
-<!-- 옵션: 전체 글자 크기 -->
-
-<!-- 댓글 capcha인가 그거 position absolute 빼 -->

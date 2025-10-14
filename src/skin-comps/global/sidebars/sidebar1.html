@@ -1,0 +1,107 @@
+
+  <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
+  <div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold"><!-- 클래스 초기상태: 모두 접힘 -->
+    <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
+
+      <s_sidebar_element><div class="sidebar_element"><!-- 메뉴 -->
+        <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
+        <nav id="navMenu" class="sidebar_elementMain">
+          [##_blog_menu_##]
+          <script>(function(){ 
+            document.querySelector('#navMenu > ul').innerHTML 
+              += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
+              +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
+
+            //// 메뉴의 항목들에 클래스 추가
+            const navMenus = document.querySelectorAll('#navMenu a')
+            for( let navMenu of navMenus ){
+              navMenu.classList.add('themeBtn');
+            }
+          })()</script>
+        </nav>
+      </div></s_sidebar_element>
+
+      <s_sidebar_element><div class="sidebar_element"><!-- 카테고리 -->
+        <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
+        <nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
+        <script type="text/javascript">
+          //// 펼접버튼 추가
+          (function(){
+            const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
+            for( let li of category_list_lis ){
+              const sub_category_list = li.querySelector('ul.sub_category_list');// 하위 카테고리 (nullable)
+              const btn = document.createElement('button');
+              if( sub_category_list != null ){
+                btn.addEventListener('click', ()=>{
+                  li.classList.toggle('open');
+                });
+              }else{
+                li.classList.add('lonely');
+              }
+              li.prepend( btn );
+            }
+          })();
+
+          document.addEventListener('DOMContentLoaded', function(){
+            //// 카테고리 기본으로 펴기
+            const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
+            const catOpenLevel = '[##_var_catOpenLevel_##]';
+            if( catOpenLevel === 'openAll' ){// 모두 열기
+              for( let li of category_list_lis ){
+                li.classList.add('open');
+              }
+            }else if( catOpenLevel === 'openCurr' ){
+              const currCat = (function(){
+                if( window.location.pathname.startsWith('/category/') ){// 카테고리 페이지
+                  return window.location.pathname.substring(10).split('/')[0];// 10: '/category/' 글자수
+                }else{
+                  let catBtn = document.querySelector('#postPagePost .func .category');
+                  if( catBtn != null ){
+                    return encodeURIComponent( catBtn.innerText.split('/')[0] );
+                  }
+                }
+                return null;
+              })();
+              if( currCat !== null ){
+                const pathname = '/category/' + currCat;
+                for( let li of category_list_lis ){
+                  if( li.getElementsByTagName('a')[0].getAttribute('href') === pathname ){
+                    li.classList.add('open');
+                    break;
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </div></s_sidebar_element>
+
+      <s_sidebar_element><div class="sidebar_element"><!-- 검색창 -->
+        <button class="bubbleBtn themeBtn">&#x1F50D;</button>
+        <div class="sidebar_elementMain search">
+          <form><s_search>
+            <input type="text" 
+              class="themeInput searchInput"
+              name="[##_search_name_##]" 
+              value="[##_search_text_##]" 
+              onkeypress="if( event.keyCode == 13 ){ [##_search_onclick_submit_##] }"
+              placeholder="검색어 입력" 
+              autocomplete=off
+              style="
+                  width: 200px;
+                  vertical-align: middle;" /> 
+            <button type="button" 
+              class="submit"
+              onclick="[##_search_onclick_submit_##]" 
+              style="
+                  font-size: 150%;
+                  vertical-align: middle;" 
+              >&#x1F50D;</button>
+          </s_search></form>
+        </div>
+        <span class="caption">찾기</span>
+      </div></s_sidebar_element>
+
+    </s_sidebar></aside>
+    <button class="sidebarBtn themeBtn" >≡</button><!-- 펼접버튼 -->
+  </div><!-- 사이드바상자1 ##-->

@@ -1,0 +1,28 @@
+
+  <!--## 메인영역2 -->
+  <div id="main2Box"><div id="main2">
+
+{% include "skin-comps/pages/최근공지.html" %}
+
+    <!--### 메인 -->
+    <main id="main">
+{% include "skin-comps/pages/홈커버.html" %}
+{% include "skin-comps/pages/페이지페이지.html" %}
+{% include "skin-comps/pages/공지페이지.html" %}
+{% include "skin-comps/pages/글페이지/main.html" %}
+{% include "skin-comps/pages/글목록페이지/main.html" %}
+{% include "skin-comps/pages/태그페이지.html" %}
+{% include "skin-comps/pages/방명록페이지.html" %}
+    </main><!-- 메인 ###-->
+    <script>//{% include "skin-comps/pages/main.js" %}</script>
+
+{% include "skin-comps/pages/글목록페이징.html" %}
+
+    <!--### 하단 광고 -->
+    <div id="under">[##_revenue_list_lower_##]</div>
+
+  </div></div><!-- 메인영역2 ##--><script type="text/javascript">
+    const main2Box = document.getElementById('main2Box');
+    const main2    = document.getElementById('main2');
+    main2.style.maxWidth = maxWidthOfMain2 + 'px';
+  </script>
