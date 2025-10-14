@@ -1,0 +1,70 @@
+/**##### 썸네일 및 제목 card */
+#postList.card .category ,/* 나머지 요소 숨김 */
+#postList.card .writer ,
+#postList.card .content {
+  display: none;
+}
+#postList.card {
+  text-align: center;
+}
+#postList.card > */*li*/ {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 40px 12px;/* 간격 */
+  box-shadow: 1px 1px 4px #0008;/* 그림자 */
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  text-align: left;
+}
+#postList.card > */*li*/ > */*a*/ {
+  padding: 20px 10px;
+  box-sizing: content-box;
+}
+#postList.card .thumbnail {/* 썸네일 경계선 */
+  border: 1px solid #ddd;
+  border: 1px solid var(--borderCol);
+  background-color: #ddd;
+  background-color: var(--borderCol);
+  overflow: hidden;
+}
+#postList.card .thumbnail img {/* 썸네일 */
+  max-height: 200px;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  transition-duration: 0.5s;
+}
+@media (max-width: 600px) {/* 이유는 모르겠는데 딴데서는 안 그러고 모바일 삼성인터넷에서만 얘 땜에 가로스크롤 생김  */
+  #postList.card .thumbnail img {
+    max-width: 100%;
+  }
+}
+#postList.card .itemHead {
+  margin-top: 5px;
+  max-width: 300px;
+}
+#postList.card .title {
+  font-size: 110%;
+  font-weight: normal;
+}
+#postList.card .itemBody {/* 날짜 */
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  text-align: right;
+  font-family: 'Gaegu', cursive;
+  font-size: 0.9em;
+  line-height: 1;
+}
+#postList.card .tape {/* 테이프 장식 */
+  height: 65px;
+  width: 35px;
+  top: -30px;
+  left: 45%;
+  transform: rotate(10deg);
+}
+#postList.card > */*li*/:hover .thumbnail img {/* 마우스 올리면 그림 확대 */
+  transform: scale(1.1);
+}

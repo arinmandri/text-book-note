@@ -369,26 +369,26 @@
 	</variables>
 
 
-	<liststyle>
-		<item>
-			<label>큼직 한 줄</label>
-			<value>train</value>
-		</item>
-		<item>
-			<label>썸네일만</label>
-			<value>album</value>
-		</item>
-		<item>
-			<label>썸네일 및 제목</label>
-			<value>card</value>
-		</item>
-		<item>
-			<label>간략 목록</label>
-			<value>simple</value>
-		</item>
-		<item>
-			<label>복잡 목록</label>
-			<value>detailed</value>
-		</item>
-	</liststyle>
+<liststyle>
+	<item>
+		<label>큼직 한 줄</label>
+		<value>train</value>
+	</item>
+	<item>
+		<label>썸네일만</label>
+		<value>album</value>
+	</item>
+	<item>
+		<label>썸네일 및 제목</label>
+		<value>card</value>
+	</item>
+	<item>
+		<label>간략 목록</label>
+		<value>simple</value>
+	</item>
+	<item>
+		<label>복잡 목록</label>
+		<value>detailed</value>
+	</item>
+</liststyle>
 </skin>

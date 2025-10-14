@@ -60,7 +60,7 @@
 			<showValue>1</showValue>
 		</tree>
 
-		<liststyle>card</liststyle>
+		<liststyle>{% include "liststyle/defaultOption" %}</liststyle>
 	</default>
 {% include "index/cover.xml" %}
 
@@ -70,5 +70,5 @@
 {% include "index/variablegroup-zzz.xml" %}
 	</variables>
 
-{% include "index/liststyle.xml" %}
+{% include "liststyle/liststyle.xml" %}
 </skin>
