@@ -32,22 +32,50 @@ document.body.classList.add('login-' + T.config.ROLE);
   <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
 </div>
 
-{% include "skin-comps/global/header.html" %}
+{% include "skin-comps/header.html" %}
 
 <!--# 메인영역1 -->
 <div id="main1">
-{% include "skin-comps/global/sidebars/sidebar1.html" %}
-{% include "skin-comps/global/main2.html" %}
-{% include "skin-comps/global/sidebars/sidebar2.html" %}
+{% include "skin-comps/sidebars/sidebar1.html" %}
+
+  <!--## 메인영역2 -->
+  <div id="main2Box"><div id="main2">
+
+{% include "skin-comps/pages/최근공지.html" %}
+
+    <!--### 메인 -->
+    <main id="main">
+{% include "skin-comps/pages/홈커버.html" %}
+{% include "skin-comps/pages/페이지페이지.html" %}
+{% include "skin-comps/pages/공지페이지.html" %}
+{% include "skin-comps/pages/글페이지/main.html" %}
+{% include "skin-comps/pages/글목록페이지/main.html" %}
+{% include "skin-comps/pages/태그페이지.html" %}
+{% include "skin-comps/pages/방명록페이지.html" %}
+    </main><!-- 메인 ###-->
+    <script>//{% include "skin-comps/pages/main.js" %}
+    </script>
+
+{% include "skin-comps/pages/글목록페이징.html" %}
+
+    <!--### 하단 광고 -->
+    <div id="under">[##_revenue_list_lower_##]</div>
+
+  </div></div><!-- 메인영역2 ##--><script type="text/javascript">
+    const main2Box = document.getElementById('main2Box');
+    const main2    = document.getElementById('main2');
+    main2.style.maxWidth = maxWidthOfMain2 + 'px';
+  </script>
+{% include "skin-comps/sidebars/sidebar2.html" %}
 </div><!-- 메인영역1 #-->
 
-{% include "skin-comps/global/sidebars/sidebar3.html" %}
+{% include "skin-comps/sidebars/sidebar3.html" %}
 
 <script>
-//{% include "skin-comps/global/sidebars/sidebars.js" %}
+//{% include "skin-comps/sidebars/sidebars.js" %}
 </script>
 
-{% include "skin-comps/global/footer.html" %}
+{% include "skin-comps/footer.html" %}
 
 </s_t3></body>
 </html>

@@ -43,9 +43,9 @@ body {
 
 
 
-{% include "skin-comps/global/style.css" %}
-{% include "skin-comps/global/main.css" %}
-{% include "skin-comps/global/sidebars/style.css" %}
+{% include "skin-comps/style.css" %}
+{% include "skin-comps/main.css" %}
+{% include "skin-comps/sidebars/style.css" %}
 
 
 
