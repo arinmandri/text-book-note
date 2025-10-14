@@ -1,28 +1,28 @@
 
 html[data-theme="light"] {
-    --backCol: [##_var_backCol_light_##];
-    --baseTextCol: [##_var_baseTextCol_light_##];
-    --listBack: [##_var_listBack_light_##];
-    --borderCol: [##_var_borderCol_light_##];
-    --frameBack: [##_var_frameBack_light_##];
-    --frameFore: [##_var_frameFore_light_##];
-    --pointCol: [##_var_pointCol_light_##];
-    --bonmunTextCol: [##_var_bonmunTextCol_light_##];
-    --bonmunForm: [##_var_bonmunForm_light_##];
-    --bonmunActing: [##_var_bonmunActing_light_##];
-    --highlight: [##_var_highlight_light_##];
+  --backCol: [##_var_backCol_light_##];
+  --baseTextCol: [##_var_baseTextCol_light_##];
+  --listBack: [##_var_listBack_light_##];
+  --borderCol: [##_var_borderCol_light_##];
+  --frameBack: [##_var_frameBack_light_##];
+  --frameFore: [##_var_frameFore_light_##];
+  --pointCol: [##_var_pointCol_light_##];
+  --bonmunTextCol: [##_var_bonmunTextCol_light_##];
+  --bonmunForm: [##_var_bonmunForm_light_##];
+  --bonmunActing: [##_var_bonmunActing_light_##];
+  --highlight: [##_var_highlight_light_##];
 }
 
 html[data-theme="dark"] {
-    --backCol: [##_var_backCol_dark_##];
-    --baseTextCol: [##_var_baseTextCol_dark_##];
-    --listBack: [##_var_listBack_dark_##];
-    --borderCol: [##_var_borderCol_dark_##];
-    --frameBack: [##_var_frameBack_dark_##];
-    --frameFore: [##_var_frameFore_dark_##];
-    --pointCol: [##_var_pointCol_dark_##];
-    --bonmunTextCol: [##_var_bonmunTextCol_dark_##];
-    --bonmunForm: [##_var_bonmunForm_dark_##];
-    --bonmunActing: [##_var_bonmunActing_dark_##];
-    --highlight: [##_var_highlight_dark_##];
+  --backCol: [##_var_backCol_dark_##];
+  --baseTextCol: [##_var_baseTextCol_dark_##];
+  --listBack: [##_var_listBack_dark_##];
+  --borderCol: [##_var_borderCol_dark_##];
+  --frameBack: [##_var_frameBack_dark_##];
+  --frameFore: [##_var_frameFore_dark_##];
+  --pointCol: [##_var_pointCol_dark_##];
+  --bonmunTextCol: [##_var_bonmunTextCol_dark_##];
+  --bonmunForm: [##_var_bonmunForm_dark_##];
+  --bonmunActing: [##_var_bonmunActing_dark_##];
+  --highlight: [##_var_highlight_dark_##];
 }
