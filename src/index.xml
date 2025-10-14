@@ -10,8 +10,58 @@
 			<![CDATA[아직 만드는 중]]>
 		</license>
 	</information>
-{% include "index/author.xml" %}
-{% include "index/default.xml" %}
+
+	<author>
+		<name>김영선</name>
+		<homepage>https://peekabook.tistory.com</homepage>
+		<email>arinmandri@gmail.com</email>
+	</author>
+
+	<default>
+		<entriesOnPage>20</entriesOnPage><!-- 홈 화면 글 수 -->
+		<entriesOnList>30</entriesOnList><!-- 글 목록 글 수 -->
+
+		<itemsOnGuestbook>100</itemsOnGuestbook><!-- 한페이지에 표시될 방명록 갯수 -->
+
+		<recentEntries>7</recentEntries><!-- 사이드바의 최근글 표시 갯수 -->
+		<lengthOfRecentEntry>50</lengthOfRecentEntry><!-- 최근 글 표현될 글자수 -->
+		<recentComments>7</recentComments><!-- 사이드바의 최근 댓글 표시 갯수 -->
+		<lengthOfRecentComment>50</lengthOfRecentComment><!-- 최근 댓글에 표현될 글자수 -->
+		<recentTrackbacks>7</recentTrackbacks><!-- 사이드바의 최근 트랙백 표시 갯수 -->
+		<lengthOfRecentTrackback>50</lengthOfRecentTrackback><!-- 최근 트랙백에 표현될 글자수 -->
+
+		<lengthOfRecentNotice>127</lengthOfRecentNotice><!-- 최근 공지 표현될 글자수 -->
+
+		<tagsInCloud>25</tagsInCloud><!-- 127 넘으면 스킨 적용이 안 되는데 그 원인을 알려주지도 않아서 노가다로 찾음 -->
+		<sortInCloud>1</sortInCloud><!-- 태그 클라우드 표현 방식 (1:인기도순, 2:이름순, 3:랜덤) -->
+
+		<expandComment>1</expandComment><!-- 댓글영역 표현 방식 (0:감추기, 1:펼치기) -->
+		<expandTrackback>0</expandTrackback><!-- 트랙백영역 표현 방식 (0:감추기, 1:펼치기) -->
+		<lengthOfLink>30</lengthOfLink><!-- 링크에 표현될 글자수 --><!-- 뭔 링크 ??? -->
+
+		<showListOnCategory>1</showListOnCategory><!-- 커버 미사용 홈에서 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
+		<showListOnArchive>1</showListOnArchive><!-- ??? -->
+		<showListLock>0</showListLock><!-- 홈 설정과 기본 설정에서 '목록 구성 요소' 항목의 노출 여부 결정 (0: 노출, 1: 노출 안 함) -->
+		<commentMessage>
+			<none>댓글이 없습니다.</none>
+			<single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>받은 트랙백이 없고</none>
+			<single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+		</trackbackMessage>
+
+		<tree><!-- ??? -->
+			<color>ff0000</color>
+			<bgColor>ff0000</bgColor>
+			<activeColor>ff0000</activeColor>
+			<activeBgColor>ff0000</activeBgColor>
+			<labelLength>50</labelLength>
+			<showValue>1</showValue>
+		</tree>
+
+		<liststyle>card</liststyle>
+	</default>
 {% include "index/cover.xml" %}
 
 	<variables>

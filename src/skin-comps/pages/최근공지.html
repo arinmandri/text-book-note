@@ -1,47 +1,47 @@
 
-    <s_rct_notice><!--### 최근공지 -->
-      <div id="recentNotice" style="position: relative">
-        <input type="hidden" name="hideNotice" value="false">
-        <svg class="pushpin" width="23px" height="45px">
-          <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
-          <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
-        </svg>
-        <div id="recentNoticeListBox">
-          <ul id="recentNoticeList">
-            <s_rct_notice_rep><li>
-              <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
-            </li></s_rct_notice_rep>
-          </ul>
-        </div>
-      </div>
-      <script type="text/javascript">
-        const rctNoticeLis = document.querySelectorAll('#recentNoticeList li');
+<s_rct_notice><!--### 최근공지 -->
+  <div id="recentNotice" style="position: relative">
+    <input type="hidden" name="hideNotice" value="false">
+    <svg class="pushpin" width="23px" height="45px">
+      <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
+      <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
+    </svg>
+    <div id="recentNoticeListBox">
+      <ul id="recentNoticeList">
+        <s_rct_notice_rep><li>
+          <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+        </li></s_rct_notice_rep>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    const rctNoticeLis = document.querySelectorAll('#recentNoticeList li');
 
-        function showNextItem() {
-          const prev = document.querySelector('#recentNoticeList li.prev');
-          if( prev != null ){
-            prev.classList.remove('prev');
-          }
-          for( let index=0; index < rctNoticeLis.length; index+=1 ){
-            const item = rctNoticeLis[index];
-            if( item.classList.contains('curr') ){
-              item.classList.remove('curr');
-              item.classList.add('prev');
-              let nextIndex = ( index+1 ) % rctNoticeLis.length;
-              rctNoticeLis[nextIndex].classList.add('curr');
-              break;
-            }
-          }
+    function showNextItem() {
+      const prev = document.querySelector('#recentNoticeList li.prev');
+      if( prev != null ){
+        prev.classList.remove('prev');
+      }
+      for( let index=0; index < rctNoticeLis.length; index+=1 ){
+        const item = rctNoticeLis[index];
+        if( item.classList.contains('curr') ){
+          item.classList.remove('curr');
+          item.classList.add('prev');
+          let nextIndex = ( index+1 ) % rctNoticeLis.length;
+          rctNoticeLis[nextIndex].classList.add('curr');
+          break;
         }
+      }
+    }
 
-        if( rctNoticeLis.length === 0 ){
-          //// 최근공지 없으면 최근공지 상자 삭제
-          document.getElementById('recentNotice').remove();
-        }else{
-          rctNoticeLis[0].classList.add('curr');
-          if( rctNoticeLis.length >= 2 ){
-            setInterval(showNextItem, 5000);
-          }
-        }
-      </script>
-    </s_rct_notice>
+    if( rctNoticeLis.length === 0 ){
+      //// 최근공지 없으면 최근공지 상자 삭제
+      document.getElementById('recentNotice').remove();
+    }else{
+      rctNoticeLis[0].classList.add('curr');
+      if( rctNoticeLis.length >= 2 ){
+        setInterval(showNextItem, 5000);
+      }
+    }
+  </script>
+</s_rct_notice>

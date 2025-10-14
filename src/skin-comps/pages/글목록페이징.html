@@ -1,30 +1,30 @@
 
 
-    <s_paging><!--### 페이징 -->
-      <div id="paging" class="paging">
-        <a [##_prev_page_##] class="[##_no_more_prev_##]"><button class="themeBtn">◀</button></a>
-          <s_paging_rep>
-            <a [##_paging_rep_link_##] class="num"><button class="themeBtn">[##_paging_rep_link_num_##]</button></a>
-          </s_paging_rep>
-        <a [##_next_page_##] class="[##_no_more_next_##]"><button class="themeBtn">▶</button></a>
-      </div>
-      <script>(function(){ // 글목록 페이지의 상단부분에도 페이징 복붙하기
-        const paging = document.getElementById('paging');
+<s_paging><!--### 페이징 -->
+  <div id="paging" class="paging">
+    <a [##_prev_page_##] class="[##_no_more_prev_##]"><button class="themeBtn">◀</button></a>
+      <s_paging_rep>
+        <a [##_paging_rep_link_##] class="num"><button class="themeBtn">[##_paging_rep_link_num_##]</button></a>
+      </s_paging_rep>
+    <a [##_next_page_##] class="[##_no_more_next_##]"><button class="themeBtn">▶</button></a>
+  </div>
+  <script>(function(){ // 글목록 페이지의 상단부분에도 페이징 복붙하기
+    const paging = document.getElementById('paging');
 
-        //// 페이지가 1개 이하이면 페이징 버튼 삭제
-        if( paging.childElementCount <= 3 ){
-          paging.remove();
-          const pagingCopy = document.getElementById('pagingCopy');
-          if( pagingCopy != null ){
-            pagingCopy.remove();
-          }
-        }
-        //// 목록 상단이랑 하단 둘다 페이징 버튼 있었으면 좋겠으니까 복사
-        else{
-          const pagingCopy = document.getElementById('pagingCopy');
-          if( pagingCopy != null ){
-            pagingCopy.innerHTML = paging.innerHTML;
-          }
-        }
-      })();</script>
-    </s_paging>
+    //// 페이지가 1개 이하이면 페이징 버튼 삭제
+    if( paging.childElementCount <= 3 ){
+      paging.remove();
+      const pagingCopy = document.getElementById('pagingCopy');
+      if( pagingCopy != null ){
+        pagingCopy.remove();
+      }
+    }
+    //// 목록 상단이랑 하단 둘다 페이징 버튼 있었으면 좋겠으니까 복사
+    else{
+      const pagingCopy = document.getElementById('pagingCopy');
+      if( pagingCopy != null ){
+        pagingCopy.innerHTML = paging.innerHTML;
+      }
+    }
+  })();</script>
+</s_paging>

@@ -1,44 +1,44 @@
 
-        <!--▶ 머리 부분 -->
-        <div id="listHead">
-          <!--페이지 제목 등 -->
-          <div class="titleBox">
-            <h1 class="title pageTitle">[##_list_conform_##]</h1>
-            <div class="subtitle">
-              <span id="listPage-head-pagetype" class="pagetype"></span>
-              <span class="postNum _fontSans">[##_list_count_##]</span>개
-              <script>(function(){ // 페이지별 문구 다르게
-                const a = document.getElementById('listPage-head-pagetype')
-                if( document.getElementById('tt-body-category') != null )
-                  a.innerText = '카테고리의 게시글 '
-                if( document.getElementById('tt-body-archive') != null )
-                  a.innerText = '보관함의 게시글 '
-                if( document.getElementById('tt-body-tag') != null )
-                  a.innerText = '태그가 있는 게시글 '
-                if( document.getElementById('tt-body-search') != null )
-                  a.innerText = '검색 결과 '
-                if( document.getElementById('tt-body-index') != null )
-                  a.innerText = '게시글 수 '
-              })()</script>
-            </div>
-          </div>
-          <!-- 페이지 설명 등 -->
-          <div class="decoBox">
-            <!-- 대표 이미지 -->
-            <div>
-              <s_list_image><img loading="lazy" class="image" src="[##_list_image_##]"></s_list_image>
-            </div>
-            <!-- 설명 -->
-            <p class="description _fontCursive">[##_list_description_##]</p>
-            <!-- 꾸밈테이프 -->
-            <span class="tape tape1"></span>
-            <span class="tape tape2"></span>
-          </div>
-          <script>(function(){
-            //// 썸네일 & 설명 둘다 없으면 꾸밈상자 삭제
-            if( document.querySelector('.decoBox .image') == null 
-             && document.querySelector('.decoBox .description').innerHTML == '' ){
-              document.querySelector('.decoBox').remove()
-            }
-          })()</script>
-        </div>
+<!--▶ 머리 부분 -->
+<div id="listHead">
+  <!--페이지 제목 등 -->
+  <div class="titleBox">
+    <h1 class="title pageTitle">[##_list_conform_##]</h1>
+    <div class="subtitle">
+      <span id="listPage-head-pagetype" class="pagetype"></span>
+      <span class="postNum _fontSans">[##_list_count_##]</span>개
+      <script>(function(){ // 페이지별 문구 다르게
+        const a = document.getElementById('listPage-head-pagetype')
+        if( document.getElementById('tt-body-category') != null )
+          a.innerText = '카테고리의 게시글 '
+        if( document.getElementById('tt-body-archive') != null )
+          a.innerText = '보관함의 게시글 '
+        if( document.getElementById('tt-body-tag') != null )
+          a.innerText = '태그가 있는 게시글 '
+        if( document.getElementById('tt-body-search') != null )
+          a.innerText = '검색 결과 '
+        if( document.getElementById('tt-body-index') != null )
+          a.innerText = '게시글 수 '
+      })()</script>
+    </div>
+  </div>
+  <!-- 페이지 설명 등 -->
+  <div class="decoBox">
+    <!-- 대표 이미지 -->
+    <div>
+      <s_list_image><img loading="lazy" class="image" src="[##_list_image_##]"></s_list_image>
+    </div>
+    <!-- 설명 -->
+    <p class="description _fontCursive">[##_list_description_##]</p>
+    <!-- 꾸밈테이프 -->
+    <span class="tape tape1"></span>
+    <span class="tape tape2"></span>
+  </div>
+  <script>(function(){
+    //// 썸네일 & 설명 둘다 없으면 꾸밈상자 삭제
+    if( document.querySelector('.decoBox .image') == null 
+      && document.querySelector('.decoBox .description').innerHTML == '' ){
+      document.querySelector('.decoBox').remove()
+    }
+  })()</script>
+</div>
