@@ -285,7 +285,6 @@ document.body.classList.add('login-' + T.config.ROLE);
   <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
   <div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold"><!-- 클래스 초기상태: 모두 접힘 -->
     <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
-
       <s_sidebar_element><div class="sidebar_element"><!-- 메뉴 -->
         <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
         <nav id="navMenu" class="sidebar_elementMain">
@@ -303,7 +302,6 @@ document.body.classList.add('login-' + T.config.ROLE);
           })()</script>
         </nav>
       </div></s_sidebar_element>
-
       <s_sidebar_element><div class="sidebar_element"><!-- 카테고리 -->
         <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
         <nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
@@ -358,7 +356,6 @@ document.body.classList.add('login-' + T.config.ROLE);
           });
         </script>
       </div></s_sidebar_element>
-
       <s_sidebar_element><div class="sidebar_element"><!-- 검색창 -->
         <button class="bubbleBtn themeBtn">&#x1F50D;</button>
         <div class="sidebar_elementMain search">
@@ -384,7 +381,6 @@ document.body.classList.add('login-' + T.config.ROLE);
         </div>
         <span class="caption">찾기</span>
       </div></s_sidebar_element>
-
     </s_sidebar></aside>
     <button class="sidebarBtn themeBtn" >≡</button><!-- 펼접버튼 -->
   </div><!-- 사이드바상자1 ##-->
@@ -1160,7 +1156,6 @@ document.body.classList.add('login-' + T.config.ROLE);
   <!--## 사이드바상자2 : 오른쪽 사이드바 영역 -->
   <div id="sidebarBox2" class="sidebarBox fold"><!-- 클래스 초기상태: 모두 접힘 -->
     <aside id="sidebar2" class="sidebar sidebarV"><s_sidebar>
-
       <s_sidebar_element><div class="sidebar_element datetime"><!-- 현재시각 -->
         <button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
         <div class="sidebar_elementMain">
@@ -1241,7 +1236,6 @@ document.body.classList.add('login-' + T.config.ROLE);
         </div>
         <span class="caption">현재시각</span>
       </div></s_sidebar_element>
-
       <s_sidebar_element><div class="sidebar_element bonmunContentsTable"><!-- 본문 목차 -->
         <button class="bubbleBtn themeBtn">&#x2630;</button>
         <div class="sidebar_elementMain">
@@ -1332,7 +1326,6 @@ document.body.classList.add('login-' + T.config.ROLE);
           }
         })();</script>
       </div></s_sidebar_element>
-
       <s_sidebar_element><div class="sidebar_element"><!-- 설정 -->
         <button class="bubbleBtn themeBtn">&#x2699;&#xFE0F;</button>
         <div class="sidebar_elementMain settings">
@@ -1406,7 +1399,6 @@ document.body.classList.add('login-' + T.config.ROLE);
         </div>
         <span class="caption">설정</span>
       </div></s_sidebar_element>
-
       <s_sidebar_element><div class="sidebar_element description"><!-- 이 블로그는 -->
         <button class="bubbleBtn themeBtn">&#x2754;</button>
         <div class="sidebar_elementMain description" style="position: relative">
@@ -1489,7 +1481,7 @@ document.body.classList.add('login-' + T.config.ROLE);
 <!--### 사이드바3 -->
 <aside id="sidebar3" class="sidebar sidebarH">
   <s_sidebar>
-    <s_sidebar_element><div class="sidebar_element"><!-- 랜덤태그 -->
+      <s_sidebar_element><div class="sidebar_element"><!-- 랜덤태그 -->
       <button class="bubbleBtn themeBtn">&#x2601;&#xFE0F;</button>
       <div class="sidebar_elementMain randomtag">
         <p class="padding">
@@ -1498,8 +1490,7 @@ document.body.classList.add('login-' + T.config.ROLE);
       </div>
       <span class="caption">랜덤태그</span>
     </div></s_sidebar_element>
-
-    <s_sidebar_element><div class="sidebar_element"><!-- 인기글 -->
+      <s_sidebar_element><div class="sidebar_element"><!-- 인기글 -->
       <button class="bubbleBtn themeBtn">&#x1F525;</button>
       <ol class="sidebar_elementMain popularpost">
         <s_rctps_popular_rep><li class="line-out"><a href="[##_rctps_rep_link_##]" class="line-in">
@@ -1509,8 +1500,7 @@ document.body.classList.add('login-' + T.config.ROLE);
       </ol>
       <span class="caption">인기글</span>
     </div></s_sidebar_element>
-
-    <s_sidebar_element><div class="sidebar_element"><!-- 최근 글 -->
+      <s_sidebar_element><div class="sidebar_element"><!-- 최근 글 -->
       <button class="bubbleBtn themeBtn">&#x26A1;</button>
       <ol class="sidebar_elementMain recentpost">
         <s_rctps_rep><li class="line-out"><a href="[##_rctps_rep_link_##]" class="line-in">
@@ -1520,8 +1510,7 @@ document.body.classList.add('login-' + T.config.ROLE);
       </ol>
       <span class="caption">최근 글</span>
     </div></s_sidebar_element>
-
-    <s_sidebar_element><div class="sidebar_element"><!-- 최근 댓글 -->
+      <s_sidebar_element><div class="sidebar_element"><!-- 최근 댓글 -->
       <button class="bubbleBtn themeBtn">&#x1F4AC;</button>
       <ol class="sidebar_elementMain recentcomment">
         <s_rctrp_rep><li class="line-out"><a href="[##_rctrp_rep_link_##]" class="line-in">
@@ -1530,8 +1519,7 @@ document.body.classList.add('login-' + T.config.ROLE);
       </ol>
       <span class="caption">최근 댓글</span>
     </div></s_sidebar_element>
-
-    <s_sidebar_element><div class="sidebar_element"><!-- 방문자 수 -->
+      <s_sidebar_element><div class="sidebar_element"><!-- 방문자 수 -->
       <button class="bubbleBtn themeBtn">&#x1F465;</button>
       <div class="sidebar_elementMain visitcount">
         <p class="padding" style="font-size: 0.9em">

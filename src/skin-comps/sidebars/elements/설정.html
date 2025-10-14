@@ -1,0 +1,73 @@
+<div class="sidebar_element"><!-- 설정 -->
+        <button class="bubbleBtn themeBtn">&#x2699;&#xFE0F;</button>
+        <div class="sidebar_elementMain settings">
+          <div class="settingForm darkmode">
+            <input class="settingCore" type="hidden" name="darkmode" onchange="onchangeDarkmode(this)" oninvalid="setDefaultDarkmode(this)">
+            빛깔: <button id="darkmodeBtn" class="settingAction toggle">&#x2713;</button>
+            <input type="checkbox" class="fixCbox" oninvalid="setDefaultDarkmode()" /><label class="fixCboxLabel">굄</label>
+            <script type="text/javascript">
+              function onchangeDarkmode( settingCore ){
+                setDarkmode( settingCore );
+                setSettingFixCbox( settingCore.name, true );
+              }
+
+              function setDarkmode( settingCore , isDark ){
+                if( isDark === undefined )
+                  isDark = settingCore.value === 'true' ? true : false;
+
+                if( isDark ){
+                  document.body.classList.add('theme-dark');
+                  document.body.classList.remove('theme-light');
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                  document.body.classList.add('theme-light');
+                  document.body.classList.remove('theme-dark');
+                  document.documentElement.setAttribute('data-theme', 'light');
+                }
+              }
+
+              //// 시간대에 따라 다크모드 설정
+              function setDefaultDarkmode( settingCore ) {
+                if( settingCore === undefined )
+                  settingCore = document.getElementById('settingCore-darkmode');
+
+                const hour = new Date().getHours();
+                if( hour >= 18 || hour < 6 ){
+                  settingCore.value = 'true';
+                  setDarkmode( settingCore, true );
+                }else{
+                  settingCore.value = 'false';
+                  setDarkmode( settingCore, false );
+                }
+              }
+            </script>
+          </div>
+
+          <div class="fontsize settingForm">
+            <input type="hidden" class="settingCore" name="fontsize" value="100" onchange="onchangeFontsize(this)" />
+            글자: 
+            <button class="fontsizeBtn fontsizeBtnDown  themeBtn" onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
+            <button class="fontsizeBtn fontsizeBtnReset themeBtn" onclick="clickFontsizeBtn( 0)" >보통</button>
+            <button class="fontsizeBtn fontsizeBtnUp    themeBtn" onclick="clickFontsizeBtn( 1)"  style="font-size: 135%;">크게</button>
+            <input type="checkbox" class="fixCbox" /><label class="fixCboxLabel">굄</label>
+            <script type="text/javascript">
+              function onchangeFontsize( settingCore ) {
+                document.body.style.fontSize = settingCore.value + '%';
+              }
+
+              function clickFontsizeBtn( goup ){
+                let value = Number(getSettingValue('fontsize'));
+                if( goup === 1 ){
+                  value += 5; if( value > 150 ) value = 150;
+                }else if( goup === -1 ){
+                  value -= 5; if( value < 75 ) value = 75;
+                }else{
+                  value = 100;
+                }
+                setSettingValue( 'fontsize', value );
+              }
+            </script>
+          </div>
+        </div>
+        <span class="caption">설정</span>
+      </div>
