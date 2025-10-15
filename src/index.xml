@@ -96,5 +96,5 @@
 		</variablegroup>
 	</variables>
 
-{% include "liststyle/liststyle.xml" %}
+{% include "skin-comps/liststyle/liststyle.xml" %}
 </skin>
