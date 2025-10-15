@@ -1,0 +1,25 @@
+<div class="fontsize settingForm">
+  <input type="hidden" class="settingCore" name="fontsize" value="100" onchange="onchangeFontsize(this)" />
+  글자: 
+  <button class="fontsizeBtn fontsizeBtnDown  themeBtn" onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
+  <button class="fontsizeBtn fontsizeBtnReset themeBtn" onclick="clickFontsizeBtn( 0)" >보통</button>
+  <button class="fontsizeBtn fontsizeBtnUp    themeBtn" onclick="clickFontsizeBtn( 1)"  style="font-size: 135%;">크게</button>
+  <label><input type="checkbox" class="fixCbox" />굄</label>
+  <script type="text/javascript">
+    function onchangeFontsize( settingCore ) {
+      document.body.style.fontSize = settingCore.value + '%';
+    }
+
+    function clickFontsizeBtn( goup ){
+      let value = Number(getSettingValue('fontsize'));
+      if( goup === 1 ){
+        value += 5; if( value > 150 ) value = 150;
+      }else if( goup === -1 ){
+        value -= 5; if( value < 75 ) value = 75;
+      }else{
+        value = 100;
+      }
+      setSettingValue( 'fontsize', value );
+    }
+  </script>
+</div>

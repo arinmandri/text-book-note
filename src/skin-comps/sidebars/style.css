@@ -219,5 +219,5 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 {% include "skin-comps/sidebars/elements/랜덤태그.css" %}
 {% include "skin-comps/sidebars/elements/검색.css" %}
 {% include "skin-comps/sidebars/elements/이블로그는.css" %}
-{% include "skin-comps/sidebars/elements/설정.css" %}
+{% include "skin-comps/sidebars/elements/인블로그설정.css" %}
 {% include "skin-comps/sidebars/elements/인기글-최근글-최근댓글.css" %}

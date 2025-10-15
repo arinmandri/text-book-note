@@ -1,0 +1,41 @@
+<div class="settingForm darkmode">
+  <input class="settingCore" type="hidden" name="darkmode" onchange="onchangeDarkmode(this)" oninvalid="setDefaultDarkmode(this)">
+  빛깔: <button id="darkmodeBtn" class="settingAction toggle">&#x2713;</button>
+  <label><input type="checkbox" class="fixCbox" oninvalid="setDefaultDarkmode()" />굄</label>
+  <script type="text/javascript">
+    function onchangeDarkmode( settingCore ){
+      setDarkmode( settingCore );
+      setSettingFixCbox( settingCore.name, true );
+    }
+
+    function setDarkmode( settingCore , isDark ){
+      if( isDark === undefined )
+        isDark = settingCore.value === 'true' ? true : false;
+
+      if( isDark ){
+        document.body.classList.add('theme-dark');
+        document.body.classList.remove('theme-light');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.body.classList.add('theme-light');
+        document.body.classList.remove('theme-dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    //// 시간대에 따라 다크모드 설정
+    function setDefaultDarkmode( settingCore ) {
+      if( settingCore === undefined )
+        settingCore = document.getElementById('settingCore-darkmode');
+
+      const hour = new Date().getHours();
+      if( hour >= 18 || hour < 6 ){
+        settingCore.value = 'true';
+        setDarkmode( settingCore, true );
+      }else{
+        settingCore.value = 'false';
+        setDarkmode( settingCore, false );
+      }
+    }
+  </script>
+</div>

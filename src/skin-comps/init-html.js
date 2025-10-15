@@ -20,6 +20,6 @@ function getParameters() {
 }
 const param = getParameters();
 
-//{% include "settings/darkmode-html.js" %}
+//{% include "inblog-settings/darkmode-html.js" %}
 
 //{% include "extentions/checkDeletePost/script.js" %}
