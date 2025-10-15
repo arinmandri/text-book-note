@@ -1,0 +1,12 @@
+<variable>
+	<name>catOpenLevel</name>
+	<label>카테고리 초기 열림 상태</label>
+	<description>카테고리 메뉴 항목들의 초기 열림 상태</description>
+	<type>SELECT</type>
+	<option><![CDATA[[
+			{"name":"collapse", "value":"collapse", "label":"모두 닫기"},
+			{"name":"openCurr", "value":"openCurr", "label":"현재 카테고리만 열기"},
+			{"name":"openAll",  "value":"openAll",  "label":"모두 열기"}
+	]]]></option>
+	<default>openCurr</default>
+</variable>

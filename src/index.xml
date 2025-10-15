@@ -73,24 +73,13 @@
 {% include "skin-comps/sidebars/tskin_variable.xml" %}
 		</variablegroup>
 
-		<variablegroup name="본문">
+		<variablegroup name="게시글">
 {% include "extentions/bonmunHeading/index_variable.xml" %}
 {% include "extentions/checkDeletePost/index_variable.xml" %}
 		</variablegroup>
 
 		<variablegroup name="그밖에">
-			<variable>
-				<name>catOpenLevel</name>
-				<label>카테고리 초기 열림 상태</label>
-				<description>썸네일이 없는 게시글의 썸네일 표시</description>
-				<type>SELECT</type>
-				<option><![CDATA[[
-				    {"name":"collapse", "value":"collapse", "label":"모두 닫기"},
-				    {"name":"openCurr", "value":"openCurr", "label":"현재 카테고리만 열기"},
-				    {"name":"openAll",  "value":"openAll",  "label":"모두 열기"}
-				]]]></option>
-				<default>openCurr</default>
-			</variable>
+{% include "skin-comps/sidebars/elements/카테고리-tskin_variable.xml" %}
 			<variable>
 				<name>footerText</name>
 				<label>하단문구</label>
