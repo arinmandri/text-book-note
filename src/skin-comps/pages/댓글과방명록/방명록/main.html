@@ -1,0 +1,18 @@
+<s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
+  <h1 class="areaTitle">누구누구 왔다감</h1>
+
+{% include "skin-comps/pages/댓글과방명록/방명록/폼.html" %}
+
+  <div id="pagingCopy" class="paging"></div>
+
+{% include "skin-comps/pages/댓글과방명록/방명록/목록.html" %}
+
+  <p class="listMsg"></p>
+
+  <script type="text/javascript">
+    //// 댓글목록 비었으면 표시
+    if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
+      document.querySelector('#commentSec .listMsg').innerText = '방명록이 없습니다.';
+    }
+  </script>
+</div></s_guest>

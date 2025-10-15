@@ -496,7 +496,7 @@ function setSettingFixCbox( settingName, checked ){
   <hr class="areaSeparator">
 
 <s_rp><!--▶ 댓글 --><div id="commentSec">
-<h1 class="areaTitle">댓글</h1>
+  <h1 class="areaTitle">댓글</h1>
 
 <s_rp_container><!-- 댓글 목록 --><ul class="comment1List commentList">
 
@@ -536,7 +536,7 @@ function setSettingFixCbox( settingName, checked ){
   </li></s_rp_rep>
 </ul></s_rp_container>
 
-<p class="listMsg"></p>
+  <p class="listMsg"></p>
 
 <!-- 댓글 입력폼 -->
 <div class="formBox"><s_rp_input_form>
@@ -564,17 +564,17 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 </s_rp_input_form></div>
 
-<p class="formMsg"></p>
+  <p class="formMsg"></p>
 
-<script type="text/javascript">
-  //// 댓글목록 비었으면 표시
-  if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
-    document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
-  }
-  if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
-    document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
-  }
-</script>
+  <script type="text/javascript">
+    //// 댓글목록 비었으면 표시
+    if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
+      document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
+    }
+    if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
+      document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
+    }
+  </script>
 </div></s_rp>
 
   </div>
@@ -642,7 +642,7 @@ function setSettingFixCbox( settingName, checked ){
   <hr class="areaSeparator">
 
 <s_rp><!--▶ 댓글 --><div id="commentSec">
-<h1 class="areaTitle">댓글</h1>
+  <h1 class="areaTitle">댓글</h1>
 
 <s_rp_container><!-- 댓글 목록 --><ul class="comment1List commentList">
 
@@ -682,7 +682,7 @@ function setSettingFixCbox( settingName, checked ){
   </li></s_rp_rep>
 </ul></s_rp_container>
 
-<p class="listMsg"></p>
+  <p class="listMsg"></p>
 
 <!-- 댓글 입력폼 -->
 <div class="formBox"><s_rp_input_form>
@@ -710,17 +710,17 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 </s_rp_input_form></div>
 
-<p class="formMsg"></p>
+  <p class="formMsg"></p>
 
-<script type="text/javascript">
-  //// 댓글목록 비었으면 표시
-  if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
-    document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
-  }
-  if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
-    document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
-  }
-</script>
+  <script type="text/javascript">
+    //// 댓글목록 비었으면 표시
+    if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
+      document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
+    }
+    if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
+      document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
+    }
+  </script>
 </div></s_rp>
 
   <hr class="areaSeparator">
@@ -993,75 +993,74 @@ function setSettingFixCbox( settingName, checked ){
     document.getElementById('tagCount').innerText = tagBox.childElementCount +'개';
   </script>
 </s_tag>
-
 <s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
   <h1 class="areaTitle">누구누구 왔다감</h1>
 
-  <!-- 방명록 입력폼 -->
-  <div class="formBox"><s_guest_input_form>
-    <s_guest_form><p class="guest">
-        <label for="commentInput_name"     >이름:</label>
-        <input type="text"     id="commentInput_name"     class="themeInput" name="[##_guest_input_name_##]" value="[##_guest_name_##]" size="6" />
-        <label for="commentInput_password" >비밀번호:</label>
-        <input type="password" id="commentInput_password" class="themeInput" name="[##_guest_input_password_##]" value="[##_guest_password_##]" maxlength="8" size="4" />
-        <label for="commentInput_homepage" >홈페이지:</label>
-        <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" size="20" />
-    </p></s_guest_form>
-    <textarea 
-        class="commentInput themeInput" 
-        name="[##_guest_textarea_body_##]" 
-        rows="5" cols="30" 
-        placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
-    <div class="submitBox">
-      <input type="checkbox" id="commentInput_secret" name="secret" class="checkbox" />
-      <label for="commentInput_secret">귓속말로</label>
-      <input 
-          type="submit" 
-          class="commentBtn themeBtn" 
-          value="라고 한마디 하기" 
-          onclick="[##_guest_onclick_submit_##]" />
-    </div>
-  </s_guest_input_form></div>
+<!-- 방명록 입력폼 -->
+<div class="formBox"><s_guest_input_form>
+  <s_guest_form><p class="guest">
+      <label for="commentInput_name"     >이름:</label>
+      <input type="text"     id="commentInput_name"     class="themeInput" name="[##_guest_input_name_##]" value="[##_guest_name_##]" size="6" />
+      <label for="commentInput_password" >비밀번호:</label>
+      <input type="password" id="commentInput_password" class="themeInput" name="[##_guest_input_password_##]" value="[##_guest_password_##]" maxlength="8" size="4" />
+      <label for="commentInput_homepage" >홈페이지:</label>
+      <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" size="20" />
+  </p></s_guest_form>
+  <textarea 
+      class="commentInput themeInput" 
+      name="[##_guest_textarea_body_##]" 
+      rows="5" cols="30" 
+      placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
+  <div class="submitBox">
+    <input type="checkbox" id="commentInput_secret" name="secret" class="checkbox" />
+    <label for="commentInput_secret">귓속말로</label>
+    <input 
+        type="submit" 
+        class="commentBtn themeBtn" 
+        value="라고 한마디 하기" 
+        onclick="[##_guest_onclick_submit_##]" />
+  </div>
+</s_guest_input_form></div>
 
   <div id="pagingCopy" class="paging"></div>
 
-  <s_guest_container><!-- 방명록 목록 --><ul class="comment1List commentList">
+<s_guest_container><!-- 방명록 목록 --><ul class="comment1List commentList">
 
-    <s_guest_rep><li id="[##_guest_rep_id_##]">
-      <div class="comment comment1 [##_guest_rep_class_##]">
-        <div class="area1">
-          <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
-          <span class="writer">[##_guest_rep_name_##]</span>
-        </div>
-        <div class="area2">
-          <span class="content">[##_guest_rep_desc_##]</span>
-        </div>
-        <div class="area3">
-          <span class="date">[##_guest_rep_date_##]</span
-          ><button class="themeBtn" onclick="[##_guest_rep_onclick_reply_##]">&crarr;</button
-          ><button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
-        </div>
+  <s_guest_rep><li id="[##_guest_rep_id_##]">
+    <div class="comment comment1 [##_guest_rep_class_##]">
+      <div class="area1">
+        <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
+        <span class="writer">[##_guest_rep_name_##]</span>
       </div>
-      <s_guest_reply_container><!-- 답글 목록 --><ul class="comment2List commentList">
-        <s_guest_reply_rep><li id="[##_guest_rep_id_##]">
-          <div class="comment comment2 [##_guest_rep_class_##]">
-            <span class="tape"></span>
-            <div class="area1">
-              <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
-              <span class="writer">[##_guest_rep_name_##]</span>
-            </div>
-            <div class="area2">
-              <span class="content">[##_guest_rep_desc_##]</span>
-            </div>
-            <div class="area3">
-              <span class="date">[##_guest_rep_date_##]</span>
-              <button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
-            </div>
+      <div class="area2">
+        <span class="content">[##_guest_rep_desc_##]</span>
+      </div>
+      <div class="area3">
+        <span class="date">[##_guest_rep_date_##]</span
+        ><button class="themeBtn" onclick="[##_guest_rep_onclick_reply_##]">&crarr;</button
+        ><button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
+      </div>
+    </div>
+    <s_guest_reply_container><!-- 답글 목록 --><ul class="comment2List commentList">
+      <s_guest_reply_rep><li id="[##_guest_rep_id_##]">
+        <div class="comment comment2 [##_guest_rep_class_##]">
+          <span class="tape"></span>
+          <div class="area1">
+            <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
+            <span class="writer">[##_guest_rep_name_##]</span>
           </div>
-        </li></s_guest_reply_rep>
-      </ul></s_guest_reply_container>
-    </li></s_guest_rep>
-  </ul></s_guest_container>
+          <div class="area2">
+            <span class="content">[##_guest_rep_desc_##]</span>
+          </div>
+          <div class="area3">
+            <span class="date">[##_guest_rep_date_##]</span>
+            <button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
+          </div>
+        </div>
+      </li></s_guest_reply_rep>
+    </ul></s_guest_reply_container>
+  </li></s_guest_rep>
+</ul></s_guest_container>
 
   <p class="listMsg"></p>
 

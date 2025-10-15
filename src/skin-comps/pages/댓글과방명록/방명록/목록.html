@@ -1,0 +1,37 @@
+<s_guest_container><!-- 방명록 목록 --><ul class="comment1List commentList">
+
+  <s_guest_rep><li id="[##_guest_rep_id_##]">
+    <div class="comment comment1 [##_guest_rep_class_##]">
+      <div class="area1">
+        <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
+        <span class="writer">[##_guest_rep_name_##]</span>
+      </div>
+      <div class="area2">
+        <span class="content">[##_guest_rep_desc_##]</span>
+      </div>
+      <div class="area3">
+        <span class="date">[##_guest_rep_date_##]</span
+        ><button class="themeBtn" onclick="[##_guest_rep_onclick_reply_##]">&crarr;</button
+        ><button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
+      </div>
+    </div>
+    <s_guest_reply_container><!-- 답글 목록 --><ul class="comment2List commentList">
+      <s_guest_reply_rep><li id="[##_guest_rep_id_##]">
+        <div class="comment comment2 [##_guest_rep_class_##]">
+          <span class="tape"></span>
+          <div class="area1">
+            <img loading="lazy" class="propic" src="[##_guest_rep_logo_##]" alt="프사">
+            <span class="writer">[##_guest_rep_name_##]</span>
+          </div>
+          <div class="area2">
+            <span class="content">[##_guest_rep_desc_##]</span>
+          </div>
+          <div class="area3">
+            <span class="date">[##_guest_rep_date_##]</span>
+            <button class="themeBtn" onclick="[##_guest_rep_onclick_delete_##]">&#x2715;</button>
+          </div>
+        </div>
+      </li></s_guest_reply_rep>
+    </ul></s_guest_reply_container>
+  </li></s_guest_rep>
+</ul></s_guest_container>

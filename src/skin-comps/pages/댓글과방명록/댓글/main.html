@@ -1,0 +1,21 @@
+<s_rp><!--▶ 댓글 --><div id="commentSec">
+  <h1 class="areaTitle">댓글</h1>
+
+{% include "skin-comps/pages/댓글과방명록/댓글/목록.html" %}
+
+  <p class="listMsg"></p>
+
+{% include "skin-comps/pages/댓글과방명록/댓글/폼.html" %}
+
+  <p class="formMsg"></p>
+
+  <script type="text/javascript">
+    //// 댓글목록 비었으면 표시
+    if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
+      document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
+    }
+    if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
+      document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
+    }
+  </script>
+</div></s_rp>
