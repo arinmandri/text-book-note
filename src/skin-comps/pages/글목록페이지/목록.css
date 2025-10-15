@@ -6,15 +6,7 @@
 ├텅
 └목록 ul#postList.목록스타일별클래스(index.xml에서 정의, 사용자가 관리 페이지에서 선택)
 */
-/* 보기형식 변경 버튼 */
-#listStyleBtns {
-  margin-right: 10%;
-  margin-bottom: 20px;
-  text-align: right;
-}
-#listStyleBtns button {
-  padding: 8px;
-}
+{% include "liststyle/controller/_.css" %}
 /*
 ul#postList ─ li 여럿
 ├a ─ section.postListItem

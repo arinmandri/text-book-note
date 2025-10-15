@@ -1,0 +1,9 @@
+/* 보기형식 변경 버튼 */
+#listStyleBtns {
+  margin-right: 10%;
+  margin-bottom: 20px;
+  text-align: right;
+}
+#listStyleBtns button {
+  padding: 8px;
+}
