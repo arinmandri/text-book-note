@@ -3,5 +3,6 @@
 	<item>
 		<label>{{ value.desc }}</label>
 		<value>{{ name }}</value>
-	</item>{% endfor %}
+	</item>
+{% endfor %}
 </liststyle>

@@ -1750,7 +1750,8 @@ ul#postList ─ li 여럿
 #postList > */*li*/ {
   position: relative;
 }
-/**##### 크게 한 줄 train */
+
+  /**##### 크게 한 줄 train */
 /* 상단 페이징과 보기형식 변경 버튼을 표시하지 않는다 ???*/
 /*#postList.train .paging ,
 #listStyleBtns {
@@ -1807,7 +1808,8 @@ ul#postList ─ li 여럿
   right: 2px;
   bottom: 2px;
 }
-/**##### 썸네일만 album */
+
+  /**##### 썸네일만 album */
 #postList.album .itemHead ,
 #postList.album .category ,
 #postList.album .itemBody ,
@@ -1875,7 +1877,8 @@ ul#postList ─ li 여럿
     font-size: 100%;
   }
 }
-/**##### 썸네일 및 제목 card */
+
+  /**##### 썸네일 및 제목 card */
 #postList.card .category ,/* 나머지 요소 숨김 */
 #postList.card .writer ,
 #postList.card .content {
@@ -1945,7 +1948,8 @@ ul#postList ─ li 여럿
 #postList.card > */*li*/:hover .thumbnail img {/* 마우스 올리면 그림 확대 */
   transform: scale(1.1);
 }
-/**##### 간략 목록 simple */
+
+  /**##### 간략 목록 simple */
 #postList.simple {
   width: 94%;
   max-width: 700px;
@@ -2007,7 +2011,8 @@ ul#postList ─ li 여럿
 #postList.simple .category::before {
   content: '~';
 }
-/**##### 복잡 목록 detailed */
+
+  /**##### 복잡 목록 detailed */
 #postList.detailed > */*li*/ {
   margin: 10px 0;
   border-bottom: 3px double #ddd;
@@ -2047,6 +2052,7 @@ ul#postList ─ li 여럿
   background-color: var(--highlight);
   color: black;
 }
+
 
 
 /**### 태그 페이지 */

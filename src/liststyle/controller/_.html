@@ -1,23 +1,21 @@
 
-  <div class="settingForm"><!-- 보기형식 변경 -->
-    <input type="hidden" class="settingCore" name="listStyle" value="[##_list_style_##]" onchange="onchangeListStyle(this)" />
-    <menu id="listStyleBtns">
-      <span style="font-family: 'Gaegu', cursive;">보임새: </span>
-      <!--가로로 크게    --><button class="settingAction clickValue themeBtn" value="train"    >&#9632;</button>
-      <!--썸네일만       --><button class="settingAction clickValue themeBtn" value="album"    >&#8862;</button>
-      <!--썸네일 및 제목 --><button class="settingAction clickValue themeBtn" value="card"     >&#9635;</button>
-      <!--간략 목록      --><button class="settingAction clickValue themeBtn" value="simple"   >&#8863;</button>
-      <!--복잡 목록      --><button class="settingAction clickValue themeBtn" value="detailed" >&#9636;</button>
-      <input type="checkbox" class="fixCbox" /><label class="fixCboxLabel">굄</label>
-      <script>
-        function onchangeListStyle( settingCore ){
-          setListStyle( settingCore.value );
-        }
+<div class="settingForm"><!-- 보기형식 변경 -->
+  <input type="hidden" class="settingCore" name="listStyle" value="[##_list_style_##]" onchange="onchangeListStyle(this)" />
+  <menu id="listStyleBtns">
+    <span style="font-family: 'Gaegu', cursive;">보임새: </span>
+{% for name, value in settings.skin.liststyle.options.items() %}
+    <button class="settingAction clickValue themeBtn" value="{{ name }}">{{ value.buttonText }}</button>
+{% endfor %}
+    <input type="checkbox" class="fixCbox" /><label class="fixCboxLabel">굄</label>
+    <script>
+      function onchangeListStyle( settingCore ){
+        setListStyle( settingCore.value );
+      }
 
-        //// 보임새 설정
-        function setListStyle( style ){
-          document.getElementById('postList').className = style;
-        }
-      </script>
-    </menu>
-  </div>
+      //// 보임새 설정
+      function setListStyle( style ){
+        document.getElementById('postList').className = style;
+      }
+    </script>
+  </menu>
+</div>

@@ -30,8 +30,6 @@ ul#postList ─ li 여럿
 #postList > */*li*/ {
   position: relative;
 }
-{% include "liststyle/options/train.css" %}
-{% include "liststyle/options/album.css" %}
-{% include "liststyle/options/card.css" %}
-{% include "liststyle/options/simple.css" %}
-{% include "liststyle/options/detailed.css" %}
+{% for name, value in settings.skin.liststyle.options.items() %}
+  {% include "liststyle/style/" + name + ".css" %}
+{% endfor %}
