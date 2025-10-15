@@ -357,7 +357,7 @@
 				<label>하단문구</label>
 				<description>블로그 바닥에 표시할 문구</description>
 				<type>STRING</type>
-				<default><![CDATA[개발자: arinmandri@gmail.com]]></default>
+				<default><![CDATA[블로그 스킨 <a href=https://github.com/arinmandri/text-book-note>깃허브</a>]]></default>
 			</variable>
 			<variable>
 				<name>noThumbnail</name>
