@@ -50,7 +50,7 @@ body {
 
 
 /**## 메인영역2 */
-{% include "skin-comps/pages/최근공지.css" %}
+{% include "skin-comps/최근공지/_.css" %}
 
 {% include "skin-comps/pages/글목록페이징.css" %}
 
