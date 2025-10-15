@@ -1,11 +1,10 @@
-
-<s_permalink_article_rep><!--◆ 글보기 페이지 -->
+<!--◆ 글보기 페이지 -->
 {% with
   type='article',
   category_name='[##_article_rep_category_##]',
   category_link='[##_article_rep_category_link_##]'
 %}
-{% include "skin-comps/pages/글페이지/게시글.html" %}
+{% include "skin-comps/pages/글페이지/article.html" %}
 {% endwith %}
 
   <hr class="areaSeparator">
@@ -13,5 +12,5 @@
 {% include "skin-comps/pages/글페이지/댓글.html" %}
 
   <hr class="areaSeparator">
+
 {% include "skin-comps/pages/글페이지/카테고리다른글.html" %}
-</s_permalink_article_rep>
