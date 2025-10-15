@@ -62,7 +62,7 @@
 
 		<liststyle>{{ settings.skin.liststyle.default }}</liststyle>
 	</default>
-{% include "homecover/index.xml" %}
+{% include "skin-comps/homecover/index.xml" %}
 
 	<variables>
 {% include "style/color-scheme/variablegroup-colorscheme-light.xml" %}
