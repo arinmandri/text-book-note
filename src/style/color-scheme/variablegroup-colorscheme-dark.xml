@@ -47,28 +47,28 @@
 	</variable>
 	<variable>
 		<name>listBack_dark</name>
-		<label>항목 바닥색</label>
+		<label>항목 밑색</label>
 		<description><![CDATA[기본값은 #333]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#333]]></default>
 	</variable>
 	<variable>
 		<name>borderCol_dark</name>
-		<label>경계선색</label>
+		<label>금색</label>
 		<description><![CDATA[기본값은 #444444]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#444444]]></default>
 	</variable>
 	<variable>
 		<name>frameBack_dark</name>
-		<label>헤더, 푸터, 버튼 등</label>
+		<label>딱지 밑색</label>
 		<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #666666aa]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#666666aa]]></default>
 	</variable>
 	<variable>
 		<name>frameFore_dark</name>
-		<label>헤더, 푸터, 버튼 등 글자</label>
+		<label>딱지 글자색</label>
 		<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ffffff]]></default>
@@ -89,7 +89,7 @@
 	</variable>
 	<variable>
 		<name>bonmunForm_dark</name>
-		<label>본문 서식강조</label>
+		<label>본문 서식요소</label>
 		<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ffdd44]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ffdd44]]></default>
