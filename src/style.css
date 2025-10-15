@@ -61,7 +61,7 @@ body {
   backdrop-filter: blur(5px);
 }
 
-{% include "skin-comps/pages/글페이지/style.css" %}
+{% include "skin-comps/pages/게시글/style.css" %}
 
 {% include "skin-comps/pages/글목록페이지/style.css" %}
 

@@ -124,7 +124,7 @@ main
   margin: 0 auto;
 }
 
-{% include "skin-comps/pages/글페이지/본문.css" %}
-{% include "skin-comps/pages/글페이지/댓글.css" %}
-{% include "skin-comps/pages/글페이지/카테고리다른글.css" %}
-{% include "skin-comps/pages/글페이지/보호글.css" %}
+{% include "skin-comps/pages/게시글/본문.css" %}
+{% include "skin-comps/pages/댓글/style.css" %}
+{% include "skin-comps/pages/게시글/카테고리다른글.css" %}
+{% include "skin-comps/pages/게시글/보호글.css" %}
