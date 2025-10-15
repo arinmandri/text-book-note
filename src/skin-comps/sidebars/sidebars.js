@@ -1,4 +1,7 @@
 
+const minWidthToOpenSidebar1 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 );
+const minWidthToOpenSidebar2 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 );
+
 const sidebarBox1     = document.getElementById('sidebarBox1');
 const sidebarBox2     = document.getElementById('sidebarBox2');
 const sidebar2        = document.getElementById('sidebar2');

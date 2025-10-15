@@ -38,10 +38,6 @@ let noThumbnail = "[##_var_noThumbnail_##]";
 if( noThumbnail === "" )
   noThumbnail = "./images/noThumbnail-default.svg";
 
-const maxWidthOfMain2        = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]',        1000, 1500 );
-const minWidthToOpenSidebar1 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 );
-const minWidthToOpenSidebar2 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 );
-
 //{% include "inblog-settings/darkmode-html.js" %}
 
 //{% include "extentions/checkDeletePost/script.js" %}

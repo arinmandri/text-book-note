@@ -1,0 +1,6 @@
+<variable>
+	<name>maxWidthOfMain2</name>
+	<label>중앙 영역 최대 너비 (1000 이상 숫자만)</label>
+	<type>STRING</type>
+	<default><![CDATA[1500]]></default>
+</variable>
