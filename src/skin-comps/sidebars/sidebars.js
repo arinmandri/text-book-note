@@ -100,11 +100,3 @@ function onWindowResize(){
     }
   }, 70);
 }
-
-//// 광고차단 확인
-function isAdBlocking(){
-  let ad = document.getElementsByClassName('revenue_unit_wrap')[0];
-  if( getComputedStyle(ad).display === 'none' )
-    return true;
-  return false;
-}
