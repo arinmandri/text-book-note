@@ -65,7 +65,7 @@ body {
 
 {% include "skin-comps/pages/글목록페이지/style.css" %}
 
-{% include "skin-comps/pages/태그페이지.css" %}
+{% include "skin-comps/pages/태그페이지/style.css" %}
 
 
 
