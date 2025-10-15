@@ -11,5 +11,5 @@ document.body.classList.add('login-' + T.config.ROLE);
   if( _body == null ) _body = document.getElementById('tt-body-index');
 
   const body = _body;
-  if( body != null ) body.className = 'tt-body-list';
+  if( body != null ) body.classList.add('tt-body-list');
 })();
