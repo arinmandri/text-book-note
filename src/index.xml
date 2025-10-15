@@ -60,7 +60,7 @@
 			<showValue>1</showValue>
 		</tree>
 
-		<liststyle>{% include "liststyle/defaultOption" %}</liststyle>
+		<liststyle>{{ settings.skin.liststyle.default }}</liststyle>
 	</default>
 {% include "homecover/index.xml" %}
 
