@@ -494,87 +494,87 @@ function setSettingFixCbox( settingName, checked ){
 
     <hr class="areaSeparator">
 
-    <s_rp><!--▶ 댓글 --><div id="commentSec">
-      <h1 class="areaTitle">댓글</h1>
+<s_rp><!--▶ 댓글 --><div id="commentSec">
+<h1 class="areaTitle">댓글</h1>
 
-      <s_rp_container><!-- 댓글 목록 --><ul class="comment1List commentList">
+<s_rp_container><!-- 댓글 목록 --><ul class="comment1List commentList">
 
-        <s_rp_rep><li id="[##_rp_rep_id_##]">
-          <div class="comment comment1 [##_rp_rep_class_##]">
-            <div class="area1">
-              <img loading="lazy" class="propic" src="[##_rp_rep_logo_##]" alt="프사">
-              <span class="writer">[##_rp_rep_name_##]</span>
-            </div>
-            <div class="area2">
-              <span class="content">[##_rp_rep_desc_##]</span>
-            </div>
-            <div class="area3">
-              <span class="date">[##_rp_rep_date_##]</span
-              ><button class="themeBtn" onclick="[##_rp_rep_onclick_reply_##]">&crarr;</button
-              ><button class="themeBtn" onclick="[##_rp_rep_onclick_delete_##]">&#x2715;</button>
-            </div>
+  <s_rp_rep><li id="[##_rp_rep_id_##]">
+    <div class="comment comment1 [##_rp_rep_class_##]">
+      <div class="area1">
+        <img loading="lazy" class="propic" src="[##_rp_rep_logo_##]" alt="프사">
+        <span class="writer">[##_rp_rep_name_##]</span>
+      </div>
+      <div class="area2">
+        <span class="content">[##_rp_rep_desc_##]</span>
+      </div>
+      <div class="area3">
+        <span class="date">[##_rp_rep_date_##]</span
+        ><button class="themeBtn" onclick="[##_rp_rep_onclick_reply_##]">&crarr;</button
+        ><button class="themeBtn" onclick="[##_rp_rep_onclick_delete_##]">&#x2715;</button>
+      </div>
+    </div>
+    <s_rp2_container><!-- 답글 목록 --><ul class="comment2List commentList">
+      <s_rp2_rep><li id="[##_rp_rep_id_##]">
+        <div class="comment comment2 [##_rp_rep_class_##]">
+          <span class="tape"></span>
+          <div class="area1">
+            <img loading="lazy" class="propic" src="[##_rp_rep_logo_##]" alt="프사">
+            <span class="writer">[##_rp_rep_name_##]</span>
           </div>
-          <s_rp2_container><!-- 답글 목록 --><ul class="comment2List commentList">
-            <s_rp2_rep><li id="[##_rp_rep_id_##]">
-              <div class="comment comment2 [##_rp_rep_class_##]">
-                <span class="tape"></span>
-                <div class="area1">
-                  <img loading="lazy" class="propic" src="[##_rp_rep_logo_##]" alt="프사">
-                  <span class="writer">[##_rp_rep_name_##]</span>
-                </div>
-                <div class="area2">
-                  <span class="content">[##_rp_rep_desc_##]</span>
-                </div>
-                <div class="area3">
-                  <span class="date">[##_rp_rep_date_##]</span>
-                  <button class="themeBtn" onclick="[##_rp_rep_onclick_delete_##]">&#x2715;</button>
-                </div>
-              </div>
-            </li></s_rp2_rep>
-          </ul></s_rp2_container>
-        </li></s_rp_rep>
-      </ul></s_rp_container>
-
-      <p class="listMsg"></p>
-
-      <!-- 댓글 입력폼 -->
-      <div class="formBox"><s_rp_input_form>
-        <s_rp_guest><p class="guest">
-            <label for="commentInput_name"     >이름:</label>
-            <input type="text"     id="commentInput_name"     class="themeInput" name="[##_rp_input_name_##]" value="[##_guest_name_##]" size="6" />
-            <label for="commentInput_password" >비밀번호:</label>
-            <input type="password" id="commentInput_password" class="themeInput" name="[##_rp_input_password_##]" value="[##_rp_password_##]" maxlength="8" size="4" />
-            <label for="commentInput_homepage" >홈페이지:</label>
-            <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" size="20" />
-        </p></s_rp_guest>
-        <textarea 
-            class="commentInput themeInput" 
-            name="[##_rp_input_comment_##]" 
-            rows="5" cols="30" 
-            placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
-        <div class="submitBox">
-          <input type="checkbox" id="commentInput_secret" name="[##_rp_input_is_secret_##]" class="checkbox" />
-          <label for="commentInput_secret">귓속말로</label>
-          <input 
-              type="submit" 
-              class="commentBtn themeBtn" 
-              value="라고 한마디 하기" 
-              onclick="[##_rp_onclick_submit_##]" />
+          <div class="area2">
+            <span class="content">[##_rp_rep_desc_##]</span>
+          </div>
+          <div class="area3">
+            <span class="date">[##_rp_rep_date_##]</span>
+            <button class="themeBtn" onclick="[##_rp_rep_onclick_delete_##]">&#x2715;</button>
+          </div>
         </div>
-      </s_rp_input_form></div>
+      </li></s_rp2_rep>
+    </ul></s_rp2_container>
+  </li></s_rp_rep>
+</ul></s_rp_container>
 
-      <p class="formMsg"></p>
+<p class="listMsg"></p>
 
-      <script type="text/javascript">
-        //// 댓글목록 비었으면 표시
-        if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
-          document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
-        }
-        if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
-          document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
-        }
-      </script>
-    </div></s_rp>
+<!-- 댓글 입력폼 -->
+<div class="formBox"><s_rp_input_form>
+  <s_rp_guest><p class="guest">
+      <label for="commentInput_name"     >이름:</label>
+      <input type="text"     id="commentInput_name"     class="themeInput" name="[##_rp_input_name_##]" value="[##_guest_name_##]" size="6" />
+      <label for="commentInput_password" >비밀번호:</label>
+      <input type="password" id="commentInput_password" class="themeInput" name="[##_rp_input_password_##]" value="[##_rp_password_##]" maxlength="8" size="4" />
+      <label for="commentInput_homepage" >홈페이지:</label>
+      <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" size="20" />
+  </p></s_rp_guest>
+  <textarea 
+      class="commentInput themeInput" 
+      name="[##_rp_input_comment_##]" 
+      rows="5" cols="30" 
+      placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
+  <div class="submitBox">
+    <input type="checkbox" id="commentInput_secret" name="[##_rp_input_is_secret_##]" class="checkbox" />
+    <label for="commentInput_secret">귓속말로</label>
+    <input 
+        type="submit" 
+        class="commentBtn themeBtn" 
+        value="라고 한마디 하기" 
+        onclick="[##_rp_onclick_submit_##]" />
+  </div>
+</s_rp_input_form></div>
+
+<p class="formMsg"></p>
+
+<script type="text/javascript">
+  //// 댓글목록 비었으면 표시
+  if( document.querySelector('#commentSec .commentList').childElementCount === 0 ){
+    document.querySelector('#commentSec .listMsg').innerText = '댓글이 없습니다.';
+  }
+  if( document.querySelector('#commentSec .formBox').childElementCount === 0 ){
+    document.querySelector('#commentSec .formMsg').innerText = '댓글 비허용 글입니다.';
+  }
+</script>
+</div></s_rp>
   </div>
 </s_notice_rep>
 
