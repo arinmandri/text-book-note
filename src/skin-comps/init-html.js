@@ -18,7 +18,7 @@ function getParameters() {
   }
   return param;
 }
-const param = getParameters()
+const param = getParameters();
 
 //{% include "settings/darkmode-html.js" %}
 
