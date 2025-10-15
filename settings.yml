@@ -4,5 +4,18 @@ src:
     - skin.html
     - style.css
 
+skin:
+  liststyles:
+    train:
+      desc: '큼직 한 줄'
+    album:
+      desc: '썸네일만'
+    card:
+      desc: '썸네일 및 제목'
+    simple:
+      desc: '간략 목록'
+    detailed:
+      desc: '복잡 목록'
+
 prod:
   dir: production

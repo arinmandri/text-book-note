@@ -21,7 +21,9 @@ def main():
 
     for targetFilePath in settings["src"]["targets"]:
         template = env.get_template(targetFilePath)
-        result = template.render()
+        result = template.render({
+            'settings': settings
+        })
 
         with open(settings["prod"]["dir"] + '/' + targetFilePath, "w", encoding="utf-8") as f:
             f.write(result)
