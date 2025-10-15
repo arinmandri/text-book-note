@@ -1,7 +1,7 @@
 <liststyle>
 {% for name, value in settings.skin.liststyle.options.items() %}
 	<item>
-		<label>{{ value.desc }}</label>
+		<label>{{ value.label }}</label>
 		<value>{{ name }}</value>
 	</item>
 {% endfor %}

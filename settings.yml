@@ -8,19 +8,19 @@ skin:
   liststyle:
     options:
       train:
-        desc: '큼직 한 줄'
+        label: '큼직 한 줄'
         buttonText: '&#9632;'
       album:
-        desc: '썸네일만'
+        label: '썸네일만'
         buttonText: '&#8862;'
       card:
-        desc: '썸네일 및 제목'
+        label: '썸네일 및 제목'
         buttonText: '&#9635;'
       simple:
-        desc: '간략 목록'
+        label: '간략 목록'
         buttonText: '&#8863;'
       detailed:
-        desc: '복잡 목록'
+        label: '복잡 목록'
         buttonText: '&#9636;'
     default: card
 
