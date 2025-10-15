@@ -1,9 +1,10 @@
-<div class="sidebar_element"><!-- 랜덤태그 -->
-  <button class="bubbleBtn themeBtn">&#x2601;&#xFE0F;</button>
-  <div class="sidebar_elementMain randomtag">
-    <p class="padding">
-      <s_random_tags><a href="[##_tag_link_##]" class="tagcloud tag[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags>
-    </p>
-  </div>
-  <span class="caption">랜덤태그</span>
+{% extends "skin-comps/sidebars/elements/base.html" %}
+{% block content %}<!-- 랜덤태그 -->
+<button class="bubbleBtn themeBtn">&#x2601;&#xFE0F;</button>
+<div class="sidebar_elementMain randomtag">
+  <p class="padding">
+    <s_random_tags><a href="[##_tag_link_##]" class="tagcloud tag[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags>
+  </p>
 </div>
+<span class="caption">랜덤태그</span>
+{% endblock %}

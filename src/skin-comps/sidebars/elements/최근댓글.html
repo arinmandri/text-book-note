@@ -1,9 +1,10 @@
-<div class="sidebar_element"><!-- 최근 댓글 -->
-  <button class="bubbleBtn themeBtn">&#x1F4AC;</button>
-  <ol class="sidebar_elementMain recentcomment">
-    <s_rctrp_rep><li class="line-out"><a href="[##_rctrp_rep_link_##]" class="line-in">
-      [##_rctrp_rep_desc_##]
-    </a></li></s_rctrp_rep>
-  </ol>
-  <span class="caption">최근 댓글</span>
-</div>
+{% extends "skin-comps/sidebars/elements/base.html" %}
+{% block content %}<!-- 최근 댓글 -->
+<button class="bubbleBtn themeBtn">&#x1F4AC;</button>
+<ol class="sidebar_elementMain recentcomment">
+  <s_rctrp_rep><li class="line-out"><a href="[##_rctrp_rep_link_##]" class="line-in">
+    [##_rctrp_rep_desc_##]
+  </a></li></s_rctrp_rep>
+</ol>
+<span class="caption">최근 댓글</span>
+{% endblock %}

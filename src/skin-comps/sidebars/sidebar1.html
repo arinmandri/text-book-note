@@ -2,9 +2,9 @@
 <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
 <div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
-    <s_sidebar_element>{% include "skin-comps/sidebars/elements/메뉴.html" %}</s_sidebar_element>
-    <s_sidebar_element>{% include "skin-comps/sidebars/elements/카테고리.html" %}</s_sidebar_element>
-    <s_sidebar_element>{% include "skin-comps/sidebars/elements/검색창.html" %}</s_sidebar_element>
+    {% include "skin-comps/sidebars/elements/메뉴.html" %}
+    {% include "skin-comps/sidebars/elements/카테고리.html" %}
+    {% include "skin-comps/sidebars/elements/검색창.html" %}
   </s_sidebar></aside>
   <button class="sidebarBtn themeBtn" >≡</button><!-- 펼접버튼 -->
 </div><!-- 사이드바상자1 ##-->

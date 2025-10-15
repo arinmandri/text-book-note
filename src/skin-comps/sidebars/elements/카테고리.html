@@ -1,54 +1,55 @@
-<div class="sidebar_element"><!-- 카테고리 -->
-  <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
-  <nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
-  <script type="text/javascript">
-    //// 펼접버튼 추가
-    (function(){
-      const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
-      for( let li of category_list_lis ){
-        const sub_category_list = li.querySelector('ul.sub_category_list');// 하위 카테고리 (nullable)
-        const btn = document.createElement('button');
-        if( sub_category_list != null ){
-          btn.addEventListener('click', ()=>{
-            li.classList.toggle('open');
-          });
-        }else{
-          li.classList.add('lonely');
-        }
-        li.prepend( btn );
+{% extends "skin-comps/sidebars/elements/base.html" %}
+{% block content %}<!-- 카테고리 -->
+<button class="bubbleBtn themeBtn">&#x1F6AA;</button>
+<nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
+<script type="text/javascript">
+  //// 펼접버튼 추가
+  (function(){
+    const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
+    for( let li of category_list_lis ){
+      const sub_category_list = li.querySelector('ul.sub_category_list');// 하위 카테고리 (nullable)
+      const btn = document.createElement('button');
+      if( sub_category_list != null ){
+        btn.addEventListener('click', ()=>{
+          li.classList.toggle('open');
+        });
+      }else{
+        li.classList.add('lonely');
       }
-    })();
+      li.prepend( btn );
+    }
+  })();
 
-    document.addEventListener('DOMContentLoaded', function(){
-      //// 카테고리 기본으로 펴기
-      const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
-      const catOpenLevel = '[##_var_catOpenLevel_##]';
-      if( catOpenLevel === 'openAll' ){// 모두 열기
-        for( let li of category_list_lis ){
-          li.classList.add('open');
-        }
-      }else if( catOpenLevel === 'openCurr' ){
-        const currCat = (function(){
-          if( window.location.pathname.startsWith('/category/') ){// 카테고리 페이지
-            return window.location.pathname.substring(10).split('/')[0];// 10: '/category/' 글자수
-          }else{
-            let catBtn = document.querySelector('#postPagePost .func .category');
-            if( catBtn != null ){
-              return encodeURIComponent( catBtn.innerText.split('/')[0] );
-            }
+  document.addEventListener('DOMContentLoaded', function(){
+    //// 카테고리 기본으로 펴기
+    const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
+    const catOpenLevel = '[##_var_catOpenLevel_##]';
+    if( catOpenLevel === 'openAll' ){// 모두 열기
+      for( let li of category_list_lis ){
+        li.classList.add('open');
+      }
+    }else if( catOpenLevel === 'openCurr' ){
+      const currCat = (function(){
+        if( window.location.pathname.startsWith('/category/') ){// 카테고리 페이지
+          return window.location.pathname.substring(10).split('/')[0];// 10: '/category/' 글자수
+        }else{
+          let catBtn = document.querySelector('#postPagePost .func .category');
+          if( catBtn != null ){
+            return encodeURIComponent( catBtn.innerText.split('/')[0] );
           }
-          return null;
-        })();
-        if( currCat !== null ){
-          const pathname = '/category/' + currCat;
-          for( let li of category_list_lis ){
-            if( li.getElementsByTagName('a')[0].getAttribute('href') === pathname ){
-              li.classList.add('open');
-              break;
-            }
+        }
+        return null;
+      })();
+      if( currCat !== null ){
+        const pathname = '/category/' + currCat;
+        for( let li of category_list_lis ){
+          if( li.getElementsByTagName('a')[0].getAttribute('href') === pathname ){
+            li.classList.add('open');
+            break;
           }
         }
       }
-    });
-  </script>
-</div>
+    }
+  });
+</script>
+{% endblock %}

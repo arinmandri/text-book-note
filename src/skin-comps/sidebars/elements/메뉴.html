@@ -1,17 +1,18 @@
-<div class="sidebar_element"><!-- 메뉴 -->
-  <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
-  <nav id="navMenu" class="sidebar_elementMain">
-    [##_blog_menu_##]
-    <script>(function(){ 
-      document.querySelector('#navMenu > ul').innerHTML 
-        += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
-        +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
+{% extends "skin-comps/sidebars/elements/base.html" %}
+{% block content %}<!-- 메뉴 -->
+<button class="bubbleBtn themeBtn">&#x1F3E0;</button>
+<nav id="navMenu" class="sidebar_elementMain">
+  [##_blog_menu_##]
+  <script>(function(){ 
+    document.querySelector('#navMenu > ul').innerHTML 
+      += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
+      +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
 
-      //// 메뉴의 항목들에 클래스 추가
-      const navMenus = document.querySelectorAll('#navMenu a')
-      for( let navMenu of navMenus ){
-        navMenu.classList.add('themeBtn');
-      }
-    })()</script>
-  </nav>
-</div>
+    //// 메뉴의 항목들에 클래스 추가
+    const navMenus = document.querySelectorAll('#navMenu a')
+    for( let navMenu of navMenus ){
+      navMenu.classList.add('themeBtn');
+    }
+  })()</script>
+</nav>
+{% endblock %}
