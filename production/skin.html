@@ -538,6 +538,7 @@ function setSettingFixCbox( settingName, checked ){
 
   <p class="listMsg"></p>
 
+
 <!-- 댓글 입력폼 -->
 <div class="formBox"><s_rp_input_form>
   <s_rp_guest><p class="guest">
@@ -563,6 +564,7 @@ function setSettingFixCbox( settingName, checked ){
         onclick="[##_rp_onclick_submit_##]" />
   </div>
 </s_rp_input_form></div>
+
 
   <p class="formMsg"></p>
 
@@ -684,6 +686,7 @@ function setSettingFixCbox( settingName, checked ){
 
   <p class="listMsg"></p>
 
+
 <!-- 댓글 입력폼 -->
 <div class="formBox"><s_rp_input_form>
   <s_rp_guest><p class="guest">
@@ -709,6 +712,7 @@ function setSettingFixCbox( settingName, checked ){
         onclick="[##_rp_onclick_submit_##]" />
   </div>
 </s_rp_input_form></div>
+
 
   <p class="formMsg"></p>
 
@@ -996,6 +1000,7 @@ function setSettingFixCbox( settingName, checked ){
 <s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
   <h1 class="areaTitle">누구누구 왔다감</h1>
 
+
 <!-- 방명록 입력폼 -->
 <div class="formBox"><s_guest_input_form>
   <s_guest_form><p class="guest">
@@ -1012,7 +1017,7 @@ function setSettingFixCbox( settingName, checked ){
       rows="5" cols="30" 
       placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
   <div class="submitBox">
-    <input type="checkbox" id="commentInput_secret" name="secret" class="checkbox" />
+    <input type="checkbox" id="commentInput_secret" name="[##_guest_input_is_secret_##]" class="checkbox" />
     <label for="commentInput_secret">귓속말로</label>
     <input 
         type="submit" 
@@ -1021,6 +1026,7 @@ function setSettingFixCbox( settingName, checked ){
         onclick="[##_guest_onclick_submit_##]" />
   </div>
 </s_guest_input_form></div>
+
 
   <div id="pagingCopy" class="paging"></div>
 

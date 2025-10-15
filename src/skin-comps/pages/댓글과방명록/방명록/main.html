@@ -1,7 +1,14 @@
 <s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
   <h1 class="areaTitle">누구누구 왔다감</h1>
 
-{% include "skin-comps/pages/댓글과방명록/방명록/폼.html" %}
+{% with
+  type='guest',
+  name='방명록',
+  s_for_member='s_guest_form',
+  textarea_name='[##_guest_textarea_body_##]'
+%}
+{% include "skin-comps/pages/댓글과방명록/base/폼.html" %}
+{% endwith %}
 
   <div id="pagingCopy" class="paging"></div>
 
