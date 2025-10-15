@@ -5,7 +5,7 @@
   <div class="settingForm darkmode">
     <input class="settingCore" type="hidden" name="darkmode" onchange="onchangeDarkmode(this)" oninvalid="setDefaultDarkmode(this)">
     빛깔: <button id="darkmodeBtn" class="settingAction toggle">&#x2713;</button>
-    <input type="checkbox" class="fixCbox" oninvalid="setDefaultDarkmode()" /><label class="fixCboxLabel">굄</label>
+    <label><input type="checkbox" class="fixCbox" oninvalid="setDefaultDarkmode()" />굄</label>
     <script type="text/javascript">
       function onchangeDarkmode( settingCore ){
         setDarkmode( settingCore );
@@ -50,7 +50,7 @@
     <button class="fontsizeBtn fontsizeBtnDown  themeBtn" onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
     <button class="fontsizeBtn fontsizeBtnReset themeBtn" onclick="clickFontsizeBtn( 0)" >보통</button>
     <button class="fontsizeBtn fontsizeBtnUp    themeBtn" onclick="clickFontsizeBtn( 1)"  style="font-size: 135%;">크게</button>
-    <input type="checkbox" class="fixCbox" /><label class="fixCboxLabel">굄</label>
+    <label><input type="checkbox" class="fixCbox" />굄</label>
     <script type="text/javascript">
       function onchangeFontsize( settingCore ) {
         document.body.style.fontSize = settingCore.value + '%';

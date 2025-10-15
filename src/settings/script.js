@@ -1,19 +1,4 @@
 
-//// 다크모드 - body
-(function(){
-  const isDark = document.getElementsByTagName('html')[0].dataset.theme === 'dark';
-  if( isDark ){
-    document.body.classList.add('theme-dark');
-    document.body.classList.remove('theme-light');
-  }else{
-    document.body.classList.add('theme-light');
-    document.body.classList.remove('theme-dark');
-  }
-})();
-
-
-
-
 let noThumbnail = "[##_var_noThumbnail_##]";
 if( noThumbnail === "" )
   noThumbnail = "./images/noThumbnail-default.svg";
@@ -49,16 +34,16 @@ function getOptionValue( optionValueString, minVal, defaultVal ) {
   /*
    * settingForm
    * ├ input.settingCore 설정값 
-   * │    name 속성에 설정값 이름 지정.
-   * │    value 속성에 값 들어감.
-   * │    onchange 에서 설정의 효과 발동.(각자 정의)
-   * │    oninvalid 에서 저장된 설정 없을시의 동작.
-   * ├ .settingAction.toggle 논리값꼴 설정값 // 클릭시 설정값 토글
-   * ├ .settingAction.clickValue 택일
+   * │    태그 속성에 이 설정의 동작 지정.
+   * │    name 설정 이름.
+   * │    value 설정의 값.
+   * │    onchange 설정의 효과.(각자 정의)
+   * │    oninvalid 저장된 설정 없을시의 동작.(기본값으로 적용 등)
+   * ├ .settingAction.toggle 논리값꼴 설정값. 클릭시 설정값 토글
+   * ├ .settingAction.clickValue 설정값. 선택시 settingCore의 value로 적용
    * ├ (다른 타입의 설정은 onclick 직접 정의)
-   * ├ input[type="checkbox"].fixCbox 고정 체크박스설정값 있으면 자동으로 체크된다. 고정시 값 저장. 고정 해제시 저장된 값 삭제.
-   * │    oninvalid 에서 체크 해제시의 동작.
-   * └ label.fixCboxLabel 고정 체크박스 라벨
+   * └ input[type="checkbox"].fixCbox 고정 체크박스설정값 있으면 자동으로 체크된다. 고정시 값 저장. 고정 해제시 저장된 값 삭제.
+   * 　    oninvalid 체크 해제시의 동작.
    */
   document.addEventListener('DOMContentLoaded', function(){
     //// 모든 설정요소 가져오기
