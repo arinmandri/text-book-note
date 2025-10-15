@@ -43,8 +43,7 @@ body {
 
 
 
-{% include "skin-comps/style.css" %}
-{% include "skin-comps/main.css" %}
+{% include "skin-comps/frame/style.css" %}
 {% include "skin-comps/sidebars/style.css" %}
 
 

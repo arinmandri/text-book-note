@@ -1,0 +1,28 @@
+/**# 헤더, 푸터 */
+header , footer {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  text-align: center;
+  background-color: #114;
+  background-color: var(--frameBack);
+  color: #fff;
+  color: var(--frameFore);
+  font-family: 'Jua', sans-serif;
+  font-weight: 100;
+}
+header {
+  border-bottom-left-radius: 50px 100%;
+  border-bottom-right-radius: 50px 100%;
+}
+header a {
+  display: block;
+  padding: 30px 10%;
+}
+footer {
+  padding: 42px 50px;
+  border-top-left-radius: 50px 100%;
+  border-top-right-radius: 50px 100%;
+}

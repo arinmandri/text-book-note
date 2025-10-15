@@ -26,12 +26,9 @@
 //{% include "inblog-settings/script.js" %}
 </script>
 
-<div id="backImgBox">
-  <s_if_var_backImg_light><div class="backImg light [##_var_backImgType_light_##]" style="background-image: url('[##_var_backImg_light_##]');" ></div></s_if_var_backImg_light>
-  <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
-</div>
+{% include "skin-comps/frame/background.html" %}
 
-{% include "skin-comps/header.html" %}
+{% include "skin-comps/frame/header.html" %}
 
 <!--# 메인영역1 -->
 <div id="main1">
@@ -74,7 +71,7 @@
 //{% include "skin-comps/sidebars/sidebars.js" %}
 </script>
 
-{% include "skin-comps/footer.html" %}
+{% include "skin-comps/frame/footer.html" %}
 
 </s_t3></body>
 </html>

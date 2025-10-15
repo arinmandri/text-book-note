@@ -1,27 +1,3 @@
-
-/**# 전체
-body
-├헤더 header ─ a
-├메인영역1 div#main1
-├사이드바3 div#sidebar3.sidebarH
-└푸터 footer
-*/
-/**# 전체
-TODO 일케 해 ?????????? 
-body
-├헤더
-├중앙1
-│├사이드바1
-│└중앙2
-│　├중앙3
-│　│├최근공지
-│　│├메뉴
-│　│└중앙4
-│　├목차
-│　└사이드바2
-├사이드바3
-└푸터 footer
-*/
 /* 배경 그림 */
 #backImgBox .backImg {
   width: 100%;
@@ -96,32 +72,4 @@ body:not(.theme-dark) .backImg.dark {
 #backImgBox .backImgType_X9 {
   background-position: bottom 0px right 0px;
   background-repeat: no-repeat;
-}
-/**# 헤더, 푸터 */
-header , footer {
-  position: relative;
-
-  width: 100%;
-  box-sizing: border-box;
-
-  text-align: center;
-  background-color: #114;
-  background-color: var(--frameBack);
-  color: #fff;
-  color: var(--frameFore);
-  font-family: 'Jua', sans-serif;
-  font-weight: 100;
-}
-header {
-  border-bottom-left-radius: 50px 100%;
-  border-bottom-right-radius: 50px 100%;
-}
-header a {
-  display: block;
-  padding: 30px 10%;
-}
-footer {
-  padding: 42px 50px;
-  border-top-left-radius: 50px 100%;
-  border-top-right-radius: 50px 100%;
 }
