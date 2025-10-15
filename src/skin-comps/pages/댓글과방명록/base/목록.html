@@ -1,0 +1,37 @@
+<s_{{ type }}_container><!-- {{ name }} 목록 --><ul class="comment1List commentList">
+
+  <s_{{ type }}_rep><li id="[##_{{ type }}_rep_id_##]">
+    <div class="comment comment1 [##_{{ type }}_rep_class_##]">
+      <div class="area1">
+        <img loading="lazy" class="propic" src="[##_{{ type }}_rep_logo_##]" alt="프사">
+        <span class="writer">[##_{{ type }}_rep_name_##]</span>
+      </div>
+      <div class="area2">
+        <span class="content">[##_{{ type }}_rep_desc_##]</span>
+      </div>
+      <div class="area3">
+        <span class="date">[##_{{ type }}_rep_date_##]</span
+        ><button class="themeBtn" onclick="[##_{{ type }}_rep_onclick_reply_##]">&crarr;</button
+        ><button class="themeBtn" onclick="[##_{{ type }}_rep_onclick_delete_##]">&#x2715;</button>
+      </div>
+    </div>
+    <{{ s_reply_container }}><!-- 답글 목록 --><ul class="comment2List commentList">
+      <{{ s_reply_rep }}><li id="[##_{{ type }}_rep_id_##]">
+        <div class="comment comment2 [##_{{ type }}_rep_class_##]">
+          <span class="tape"></span>
+          <div class="area1">
+            <img loading="lazy" class="propic" src="[##_{{ type }}_rep_logo_##]" alt="프사">
+            <span class="writer">[##_{{ type }}_rep_name_##]</span>
+          </div>
+          <div class="area2">
+            <span class="content">[##_{{ type }}_rep_desc_##]</span>
+          </div>
+          <div class="area3">
+            <span class="date">[##_{{ type }}_rep_date_##]</span>
+            <button class="themeBtn" onclick="[##_{{ type }}_rep_onclick_delete_##]">&#x2715;</button>
+          </div>
+        </div>
+      </li></{{ s_reply_rep }}>
+    </ul></{{ s_reply_container }}>
+  </li></s_{{ type }}_rep>
+</ul></s_{{ type }}_container>

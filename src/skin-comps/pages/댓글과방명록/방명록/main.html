@@ -1,18 +1,20 @@
-<s_guest><!--### 방명록 페이지 --><div id="commentSec"><!-- 댓글이랑 똑같이, 치환자만 치환; 단 입력폼이 위로옴, 입력폼 없음 메시지 없음 -->
+<s_guest><!--### 방명록 페이지 --><div id="commentSec">
   <h1 class="areaTitle">누구누구 왔다감</h1>
 
 {% with
   type='guest',
   name='방명록',
   s_for_member='s_guest_form',
-  textarea_name='[##_guest_textarea_body_##]'
+  textarea_name='[##_guest_textarea_body_##]',
+  s_reply_container='s_guest_reply_container',
+  s_reply_rep='s_guest_reply_rep'
 %}
 {% include "skin-comps/pages/댓글과방명록/base/폼.html" %}
-{% endwith %}
 
   <div id="pagingCopy" class="paging"></div>
 
-{% include "skin-comps/pages/댓글과방명록/방명록/목록.html" %}
+{% include "skin-comps/pages/댓글과방명록/base/목록.html" %}
+{% endwith %}
 
   <p class="listMsg"></p>
 

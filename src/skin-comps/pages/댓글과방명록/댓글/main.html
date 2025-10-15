@@ -1,16 +1,18 @@
 <s_rp><!--▶ 댓글 --><div id="commentSec">
   <h1 class="areaTitle">댓글</h1>
 
-{% include "skin-comps/pages/댓글과방명록/댓글/목록.html" %}
-
-  <p class="listMsg"></p>
-
 {% with
   type='rp',
   name='댓글',
   s_for_member='s_rp_guest',
-  textarea_name='[##_rp_input_comment_##]'
+  textarea_name='[##_rp_input_comment_##]',
+  s_reply_container='s_rp2_container',
+  s_reply_rep='s_rp2_rep'
 %}
+{% include "skin-comps/pages/댓글과방명록/base/목록.html" %}
+
+  <p class="listMsg"></p>
+
 {% include "skin-comps/pages/댓글과방명록/base/폼.html" %}
 {% endwith %}
 
