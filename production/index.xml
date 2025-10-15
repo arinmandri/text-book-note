@@ -320,7 +320,7 @@
 </variable>
 		</variablegroup>
 
-		<variablegroup name="본문">
+		<variablegroup name="게시글">
 
 <variable>
 	<name>bonmunHeadingNumbering</name>
