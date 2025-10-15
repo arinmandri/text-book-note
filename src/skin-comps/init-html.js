@@ -20,6 +20,28 @@ function getParameters() {
 }
 const param = getParameters();
 
+//// 티스토리 스킨 옵션 값 가져오기
+function getTskinOptionNumVal( optionValueString, minVal, defaultVal ) {
+  try{
+    if( optionValueString === '' ) return defaultVal;
+    if( optionValueString == null ) return defaultVal;
+    let val = Number( optionValueString );
+    if( val < minVal ) return defaultVal;
+    return val;
+  }catch (e){
+    console.error('옵션 값 '+optionValueString+'을를 수로 변환  실패');
+    return defaultVal;
+  }
+}
+
+let noThumbnail = "[##_var_noThumbnail_##]";
+if( noThumbnail === "" )
+  noThumbnail = "./images/noThumbnail-default.svg";
+
+const maxWidthOfMain2        = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]',        1000, 1500 );
+const minWidthToOpenSidebar1 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 );
+const minWidthToOpenSidebar2 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 );
+
 //{% include "inblog-settings/darkmode-html.js" %}
 
 //{% include "extentions/checkDeletePost/script.js" %}

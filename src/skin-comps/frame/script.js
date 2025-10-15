@@ -1,0 +1,1 @@
+document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
