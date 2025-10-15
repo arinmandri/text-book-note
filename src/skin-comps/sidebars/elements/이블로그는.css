@@ -1,0 +1,79 @@
+/**### 블로그 description */
+.sidebar_elementMain.description > .box {
+  margin: 20px;
+  padding: 10px 12px 25px 12px;
+  border: 1px solid #dddddd;
+  border: 1px solid var(--borderCol);
+  box-shadow: 1px 1px 4px #0004;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+}
+.sidebar_elementMain.description > .box > * {
+  margin: 30px 0;
+}
+.sidebar_elementMain.description > .box > *:first-child {
+  margin-top: 0;
+}
+.sidebar_elementMain.description > .box > *:last-child {
+  margin-bottom: 0;
+}
+.sidebar_elementMain.description .head > * {
+  margin: 10px 0;
+}
+.sidebar_elementMain.description .img {
+  position: relative;
+}
+.sidebar_elementMain.description .img > .blog_image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.sidebar_elementMain.description .img > .blog_image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 5em;
+  max-height: 3.5em;
+  border: 2px solid #000000;
+  border: 2px solid var(--bonmunTextCol);
+  border-radius: 50%;
+}
+.sidebar_elementMain.description .img > .ribbon {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 108px;
+}
+.sidebar_elementMain.description .desc {
+  margin-top: 30px;
+}
+.sidebar_elementMain.description .linksBox {
+  position: relative;
+}
+.sidebar_elementMain.description .linksBox > hr {
+  margin: 10px 0;
+  border: 2px dotted #ddd;
+  border: 2px dotted var(--borderCol);
+}
+.sidebar_elementMain.description .linksBox > span {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+  padding: 7px;
+  font-size: 75%;
+  color: grey;
+}
+.sidebar_elementMain.description .links > * {
+  margin: 8px 4px;
+}
+.sidebar_elementMain.description .links a {
+  display: inline-block;
+}
+.sidebar_elementMain.description .links img {
+  height: 1em;
+  vertical-align: text-bottom;
+}

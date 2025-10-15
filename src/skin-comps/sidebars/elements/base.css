@@ -1,0 +1,50 @@
+/**### 사이드바아이템 - 공통
+사이드바 div.sidebar
+├사이드바아이템 div.sidebar_element.각자
+│├X 버블버튼(optional) button.bubbleBtn html 파일에는 이렇게 돼있지만 스크립트를 이용해서 다른 곳으로 수거해감.
+│├사이드바아이템본체 div.sidebar_elementMain.각자
+│└캡션(optional) span.caption
+...
+*/
+.sidebar > * {
+  width: 300px;
+}
+.sidebar .caption {/* ▴ figure 0: blahblah 이거 */
+  display: block;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+.sidebar .caption .semo {
+  color: #ff6644;
+  color: var(--pointCol);
+}
+.sidebar .bubbleBtn {
+  display: none;
+}
+.sidebar .padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sidebar .strong {
+  color: #ff6644;
+  color: var(--pointCol);
+  font-size: 150%;
+  font-weight: bold;
+}
+.sidebar .line-out {
+  margin: 6px auto;
+}
+.sidebar .line-in {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
+
+  /* 긴 것을 '…'로 줄임' */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

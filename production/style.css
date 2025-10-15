@@ -775,7 +775,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .randomtag .tagcloud2::after {
   content: '★';
 }
-/**### 검색창 */
+/**### 검색 */
 .sidebar_elementMain.search > form {
   padding: 10px;
 }

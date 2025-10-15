@@ -1,0 +1,23 @@
+/* 인기글 최근글 최근댓글 */
+.sidebar_elementMain.popularpost a::before {
+  content: "hot";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.sidebar_elementMain.recentpost a::before {
+  content: "new";
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: 60%;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+.sidebar_elementMain.recentcomment a::before {
+  content: "\1F4AC";
+  font-size: 80%;
+}

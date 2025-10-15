@@ -1,0 +1,22 @@
+/**### 사이드바아이템 - 랜덤태그 */
+.randomtag .tagcloud::before {
+  content: '#';
+  color: #dddddd;
+  color: var(--borderCol);
+}
+.randomtag .tagcloud {
+  margin: 1px 3px;
+  word-break: keep-all;
+}
+.randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
+  color: #ff6644;
+  color: var(--pointCol);
+}
+.randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}
+.randomtag .tagcloud3 {font-size: 120%; font-weight: bold;}
+.randomtag .tagcloud4 {font-size: 100%;}
+.randomtag .tagcloud5 {font-size: 75%;}
+.randomtag .tagcloud1::after ,
+.randomtag .tagcloud2::after {
+  content: '★';
+}

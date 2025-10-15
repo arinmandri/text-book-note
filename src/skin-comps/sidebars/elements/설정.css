@@ -1,0 +1,20 @@
+/* 설정 */
+.sidebar_elementMain.settings > * {
+  margin: 15px 8px;
+}
+#darkmodeBtn {
+  width: 1.1em;
+  height: 1.1em;
+  border-color: #ddd;
+  border-color: var(--borderCol);
+  border-width: 2px;
+  border-radius: 10px;
+  font-size: 360%;
+  color: #f64;
+  color: var(--pointCol);
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+}
+.fontsizeBtn {
+  padding: 7px;
+}

@@ -1,0 +1,59 @@
+/**### 사이드바아이템 - 카테고리
+카테고리 nav#navCat
+└카테고리 ul.tt_category ─ li
+　├분류전체보기 a.link_tit
+　└상위카테고리 ul.category_list ─ li 여럿
+　　├해당 a.link_item
+　　└하위카테고리 ul.sub_category_list (없으면 없음) ─ li ─ a.link_sub_item
+*/
+#navCat {
+  text-align: left;/* 왼쪽정렬 */
+  padding: 0;
+}
+#navCat .tt_category li {
+  margin: 15px auto;
+}
+#navCat .tt_category a {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--borderCol);
+  padding: 3px 12px;
+  transition: background-color 1s;
+}
+#navCat .tt_category a:hover {
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  border-color: #ff6644;
+  border-color: var(--pointCol);
+  color: black;
+  font-weight: bold;
+  transition-duration: 0s;
+}
+#navCat .category_list > li > button {
+  float: left;
+  width: 1.6em;
+  height: 1.6em;
+  background-color: transparent;
+}
+#navCat .category_list > li > button::after {
+  content: '\1F4C1';
+}
+#navCat .category_list > li.open > button::after {
+  content: '\1F4C2';
+}
+#navCat .category_list > li.lonely > button::after {
+  content: '\1F4CB';
+}
+#navCat .category_list > li:not(.open) > .sub_category_list {
+  display: none;
+}
+#navCat .link_sub_item::before {
+  content: '\1F4CE ';
+  color: #ff6644;
+  color: var(--pointCol);
+}
+#navCat .c_cnt {
+  font-size: 90%;
+  font-family: Gaegu, cursive;
+  color: grey;
+}
