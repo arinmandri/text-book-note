@@ -1,8 +1,9 @@
-src:
+go:
   targets:
     - index.xml
     - skin.html
     - style.css
+  out_dir: production
 
 skin:
   liststyle:
@@ -45,6 +46,3 @@ skin:
     widepage:
       label: '책장'
       desc: '책장처럼 넘겨본다.'
-
-prod:
-  dir: production
