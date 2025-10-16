@@ -22,7 +22,15 @@ skin:
       detailed:
         label: '복잡 목록'
         buttonText: '&#9636;'
-    default: card
+    default_base: card
+    default:
+      # 화면별 기본 스타일
+#     index:             # 홈
+#     category:          # 카테고리
+#     archive:           # 보관함
+      tag:      simple   # 태그
+      search:   detailed # 검색결과
+#     location:          # 지역로그
 
 prod:
   dir: production

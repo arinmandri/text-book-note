@@ -1,12 +1,10 @@
 
 (function(){
-  //// 검색결과 페이지인 경우 보기형식: 복잡 목록
-  var a = document.querySelector('#tt-body-search #postList')
-  if( a != null ) a.className = 'detailed'
-
-  //// 태그 검색 페이지인 경우 보기형식: 간략 목록
-  var a = document.querySelector('#tt-body-tag #postList')
-  if( a != null ) a.className = 'simple'
+  //// 화면별 기본 보기형식
+{% for page, value in settings.skin.liststyle.default.items() %}
+  var a = document.querySelector('#tt-body-{{ page }} #postList')
+  if( a != null ) a.className = '{{ value }}'
+{% endfor %}
 
   //// 썸네일 없으면 대체이미지
   const thumbnails = document.querySelectorAll('#postList .thumbnail')
