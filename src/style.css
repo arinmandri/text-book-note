@@ -63,7 +63,7 @@ body {
 
 {% include "skin-comps/main/게시글/style.css" %}
 
-{% include "skin-comps/main/글목록페이지/style.css" %}
+{% include "skin-comps/main/리스트/글목록페이지/style.css" %}
 
 {% include "skin-comps/main/태그페이지/style.css" %}
 

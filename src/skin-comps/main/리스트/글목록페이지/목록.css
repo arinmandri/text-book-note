@@ -6,7 +6,7 @@
 ├텅
 └목록 ul#postList.목록스타일별클래스(index.xml에서 정의, 사용자가 관리 페이지에서 선택)
 */
-{% include "skin-comps/liststyle/controller/_.css" %}
+{% include "skin-comps/main/리스트/liststyle/controller/_.css" %}
 /*
 ul#postList ─ li 여럿
 ├a ─ section.postListItem
@@ -31,5 +31,5 @@ ul#postList ─ li 여럿
   position: relative;
 }
 {% for name, value in settings.skin.liststyle.options.items() %}
-  {% include "skin-comps/liststyle/style/" + name + ".css" %}
+  {% include "skin-comps/main/리스트/liststyle/style/" + name + ".css" %}
 {% endfor %}
