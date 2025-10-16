@@ -1,7 +1,7 @@
 <s_cover_group><!--◆ 홈 커버 -->
   홈커버 만드는 중
   <s_cover_rep>
-{% for name, value in settings.skin.homecover.items() %}
+{% for name, value in settings.homecover.items() %}
   {% include "skin-comps/main/리스트/홈커버/items/" + name + ".html" %}
 {% endfor %}
   </s_cover_rep>

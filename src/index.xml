@@ -60,7 +60,7 @@
 			<showValue>1</showValue>
 		</tree>
 
-		<liststyle>{{ settings.skin.liststyle.default_base }}</liststyle>
+		<liststyle>{{ settings.liststyle.default_base }}</liststyle>
 	</default>
 {% include "skin-comps/main/리스트/홈커버/index.xml" %}
 

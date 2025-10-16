@@ -1,7 +1,7 @@
 
 (function(){
   //// 화면별 기본 보기형식
-{% for page, value in settings.skin.liststyle.default.items() %}
+{% for page, value in settings.liststyle.default.items() %}
   var a = document.querySelector('#tt-body-{{ page }} #postList')
   if( a != null ) a.className = '{{ value }}'
 {% endfor %}

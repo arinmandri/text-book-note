@@ -22,7 +22,7 @@ def main():
     for targetFilePath in settings["src"]["targets"]:
         template = env.get_template(targetFilePath)
         result = template.render({
-            'settings': settings
+            'settings': settings['skin']
         })
 
         with open(settings["prod"]["dir"] + '/' + targetFilePath, "w", encoding="utf-8") as f:

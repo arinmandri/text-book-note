@@ -1,5 +1,5 @@
 <liststyle>
-{% for name, value in settings.skin.liststyle.options.items() %}
+{% for name, value in settings.liststyle.options.items() %}
 	<item>
 		<label>{{ value.label }}</label>
 		<value>{{ name }}</value>

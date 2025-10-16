@@ -1,5 +1,5 @@
 <cover>
-{% for name, value in settings.skin.homecover.items() %}
+{% for name, value in settings.homecover.items() %}
 	<item>
 		<name><![CDATA[{{ name }}]]></name>
 		<label><![CDATA[{{ value.label }}]]></label>
