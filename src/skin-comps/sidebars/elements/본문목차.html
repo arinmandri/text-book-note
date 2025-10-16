@@ -1,0 +1,23 @@
+{% extends "skin-comps/sidebars/elements/base.html" %}
+{% block additional_class %}bonmunContentsTable{% endblock %}
+{% block content %}<!-- 본문 목차 -->
+<button class="bubbleBtn themeBtn">&#x2630;</button>
+<div class="sidebar_elementMain">
+  <!-- 게시글 보기 페이지에서만 나타난다. hn 태그들을 인식해서 목차를 만든다. -->
+  <ol id="bonmunHeadingList" class="_textLeft"></ol>
+</div>
+<span class="caption">목차</span>
+<script>(function(){
+  if( document.getElementById('tt-body-page') == null ){
+    document.querySelector('.sidebar_element.bonmunContentsTable').remove();
+  }else{// 게시글 페이지일 때만
+    //// 본문 다 불러온 뒤에 목차 생성
+    document.addEventListener('DOMContentLoaded', function(){
+      const list = document.getElementById('bonmunHeadingList')
+      const bonmun = document.getElementsByClassName('bonmun')[0];
+      const genFunc = {% include "extentions/bonmunHeading/genFunc.js" %};
+      genFunc( bonmun, list );
+    });
+  }
+})();</script>
+{% endblock %}
