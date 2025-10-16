@@ -2,7 +2,9 @@
 <!--▶ 목록 -->
 <div>
 {% include "skin-comps/liststyle/controller/_.html" %}
-  <s_list_empty><div>텅</div><!-- TODO --></s_list_empty>
+
+{% include "skin-comps/main/글목록페이지/목록-없음.html" %}
+
   <ul id="postList" class="[##_list_style_##]">
     <s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><section class="postListItem">
       <div class="thumbnail">
