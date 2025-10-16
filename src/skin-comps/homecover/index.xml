@@ -1,12 +1,9 @@
-
-	<cover>
-		<item>
-			<name></name>
-			<label>
-				<![CDATA[ 홈커버 아직 없음 ]]>
-			</label>
-			<description>
-				<![CDATA[ 아리랑 아리랑 아라리요 ]]>
-			</description>
-		</item>
-	</cover>
+<cover>
+{% for name, value in settings.skin.homecover.items() %}
+	<item>
+		<name><![CDATA[{{ name }}]]></name>
+		<label><![CDATA[{{ value.label }}]]></label>
+		<description><![CDATA[{{ value.desc }}]]></description>
+	</item>
+{% endfor %}
+</cover>

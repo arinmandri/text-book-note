@@ -1,4 +1,8 @@
-
 <s_cover_group><!--◆ 홈 커버 -->
-  <!-- TODO -->
+  홈커버 만드는 중
+  <s_cover_rep>
+{% for name, value in settings.skin.homecover.items() %}
+  {% include "skin-comps/homecover/items/" + name + ".html" %}
+{% endfor %}
+  </s_cover_rep>
 </s_cover_group>

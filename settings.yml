@@ -32,5 +32,19 @@ skin:
       search:   detailed # 검색결과
 #     location:          # 지역로그
 
+  homecover:
+    train:
+      label: '큼직 한 줄'
+      desc: '글목록 옵션의 큼직 한 줄과 같다.'
+    card:
+      label: '작은 앨범'
+      desc: '썸네일 오른쪽왼쪽 번갈아 붙임.'
+    bookcover:
+      label: '책표지'
+      desc: '썸네일로 왕큰 배경 함.'
+    widepage:
+      label: '책장'
+      desc: '책장처럼 넘겨본다.'
+
 prod:
   dir: production

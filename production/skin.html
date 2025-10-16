@@ -439,9 +439,19 @@ function setSettingFixCbox( settingName, checked ){
 
     <!--### 메인 -->
     <main id="main">
-
 <s_cover_group><!--◆ 홈 커버 -->
-  <!-- TODO -->
+  홈커버 만드는 중
+  <s_cover_rep>
+
+  HOMECOVER_TRAIN
+
+  HOMECOVER_CARD
+
+  HOMECOVER_BOOKCOVER
+
+  HOMECOVER_WIDEPAGE
+
+  </s_cover_rep>
 </s_cover_group>
 
 <s_notice_rep><!--◆ 공지 페이지 -->
@@ -833,23 +843,23 @@ function setSettingFixCbox( settingName, checked ){
 <s_list_empty><div>텅</div><!-- TODO --></s_list_empty>
 
   <ul id="postList" class="[##_list_style_##]">
-    <s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><section class="postListItem">
-      <div class="thumbnail">
-        <s_list_rep_thumbnail><img loading="lazy" src="[##_list_rep_thumbnail_##]"></s_list_rep_thumbnail>
-      </div>
-      <div class="itemHead">
-        <h2 class="title">[##_list_rep_title_##]</h2>
-        <span class="category">[##_list_rep_category_##]</span>
-      </div>
-      <div class="itemBody">
-        <span class="content">[##_list_rep_summary_##]</span>
-        <span class="itemTail">
-          <span class="date">[##_list_rep_regdate_##].</span>
-          <span class="writer">[##_list_rep_author_##]</span>
-        </span>
-      </div>
-      <span class="tape"></span>
-    </section></a></li></s_list_rep>
+<s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><section class="postListItem">
+  <div class="thumbnail">
+    <s_list_rep_thumbnail><img loading="lazy" src="[##_list_rep_thumbnail_##]"></s_list_rep_thumbnail>
+  </div>
+  <div class="itemHead">
+    <h2 class="title">[##_list_rep_title_##]</h2>
+    <span class="category">[##_list_rep_category_##]</span>
+  </div>
+  <div class="itemBody">
+    <span class="content">[##_list_rep_summary_##]</span>
+    <span class="itemTail">
+      <span class="date">[##_list_rep_regdate_##].</span>
+      <span class="writer">[##_list_rep_author_##]</span>
+    </span>
+  </div>
+  <span class="tape"></span>
+</section></a></li></s_list_rep>
   </ul>
 
   <script>//
@@ -1090,7 +1100,7 @@ function setSettingFixCbox( settingName, checked ){
       </s_paging_rep>
     <a [##_next_page_##] class="[##_no_more_next_##]"><button class="themeBtn">▶</button></a>
   </div>
-  <script>(function(){ // 글목록 페이지의 상단부분에도 페이징 복붙하기
+  <script>(function(){
     const paging = document.getElementById('paging');
 
     //// 페이지가 1개 이하이면 페이징 버튼 삭제

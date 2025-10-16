@@ -62,18 +62,33 @@
 
 		<liststyle>card</liststyle>
 	</default>
+<cover>
 
-	<cover>
-		<item>
-			<name></name>
-			<label>
-				<![CDATA[ 홈커버 아직 없음 ]]>
-			</label>
-			<description>
-				<![CDATA[ 아리랑 아리랑 아라리요 ]]>
-			</description>
-		</item>
-	</cover>
+	<item>
+		<name><![CDATA[train]]></name>
+		<label><![CDATA[큼직 한 줄]]></label>
+		<description><![CDATA[글목록 옵션의 큼직 한 줄과 같다.]]></description>
+	</item>
+
+	<item>
+		<name><![CDATA[card]]></name>
+		<label><![CDATA[작은 앨범]]></label>
+		<description><![CDATA[썸네일 오른쪽왼쪽 번갈아 붙임.]]></description>
+	</item>
+
+	<item>
+		<name><![CDATA[bookcover]]></name>
+		<label><![CDATA[책표지]]></label>
+		<description><![CDATA[썸네일로 왕큰 배경 함.]]></description>
+	</item>
+
+	<item>
+		<name><![CDATA[widepage]]></name>
+		<label><![CDATA[책장]]></label>
+		<description><![CDATA[책장처럼 넘겨본다.]]></description>
+	</item>
+
+</cover>
 
 	<variables>
 
