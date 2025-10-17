@@ -73,6 +73,7 @@
 		<variablegroup name="놓임새">
 {% include "skin-comps/frame/tskin_variable.xml" %}
 {% include "skin-comps/sidebars/tskin_variable.xml" %}
+{% include "skin-comps/main/홈커버/variable.xml" %}
 		</variablegroup>
 
 		<variablegroup name="게시글">

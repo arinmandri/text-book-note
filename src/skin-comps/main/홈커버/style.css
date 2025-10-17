@@ -1,8 +1,7 @@
-/* 홈에서는 헤더 푸터 말고 홈커버만 보임 */
-body#tt-body-index #main1 {
-  display: none;
-}
-body#tt-body-index #sidebar3 {
+/* 홈에서는 홈커버만 보임 */
+body#tt-body-index #main1 ,
+body#tt-body-index #sidebar3 ,
+body#tt-body-index .hideAtHome-1 {
   display: none;
 }
 

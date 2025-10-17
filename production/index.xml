@@ -357,6 +357,20 @@
 	<type>STRING</type>
 	<default><![CDATA[1500]]></default>
 </variable>
+<variable>
+	<name>hideAtHome_Header</name>
+	<label>홈에서 헤더 숨김</label>
+	<description></description>
+	<type>BOOL</type>
+	<default><![CDATA[false]]></default>
+</variable>
+<variable>
+	<name>hideAtHome_Footer</name>
+	<label>홈에서 푸터 숨김</label>
+	<description></description>
+	<type>BOOL</type>
+	<default><![CDATA[false]]></default>
+</variable>
 		</variablegroup>
 
 		<variablegroup name="게시글">
