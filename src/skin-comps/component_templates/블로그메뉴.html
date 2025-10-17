@@ -1,0 +1,14 @@
+<nav {{ nav_additional_attributes }}>
+  [##_blog_menu_##]
+  <script>(function(){ 
+    document.querySelector('{{ nav_querySelector }} > ul').innerHTML 
+      += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
+      +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
+
+    //// 메뉴의 항목들에 클래스 추가
+    const navMenus = document.querySelectorAll('{{ nav_querySelector }} a')
+    for( let navMenu of navMenus ){
+      navMenu.classList.add('themeBtn');
+    }
+  })()</script>
+</nav>

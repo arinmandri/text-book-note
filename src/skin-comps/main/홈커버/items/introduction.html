@@ -3,6 +3,11 @@
 <div class="homecover introduction">
   <h1>[##_title_##]</h1>
   <img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
-  <nav>[##_blog_menu_##]</nav>
+{% with
+  nav_additional_attributes='',
+  nav_querySelector='.homecover.introduction nav'
+%}
+{% include "skin-comps/component_templates/블로그메뉴.html" %}
+{% endwith %}
 </div>
 {% endblock %}
