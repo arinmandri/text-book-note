@@ -44,6 +44,7 @@ body {
 
 
 {% include "skin-comps/frame/style.css" %}
+{% include "skin-comps/main/리스트/홈커버/style.css" %}
 {% include "skin-comps/sidebars/style.css" %}
 
 

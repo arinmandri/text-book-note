@@ -34,6 +34,9 @@ skin:
 #     location:          # 지역로그
 
   homecover:
+    introduction:
+      label: '소개'
+      desc: '블로그 소개와 블로그 메뉴가 나온다. 이 홈커버는 콘텐츠를 설정해도 나오지 않습니다.'
     train:
       label: '큼직 한 줄'
       desc: '글목록 옵션의 큼직 한 줄과 같다.'
@@ -46,3 +49,4 @@ skin:
     widepage:
       label: '책장'
       desc: '책장처럼 넘겨본다.'
+# XXX 이원화됨. 애초에 이것들이 소스랑 분리돼 settings에 있을 이유가 있을가?

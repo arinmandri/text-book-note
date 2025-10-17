@@ -60,9 +60,33 @@
 			<showValue>1</showValue>
 		</tree>
 
+		<cover><![CDATA[[
+  {
+    "name": "introduction",
+    "title": "이 블로그는",
+    "dataType": "CUSTOM",
+    "data": []
+  },
+  {
+    "name": "train",
+    "title": "요즈음의 일",
+    "dataType": "RECENT",
+    "data": {
+      "category": "ALL",
+      "size": 5
+    }
+  }
+]]]></cover>
+
 		<liststyle>card</liststyle>
 	</default>
 <cover>
+
+	<item>
+		<name><![CDATA[introduction]]></name>
+		<label><![CDATA[소개]]></label>
+		<description><![CDATA[블로그 소개와 블로그 메뉴가 나온다. 이 홈커버는 콘텐츠를 설정해도 나오지 않습니다.]]></description>
+	</item>
 
 	<item>
 		<name><![CDATA[train]]></name>

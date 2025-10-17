@@ -359,6 +359,13 @@ footer {
     overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
   }
 }
+/* 홈에서는 헤더 푸터 말고 홈커버만 보임 */
+body#tt-body-index #main1 {
+  display: none;
+}
+body#tt-body-index #sidebar3 {
+  display: none;
+}
 
 /* ## 사이드바 */
 /*

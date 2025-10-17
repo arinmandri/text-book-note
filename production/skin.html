@@ -275,6 +275,47 @@ function setSettingFixCbox( settingName, checked ){
   <a href="/" style="display: block">[##_title_##]</a>
 </header>
 
+<s_cover_group><!--◆ 홈 커버 -->
+  <h1>스킨 수정 작업 중: 홈커버 만드는 중</h1>
+  <s_cover_rep>
+
+  <s_cover name="introduction">
+
+<div>
+  <h1>[##_title_##]</h1>
+  <img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
+  <div>[##_blog_menu_##]</div>
+</div>
+
+</s_cover>
+
+  <s_cover name="train">
+
+HOMECOVER_TRAIN
+
+</s_cover>
+
+  <s_cover name="card">
+
+HOMECOVER_CARD
+
+</s_cover>
+
+  <s_cover name="bookcover">
+
+HOMECOVER_BOOKCOVER
+
+</s_cover>
+
+  <s_cover name="widepage">
+
+HOMECOVER_WIDEPAGE
+
+</s_cover>
+
+  </s_cover_rep>
+</s_cover_group>
+
 <!--# 메인영역1 -->
 <div id="main1">
 
@@ -388,6 +429,7 @@ function setSettingFixCbox( settingName, checked ){
 </div><!-- 사이드바상자1 ##-->
 
   <!--## 메인영역2 -->
+  <!-- main2Box-main2 이중으로 된 이유: (스타일) main2와 main2Box는 가로크기가 같지 않고 main2를 가운데 놓으려고. -->
   <div id="main2Box"><div id="main2">
 
 <s_rct_notice><!--### 최근공지 -->
@@ -439,20 +481,6 @@ function setSettingFixCbox( settingName, checked ){
 
     <!--### 메인 -->
     <main id="main">
-<s_cover_group><!--◆ 홈 커버 -->
-  홈커버 만드는 중
-  <s_cover_rep>
-
-  HOMECOVER_TRAIN
-
-  HOMECOVER_CARD
-
-  HOMECOVER_BOOKCOVER
-
-  HOMECOVER_WIDEPAGE
-
-  </s_cover_rep>
-</s_cover_group>
 
 <s_notice_rep><!--◆ 공지 페이지 -->
   <div class="noticePost onlyOnPage-index">
