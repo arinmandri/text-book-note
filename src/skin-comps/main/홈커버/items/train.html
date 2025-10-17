@@ -1,4 +1,38 @@
 {% extends "skin-comps/main/홈커버/items/base.html" %}
 {% block content %}
-HOMECOVER_TRAIN
+<ul class="postList">
+  <s_cover_item>
+    <s_cover_item_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+          <span class="category">[##_cover_item_category_##]</span>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+          <span class="itemTail">
+            <span class="date">[##_cover_item_simple_date_##].</span>
+          </span>
+        </div>
+      </section></a></li>
+    </s_cover_item_article_info>
+
+    <s_cover_item_not_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+        </div>
+      </section></a></li>
+    </s_cover_item_not_article_info>
+  </s_cover_item>
+</ul>
 {% endblock %}

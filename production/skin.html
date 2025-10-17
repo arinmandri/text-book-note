@@ -274,11 +274,13 @@ function setSettingFixCbox( settingName, checked ){
   <a href="/" style="display: block">[##_title_##]</a>
 </header>
 
-<s_cover_group><!--◆ 홈 커버 -->
+<s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
   <h1>스킨 수정 작업 중: 홈커버 만드는 중</h1>
   <s_cover_rep>
 
   <s_cover name="introduction">
+	<div class="homecoverItem introduction">
+<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 
 <div class="homecover introduction">
   <h1>[##_title_##]</h1>
@@ -301,34 +303,81 @@ function setSettingFixCbox( settingName, checked ){
 
 </div>
 
+	</div>
 </s_cover>
 
   <s_cover name="train">
+	<div class="homecoverItem train">
+<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 
-HOMECOVER_TRAIN
+<ul class="postList">
+  <s_cover_item>
+    <s_cover_item_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+          <span class="category">[##_cover_item_category_##]</span>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+          <span class="itemTail">
+            <span class="date">[##_cover_item_simple_date_##].</span>
+          </span>
+        </div>
+      </section></a></li>
+    </s_cover_item_article_info>
 
+    <s_cover_item_not_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+        </div>
+      </section></a></li>
+    </s_cover_item_not_article_info>
+  </s_cover_item>
+</ul>
+
+	</div>
 </s_cover>
 
   <s_cover name="card">
+	<div class="homecoverItem card">
+<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 
 HOMECOVER_CARD
 
+	</div>
 </s_cover>
 
   <s_cover name="bookcover">
+	<div class="homecoverItem bookcover">
+<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 
 HOMECOVER_BOOKCOVER
 
+	</div>
 </s_cover>
 
   <s_cover name="widepage">
+	<div class="homecoverItem widepage">
+<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 
 HOMECOVER_WIDEPAGE
 
+	</div>
 </s_cover>
 
   </s_cover_rep>
-</s_cover_group>
+</div></s_cover_group>
 
 <!--# 메인영역1 -->
 <div id="main1">
