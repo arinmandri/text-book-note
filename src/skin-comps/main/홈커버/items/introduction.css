@@ -1,0 +1,22 @@
+/* 사이드바의 메뉴랑 좀 중복이긴? 한데? 그렇다고 공통추출?은 좀 거창?한 거 같기?도 하고? */
+.homecover.introduction {
+  padding: 10px 10px;
+}
+.homecover.introduction li {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+}
+.homecover.introduction li > a {
+  display: block;
+  padding: 10px 15px 10px 20px;
+  border-radius: 0;
+}
+.homecover.introduction li::before {
+  content: '';
+  height: 90%; width: 0;
+  position: absolute;
+  top: 5%; left: -1px;
+  border-left: 4px dotted #fff;
+  border-left: 4px dotted var(--backCol);
+}
