@@ -44,7 +44,7 @@ body {
 
 
 {% include "skin-comps/frame/style.css" %}
-{% include "skin-comps/main/리스트/홈커버/style.css" %}
+{% include "skin-comps/main/홈커버/style.css" %}
 {% include "skin-comps/sidebars/style.css" %}
 
 
@@ -64,7 +64,7 @@ body {
 
 {% include "skin-comps/main/게시글/style.css" %}
 
-{% include "skin-comps/main/리스트/글목록페이지/style.css" %}
+{% include "skin-comps/main/리스트/style.css" %}
 
 {% include "skin-comps/main/태그페이지/style.css" %}
 

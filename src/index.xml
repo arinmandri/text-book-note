@@ -60,11 +60,11 @@
 			<showValue>1</showValue>
 		</tree>
 
-		<cover><![CDATA[{% include "skin-comps/main/리스트/홈커버/default.json" %}]]></cover>
+		<cover><![CDATA[{% include "skin-comps/main/홈커버/default.json" %}]]></cover>
 
 		<liststyle>{{ settings.liststyle.default_base }}</liststyle>
 	</default>
-{% include "skin-comps/main/리스트/홈커버/index.xml" %}
+{% include "skin-comps/main/홈커버/index.xml" %}
 
 	<variables>
 {% include "style/color-scheme/variablegroup-colorscheme-light.xml" %}
