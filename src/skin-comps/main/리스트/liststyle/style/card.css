@@ -54,7 +54,7 @@
   bottom: 1px;
   right: 5px;
   text-align: right;
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   font-size: 0.9em;
   line-height: 1;
 }

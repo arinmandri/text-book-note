@@ -20,7 +20,7 @@ main
   margin-bottom: 30px;
 
   text-align: center;
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
   font-size: 120%;
   font-weight: bold;
   letter-spacing: 0.2em;

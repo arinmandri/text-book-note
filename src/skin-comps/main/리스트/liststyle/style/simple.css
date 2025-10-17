@@ -51,10 +51,10 @@
   display: inline;
   font-size: 120%;
   font-weight: normal;
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
 }
 #postList.simple .category {/* 카테고리 */
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   font-size: 90%;
 }
 #postList.simple .category::before {

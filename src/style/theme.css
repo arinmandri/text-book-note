@@ -13,7 +13,7 @@ hr.areaSeparator {
   background-color: var(--frameBack);
   color: #ffffff;
   color: var(--frameFore);
-  font-family: 'Jua', sans-serif;
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
   transition: background-color 1.5s;
   line-height: 1;
 }
@@ -52,7 +52,7 @@ body.theme-dark .themeBtn {
 
 .pageTitle {
   margin: 40px auto;
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
   font-size: 250%;
   font-weight: 600;
   color: #000;

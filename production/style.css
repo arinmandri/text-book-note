@@ -1,11 +1,17 @@
 @charset "utf-8";
 
 /* Web Font */
-/* sans-serif  */@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-/* serif       */@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
-/* handwriting */@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
-/* monospace   */@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic+Coding&display=swap');
-/* 블로그 요소 강조 */@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 
 html {
   width: 100%;
@@ -797,7 +803,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #navCat .c_cnt {
   font-size: 90%;
-  font-family: Gaegu, cursive;
+  font-family: 'Gaegu', cursive;
   color: grey;
 }
 
@@ -1226,7 +1232,7 @@ main
 /* 소제목들 */
 .pmargin .hn {
   font-size: 0.6em;
-  font-family: 'Jua';
+  font-family: 'Jua', sans-serif;
   font-weight: bold;
   color: #cba;
   color: var(--bonmunForm);
@@ -1593,7 +1599,7 @@ li > dl > dt ,
 }
 .comment .writer {/* 글쓴이 */
   font-weight: bold;
-  font-family: Gaegu, cursive;
+  font-family: 'Gaegu', cursive;
   vertical-align: middle;
 }
 .comment .area2 {/* 댓글 내용 */
@@ -1605,7 +1611,7 @@ li > dl > dt ,
 }
 .comment .date {/* 날짜 */
   font-size: 0.8em;
-  font-family: Gaegu, cursive;
+  font-family: 'Gaegu', cursive;
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
   font-family: 'Nanum Gothic', sans-serif;

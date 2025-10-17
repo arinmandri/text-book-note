@@ -54,6 +54,6 @@
 }
 #navCat .c_cnt {
   font-size: 90%;
-  font-family: Gaegu, cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   color: grey;
 }

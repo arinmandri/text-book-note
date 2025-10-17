@@ -10,7 +10,7 @@ header , footer {
   background-color: var(--frameBack);
   color: #fff;
   color: var(--frameFore);
-  font-family: 'Jua', sans-serif;
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
   font-weight: 100;
 }
 header {

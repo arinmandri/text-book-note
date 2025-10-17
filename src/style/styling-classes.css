@@ -30,13 +30,13 @@ body:not(#tt-body-page) .onlyOnPage-page {
   font-weight: bold;
 }
 ._fontSans {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: {{ settings.fontFamily.sans.cssValue }};
 }
 ._fontSerif {
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
 }
 ._fontCursive {
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
 }
 /* 글자색 */
 .red        { color:            #d04 }

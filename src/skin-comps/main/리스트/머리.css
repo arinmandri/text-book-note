@@ -32,7 +32,7 @@
 }
 #listHead .subtitle {
   margin-top: 15px;
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
 }
 #listHead .postNum {
   color: #ff6644;

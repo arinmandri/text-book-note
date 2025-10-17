@@ -33,7 +33,7 @@
   font-size: 200%;
   border-bottom: 3px dashed #ddd;
   border-bottom: 3px dashed var(--borderCol);
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
 }
 #main4.tagBoxOrdered .list {
   padding: 10px;

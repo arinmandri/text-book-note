@@ -42,11 +42,11 @@
   overflow: hidden;
 }
 .homecoverItem.train .content {/* 본문 */
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
   font-size: 1.1em;
 }
 .homecoverItem.train .itemTail {/* 날짜등 */
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   position: absolute;
   right: 2px;
   bottom: 2px;

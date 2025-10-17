@@ -44,11 +44,11 @@ small {
   color: grey;
 }
 strong {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: {{ settings.fontFamily.sans.cssValue }};
   font-weight: bold;
 }
 pre , code {
-  font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
+  font-family: {{ settings.fontFamily.monospace.cssValue }};
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */

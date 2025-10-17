@@ -4,7 +4,7 @@
   padding: 20px 3%;
   color: #000;
   color: var(--bonmunTextCol);
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
   line-height: 1.8;
 }
 /* a */
@@ -30,7 +30,7 @@
 /* 소제목들 */
 .pmargin .hn {
   font-size: 0.6em;
-  font-family: 'Jua';
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
   font-weight: bold;
   color: #cba;
   color: var(--bonmunForm);
@@ -48,7 +48,7 @@
 .pmargin > h4 , 
 .pmargin > h5 , 
 .pmargin > h6 {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: {{ settings.fontFamily.sans.cssValue }};
 }
 /* 위 여백 */
 .pmargin > h2:not(:first-child) { margin-top: 190px; }
@@ -63,7 +63,7 @@
   color: var(--frameFore);
   text-align: center;/* 글자 가운데 */
   font-size: 179%;/* 글자 크기 */
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
   letter-spacing: 0.1em;
   padding: 3px;
 }
@@ -133,7 +133,7 @@
   height: 1.32em;
   border-radius: 50px;
   /* 내부 */
-  font-family: 'Jua', sans-serif;
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
   background-color: #cba;
   background-color: var(--bonmunForm);
   color: #fff;
@@ -141,7 +141,7 @@
   cursor: default;
 }
 .bonmun dt {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: {{ settings.fontFamily.sans.cssValue }};
 }
 .bonmun dd::before {
   content: '\270D\0020';

@@ -12,7 +12,7 @@
 .sidebar .caption {/* ▴ figure 0: blahblah 이거 */
   display: block;
   text-align: center;
-  font-family: 'Gaegu', cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   margin-top: 12px;
   padding-bottom: 10px;
   font-size: 0.8em;

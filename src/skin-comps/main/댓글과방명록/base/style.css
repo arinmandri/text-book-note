@@ -87,7 +87,7 @@
 }
 .comment .writer {/* 글쓴이 */
   font-weight: bold;
-  font-family: Gaegu, cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
   vertical-align: middle;
 }
 .comment .area2 {/* 댓글 내용 */
@@ -99,10 +99,10 @@
 }
 .comment .date {/* 날짜 */
   font-size: 0.8em;
-  font-family: Gaegu, cursive;
+  font-family: {{ settings.fontFamily.handwriting.cssValue }};
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: {{ settings.fontFamily.sans.cssValue }};
 }
 .comment .themeBtn {/* 버튼 */
   display: inline-block;
@@ -155,5 +155,5 @@
 #commentSec .formMsg {
   margin: 40px 0;
   text-align: center;
-  font-family: 'Noto Serif KR', serif;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
 }

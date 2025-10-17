@@ -6,6 +6,23 @@ go:
   out_dir: production
 
 skin:
+  fontFamily:
+    sans:
+      url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'
+      cssValue: "'Nanum Gothic', sans-serif"
+    serif:
+      url: 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap'
+      cssValue: "'Noto Serif KR', serif"
+    handwriting:
+      url: 'https://fonts.googleapis.com/css2?family=Gaegu&display=swap'
+      cssValue: "'Gaegu', cursive"
+    monospace:
+      url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap'
+      cssValue: "'D2Coding', 'Nanum Gothic Coding', consolas, monospace"
+    sticker:
+      url: 'https://fonts.googleapis.com/css2?family=Jua&display=swap'
+      cssValue: "'Jua', sans-serif"
+
   liststyle:
     options:
       train:
