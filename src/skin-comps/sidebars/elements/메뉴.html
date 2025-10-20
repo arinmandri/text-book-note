@@ -2,7 +2,8 @@
 {% block content %}<!-- 메뉴 -->
 <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
 {% with
-  nav_additional_attributes='id="navMenu" class="sidebar_elementMain"',
+  nav_additional_classes='sidebar_elementMain',
+  nav_additional_attributes='id="navMenu"',
   nav_querySelector='#navMenu'
 %}
 {% include "skin-comps/component_templates/블로그메뉴.html" %}

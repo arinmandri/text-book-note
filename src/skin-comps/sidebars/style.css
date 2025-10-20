@@ -213,7 +213,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 
 {% include "skin-comps/sidebars/elements/base.css" %}
-{% include "skin-comps/sidebars/elements/메뉴.css" %}
 {% include "skin-comps/sidebars/elements/카테고리.css" %}
 {% include "skin-comps/sidebars/elements/본문목차.css" %}
 {% include "skin-comps/sidebars/elements/랜덤태그.css" %}

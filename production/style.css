@@ -228,6 +228,30 @@ body.theme-dark .themeBtn {
   height: 1em;
   vertical-align: text-bottom;
 }
+/**
+메뉴 nav.blogMenu ─ ul ─ li ─ a
+*/
+.blogMenu {
+  padding: 10px 10px;
+}
+.blogMenu li {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+}
+.blogMenu li > a {
+  display: block;
+  padding: 10px 15px 10px 20px;
+  border-radius: 0;
+}
+.blogMenu li::before {/* 왼쪽장식 */
+  content: '';
+  height: 90%; width: 0;
+  position: absolute;
+  top: 5%; left: -1px;
+  border-left: 4px dotted #fff;
+  border-left: 4px dotted var(--backCol);
+}
 
 
 
@@ -385,11 +409,18 @@ body#tt-body-index .hideAtHome-1 {
   display: none;
 }
 
+.homecoverItem {
+  margin: 100px 0;
+}
 .homecoverItem h1 {
   text-align: right;
 }
 
-  .homecover.introduction > .namecard {
+  .homecover.introduction > * {
+  margin: 20px auto;
+}
+
+.homecover.introduction > .namecard {
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
@@ -412,29 +443,6 @@ body#tt-body-index .hideAtHome-1 {
 
 .homecover.introduction > .namecard .box2 > * {
   margin: 9px;
-}
-
-/* 사이드바의 메뉴랑 좀 중복이긴? 한데? 그렇다고 공통추출?은 좀 거창?한 거 같기?도 하고? */
-.homecover.introduction > nav {
-  padding: 10px 10px;
-}
-.homecover.introduction > nav li {
-  display: inline-block;
-  margin: 5px;
-  position: relative;
-}
-.homecover.introduction > nav li > a {
-  display: block;
-  padding: 10px 15px 10px 20px;
-  border-radius: 0;
-}
-.homecover.introduction > nav li::before {
-  content: '';
-  height: 90%; width: 0;
-  position: absolute;
-  top: 5%; left: -1px;
-  border-left: 4px dotted #fff;
-  border-left: 4px dotted var(--backCol);
 }
 
   .homecoverItem.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
@@ -760,30 +768,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-/**### 사이드바아이템 - 메뉴
-메뉴 nav#navMenu ─ ul ─ li ─ a
-*/
-#navMenu {
-  padding: 10px 10px;
-}
-#navMenu li {
-  display: inline-block;
-  margin: 5px;
-  position: relative;
-}
-#navMenu li > a {
-  display: block;
-  padding: 10px 15px 10px 20px;
-  border-radius: 0;
-}
-#navMenu li::before {/* 왼쪽장식 */
-  content: '';
-  height: 90%; width: 0;
-  position: absolute;
-  top: 5%; left: -1px;
-  border-left: 4px dotted #fff;
-  border-left: 4px dotted var(--backCol);
 }
 /**### 사이드바아이템 - 카테고리
 카테고리 nav#navCat

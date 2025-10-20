@@ -1,20 +1,20 @@
-/**### 사이드바아이템 - 메뉴
-메뉴 nav#navMenu ─ ul ─ li ─ a
+/**
+메뉴 nav.blogMenu ─ ul ─ li ─ a
 */
-#navMenu {
+.blogMenu {
   padding: 10px 10px;
 }
-#navMenu li {
+.blogMenu li {
   display: inline-block;
   margin: 5px;
   position: relative;
 }
-#navMenu li > a {
+.blogMenu li > a {
   display: block;
   padding: 10px 15px 10px 20px;
   border-radius: 0;
 }
-#navMenu li::before {/* 왼쪽장식 */
+.blogMenu li::before {/* 왼쪽장식 */
   content: '';
   height: 90%; width: 0;
   position: absolute;
