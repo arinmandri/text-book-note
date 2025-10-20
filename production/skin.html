@@ -275,16 +275,16 @@ function setSettingFixCbox( settingName, checked ){
 </header>
 
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
-  <h1>스킨 수정 작업 중: 홈커버 만드는 중</h1>
+  <p style="font-size: 200%">스킨 수정 작업 중: 홈커버 만드는 중</p>
   <s_cover_rep>
 
   <s_cover name="introduction">
-	<div class="homecoverItem introduction">
+	<section class="homecoverItem introduction">
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
+		<div class="homecover introduction">
 
-<div class="homecover introduction">
-  <h1>[##_title_##]</h1>
-  <img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
+<h2>[##_title_##]</h2>
+<img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
 
 <nav >
   [##_blog_menu_##]
@@ -301,19 +301,20 @@ function setSettingFixCbox( settingName, checked ){
   })()</script>
 </nav>
 
-</div>
 
-	</div>
+		</div>
+	</section>
 </s_cover>
 
   <s_cover name="train">
-	<div class="homecoverItem train">
+	<section class="homecoverItem train">
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
+		<div class="homecover train">
 
 <ul class="postList">
   <s_cover_item>
     <s_cover_item_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
         <div class="thumbnail">
           <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
         </div>
@@ -327,11 +328,11 @@ function setSettingFixCbox( settingName, checked ){
             <span class="date">[##_cover_item_simple_date_##].</span>
           </span>
         </div>
-      </section></a></li>
+      </article></a></li>
     </s_cover_item_article_info>
 
     <s_cover_item_not_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><section class="postListItem">
+      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
         <div class="thumbnail">
           <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
         </div>
@@ -341,39 +342,46 @@ function setSettingFixCbox( settingName, checked ){
         <div class="itemBody">
           <span class="content">[##_cover_item_summary_##]</span>
         </div>
-      </section></a></li>
+      </article></a></li>
     </s_cover_item_not_article_info>
   </s_cover_item>
 </ul>
 
-	</div>
+		</div>
+	</section>
 </s_cover>
 
   <s_cover name="card">
-	<div class="homecoverItem card">
+	<section class="homecoverItem card">
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
+		<div class="homecover card">
 
 HOMECOVER_CARD
 
-	</div>
+		</div>
+	</section>
 </s_cover>
 
   <s_cover name="bookcover">
-	<div class="homecoverItem bookcover">
+	<section class="homecoverItem bookcover">
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
+		<div class="homecover bookcover">
 
 HOMECOVER_BOOKCOVER
 
-	</div>
+		</div>
+	</section>
 </s_cover>
 
   <s_cover name="widepage">
-	<div class="homecoverItem widepage">
+	<section class="homecoverItem widepage">
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
+		<div class="homecover widepage">
 
 HOMECOVER_WIDEPAGE
 
-	</div>
+		</div>
+	</section>
 </s_cover>
 
   </s_cover_rep>
@@ -545,7 +553,7 @@ HOMECOVER_WIDEPAGE
 </s_rct_notice>
 
     <!--### 메인 -->
-    <main id="main">
+    <section id="main">
 
 <s_notice_rep><!--◆ 공지 페이지 -->
   <div class="noticePost onlyOnPage-index">
@@ -902,7 +910,7 @@ HOMECOVER_WIDEPAGE
 
 
 <!--▶ 목록 -->
-<div>
+<section>
 
 <div class="settingForm"><!-- 보기형식 변경 -->
   <input type="hidden" class="settingCore" name="listStyle" value="[##_list_style_##]" onchange="onchangeListStyle(this)" />
@@ -936,7 +944,7 @@ HOMECOVER_WIDEPAGE
 <s_list_empty><div>텅</div><!-- TODO --></s_list_empty>
 
   <ul id="postList" class="[##_list_style_##]">
-<s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><section class="postListItem">
+<s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><article class="postListItem">
   <div class="thumbnail">
     <s_list_rep_thumbnail><img loading="lazy" src="[##_list_rep_thumbnail_##]"></s_list_rep_thumbnail>
   </div>
@@ -952,7 +960,7 @@ HOMECOVER_WIDEPAGE
     </span>
   </div>
   <span class="tape"></span>
-</section></a></li></s_list_rep>
+</article></a></li></s_list_rep>
   </ul>
 
   <script>//
@@ -995,7 +1003,7 @@ HOMECOVER_WIDEPAGE
 
 })()
   </script>
-</div>
+</section>
 </s_list>
 <s_tag><!--◆ 태그 페이지 -->
   <link rel="stylesheet" type='text/css' href="./images/style_tag.css">
@@ -1183,7 +1191,7 @@ HOMECOVER_WIDEPAGE
     }
   </script>
 </div></s_guest>
-    </main><!-- 메인 ###-->
+    </section><!-- 메인 ###-->
 
 <s_paging><!--### 페이징 -->
   <div id="paging" class="paging">
