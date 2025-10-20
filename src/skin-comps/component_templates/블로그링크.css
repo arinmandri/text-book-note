@@ -1,0 +1,10 @@
+.blogLinks > * {
+  margin: 8px 4px;
+}
+.blogLinks a {
+  display: inline-block;
+}
+.blogLinks img {
+  height: 1em;
+  vertical-align: text-bottom;
+}

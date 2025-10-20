@@ -38,6 +38,7 @@ body {
 {% include "style/base.css" %}
 {% include "style/styling-classes.css" %}
 {% include "style/theme.css" %}
+{% include "skin-comps/component_templates/블로그링크.css" %}
 
 
 

@@ -23,6 +23,9 @@ body:not(#tt-body-page) .onlyOnPage-page {
 ._textLeft {
   text-align: left;
 }
+._fontLarger {
+  font-size: 120%;
+}
 ._fontSmaller {
   font-size: 75%;
 }

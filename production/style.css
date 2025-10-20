@@ -126,6 +126,9 @@ body:not(#tt-body-page) .onlyOnPage-page {
 ._textLeft {
   text-align: left;
 }
+._fontLarger {
+  font-size: 120%;
+}
 ._fontSmaller {
   font-size: 75%;
 }
@@ -214,6 +217,16 @@ body.theme-dark .themeBtn {
   color: #000;
   color: var(--bonmunTextCol);
   text-align: center;
+}
+.blogLinks > * {
+  margin: 8px 4px;
+}
+.blogLinks a {
+  display: inline-block;
+}
+.blogLinks img {
+  height: 1em;
+  vertical-align: text-bottom;
 }
 
 
@@ -376,21 +389,46 @@ body#tt-body-index .hideAtHome-1 {
   text-align: right;
 }
 
-  /* 사이드바의 메뉴랑 좀 중복이긴? 한데? 그렇다고 공통추출?은 좀 거창?한 거 같기?도 하고? */
-.homecover.introduction {
+  .homecover.introduction > .namecard {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.homecover.introduction > .namecard .blogImg {
+  max-width: 220px;
+  max-height: 220px;
+}
+
+.homecover.introduction > .namecard .box1 {
+  flex-grow: 0;
+}
+.homecover.introduction > .namecard .box2 {
+  flex-grow: 1;
+}
+
+.homecover.introduction > .namecard .box2 > * {
+  margin: 9px;
+}
+
+/* 사이드바의 메뉴랑 좀 중복이긴? 한데? 그렇다고 공통추출?은 좀 거창?한 거 같기?도 하고? */
+.homecover.introduction > nav {
   padding: 10px 10px;
 }
-.homecover.introduction li {
+.homecover.introduction > nav li {
   display: inline-block;
   margin: 5px;
   position: relative;
 }
-.homecover.introduction li > a {
+.homecover.introduction > nav li > a {
   display: block;
   padding: 10px 15px 10px 20px;
   border-radius: 0;
 }
-.homecover.introduction li::before {
+.homecover.introduction > nav li::before {
   content: '';
   height: 90%; width: 0;
   position: absolute;
@@ -931,16 +969,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   padding: 7px;
   font-size: 75%;
   color: grey;
-}
-.sidebar_elementMain.description .links > * {
-  margin: 8px 4px;
-}
-.sidebar_elementMain.description .links a {
-  display: inline-block;
-}
-.sidebar_elementMain.description .links img {
-  height: 1em;
-  vertical-align: text-bottom;
 }
 /* 설정 */
 .sidebar_elementMain.settings > * {

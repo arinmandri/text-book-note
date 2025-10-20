@@ -1,9 +1,26 @@
 {% extends "skin-comps/main/홈커버/items/base.html" %}
 {% block content %}
-<h2>[##_title_##]</h2>
-<img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
+<div class="namecard">
+  <div class="box1">
+    <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+    <span class="tape"></span>
+  </div>
+  <div class="box2 _textLeft">
+    <h2>[##_title_##]</h2>
+    <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+    <p>[##_desc_##]</p>
+    <div class="blogLinks _textRight"></div>
+  </div>
+</div><script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
+    const linksCopy = document.querySelector('.homecover.introduction .blogLinks');
+    linksCopy.innerHTML = linksOrg.innerHTML;
+  })();
+</script>
+
 {% with
-  nav_additional_attributes='',
+  nav_additional_attributes=' class="_textCenter"',
   nav_querySelector='.homecover.introduction nav'
 %}
 {% include "skin-comps/component_templates/블로그메뉴.html" %}

@@ -1,18 +1,43 @@
+.homecover.introduction > .namecard {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.homecover.introduction > .namecard .blogImg {
+  max-width: 220px;
+  max-height: 220px;
+}
+
+.homecover.introduction > .namecard .box1 {
+  flex-grow: 0;
+}
+.homecover.introduction > .namecard .box2 {
+  flex-grow: 1;
+}
+
+.homecover.introduction > .namecard .box2 > * {
+  margin: 9px;
+}
+
 /* 사이드바의 메뉴랑 좀 중복이긴? 한데? 그렇다고 공통추출?은 좀 거창?한 거 같기?도 하고? */
-.homecover.introduction {
+.homecover.introduction > nav {
   padding: 10px 10px;
 }
-.homecover.introduction li {
+.homecover.introduction > nav li {
   display: inline-block;
   margin: 5px;
   position: relative;
 }
-.homecover.introduction li > a {
+.homecover.introduction > nav li > a {
   display: block;
   padding: 10px 15px 10px 20px;
   border-radius: 0;
 }
-.homecover.introduction li::before {
+.homecover.introduction > nav li::before {
   content: '';
   height: 90%; width: 0;
   position: absolute;

@@ -67,13 +67,3 @@
   font-size: 75%;
   color: grey;
 }
-.sidebar_elementMain.description .links > * {
-  margin: 8px 4px;
-}
-.sidebar_elementMain.description .links a {
-  display: inline-block;
-}
-.sidebar_elementMain.description .links img {
-  height: 1em;
-  vertical-align: text-bottom;
-}

@@ -283,10 +283,27 @@ function setSettingFixCbox( settingName, checked ){
 <h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
 		<div class="homecover introduction">
 
-<h2>[##_title_##]</h2>
-<img src="[##_image_##]" style="max-width: 50px; max-height: 50px;">
+<div class="namecard">
+  <div class="box1">
+    <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+    <span class="tape"></span>
+  </div>
+  <div class="box2 _textLeft">
+    <h2>[##_title_##]</h2>
+    <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+    <p>[##_desc_##]</p>
+    <div class="blogLinks _textRight"></div>
+  </div>
+</div><script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
+    const linksCopy = document.querySelector('.homecover.introduction .blogLinks');
+    linksCopy.innerHTML = linksOrg.innerHTML;
+  })();
+</script>
 
-<nav >
+
+<nav  class="_textCenter">
   [##_blog_menu_##]
   <script>(function(){ 
     document.querySelector('.homecover.introduction nav > ul').innerHTML 
@@ -1503,7 +1520,7 @@ HOMECOVER_WIDEPAGE
     <div class="linksBox">
       <hr>
       <span class="_fontSerif">LINKS</span>
-      <p class="links _textRight">
+      <p class="blogLinks _textRight">
         <s_link_rep><a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a> </s_link_rep>
         <a href="[##_rss_url_##]">RSS</a>
       </p>
@@ -1521,7 +1538,7 @@ HOMECOVER_WIDEPAGE
 <span class="caption">이 블로그는?</span>
 <script type="text/javascript">
   (function(){
-    const as = document.querySelectorAll('.sidebar_element.description .links a');
+    const as = document.querySelectorAll('.blogLinks a');
     for( let a of as ){
       let logoName;
       //// url의 hostname으로 대응되는 로고 찾기
