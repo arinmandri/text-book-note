@@ -278,52 +278,43 @@ function setSettingFixCbox( settingName, checked ){
 
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
   <p style="font-size: 200%">스킨 수정 작업 중: 홈커버 만드는 중</p>
-  <s_cover_rep>
-
-  <s_cover name="introduction">
-	<section class="homecoverSection introduction">
-<h1>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">▶</a></s_cover_url></h1>
-		<div class="homecover introduction">
-
-<div class="namecard">
-  <div class="box1">
-    <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
-    <span class="tape"></span>
-  </div>
-  <div class="box2 _textLeft">
-    <h2>[##_title_##]</h2>
-    <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
-    <p>[##_desc_##]</p>
-    <div class="blogLinks _textRight"></div>
-  </div>
-</div><script>
-  document.addEventListener('DOMContentLoaded', function(){
-    const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
-    const linksCopy = document.querySelector('.homecover.introduction .blogLinks');
-    linksCopy.innerHTML = linksOrg.innerHTML;
-  })();
-</script>
-
+<section id="blog-home-introduction" class="homecoverSection">
+  <div class="namecard">
+    <div class="box1">
+      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+      <span class="tape"></span>
+    </div>
+    <div class="box2 _textLeft">
+      <h2>[##_title_##]</h2>
+      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+      <p>[##_desc_##]</p>
+      <div class="blogLinks _textRight"></div>
+    </div>
+  </div><script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
+      const linksCopy = document.querySelector('#blog-home-introduction .blogLinks');
+      linksCopy.innerHTML = linksOrg.innerHTML;
+    })();
+  </script>
 
 <nav class="blogMenu _textCenter" >
   [##_blog_menu_##]
   <script>(function(){ 
-    document.querySelector('.homecover.introduction nav > ul').innerHTML 
+    document.querySelector('#blog-home-introduction nav > ul').innerHTML 
       += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
       +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
 
     //// 메뉴의 항목들에 클래스 추가
-    const navMenus = document.querySelectorAll('.homecover.introduction nav a')
+    const navMenus = document.querySelectorAll('#blog-home-introduction nav a')
     for( let navMenu of navMenus ){
       navMenu.classList.add('themeBtn');
     }
   })()</script>
 </nav>
 
-
-		</div>
-	</section>
-</s_cover>
+</section>
+  <s_cover_rep>
 
   <s_cover name="train">
 	<section class="homecoverSection train">

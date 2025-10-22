@@ -1,0 +1,26 @@
+<section id="blog-home-introduction" class="homecoverSection">
+  <div class="namecard">
+    <div class="box1">
+      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+      <span class="tape"></span>
+    </div>
+    <div class="box2 _textLeft">
+      <h2>[##_title_##]</h2>
+      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+      <p>[##_desc_##]</p>
+      <div class="blogLinks _textRight"></div>
+    </div>
+  </div><script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
+      const linksCopy = document.querySelector('#blog-home-introduction .blogLinks');
+      linksCopy.innerHTML = linksOrg.innerHTML;
+    })();
+  </script>
+{% with
+  nav_additional_classes='_textCenter',
+  nav_querySelector='#blog-home-introduction nav'
+%}
+{% include "skin-comps/component_templates/블로그메뉴.html" %}
+{% endwith %}
+</section>

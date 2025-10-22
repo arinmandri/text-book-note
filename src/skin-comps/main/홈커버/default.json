@@ -1,11 +1,5 @@
 [
   {
-    "name": "introduction",
-    "title": "이 블로그는",
-    "dataType": "CUSTOM",
-    "data": []
-  },
-  {
     "name": "train",
     "title": "요즈음의 일",
     "dataType": "RECENT",

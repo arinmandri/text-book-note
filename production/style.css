@@ -409,18 +409,11 @@ body#tt-body-index .hideAtHome-1 {
   display: none;
 }
 
-.homecoverSection {
-  margin: 100px 0;
-}
-.homecoverSection h1 {
-  text-align: right;
-}
-
-  .homecover.introduction > * {
+#blog-home-introduction > * {
   margin: 20px auto;
 }
 
-.homecover.introduction > .namecard {
+#blog-home-introduction > .namecard {
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
@@ -429,20 +422,27 @@ body#tt-body-index .hideAtHome-1 {
   align-items: center;
 }
 
-.homecover.introduction > .namecard .blogImg {
+#blog-home-introduction > .namecard .blogImg {
   max-width: 220px;
   max-height: 220px;
 }
 
-.homecover.introduction > .namecard .box1 {
+#blog-home-introduction > .namecard .box1 {
   flex-grow: 0;
 }
-.homecover.introduction > .namecard .box2 {
+#blog-home-introduction > .namecard .box2 {
   flex-grow: 1;
 }
 
-.homecover.introduction > .namecard .box2 > * {
+#blog-home-introduction > .namecard .box2 > * {
   margin: 9px;
+}
+
+.homecoverSection {
+  margin: 100px 0;
+}
+.homecoverSection h1 {
+  text-align: right;
 }
 
   .homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
