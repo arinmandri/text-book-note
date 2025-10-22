@@ -8,15 +8,9 @@
       <h2>[##_title_##]</h2>
       <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
       <p>[##_desc_##]</p>
-      <div class="blogLinks _textRight"></div>
+      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
     </div>
-  </div><script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
-      const linksCopy = document.querySelector('#blog-home-introduction .blogLinks');
-      linksCopy.innerHTML = linksOrg.innerHTML;
-    })();
-  </script>
+  </div>
 {% with
   nav_additional_classes='_textCenter',
   nav_querySelector='#blog-home-introduction nav'

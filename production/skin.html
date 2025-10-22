@@ -110,6 +110,27 @@ function checkDeletePost() {
     return true;
   }
 }
+//// 요소 복사
+// 페이지 로딩 완료 후
+// copy-origin 의 내용을 copy-target 로 복사.
+// data-copyname 으로 복사항목끼리 구별.
+// 예시
+// <div class="copy-origin" data-copyname="name123">복사할 내용</div>
+// <div class="copy-target" data-copyname="name123"></div>
+// 복사원본은 하나만(원본끼리 서로다른이름). 복사대상은 같은 이름으로 여러 개 있어도 된다. 모두 복사.
+document.addEventListener('DOMContentLoaded', function(){
+  const origins = document.getElementsByClassName('copy-origin')
+  const targets = document.getElementsByClassName('copy-target')
+  for( let origin of origins ){
+    const name = origin.dataset.copyname;
+    for( let target of targets ){
+      const tname = target.dataset.copyname;
+      if( tname === name ){
+        target.innerHTML = origin.innerHTML;
+      }
+    }
+  }
+});
 </script>
 
 </head>
@@ -288,15 +309,9 @@ function setSettingFixCbox( settingName, checked ){
       <h2>[##_title_##]</h2>
       <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
       <p>[##_desc_##]</p>
-      <div class="blogLinks _textRight"></div>
+      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
     </div>
-  </div><script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const linksOrg = document.querySelector('.sidebar_elementMain .blogLinks');
-      const linksCopy = document.querySelector('#blog-home-introduction .blogLinks');
-      linksCopy.innerHTML = linksOrg.innerHTML;
-    })();
-  </script>
+  </div>
 
 <nav class="blogMenu _textCenter" >
   [##_blog_menu_##]
@@ -915,7 +930,7 @@ HOMECOVER_WIDEPAGE
 
   <!--▶ 상단 페이징 -->
   <!-- 스크립트로 페이징 요소 복사해서 여기에도 붙이기 … 해당 스크립트는 main 맨아래쪽 페이징 원본요소 아래 -->
-  <div id="pagingCopy" class="paging"></div>
+  <div id="pagingCopy" class="paging copy-target" data-copyname="paging"></div>
 
 
 
@@ -1151,7 +1166,7 @@ HOMECOVER_WIDEPAGE
   </div>
 </s_guest_input_form></div>
 
-  <div id="pagingCopy" class="paging"></div>
+  <div id="pagingCopy" class="paging copy-target" data-copyname="paging"></div>
 
 <s_guest_container><!-- 방명록 목록 --><ul class="comment1List commentList">
 
@@ -1204,7 +1219,7 @@ HOMECOVER_WIDEPAGE
     </section><!-- 메인 ###-->
 
 <s_paging><!--### 페이징 -->
-  <div id="paging" class="paging">
+  <div id="paging" class="paging copy-origin" data-copyname="paging">
     <a [##_prev_page_##] class="[##_no_more_prev_##]"><button class="themeBtn">◀</button></a>
       <s_paging_rep>
         <a [##_paging_rep_link_##] class="num"><button class="themeBtn">[##_paging_rep_link_num_##]</button></a>
@@ -1217,17 +1232,7 @@ HOMECOVER_WIDEPAGE
     //// 페이지가 1개 이하이면 페이징 버튼 삭제
     if( paging.childElementCount <= 3 ){
       paging.remove();
-      const pagingCopy = document.getElementById('pagingCopy');
-      if( pagingCopy != null ){
-        pagingCopy.remove();
-      }
-    }
-    //// 목록 상단이랑 하단 둘다 페이징 버튼 있었으면 좋겠으니까 복사
-    else{
-      const pagingCopy = document.getElementById('pagingCopy');
-      if( pagingCopy != null ){
-        pagingCopy.innerHTML = paging.innerHTML;
-      }
+      const pagingCopy = document.getElementById('pagingCopy')?.remove();
     }
   })();</script>
 </s_paging>
@@ -1513,7 +1518,7 @@ HOMECOVER_WIDEPAGE
     <div class="linksBox">
       <hr>
       <span class="_fontSerif">LINKS</span>
-      <p class="blogLinks _textRight">
+      <p class="blogLinks _textRight copy-origin" data-copyname="blogLinks">
         <s_link_rep><a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a> </s_link_rep>
         <a href="[##_rss_url_##]">RSS</a>
       </p>

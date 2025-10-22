@@ -1,5 +1,5 @@
 <s_paging><!--### 페이징 -->
-  <div id="paging" class="paging">
+  <div id="paging" class="paging copy-origin" data-copyname="paging">
     <a [##_prev_page_##] class="[##_no_more_prev_##]"><button class="themeBtn">◀</button></a>
       <s_paging_rep>
         <a [##_paging_rep_link_##] class="num"><button class="themeBtn">[##_paging_rep_link_num_##]</button></a>
@@ -12,17 +12,7 @@
     //// 페이지가 1개 이하이면 페이징 버튼 삭제
     if( paging.childElementCount <= 3 ){
       paging.remove();
-      const pagingCopy = document.getElementById('pagingCopy');
-      if( pagingCopy != null ){
-        pagingCopy.remove();
-      }
-    }
-    //// 목록 상단이랑 하단 둘다 페이징 버튼 있었으면 좋겠으니까 복사
-    else{
-      const pagingCopy = document.getElementById('pagingCopy');
-      if( pagingCopy != null ){
-        pagingCopy.innerHTML = paging.innerHTML;
-      }
+      const pagingCopy = document.getElementById('pagingCopy')?.remove();
     }
   })();</script>
 </s_paging>
