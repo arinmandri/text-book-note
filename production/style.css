@@ -438,6 +438,10 @@ body#tt-body-index .hideAtHome-1 {
   margin: 9px;
 }
 
+#blog-home-introduction > .blogMenu {
+  text-align: center;
+}
+
 .homecoverSection {
   margin: 100px 0;
 }

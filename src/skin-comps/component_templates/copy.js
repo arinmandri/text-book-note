@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     }
   }
+  // XXX 원본이 없으면 대상 요소도 삭제해야 하나?
 });

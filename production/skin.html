@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     }
   }
+  // XXX 원본이 없으면 대상 요소도 삭제해야 하나?
 });
 </script>
 
@@ -313,21 +314,7 @@ function setSettingFixCbox( settingName, checked ){
     </div>
   </div>
 
-<nav class="blogMenu _textCenter" >
-  [##_blog_menu_##]
-  <script>(function(){ 
-    document.querySelector('#blog-home-introduction nav > ul').innerHTML 
-      += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
-      +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
-
-    //// 메뉴의 항목들에 클래스 추가
-    const navMenus = document.querySelectorAll('#blog-home-introduction nav a')
-    for( let navMenu of navMenus ){
-      navMenu.classList.add('themeBtn');
-    }
-  })()</script>
-</nav>
-
+  <nav class="blogMenu copy-target" data-copyname="blogMenu"></nav>
 </section>
   <s_cover_rep>
 
@@ -421,8 +408,7 @@ HOMECOVER_WIDEPAGE
     <s_sidebar_element><div class="sidebar_element ">
   <!-- 메뉴 -->
 <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
-
-<nav class="blogMenu sidebar_elementMain" id="navMenu">
+<nav id="navMenu" class="blogMenu sidebar_elementMain copy-origin" data-copyname="blogMenu">
   [##_blog_menu_##]
   <script>(function(){ 
     document.querySelector('#navMenu > ul').innerHTML 
@@ -436,7 +422,6 @@ HOMECOVER_WIDEPAGE
     }
   })()</script>
 </nav>
-
 
 </div></s_sidebar_element>
     <s_sidebar_element><div class="sidebar_element ">
