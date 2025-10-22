@@ -5,12 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 <!-- STYLE -->
 <link rel="stylesheet" type='text/css' href="./style.css">
 <!-- 사용자 지정 색 -->
 <style>{% include "style/color-scheme/color-scheme.css" %}</style>
+
+{% for headitem in headitems %}
+{{ headitem }}
+{% endfor %}
 
 <script>
 //{% include "skin-comps/init-html.js" %}
