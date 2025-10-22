@@ -1,5 +1,13 @@
 
 (function(){
+  //// 태그 개수
+  document.getElementById('tagCount').innerText = 
+    '인기 태그 '
+    +(document.getElementById('tagBox').querySelectorAll('.tagcloud1,.tagcloud2,.tagcloud3').length)
+    +'개';
+})();
+
+document.addEventListener('DOMContentLoaded', function(){
   //// 한글 초성
   const Chosong = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
 
@@ -27,7 +35,7 @@
     const grouped = {};// 초성으로 분류
 
     items.forEach(el => {// 항목 분류
-      const text = el.innerText.trim();
+      const text = el.textContent.trim();
       if( text.length === 0) return;
 
       const key = getTextInitial(text[0]);// 분류기준: 초성

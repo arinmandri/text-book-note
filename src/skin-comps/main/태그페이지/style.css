@@ -5,7 +5,6 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  font-size: 200%;/* 모듈에서보단 좀 크게 보이기 */
   text-align: center;
   line-height: 1.9;
 }
@@ -21,8 +20,24 @@
   border-radius: 4px;
   padding: 2px 5px;
 }
+#tagBox .tagcloud1 {
+  font-size: 180%;
+  color: #ff6644;
+  color: var(--pointCol);
+}
+#tagBox .tagcloud2 {
+  font-size: 180%;
+}
+#tagBox .tagcloud3 {
+  font-size: 150%;
+}
+#tagBox .tagcloud4 ,
+#tagBox .tagcloud5 {
+  display: none;
+}
+
 #main4.tagBoxOrdered {
-  font-size: 150%;/* 모듈에서보단 좀 크게 보이기 */
+  font-size: 135%;/* 모듈에서보단 좀 크게 보이기 */
 }
 #main4.tagBoxOrdered .bucket {
   margin-top: 30px;
