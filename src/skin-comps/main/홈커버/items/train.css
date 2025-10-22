@@ -1,5 +1,6 @@
 .homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
-  margin: 80px 1%;
+  margin: 80px auto;
+  max-width: 900px;
   position: relative;
 }
 .homecoverSection.train .postList > */*li*/ > a {/* 항목의 안쪽 스타일 */

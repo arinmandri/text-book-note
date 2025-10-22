@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+#blog-home-introduction > .namecard .box1 {
+  margin: auto;
+}
+
 #blog-home-introduction > .namecard .blogImg {
   max-width: 220px;
   max-height: 220px;
@@ -32,6 +36,7 @@
 }
 #blog-home-introduction > .blogSearch input {
   width: 80%;
+  max-width: 600px;
   font-size: 148%;
   text-align: center;
   padding: 10px;

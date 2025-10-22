@@ -1,6 +1,11 @@
-.homecoverSection {
-  margin: 100px 0;
+.homecoverSection:not(:first-child) {
+  margin: 125px 0;
 }
 .homecoverSection h1 {
+  margin: 0 6%;
   text-align: right;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
+}
+.homecoverSection .decoUnderline {
+  border-bottom: 10px solid var(--borderCol);
 }
