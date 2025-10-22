@@ -299,7 +299,6 @@ function setSettingFixCbox( settingName, checked ){
 </header>
 
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
-  <p style="font-size: 200%">스킨 수정 작업 중: 홈커버 만드는 중</p>
 <section id="blog-home-introduction" class="homecoverSection">
   <div class="namecard">
     <div class="box1">
@@ -314,8 +313,11 @@ function setSettingFixCbox( settingName, checked ){
     </div>
   </div>
 
-  <nav class="blogMenu copy-target" data-copyname="blogMenu"></nav>
+  <nav class="blogMenu copy-target _textCenter" data-copyname="blogMenu"></nav>
+
+  <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
 </section>
+  <p style="font-size: 200%">스킨 수정 작업 중: 홈커버 만드는 중</p>
   <s_cover_rep>
 
   <s_cover name="train">
@@ -483,7 +485,7 @@ HOMECOVER_WIDEPAGE
     <s_sidebar_element><div class="sidebar_element ">
   <!-- 검색창 -->
 <button class="bubbleBtn themeBtn">&#x1F50D;</button>
-<div class="sidebar_elementMain search">
+<div class="sidebar_elementMain search copy-origin" data-copyname="blogSearch">
   <form><s_search>
     <input type="text" 
       class="themeInput searchInput"
@@ -493,7 +495,6 @@ HOMECOVER_WIDEPAGE
       placeholder="검색어 입력" 
       autocomplete=off
       style="
-          width: 200px;
           vertical-align: middle;" /> 
     <button type="button" 
       class="submit"

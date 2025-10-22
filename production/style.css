@@ -410,7 +410,7 @@ body#tt-body-index .hideAtHome-1 {
 }
 
 #blog-home-introduction > * {
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 #blog-home-introduction > .namecard {
@@ -438,8 +438,14 @@ body#tt-body-index .hideAtHome-1 {
   margin: 9px;
 }
 
-#blog-home-introduction > .blogMenu {
+#blog-home-introduction > .blogSearch form {
+  padding: 10px;
+}
+#blog-home-introduction > .blogSearch input {
+  width: 80%;
+  font-size: 148%;
   text-align: center;
+  padding: 10px;
 }
 
 .homecoverSection {
@@ -888,6 +894,9 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 /**### 검색 */
 .sidebar_elementMain.search > form {
   padding: 10px;
+}
+.sidebar_elementMain.search > form input {
+  width: 200px;
 }
 /**### 블로그 description */
 .sidebar_elementMain.description > .box {

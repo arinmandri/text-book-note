@@ -1,5 +1,5 @@
 #blog-home-introduction > * {
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 #blog-home-introduction > .namecard {
@@ -27,6 +27,12 @@
   margin: 9px;
 }
 
-#blog-home-introduction > .blogMenu {
+#blog-home-introduction > .blogSearch form {
+  padding: 10px;
+}
+#blog-home-introduction > .blogSearch input {
+  width: 80%;
+  font-size: 148%;
   text-align: center;
+  padding: 10px;
 }
