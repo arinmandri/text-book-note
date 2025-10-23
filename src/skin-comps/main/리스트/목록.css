@@ -24,8 +24,6 @@ ul#postList ─ li 여럿
 │　　└글쓴이 span.writer
 │　
 └꾸밈요소 span.tape
-
-정의된 스타일: 크게 한 줄 train, 썸네일만 album, 썸네일 및 제목 card, 간략 목록 simple, 복잡 목록 detailed
 */
 #postList > */*li*/ {
   position: relative;

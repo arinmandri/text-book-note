@@ -1870,8 +1870,6 @@ ul#postList ─ li 여럿
 │　　└글쓴이 span.writer
 │　
 └꾸밈요소 span.tape
-
-정의된 스타일: 크게 한 줄 train, 썸네일만 album, 썸네일 및 제목 card, 간략 목록 simple, 복잡 목록 detailed
 */
 #postList > */*li*/ {
   position: relative;
@@ -2082,25 +2080,25 @@ ul#postList ─ li 여럿
   transform: scale(1.1);
 }
 
-  /**##### 간략 목록 simple */
-#postList.simple {
+  /**##### 간략 목록 postit */
+#postList.postit {
   width: 94%;
   max-width: 700px;
   margin: 50px auto;
 }
-#postList.simple .thumbnail ,/* 나머지 요소 숨김 */
-#postList.simple .content ,
-#postList.simple .writer {
+#postList.postit .thumbnail ,/* 나머지 요소 숨김 */
+#postList.postit .content ,
+#postList.postit .writer {
   display: none;
 }
-#postList.simple > */*li*/ {
+#postList.postit > */*li*/ {
   margin: 15px auto;/* 간격 */
   box-shadow: 1px 1px 7px var(--borderCol);/* 그림자 */
   position: relative;/* 날짜 위치잡기용 */
   background-color: #fff;
   background-color: var(--backCol);
 }
-#postList.simple .tape {/* 왼쪽장식 */
+#postList.postit .tape {/* 왼쪽장식 */
   width: 12px;
   height: 100%;
   top: 0px;
@@ -2108,40 +2106,40 @@ ul#postList ─ li 여럿
   border-width: 0px;
   transition-duration: 0.5s;
 }
-#postList.simple > *:hover .tape {/* 마우스 올린 항목 장식 늘어남 */
+#postList.postit > *:hover .tape {/* 마우스 올린 항목 장식 늘어남 */
   width: 52px;
   left: -50px;
   transition-duration: 0.1s;
 }
-#postList.simple > */*li*/ > */*a*/ {
+#postList.postit > */*li*/ > */*a*/ {
   padding: 20px 10px;
 }
 /* 왼쪽장식 무지개 색 */
-#postList.simple > *:nth-child(8n+1) .tape {background-color: hsl(10, 100%, 60%, 50%);}
-#postList.simple > *:nth-child(8n+2) .tape {background-color: hsl(45, 100%, 50%, 50%);}
-#postList.simple > *:nth-child(8n+3) .tape {background-color: hsl(62, 100%, 48%, 50%);}
-#postList.simple > *:nth-child(8n+4) .tape {background-color: hsl(90, 100%, 49%, 50%);}
-#postList.simple > *:nth-child(8n+5) .tape {background-color: hsl(185, 100%, 60%, 50%);}
-#postList.simple > *:nth-child(8n+6) .tape {background-color: hsl(230, 100%, 70%, 50%);}
-#postList.simple > *:nth-child(8n+7) .tape {background-color: hsl(266, 100%, 55%, 50%);}
-#postList.simple > *:nth-child(8n)   .tape {background-color: hsl(315, 100%, 50%, 50%);}
-#postList.simple .itemBody {/* 날짜 위치: 바닥 오른쪽 */
+#postList.postit > *:nth-child(8n+1) .tape {background-color: hsl(10, 100%, 60%, 50%);}
+#postList.postit > *:nth-child(8n+2) .tape {background-color: hsl(45, 100%, 50%, 50%);}
+#postList.postit > *:nth-child(8n+3) .tape {background-color: hsl(62, 100%, 48%, 50%);}
+#postList.postit > *:nth-child(8n+4) .tape {background-color: hsl(90, 100%, 49%, 50%);}
+#postList.postit > *:nth-child(8n+5) .tape {background-color: hsl(185, 100%, 60%, 50%);}
+#postList.postit > *:nth-child(8n+6) .tape {background-color: hsl(230, 100%, 70%, 50%);}
+#postList.postit > *:nth-child(8n+7) .tape {background-color: hsl(266, 100%, 55%, 50%);}
+#postList.postit > *:nth-child(8n)   .tape {background-color: hsl(315, 100%, 50%, 50%);}
+#postList.postit .itemBody {/* 날짜 위치: 바닥 오른쪽 */
   position: absolute;
   bottom: 1px;
   right: 5px;
   font-size: 0.8em;/* 날짜 작게 */
 }
-#postList.simple .title {/* 제목 */
+#postList.postit .title {/* 제목 */
   display: inline;
   font-size: 120%;
   font-weight: normal;
   font-family: 'Noto Serif KR', serif;
 }
-#postList.simple .category {/* 카테고리 */
+#postList.postit .category {/* 카테고리 */
   font-family: 'Gaegu', cursive;
   font-size: 90%;
 }
-#postList.simple .category::before {
+#postList.postit .category::before {
   content: '~';
 }
 

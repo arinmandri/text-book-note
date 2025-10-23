@@ -37,7 +37,7 @@ skin:
       card:
         label: '썸네일 및 제목'
         buttonText: '&#9635;'
-      simple:
+      postit:
         label: '간략 목록'
         buttonText: '&#8863;'
       detailed:
@@ -49,7 +49,7 @@ skin:
 #     index:             # 홈
 #     category:          # 카테고리
 #     archive:           # 보관함
-      tag:      simple   # 태그
+      tag:      postit   # 태그
       search:   detailed # 검색결과
 #     location:          # 지역로그
 
