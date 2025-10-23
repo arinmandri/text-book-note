@@ -438,8 +438,8 @@ TODO HOMECOVER_WIDEPAGE
 <script type="text/javascript">
   //// 펼접버튼 추가
   (function(){
-    const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
-    for( let li of category_list_lis ){
+    const category_list_list = document.querySelectorAll('#navCat .category_list > li');
+    for( let li of category_list_list ){
       const sub_category_list = li.querySelector('ul.sub_category_list');// 하위 카테고리 (nullable)
       const btn = document.createElement('button');
       if( sub_category_list != null ){
@@ -455,10 +455,10 @@ TODO HOMECOVER_WIDEPAGE
 
   document.addEventListener('DOMContentLoaded', function(){
     //// 카테고리 기본으로 펴기
-    const category_list_lis = document.querySelectorAll('#navCat .category_list > li');
+    const category_list_list = document.querySelectorAll('#navCat .category_list > li');
     const catOpenLevel = '[##_var_catOpenLevel_##]';
     if( catOpenLevel === 'openAll' ){// 모두 열기
-      for( let li of category_list_lis ){
+      for( let li of category_list_list ){
         li.classList.add('open');
       }
     }else if( catOpenLevel === 'openCurr' ){
@@ -475,7 +475,7 @@ TODO HOMECOVER_WIDEPAGE
       })();
       if( currCat !== null ){
         const pathname = '/category/' + currCat;
-        for( let li of category_list_lis ){
+        for( let li of category_list_list ){
           if( li.getElementsByTagName('a')[0].getAttribute('href') === pathname ){
             li.classList.add('open');
             break;
