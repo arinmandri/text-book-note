@@ -14,31 +14,31 @@
     </div>
   </div>
   <script type="text/javascript">
-    const rctNoticeLis = document.querySelectorAll('#recentNoticeList li');
+    const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
 
     function showNextItem() {
       const prev = document.querySelector('#recentNoticeList li.prev');
       if( prev != null ){
         prev.classList.remove('prev');
       }
-      for( let index=0; index < rctNoticeLis.length; index+=1 ){
-        const item = rctNoticeLis[index];
+      for( let index=0; index < rctNoticeList.length; index+=1 ){
+        const item = rctNoticeList[index];
         if( item.classList.contains('curr') ){
           item.classList.remove('curr');
           item.classList.add('prev');
-          let nextIndex = ( index+1 ) % rctNoticeLis.length;
-          rctNoticeLis[nextIndex].classList.add('curr');
+          let nextIndex = ( index+1 ) % rctNoticeList.length;
+          rctNoticeList[nextIndex].classList.add('curr');
           break;
         }
       }
     }
 
-    if( rctNoticeLis.length === 0 ){
+    if( rctNoticeList.length === 0 ){
       //// 최근공지 없으면 최근공지 상자 삭제
       document.getElementById('recentNotice').remove();
     }else{
-      rctNoticeLis[0].classList.add('curr');
-      if( rctNoticeLis.length >= 2 ){
+      rctNoticeList[0].classList.add('curr');
+      if( rctNoticeList.length >= 2 ){
         setInterval(showNextItem, 5000);
       }
     }
