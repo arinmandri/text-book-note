@@ -409,6 +409,24 @@ body#tt-body-index .hideAtHome-1 {
   display: none;
 }
 
+/* 최근공지 */
+#homecover .recentNoticeListBox {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: right;
+}
+#homecover .recentNoticeListBox ul {
+  list-style: none;
+}
+#homecover .recentNoticeListBox li {
+  margin: 10px 0;
+  padding: 20px 60px 20px 20px;
+  list-style: none;
+  background-color: #f4f4f4;
+  background-color: var(--listBack);
+}
+
 #blog-home-introduction > * {
   margin: 40px auto;
 }
@@ -1046,14 +1064,14 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   background-color: var(--listBack);
   text-align: right;
 }
-#recentNoticeList {
+#recentNoticeListBox > ul {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
-#recentNoticeList li {
+#recentNoticeListBox li {
   opacity: 1%;
   position: absolute;
   width: 100%;
@@ -1065,11 +1083,11 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   white-space: nowrap;
   overflow: hidden;
 }
-#recentNoticeList li.prev {
+#recentNoticeListBox li.prev {
   opacity: 1%;
   top: -100%;
 }
-#recentNoticeList li.curr {
+#recentNoticeListBox li.curr {
   opacity: 100%;
   position: relative;
   top: 0%;

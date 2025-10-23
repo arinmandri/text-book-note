@@ -12,14 +12,14 @@
   background-color: var(--listBack);
   text-align: right;
 }
-#recentNoticeList {
+#recentNoticeListBox > ul {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
-#recentNoticeList li {
+#recentNoticeListBox li {
   opacity: 1%;
   position: absolute;
   width: 100%;
@@ -31,11 +31,11 @@
   white-space: nowrap;
   overflow: hidden;
 }
-#recentNoticeList li.prev {
+#recentNoticeListBox li.prev {
   opacity: 1%;
   top: -100%;
 }
-#recentNoticeList li.curr {
+#recentNoticeListBox li.curr {
   opacity: 100%;
   position: relative;
   top: 0%;

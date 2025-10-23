@@ -295,6 +295,7 @@ function setSettingFixCbox( settingName, checked ){
 </header>
 
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
+
 <section id="blog-home-introduction" class="homecoverSection">
   <div class="namecard">
     <div class="box1">
@@ -313,6 +314,11 @@ function setSettingFixCbox( settingName, checked ){
 
   <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
 </section>
+
+  <div class="recentNoticeListBox">
+    <ul class="copy-target" data-copyname="recentNoticeUl"></ul>
+  </div>
+
   <s_cover_rep>
 
   <s_cover name="train">
@@ -519,7 +525,7 @@ TODO HOMECOVER_WIDEPAGE
       <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
     </svg>
     <div id="recentNoticeListBox">
-      <ul id="recentNoticeList">
+      <ul id="recentNoticeList" class="copy-origin" data-copyname="recentNoticeUl">
         <s_rct_notice_rep><li>
           <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
         </li></s_rct_notice_rep>
