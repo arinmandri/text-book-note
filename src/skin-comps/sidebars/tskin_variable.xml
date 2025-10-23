@@ -2,11 +2,11 @@
 	<name>minWidthToOpenSidebar1</name>
 	<label>사이드바1 펼접 기준 (1000 이상 숫자만)</label>
 	<type>STRING</type>
-	<default><![CDATA[1800]]></default>
+	<default><![CDATA[1600]]></default>
 </variable>
 <variable>
 	<name>minWidthToOpenSidebar2</name>
 	<label>사이드바2 펼접 기준 (1000 이상 숫자만)</label>
 	<type>STRING</type>
-	<default><![CDATA[1500]]></default>
+	<default><![CDATA[1300]]></default>
 </variable>
