@@ -78,10 +78,6 @@ function getTskinOptionNumVal( optionValueString, minVal, defaultVal ) {
   }
 }
 
-let noThumbnail = "[##_var_noThumbnail_##]";
-if( noThumbnail === "" )
-  noThumbnail = "./images/noThumbnail-default.svg";
-
 ////// 다크모드 - html
 (function(){
   let isDark = false;
@@ -985,6 +981,8 @@ TODO HOMECOVER_WIDEPAGE
 
 
   //// 썸네일 없으면 대체이미지
+  const noThumbnail = "[##_var_noThumbnail_##]" || "./images/noThumbnail-default.svg";
+
   const thumbnails = document.querySelectorAll('#postList .thumbnail')
   for( let thumbnail of thumbnails ){
     if( thumbnail.getElementsByTagName('img').length == 0 ){

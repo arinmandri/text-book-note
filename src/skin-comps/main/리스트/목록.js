@@ -7,6 +7,8 @@
 {% endfor %}
 
   //// 썸네일 없으면 대체이미지
+  const noThumbnail = "[##_var_noThumbnail_##]" || "./images/noThumbnail-default.svg";
+
   const thumbnails = document.querySelectorAll('#postList .thumbnail')
   for( let thumbnail of thumbnails ){
     if( thumbnail.getElementsByTagName('img').length == 0 ){

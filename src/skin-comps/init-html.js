@@ -34,10 +34,6 @@ function getTskinOptionNumVal( optionValueString, minVal, defaultVal ) {
   }
 }
 
-let noThumbnail = "[##_var_noThumbnail_##]";
-if( noThumbnail === "" )
-  noThumbnail = "./images/noThumbnail-default.svg";
-
 //{% include "inblog-settings/darkmode-html.js" %}
 
 //{% include "extentions/checkDeletePost/script.js" %}
