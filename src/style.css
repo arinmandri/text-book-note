@@ -34,6 +34,9 @@ body {
   color: #333;
   color: var(--baseTextCol);
 }
+body > * {
+  position: relative;
+}
 
 {% include "style/base.css" %}
 {% include "style/styling-classes.css" %}

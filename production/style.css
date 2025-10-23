@@ -42,6 +42,9 @@ body {
   color: #333;
   color: var(--baseTextCol);
 }
+body > * {
+  position: relative;
+}
 
 
 */*div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, figure, p, button */{
@@ -340,8 +343,6 @@ body:not(.theme-dark) .backImg.dark {
 }
 /**# 헤더, 푸터 */
 header , footer {
-  position: relative;
-
   width: 100%;
   box-sizing: border-box;
 
@@ -388,7 +389,6 @@ footer {
 */
 #main1 {
   width: 100%;
-  position: relative;
   padding-bottom: 120px;
 }
 #main2 {
@@ -735,7 +735,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 
 /**### 사이드바3 */
 #sidebar3 {
-  position: relative;
   border-top: 5px double #ddd;
   border-top: 5px double var(--borderCol);
   padding-top: 20px;

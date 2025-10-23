@@ -200,7 +200,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 
 /**### 사이드바3 */
 #sidebar3 {
-  position: relative;
   border-top: 5px double #ddd;
   border-top: 5px double var(--borderCol);
   padding-top: 20px;

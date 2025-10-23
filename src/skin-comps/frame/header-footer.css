@@ -1,7 +1,5 @@
 /**# 헤더, 푸터 */
 header , footer {
-  position: relative;
-
   width: 100%;
   box-sizing: border-box;
 
