@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   for( let origin of origins ){
     const name = origin.dataset.copyname;
     const targetArr = map1.get( name );
-    if( targetArr === null ) continue;
+    if( targetArr === undefined ) continue;
 
     for( let target of targetArr ){
       target.innerHTML = origin.innerHTML;

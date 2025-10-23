@@ -1,5 +1,5 @@
 <s_rct_notice><!--### 최근공지 -->
-  <div id="recentNotice" style="position: relative">
+  <div id="recentNotice" class="recentNotice" style="position: relative">
     <input type="hidden" name="hideNotice" value="false">
 {% include "skin-comps/component_templates/deco-pushpin.html" %}
     <div id="recentNoticeListBox">
@@ -9,9 +9,21 @@
         </li></s_rct_notice_rep>
       </ul>
     </div>
-  </div>
-  <script type="text/javascript">
+  </div><script type="text/javascript">
     const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
+
+    if( rctNoticeList.length === 0 ){
+      //// 최근공지 없으면 최근공지 상자 삭제
+      const els = document.getElementsByClassName('recentNotice');
+      for( let el of els ){
+        el.remove();
+      }
+    }else{
+      rctNoticeList[0].classList.add('curr');
+      if( rctNoticeList.length >= 2 ){
+        setInterval(showNextItem, 5000);
+      }
+    }
 
     function showNextItem() {
       const prev = document.querySelector('#recentNoticeList li.prev');
@@ -23,20 +35,10 @@
         if( item.classList.contains('curr') ){
           item.classList.remove('curr');
           item.classList.add('prev');
-          let nextIndex = ( index+1 ) % rctNoticeList.length;
+          const nextIndex = ( index+1 ) % rctNoticeList.length;
           rctNoticeList[nextIndex].classList.add('curr');
           break;
         }
-      }
-    }
-
-    if( rctNoticeList.length === 0 ){
-      //// 최근공지 없으면 최근공지 상자 삭제
-      document.getElementById('recentNotice').remove();
-    }else{
-      rctNoticeList[0].classList.add('curr');
-      if( rctNoticeList.length >= 2 ){
-        setInterval(showNextItem, 5000);
       }
     }
   </script>
