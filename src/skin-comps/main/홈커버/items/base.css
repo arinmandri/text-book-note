@@ -1,4 +1,4 @@
-.homecoverSection:not(:first-child) {
+.homecoverSection {
   margin: 125px 0;
 }
 .homecoverSection h1 {
