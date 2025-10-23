@@ -411,10 +411,16 @@ body#tt-body-index .hideAtHome-1 {
 
 /* 최근공지 */
 #homecover .recentNoticeListBox {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
   text-align: right;
+}
+#homecover .recentNoticeListBox .pushpin {
+  position: absolute;
+  top: -14px;
+  right: 15px;
 }
 #homecover .recentNoticeListBox ul {
   list-style: none;
