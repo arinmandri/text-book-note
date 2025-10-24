@@ -628,7 +628,6 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 #sidebarBox2.sidebarBoxV {
   right: 0px;
 }
-#sidebarBox2.open ,
 #sidebarBox2.flat {
   overflow: visible;
 }
