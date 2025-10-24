@@ -60,37 +60,28 @@
   width: 30px;
   height: 45px;
   top: -35px;
-  left: 20px;
-  transform: rotate(7deg);
-}
-.commentList > li:nth-child(10n) .tape {
-  left: 30px;
+  left: 44px;
   transform: rotate(-7deg);
 }
-.comment .areaImg {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.commentList > li:nth-child(10n) .tape {
+  left: 65px;
+  transform: rotate(7deg);
 }
 .comment .area1 {
   margin-left: 39px;
   padding: 0.4em 0;
   text-align: left;
 }
-.comment1 img ,/* 프사 */
+.comment1 img {
+  transform: rotate(-5deg);
+}
 .comment2 img {
+  transform: rotate(5deg);
+}
+.comment img {/* 프사 */
   vertical-align: middle;
   border: 1px solid #ddd;
   border: 1px solid var(--borderCol);
-  transform: rotate(-5deg);
-}
-.comment1 img {/* 댓글 프사 크기 */
-  height: 1.8em;
-  width: 1.8em;
-}
-.comment2 img {/* 답글 프사 크기 */
-  height: 1.5em;
-  width: 1.5em;
 }
 .comment .writer {/* 글쓴이 */
   font-weight: bold;
@@ -114,9 +105,9 @@
 }
 .comment .themeBtn {/* 버튼 */
   display: inline-block;
-  height: 26px;
-  width: 26px;
-  margin: 0 3px;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0 0 0 7px;
 }
 .rp_admin .writer::before ,
 .guest_admin .writer::before {
@@ -164,3 +155,7 @@
   text-align: center;
   font-family: {{ settings.fontFamily.serif.cssValue }};
 }
+
+
+{% include "skin-comps/main/댓글과방명록/댓글.css" %}
+{% include "skin-comps/main/댓글과방명록/방명록.css" %}

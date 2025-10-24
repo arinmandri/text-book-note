@@ -11,7 +11,7 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 900;
   font-family: {{ settings.fontFamily.sticker.cssValue }};
 }

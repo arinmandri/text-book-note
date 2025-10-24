@@ -1,0 +1,15 @@
+#commentSec.postPage .comment .areaImg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#commentSec.postPage .comment1 img {
+  /* 댓글 프사 크기 */
+  height: 1.8em;
+  width: 1.8em;
+}
+#commentSec.postPage .comment2 img {
+  /* 답글 프사 크기 */
+  height: 1.5em;
+  width: 1.5em;
+}

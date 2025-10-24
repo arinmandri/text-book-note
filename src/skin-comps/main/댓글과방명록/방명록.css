@@ -1,0 +1,14 @@
+#commentSec.guestPage .comment .areaImg {
+  float: left;
+  padding: 4px 8px 8px 4px;
+}
+#commentSec.guestPage .comment1 img {
+  /* 댓글 프사 크기 */
+  height: 4em;
+  width: 4em;
+}
+#commentSec.guestPage .comment2 img {
+  /* 답글 프사 크기 */
+  height: 3.6em;
+  width: 3.6em;
+}
