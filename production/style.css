@@ -964,8 +964,8 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   margin: 0 auto;
   max-width: 5em;
   max-height: 3.5em;
-  border: 2px solid #000000;
-  border: 2px solid var(--bonmunTextCol);
+  box-shadow: 0px 0px 7px #000000;
+  box-shadow: 0px 0px 7px var(--bonmunTextCol);
   border-radius: 50%;
 }
 .sidebar_elementMain.description .img > .ribbon {
