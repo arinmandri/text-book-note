@@ -1,6 +1,10 @@
 
+const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
+document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
+
 const minWidthToOpenSidebar1 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 );
 const minWidthToOpenSidebar2 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 );
+const sidebarboxVOccupyingWidth = 305;
 
 const sidebarBox1     = document.getElementById('sidebarBox1');
 const sidebarBox2     = document.getElementById('sidebarBox2');
@@ -59,21 +63,36 @@ document.addEventListener('DOMContentLoaded', function(){
       + captions[i].innerText;
   }
 
-  onWindowResize();
+  refreshSidebarVStatus();
 });
 
 //// 사이드바1, 사이드바2 펼접
-let resizeTimer;
-window.addEventListener('resize', onWindowResize);
+let sidebar1_status;
+let sidebar2_status;
+let main2_status;
+
+//// 사이드바 펼접 상태
+//// 사이드바1 펴나, 사이드바2 펴나, 메인2 마진 중앙정렬 하나
+function getSidebarVStatus(){
+  const vw = document.documentElement.clientWidth;
+  return [
+    ( vw >= minWidthToOpenSidebar1 ) ? true : false,
+    ( vw >= minWidthToOpenSidebar2 ) ? true : false,
+    ( vw >= maxWidthOfMain2 + 2*sidebarboxVOccupyingWidth ) ? true : false,
+  ];
+}
+
 
 //// 화면 크기 조절
-function onWindowResize(){
-  clearTimeout( resizeTimer );
-  resizeTimer = setTimeout(()=>{
-    const vw = document.documentElement.clientWidth;
+window.addEventListener('resize', refreshSidebarVStatus);
 
-    const sidebarboxVOccupyingWidth = 305;
-    if( vw >= minWidthToOpenSidebar1 ){// 사이드바1 펴기
+function refreshSidebarVStatus(){
+
+  const [s1_status_new, s2_status_new, m2_status_new] = getSidebarVStatus();
+
+  if( sidebar1_status !== s1_status_new ){// 사이드바1 펼접상태 바뀜
+    sidebar1_status = s1_status_new;
+    if( s1_status_new === true ){// 사이드바1 펴기
       sidebarBox1.classList.remove('fold');
       sidebarBox1.classList.remove('open');
       sidebarBox1.classList.add('flat');
@@ -83,7 +102,10 @@ function onWindowResize(){
       sidebarBox1.classList.add('fold');
       main2.style.marginLeft = '';
     }
-    if( vw >= minWidthToOpenSidebar2 ){// 사이드바2 펴기
+  }
+  if( sidebar2_status !== s2_status_new ){// 사이드바2 펼접상태 바뀜
+    sidebar2_status = s2_status_new;
+    if( s2_status_new === true ){// 사이드바2 펴기
       sidebarBox2.classList.remove('fold');
       sidebarBox2.classList.remove('open');
       sidebarBox2.classList.add('flat');
@@ -97,9 +119,15 @@ function onWindowResize(){
       sidebar2.classList.remove('sidebarV');
       main2.style.marginRight = '';
     }
-    if( vw >= maxWidthOfMain2 + 2*sidebarboxVOccupyingWidth ){
-      main2.style.marginLeft = '';
-      main2.style.marginRight = '';
+  }
+  if( main2_status !== m2_status_new ){// 메인 여백(중앙정렬용)
+    main2_status = m2_status_new;
+    if( m2_status_new === true ){
+        main2.style.marginLeft = '';
+        main2.style.marginRight = '';
+    }else{
+        main2.style.marginLeft  = s1_status_new ? sidebarboxVOccupyingWidth + 'px' : '';
+        main2.style.marginRight = s2_status_new ? sidebarboxVOccupyingWidth + 'px' : '';
     }
-  }, 70);
+  }
 }
