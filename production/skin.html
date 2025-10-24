@@ -173,6 +173,16 @@ document.body.classList.add('login-' + T.config.ROLE);
 
   const body = _body;
   if( body != null ) body.classList.add('tt-body-list');
+
+  //// close-onclick-outside: 자신의 바깥을 클릭시 닫음
+  document.addEventListener('click', (e) => {
+    const clicked = e.target;
+    document.querySelectorAll('.close-onclick-outside.open').forEach(el => {
+      if (!el.contains(clicked)) {
+        el.classList.remove('open');
+      }
+    });
+  });
 })();
 ////// 다크모드 - body
 (function(){
@@ -434,7 +444,7 @@ TODO HOMECOVER_WIDEPAGE
 <div id="main1">
 
 <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
-<div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold"><!-- 클래스 초기상태: 모두 접힘 -->
+<div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
     <s_sidebar_element><div class="sidebar_element ">
   <!-- 메뉴 -->
@@ -1267,7 +1277,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div></div><!-- 메인영역2 ##-->
 
 <!--## 사이드바상자2 : 오른쪽 사이드바 영역 -->
-<div id="sidebarBox2" class="sidebarBox fold"><!-- 클래스 초기상태: 모두 접힘 -->
+<div id="sidebarBox2" class="sidebarBox fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar2" class="sidebar sidebarV"><s_sidebar>
     <s_sidebar_element><div class="sidebar_element datetime">
   <!-- 현재시각 -->
@@ -1763,10 +1773,6 @@ document.querySelectorAll('.sidebarBtn').forEach(btn => {
   btn.addEventListener('click', () => {
     btn.parentElement.classList.toggle('open');
   });
-});
-//// 사이드바1: 마우스가 떠나도 접음
-sidebarBox1.addEventListener('mouseleave', ( e ) => {
-    e.target.classList.remove('open');
 });
 
 //// 사이드바2: 리모콘에 버튼 모으기

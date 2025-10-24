@@ -17,10 +17,6 @@ document.querySelectorAll('.sidebarBtn').forEach(btn => {
     btn.parentElement.classList.toggle('open');
   });
 });
-//// 사이드바1: 마우스가 떠나도 접음
-sidebarBox1.addEventListener('mouseleave', ( e ) => {
-    e.target.classList.remove('open');
-});
 
 //// 사이드바2: 리모콘에 버튼 모으기
 (function(){
