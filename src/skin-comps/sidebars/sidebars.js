@@ -58,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
       + (i+1)+': '
       + captions[i].innerText;
   }
-
-  refreshSidebarVStatus();
 });
 
 //// 사이드바1, 사이드바2 펼접
@@ -80,6 +78,7 @@ function getSidebarVStatus(){
 
 
 //// 화면 크기 조절
+refreshSidebarVStatus();
 window.addEventListener('resize', refreshSidebarVStatus);
 
 function refreshSidebarVStatus(){
