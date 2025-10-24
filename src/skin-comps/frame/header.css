@@ -1,7 +1,6 @@
 /**# 헤더, 푸터 */
 header {
-  width: 100%;
-  box-sizing: border-box;
+  margin-right: 2%;
 
   text-align: center;
   background-color: #114;
@@ -11,8 +10,7 @@ header {
   font-family: {{ settings.fontFamily.sticker.cssValue }};
 }
 header {
-  border-bottom-left-radius: 50px 100%;
-  border-bottom-right-radius: 50px 100%;
+  border-bottom-right-radius: 60px;
 }
 header a {
   display: block;

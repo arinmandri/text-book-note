@@ -214,7 +214,7 @@ body.theme-dark .themeBtn {
 }
 
 .pageTitle {
-  margin: 40px auto;
+  margin: 80px auto;
   font-family: 'Noto Serif KR', serif;
   font-size: 250%;
   font-weight: 600;
@@ -355,8 +355,7 @@ body:not(.theme-dark) .backImg.dark {
 }
 /**# 헤더, 푸터 */
 header {
-  width: 100%;
-  box-sizing: border-box;
+  margin-right: 2%;
 
   text-align: center;
   background-color: #114;
@@ -366,8 +365,7 @@ header {
   font-family: 'Jua', sans-serif;
 }
 header {
-  border-bottom-left-radius: 50px 100%;
-  border-bottom-right-radius: 50px 100%;
+  border-bottom-right-radius: 60px;
 }
 header a {
   display: block;
