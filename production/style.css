@@ -681,11 +681,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold #sidebar2X {
   display: inline-block;
   padding: 6px 10px;
-  border-bottom-width: 0px;
-  border-top-left-radius: 10px 100%;
-  border-top-right-radius: 10px 100%;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
 }
 #sidebarBox2.fold #sidebar2Remocon {
   position: fixed;/*호환*/
@@ -693,6 +688,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   bottom: 0px;
   right: 0px;
   z-index: 20;
+  padding: 5px 10px;
   text-align: right;
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
