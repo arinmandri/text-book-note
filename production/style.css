@@ -1617,7 +1617,7 @@ li > dl > dt ,
   border: 1px solid var(--borderCol);
   background-color: #fff;
   background-color: var(--backCol);
-  padding: 10px;
+  padding: 6px;
 }
 .comment.rp_secret ,
 .comment.guest_secret {
@@ -1634,7 +1634,14 @@ li > dl > dt ,
   left: 30px;
   transform: rotate(-7deg);
 }
+.comment .areaImg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 .comment .area1 {
+  margin-left: 39px;
+  padding: 0.4em 0;
   text-align: left;
 }
 .comment1 img ,/* 프사 */
@@ -1642,7 +1649,7 @@ li > dl > dt ,
   vertical-align: middle;
   border: 1px solid #ddd;
   border: 1px solid var(--borderCol);
-  transform: rotate(-5deg) translateX(-5px);
+  transform: rotate(-5deg);
 }
 .comment1 img {/* 댓글 프사 크기 */
   height: 1.8em;
@@ -1665,6 +1672,7 @@ li > dl > dt ,
   text-align: right;
 }
 .comment .date {/* 날짜 */
+  vertical-align: bottom;
   font-size: 0.8em;
   font-family: 'Gaegu', cursive;
 }
@@ -1675,7 +1683,6 @@ li > dl > dt ,
   display: inline-block;
   height: 26px;
   width: 26px;
-  border-radius: 20px;
   margin: 0 3px;
 }
 .rp_admin .writer::before ,
