@@ -39,15 +39,16 @@ body.theme-dark .themeBtn {
   background-color: var(--listBack);
 }
 
-.decoBox {
-  z-index: 10;
+.sectionTitle {
+  margin-bottom: 52px;
+  text-align: right;
+  font-family: {{ settings.fontFamily.serif.cssValue }};
+  font-size: 180%;
+  letter-spacing: 0.16em;
 }
-.tape {
-  position: absolute;
-  display: block;
-  background-color: #fff4;
-  border: 1px solid #0003;
-  pointer-events: none;
+.sectionTitle span {
+  border-bottom: 10px solid #ddd;
+  border-bottom: 10px solid var(--borderCol);
 }
 
 .pageTitle {
@@ -58,4 +59,15 @@ body.theme-dark .themeBtn {
   color: #000;
   color: var(--bonmunTextCol);
   text-align: center;
+}
+
+.decoBox {
+  z-index: 10;
+}
+.tape {
+  position: absolute;
+  display: block;
+  background-color: #fff4;
+  border: 1px solid #0003;
+  pointer-events: none;
 }

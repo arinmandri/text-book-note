@@ -2,10 +2,6 @@
   margin: 125px 0;
 }
 .homecoverSection h1 {
-  margin: 0 6%;
-  text-align: right;
-  font-family: {{ settings.fontFamily.serif.cssValue }};
-}
-.homecoverSection .decoUnderline {
-  border-bottom: 10px solid var(--borderCol);
+  margin-left: 4%;
+  margin-right: 6%;
 }

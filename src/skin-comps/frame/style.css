@@ -7,5 +7,6 @@ body
 └푸터 footer
 */
 {% include "skin-comps/frame/background.css" %}
-{% include "skin-comps/frame/header-footer.css" %}
+{% include "skin-comps/frame/header.css" %}
+{% include "skin-comps/frame/footer.css" %}
 {% include "skin-comps/frame/main.css" %}

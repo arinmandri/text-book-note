@@ -201,15 +201,16 @@ body.theme-dark .themeBtn {
   background-color: var(--listBack);
 }
 
-.decoBox {
-  z-index: 10;
+.sectionTitle {
+  margin-bottom: 52px;
+  text-align: right;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 180%;
+  letter-spacing: 0.16em;
 }
-.tape {
-  position: absolute;
-  display: block;
-  background-color: #fff4;
-  border: 1px solid #0003;
-  pointer-events: none;
+.sectionTitle span {
+  border-bottom: 10px solid #ddd;
+  border-bottom: 10px solid var(--borderCol);
 }
 
 .pageTitle {
@@ -220,6 +221,17 @@ body.theme-dark .themeBtn {
   color: #000;
   color: var(--bonmunTextCol);
   text-align: center;
+}
+
+.decoBox {
+  z-index: 10;
+}
+.tape {
+  position: absolute;
+  display: block;
+  background-color: #fff4;
+  border: 1px solid #0003;
+  pointer-events: none;
 }
 .blogLinks > * {
   margin: 8px 4px;
@@ -342,7 +354,7 @@ body:not(.theme-dark) .backImg.dark {
   background-repeat: no-repeat;
 }
 /**# 헤더, 푸터 */
-header , footer {
+header {
   width: 100%;
   box-sizing: border-box;
 
@@ -352,7 +364,6 @@ header , footer {
   color: #fff;
   color: var(--frameFore);
   font-family: 'Jua', sans-serif;
-  font-weight: 100;
 }
 header {
   border-bottom-left-radius: 50px 100%;
@@ -363,9 +374,15 @@ header a {
   padding: 30px 10%;
 }
 footer {
-  padding: 42px 50px;
-  border-top-left-radius: 50px 100%;
-  border-top-right-radius: 50px 100%;
+  margin-top: 80px;
+  border-top: 9px double #ddd;
+  border-top: 9px double var(--borderCol);
+  padding: 60px 6% 50px 6%;
+  text-align: right;
+}
+
+footer > .content > * {
+  margin-top: 20px;
 }
 
 /**# 메인영역1
@@ -482,12 +499,8 @@ body#tt-body-index #recentNotice {
   margin: 125px 0;
 }
 .homecoverSection h1 {
-  margin: 0 6%;
-  text-align: right;
-  font-family: 'Noto Serif KR', serif;
-}
-.homecoverSection .decoUnderline {
-  border-bottom: 10px solid var(--borderCol);
+  margin-left: 4%;
+  margin-right: 6%;
 }
 
   .homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
@@ -496,7 +509,7 @@ body#tt-body-index #recentNotice {
   position: relative;
 }
 .homecoverSection.train .postList > *:first-child {
-  margin-top: 40px;
+  margin-top: 0;
 }
 .homecoverSection.train .postList > */*li*/ > a {/* 항목의 안쪽 스타일 */
   padding: 30px 20px;

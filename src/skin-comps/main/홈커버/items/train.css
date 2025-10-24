@@ -4,7 +4,7 @@
   position: relative;
 }
 .homecoverSection.train .postList > *:first-child {
-  margin-top: 40px;
+  margin-top: 0;
 }
 .homecoverSection.train .postList > */*li*/ > a {/* 항목의 안쪽 스타일 */
   padding: 30px 20px;
