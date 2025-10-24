@@ -328,118 +328,6 @@ function setSettingFixCbox( settingName, checked ){
   <a href="/" style="display: block">[##_title_##]</a>
 </header>
 
-<s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
-
-<section id="blog-home-introduction" class="homecoverSection">
-  <div class="namecard">
-    <div class="box1">
-      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
-      <span class="tape"></span>
-    </div>
-    <div class="box2 _textLeft">
-      <h2>[##_title_##]</h2>
-      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
-      <p>[##_desc_##]</p>
-      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
-    </div>
-  </div>
-
-  <nav class="blogMenu copy-target _textCenter" data-copyname="blogMenu"></nav>
-
-  <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
-</section>
-
-  <div class="recentNotice">
-<svg class="pushpin" width="23px" height="45px">
-  <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
-  <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
-</svg>
-    <ul class="copy-target" data-copyname="recentNoticeUl"></ul>
-  </div>
-
-  <s_cover_rep>
-
-  <s_cover name="train">
-  <section class="homecoverSection train">
-<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
-    <div class="homecover train">
-
-<ul class="postList">
-  <s_cover_item>
-    <s_cover_item_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
-        <div class="thumbnail">
-          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
-        </div>
-        <div class="itemHead">
-          <h2 class="title">[##_cover_item_title_##]</h2>
-          <span class="category">[##_cover_item_category_##]</span>
-        </div>
-        <div class="itemBody">
-          <span class="content">[##_cover_item_summary_##]</span>
-          <span class="itemTail">
-            <span class="date">[##_cover_item_simple_date_##].</span>
-          </span>
-        </div>
-      </article></a></li>
-    </s_cover_item_article_info>
-
-    <s_cover_item_not_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
-        <div class="thumbnail">
-          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
-        </div>
-        <div class="itemHead">
-          <h2 class="title">[##_cover_item_title_##]</h2>
-        </div>
-        <div class="itemBody">
-          <span class="content">[##_cover_item_summary_##]</span>
-        </div>
-      </article></a></li>
-    </s_cover_item_not_article_info>
-  </s_cover_item>
-</ul>
-
-    </div>
-  </section>
-</s_cover>
-
-  <s_cover name="card">
-  <section class="homecoverSection card">
-<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
-    <div class="homecover card">
-
-TODO HOMECOVER_CARD
-
-    </div>
-  </section>
-</s_cover>
-
-  <s_cover name="bookcover">
-  <section class="homecoverSection bookcover">
-<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
-    <div class="homecover bookcover">
-
-TODO HOMECOVER_BOOKCOVER
-
-    </div>
-  </section>
-</s_cover>
-
-  <s_cover name="widepage">
-  <section class="homecoverSection widepage">
-<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
-    <div class="homecover widepage">
-
-TODO HOMECOVER_WIDEPAGE
-
-    </div>
-  </section>
-</s_cover>
-
-  </s_cover_rep>
-</div></s_cover_group>
-
 <!--# 메인영역1 -->
 <div id="main1">
 
@@ -606,6 +494,117 @@ TODO HOMECOVER_WIDEPAGE
 
     <!--### 메인 -->
     <section id="main">
+<s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
+
+<section id="blog-home-introduction" class="homecoverSection">
+  <div class="namecard">
+    <div class="box1">
+      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+      <span class="tape"></span>
+    </div>
+    <div class="box2 _textLeft">
+      <h2>[##_title_##]</h2>
+      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+      <p>[##_desc_##]</p>
+      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
+    </div>
+  </div>
+
+  <nav class="blogMenu copy-target _textCenter" data-copyname="blogMenu"></nav>
+
+  <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
+</section>
+
+  <div class="recentNotice">
+<svg class="pushpin" width="23px" height="45px">
+  <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
+  <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
+</svg>
+    <ul class="copy-target" data-copyname="recentNoticeUl"></ul>
+  </div>
+
+  <s_cover_rep>
+
+  <s_cover name="train">
+  <section class="homecoverSection train">
+<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
+    <div class="homecover train">
+
+<ul class="postList">
+  <s_cover_item>
+    <s_cover_item_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+          <span class="category">[##_cover_item_category_##]</span>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+          <span class="itemTail">
+            <span class="date">[##_cover_item_simple_date_##].</span>
+          </span>
+        </div>
+      </article></a></li>
+    </s_cover_item_article_info>
+
+    <s_cover_item_not_article_info>
+      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
+        <div class="thumbnail">
+          <s_cover_item_thumbnail><img loading="lazy" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
+        </div>
+        <div class="itemHead">
+          <h2 class="title">[##_cover_item_title_##]</h2>
+        </div>
+        <div class="itemBody">
+          <span class="content">[##_cover_item_summary_##]</span>
+        </div>
+      </article></a></li>
+    </s_cover_item_not_article_info>
+  </s_cover_item>
+</ul>
+
+    </div>
+  </section>
+</s_cover>
+
+  <s_cover name="card">
+  <section class="homecoverSection card">
+<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
+    <div class="homecover card">
+
+TODO HOMECOVER_CARD
+
+    </div>
+  </section>
+</s_cover>
+
+  <s_cover name="bookcover">
+  <section class="homecoverSection bookcover">
+<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
+    <div class="homecover bookcover">
+
+TODO HOMECOVER_BOOKCOVER
+
+    </div>
+  </section>
+</s_cover>
+
+  <s_cover name="widepage">
+  <section class="homecoverSection widepage">
+<h1><span class="decoUnderline">[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>
+    <div class="homecover widepage">
+
+TODO HOMECOVER_WIDEPAGE
+
+    </div>
+  </section>
+</s_cover>
+
+  </s_cover_rep>
+</div></s_cover_group>
 
 <s_notice_rep><!--◆ 공지 페이지 -->
   <div class="noticePost onlyOnPage-index">
