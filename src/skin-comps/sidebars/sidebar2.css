@@ -1,0 +1,82 @@
+/**### 사이드바2 */
+/* 넓은 화면: 펴진채 */
+#sidebarBox2.sidebarBoxV {
+  right: 0px;
+}
+#sidebarBox2.open ,
+#sidebarBox2.flat {
+  overflow: visible;
+}
+#sidebarBox2.flat #sidebar2Remocon {
+  display: none;
+}
+/* 좁은화면: 작은 단추만으로 표현. 단추를 누르면 모달창에 해당 요소만 표시. */
+/*
+사이드바2리모콘 #sidebar2Remocon : 축소된 사이드바2의 각 아이템을 여닫는 버튼들 모음.
+html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립트를 이용해서 그 중에 사이드바2의 것만 여기로 모아오고 나머진 삭제.
+*/
+#sidebarBox2.flat {
+  right: 0px;
+}
+#sidebarBox2.fold {
+  position: fixed;/* 호환 */
+  position: sticky;
+  bottom: 0px;
+  right: 0;
+  z-index: 20;
+  margin-left: auto;
+  width: 350px;
+  max-height: 60vh;
+  overflow: scroll;
+  text-align: center;
+}
+#sidebarBox2.fold #sidebar2 {
+  position: relative;
+  margin: 20px 23px 0 23px;
+  border: 2px solid #dddddd;
+  border: 2px solid var(--borderCol);
+  border-radius: 8px;
+  height: unset;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 20px #0004;
+  background-color: #ffffff;
+  background-color: var(--backCol);
+  overflow: scroll;
+}
+#sidebarBox2.fold #sidebar2:not(.open) {
+  display: none;
+}
+#sidebarBox2.fold #sidebar2 > .sidebar_element {
+  margin-bottom: 0;
+}
+#sidebarBox2.fold #sidebar2 > .sidebar_element:not(.open) {
+  display: none;
+}
+#sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
+#sidebarBox2.fold #sidebar2X {
+  display: inline-block;
+  padding: 6px 10px;
+}
+#sidebarBox2.fold #sidebar2Remocon {
+  position: fixed;/*호환*/
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+  z-index: 20;
+  padding: 5px 10px;
+  text-align: right;
+}
+#sidebarBox2.fold #sidebar2Remocon > * {
+  margin: 10px 0 0 10px;
+}
+@media (max-width: 800px) {/* 걍 적당히 잡은 크기 */
+  #sidebar2Remocon > * {
+    margin: 5px 0 0 5px;
+  }
+}
+/* 가로로 길면 사이드바2 세로길이 꽉참 */
+@media (min-aspect-ratio: 2/1) {
+  #sidebarBox2.fold {
+    max-height: 100vh;
+  }
+}

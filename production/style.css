@@ -591,6 +591,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 #main2 {
   margin: 0 auto;
 }
+
 /**### 사이드바1 */
 #sidebarBox1 {
   left: -304px;/* 사이드바너비 + 경계선 */
@@ -622,7 +623,6 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 #sidebarBox1.flat > .sidebarBtn {
   display: none;
 }
-
 /**### 사이드바2 */
 /* 넓은 화면: 펴진채 */
 #sidebarBox2.sidebarBoxV {
@@ -705,12 +705,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
     max-height: 100vh;
   }
 }
-
-#sidebar1 .bubbleBtn ,
-#sidebar3 .bubbleBtn {
-  display: none;
-}
-
 /**### 세로 사이드바 스크롤 */
 .sidebarBoxV {
   /* 위치 크기 */
@@ -752,7 +746,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .sidebarBoxV:hover .sidebarV {
   overflow: auto;
 }
-
 /**### 사이드바3 */
 #sidebar3 {
   border-top: 5px double #ddd;
@@ -765,6 +758,8 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   margin: 30px 2px;
   vertical-align: top;
 }
+
+
 
 /**### 사이드바아이템 - 공통
 사이드바 div.sidebar

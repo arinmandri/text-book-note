@@ -1,0 +1,41 @@
+/**### 세로 사이드바 스크롤 */
+.sidebarBoxV {
+  /* 위치 크기 */
+  position: absolute;
+  top: 0px;
+  box-sizing: border-box;
+  min-width: 300px;
+  height: 100%;
+  min-height: 100vh;
+  /* 내부 */
+  text-align: center;
+  transition: left 0.12s ease-out, width 0.12s ease-out;
+  overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
+}
+.sidebarBoxV.fold {
+  background-color: #ffffff;
+  background-color: var(--backCol);
+}
+.sidebarBoxV.flat ,
+.sidebarBoxV.open {
+  position: absolute;
+  overflow: visible;/* visible이어야 자식에서 sticky 적용 됨  */
+}
+.sidebarV {
+  position: fixed;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+}
+.sidebarV > .sidebar_element {
+  display: block;/* 세로로 쌓기 */
+  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
+}
+.sidebarV > *:first-child {
+  margin-top: 20px;
+}
+.sidebarBoxV:hover .sidebarV {
+  overflow: auto;
+}

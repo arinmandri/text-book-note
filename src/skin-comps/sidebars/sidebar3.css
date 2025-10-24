@@ -1,0 +1,12 @@
+/**### 사이드바3 */
+#sidebar3 {
+  border-top: 5px double #ddd;
+  border-top: 5px double var(--borderCol);
+  padding-top: 20px;
+  text-align: center;
+}
+#sidebar3 > * {
+  display: inline-block;
+  margin: 30px 2px;
+  vertical-align: top;
+}

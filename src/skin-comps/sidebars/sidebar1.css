@@ -1,0 +1,31 @@
+/**### 사이드바1 */
+#sidebarBox1 {
+  left: -304px;/* 사이드바너비 + 경계선 */
+  border-right: 4px double #ddd;
+  border-right: 4px double var(--borderCol);
+}
+#sidebarBox1.open ,
+#sidebarBox1.flat {
+  left: 0px;
+  overflow: visible;
+}
+#sidebarBox1 > .sidebarBtn {
+  position: fixed;
+  display: block;
+  width: 30px;
+  height: 50px;
+  transition: left 0.12s ease-out, right 0.12s ease-out;
+  top: 150px;
+  left: 0px;
+  border-radius: 0 12px 12px 0;
+  border-left-width: 0;
+}
+#sidebarBox1.open > .sidebarBtn {/* >>themeBtn:hover */
+  left: 300px;
+  background-color: #f0ff40;
+  background-color: var(--highlight);
+  color: black;
+}
+#sidebarBox1.flat > .sidebarBtn {
+  display: none;
+}
