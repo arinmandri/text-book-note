@@ -14,7 +14,6 @@
   text-align: center;
   font-family: {{ settings.fontFamily.handwriting.cssValue }};
   margin-top: 12px;
-  padding-bottom: 10px;
   font-size: 0.8em;
 }
 .sidebar .caption .semo {

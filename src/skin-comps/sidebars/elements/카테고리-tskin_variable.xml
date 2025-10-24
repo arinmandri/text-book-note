@@ -1,6 +1,6 @@
 <variable>
 	<name>catOpenLevel</name>
-	<label>카테고리 초기 열림 상태</label>
+	<label>사이드바 상위카테고리 초기 상태</label>
 	<description>카테고리 메뉴 항목들의 초기 열림 상태</description>
 	<type>SELECT</type>
 	<option><![CDATA[[
