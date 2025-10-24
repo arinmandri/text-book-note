@@ -1787,7 +1787,7 @@ sidebarBox1.addEventListener('mouseleave', ( e ) => {
       prevOpens.forEach((item)=>{
         item.classList.remove('open');
       });
-      sidebar2.classList.add('open');
+      sidebarBox2.classList.add('open');
       sidebarItem.classList.add('open');
     });
     sidebar2Remocon.appendChild( bubbleBtn );
@@ -1797,7 +1797,7 @@ sidebarBox1.addEventListener('mouseleave', ( e ) => {
 
 //// 사이드바2: 접기 버튼
 document.getElementById('sidebar2X').addEventListener('click', () => {
-    sidebar2.classList.remove('open');
+    sidebarBox2.classList.remove('open');
 });
 
 document.addEventListener('DOMContentLoaded', function(){
