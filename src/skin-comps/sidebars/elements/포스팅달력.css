@@ -1,0 +1,31 @@
+.sidebar_elementMain.calendar table {
+  border-collapse: collapse;
+}
+.sidebar_elementMain.calendar caption ,
+.sidebar_elementMain.calendar thead ,
+.sidebar_elementMain.calendar tbody {
+  border-bottom: 1px solid {{ var.defaultColor.borderCol }};
+  border-bottom: 1px solid var(--borderCol);
+}
+
+.sidebar_elementMain.calendar caption a:nth-child(2) {
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
+}
+
+.sidebar_elementMain.calendar thead {
+  background-color: {{ var.defaultColor.listBack }};
+  background-color: var(--listBack);
+}
+
+.cal_click {/* 포스팅이 있는 날짜 */
+  font-weight: bold;
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
+  color: {{ var.defaultColor.pointCol }};
+  color: var(--pointCol);
+}
+body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
+  padding: 2px 0;
+  border-radius: 5px;
+  background: {{ var.defaultColor.highlight }};
+  background: var(--highlight);
+}

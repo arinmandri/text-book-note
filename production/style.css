@@ -1041,6 +1041,37 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .fontsizeBtn {
   padding: 7px;
 }
+.sidebar_elementMain.calendar table {
+  border-collapse: collapse;
+}
+.sidebar_elementMain.calendar caption ,
+.sidebar_elementMain.calendar thead ,
+.sidebar_elementMain.calendar tbody {
+  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid var(--borderCol);
+}
+
+.sidebar_elementMain.calendar caption a:nth-child(2) {
+  font-family: 'Jua', sans-serif;
+}
+
+.sidebar_elementMain.calendar thead {
+  background-color: #F4F4F4;
+  background-color: var(--listBack);
+}
+
+.cal_click {/* 포스팅이 있는 날짜 */
+  font-weight: bold;
+  font-family: 'Jua', sans-serif;
+  color: #FF6644;
+  color: var(--pointCol);
+}
+body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
+  padding: 2px 0;
+  border-radius: 5px;
+  background: #F0FF40;
+  background: var(--highlight);
+}
 /* 인기글 최근글 최근댓글 */
 .sidebar_elementMain.popularpost a::before {
   content: "hot";
