@@ -7,7 +7,6 @@
 #sidebarBox1.open ,
 #sidebarBox1.flat {
   left: 0px;
-  overflow: visible;
 }
 
 #sidebarBox1 > .sidebarBtnBox {
@@ -22,6 +21,7 @@
   display: none;
 }
 #sidebarBox1 .sidebarBtn {
+  position: fixed;/* 호환 */
   position: sticky;
   display: block;
   width: 30px;

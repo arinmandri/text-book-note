@@ -620,7 +620,6 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 #sidebarBox1.open ,
 #sidebarBox1.flat {
   left: 0px;
-  overflow: visible;
 }
 
 #sidebarBox1 > .sidebarBtnBox {
@@ -635,6 +634,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   display: none;
 }
 #sidebarBox1 .sidebarBtn {
+  position: fixed;/* 호환 */
   position: sticky;
   display: block;
   width: 30px;
@@ -732,6 +732,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   }
 }
 /**### 세로 사이드바 스크롤 */
+/* 사이드바1은 항상; 사이드바2는 flat 상태만 해당 */
 .sidebarBoxV {
   /* 위치 크기 */
   position: absolute;
@@ -744,10 +745,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   text-align: center;
   transition: left 0.12s ease-out, width 0.12s ease-out;
   overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
-}
-.sidebarBoxV.fold {
-  background-color: #ffffff;
-  background-color: var(--backCol);
 }
 .sidebarBoxV.flat ,
 .sidebarBoxV.open {
