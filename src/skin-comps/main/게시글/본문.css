@@ -73,18 +73,6 @@
   text-align: center;/* 글자 가운데 */
   font-size: 161%;/* 글자 크기 */
 }
-.pmargin > h3::before {
-  content:'\259E\259E\00a0';
-  color: {{ var.defaultColor.frameBack }};
-  color: var(--frameBack);
-  float: left;
-}
-.pmargin > h3::after  {
-  content:'\00a0\259E\259E';
-  color: {{ var.defaultColor.frameBack }};
-  color: var(--frameBack);
-  float: right;
-}
 .pmargin > h4 {/* H4: 점선밑줄 */
   border-bottom: 3px dashed {{ var.defaultColor.frameBack }};/* 밑줄 */
   border-bottom: 3px dashed var(--frameBack);
