@@ -2,7 +2,7 @@
 /**##### 본문 */
 .bonmun {
   padding: 20px 3%;
-  color: #000;
+  color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
   font-family: {{ settings.fontFamily.serif.cssValue }};
   line-height: 1.8;
@@ -24,7 +24,7 @@
 .bonmun hr {
   margin: 100px auto;
   width: 50%;
-  border-top: 4px dashed #ddd;
+  border-top: 4px dashed {{ var.defaultColor.borderCol }};
   border-top: 4px dashed var(--borderCol);
 }
 /* 소제목들 */
@@ -32,7 +32,7 @@
   font-size: 0.6em;
   font-family: {{ settings.fontFamily.sticker.cssValue }};
   font-weight: bold;
-  color: #cba;
+  color: {{ var.defaultColor.bonmunForm }};
   color: var(--bonmunForm);
 }
 .pmargin > h2 , 
@@ -41,7 +41,7 @@
 .pmargin > h5 , 
 .pmargin > h6 /*(h1은 포스트 제목이라 본문엔 안 씀)*/{
   border-width: 0px;
-  border-color: #114;
+  border-color: {{ var.defaultColor.frameBack }};
   border-color: var(--frameBack);
 }
 .pmargin > h3 , 
@@ -57,9 +57,9 @@
 .pmargin > h2 {/* H2: frameBack색 상자, */
   border-style: none;/* 테두리 없음 */
   border-radius: 10px;/* 부드러운 모서리 */
-  background-color: #114;/* 배경색 */
+  background-color: {{ var.defaultColor.frameBack }};/* 배경색 */
   background-color: var(--frameBack);
-  color: #fff;/* 글자색 */
+  color: {{ var.defaultColor.frameFore }};/* 글자색 */
   color: var(--frameFore);
   text-align: center;/* 글자 가운데 */
   font-size: 179%;/* 글자 크기 */
@@ -68,31 +68,31 @@
   padding: 3px;
 }
 .pmargin > h3 {/* H3: 굵은 밑줄, 텍스트 가운데 */
-  border-bottom: 5px solid #114;/* 밑줄 */
+  border-bottom: 5px solid {{ var.defaultColor.frameBack }};/* 밑줄 */
   border-bottom: 5px solid var(--frameBack);
   text-align: center;/* 글자 가운데 */
   font-size: 161%;/* 글자 크기 */
 }
 .pmargin > h3::before {
   content:'\259E\259E\00a0';
-  color: #114;
+  color: {{ var.defaultColor.frameBack }};
   color: var(--frameBack);
   float: left;
 }
 .pmargin > h3::after  {
   content:'\00a0\259E\259E';
-  color: #114;
+  color: {{ var.defaultColor.frameBack }};
   color: var(--frameBack);
   float: right;
 }
 .pmargin > h4 {/* H4: 점선밑줄 */
-  border-bottom: 3px dashed #114;/* 밑줄 */
+  border-bottom: 3px dashed {{ var.defaultColor.frameBack }};/* 밑줄 */
   border-bottom: 3px dashed var(--frameBack);
   font-size: 144%;/* 글자 크기 */
 }
 .pmargin > h5 {/* H5: 왼쪽 작은 장식 */
   margin-top: 52px;/* 위 여백 */
-  border-left: 12px solid #114;/* 왼쪽 장식 */
+  border-left: 12px solid {{ var.defaultColor.frameBack }};/* 왼쪽 장식 */
   border-left: 12px solid var(--frameBack);
   padding: 3px 0px 1px 12px;
   font-size: 118%;
@@ -103,7 +103,7 @@
 }
 .pmargin > h6::before {/* H6 */
   content: '● ';
-  color: #114;
+  color: {{ var.defaultColor.frameBack }};
   color: var(--frameBack);
 }
 /* 목록 */
@@ -116,7 +116,7 @@
   list-style-type: '\2756';
 }
 .bonmun ul > li::marker {
-  color: #cba;
+  color: {{ var.defaultColor.bonmunForm }};
   color: var(--bonmunForm);
 }
 .bonmun ol {/* ol 마커 */
@@ -134,9 +134,9 @@
   border-radius: 50px;
   /* 내부 */
   font-family: {{ settings.fontFamily.sticker.cssValue }};
-  background-color: #cba;
+  background-color: {{ var.defaultColor.bonmunForm }};
   background-color: var(--bonmunForm);
-  color: #fff;
+  color: {{ var.defaultColor.backCol }};
   color: var(--backCol);
   cursor: default;
 }
@@ -204,23 +204,23 @@ li > dl > dt ,
 /* 강조 상자 */
 .definitionBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  border: 2px solid #cba;
+  border: 2px solid {{ var.defaultColor.bonmunForm }};
   border: 2px solid var(--bonmunForm);
 }
 .conclusionBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  border: 2px dashed #cba;
+  border: 2px dashed {{ var.defaultColor.bonmunForm }};
   border: 2px dashed var(--bonmunForm);
 }
 .highlightBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  border: 2px dotted #cba;
+  border: 2px dotted {{ var.defaultColor.bonmunForm }};
   border: 2px dotted var(--bonmunForm);
 }
 .codeResult {
@@ -261,7 +261,7 @@ li > dl > dt ,
   padding: 10px;
   border-left: 60px solid;
   text-align: right;
-  background-color: #fff;
+  background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
   box-shadow: 1px 1px 3px #0004;
 }
@@ -288,7 +288,7 @@ li > dl > dt ,
 .hidingPreview::before ,/* 숨김상자 있음을 표시하는 문자 */
 .hidingPostview ,/* 숨은상자가 있음을 표시하는 버튼 */
 .hidingPhrase:not(:hover)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
-  color: #66aa00;
+  color: {{ var.defaultColor.bonmunActing }};
   color: var(--bonmunActing);
 }
 .bonmun a {

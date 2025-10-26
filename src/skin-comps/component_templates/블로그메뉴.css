@@ -19,6 +19,6 @@
   height: 90%; width: 0;
   position: absolute;
   top: 5%; left: -1px;
-  border-left: 4px dotted #fff;
+  border-left: 4px dotted {{ var.defaultColor.backCol }};
   border-left: 4px dotted var(--backCol);
 }

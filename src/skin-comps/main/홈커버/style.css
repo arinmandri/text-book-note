@@ -23,7 +23,7 @@ body#tt-body-index #recentNotice {
   margin: 10px 0;
   padding: 20px 60px 20px 20px;
   list-style: none;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
 }
 

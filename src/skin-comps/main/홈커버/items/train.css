@@ -12,9 +12,9 @@
   transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 .homecoverSection.train .postList > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: #ddd;
+  border-color: {{ var.defaultColor.borderCol }};
   border-color: var(--borderCol);
-  box-shadow: 0px 0px 10px #ddd;
+  box-shadow: 0px 0px 10px {{ var.defaultColor.borderCol }};
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
   transition-duration: 0s;
 }

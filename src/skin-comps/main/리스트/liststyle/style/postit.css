@@ -11,9 +11,10 @@
 }
 #postList.postit > */*li*/ {
   margin: 15px auto;/* 간격 */
+  box-shadow: 1px 1px 7px {{ var.defaultColor.borderCol }};/* 그림자 */
   box-shadow: 1px 1px 7px var(--borderCol);/* 그림자 */
   position: relative;/* 날짜 위치잡기용 */
-  background-color: #fff;
+  background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
 }
 #postList.postit .tape {/* 왼쪽장식 */

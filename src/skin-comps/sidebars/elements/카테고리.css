@@ -15,15 +15,15 @@
 }
 #navCat .tt_category a {
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid {{ var.defaultColor.borderCol }};
   border-bottom: 1px solid var(--borderCol);
   padding: 3px 12px;
   transition: background-color 1s;
 }
 #navCat .tt_category a:hover {
-  background-color: #f0ff40;
+  background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
-  border-color: #ff6644;
+  border-color: {{ var.defaultColor.pointCol }};
   border-color: var(--pointCol);
   color: black;
   font-weight: bold;
@@ -49,7 +49,7 @@
 }
 #navCat .link_sub_item::before {
   content: '\1F4CE ';
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
 }
 #navCat .c_cnt {

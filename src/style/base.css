@@ -17,9 +17,9 @@ label {
 }
 button, input, textarea {
   font-size: inherit;
-  background-color: #fff;
+  background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
-  color: #333;
+  color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
   font-family: inherit;
 }
@@ -52,7 +52,7 @@ pre , code {
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */
-  background-color: #f0ff40;
+  background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
 }

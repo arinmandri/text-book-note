@@ -52,7 +52,7 @@ main
   width: 320px;
   padding: 10px;
   box-shadow: 1px 1px 3px #0008;
-  background-color: #fdfdfd;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
   transform: rotate(-5deg);
 }
@@ -62,7 +62,7 @@ main
   max-height: 300px;
   max-width: 300px;
   box-sizing: border-box;
-  border: 2px solid #ddd;
+  border: 2px solid {{ var.defaultColor.borderCol }};
   border: 2px solid var(--borderCol);
 }
 #postPagePost .tape {
@@ -98,7 +98,7 @@ main
 }
 #postPagePost .tags a::before {
   content: '\266F';/*#*/
-  color: #f64;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
   font-weight: 900;
 }
@@ -115,7 +115,7 @@ main
 #postPagePost .underHeader {/* 헤더 아래 구분선 */
   margin: 0 auto;
   position: relative;
-  border-top: 6px solid #ddd;
+  border-top: 6px solid {{ var.defaultColor.borderCol }};
   border-top: 6px solid var(--borderCol);
   width: 90%;
   transform: translateY(1.5em);

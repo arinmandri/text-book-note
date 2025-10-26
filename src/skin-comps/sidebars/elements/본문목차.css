@@ -17,7 +17,7 @@
   width: 2em;
 }
 #bonmunHeadingList .h2 .num {
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
 }
 #bonmunHeadingList .h4 {
@@ -25,7 +25,7 @@
 }
 #bonmunHeadingList .current {
   font-weight: bold;
-  background-color: #f0ff40;
+  background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
 }

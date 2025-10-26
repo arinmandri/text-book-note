@@ -12,10 +12,10 @@
 }
 .relatedList > * {
   margin: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid {{ var.defaultColor.borderCol }};
   border: 1px solid var(--borderCol);
   border-left-width: 0px;
-  background-color: #ffffff;
+  background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
 }
 .relatedList > *:hover {
@@ -24,6 +24,6 @@
 .relatedList > * a {
   display: block;
   padding: 12px;
-  border-left: 4px solid #ff6644;
+  border-left: 4px solid {{ var.defaultColor.pointCol }};
   border-left: 4px solid var(--pointCol);
 }

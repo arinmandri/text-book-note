@@ -37,9 +37,9 @@ body {
   max-width: 100vw;
   min-height: 100vh;
 
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
 }
 body > * {
@@ -65,9 +65,9 @@ label {
 }
 button, input, textarea {
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
   font-family: inherit;
 }
@@ -100,7 +100,7 @@ pre , code {
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
 }
@@ -164,7 +164,7 @@ body:not(#tt-body-page) .onlyOnPage-page {
 hr.areaSeparator {
   width: 60%;
   margin: 60px auto;
-  border-top: 4px dashed #ddd;
+  border-top: 4px dashed #DDDDDD;
   border-top: 4px dashed var(--borderCol);
 }
 
@@ -173,7 +173,7 @@ hr.areaSeparator {
   border-radius: 8px;
   background-color: #111144;
   background-color: var(--frameBack);
-  color: #ffffff;
+  color: #FFFFFF;
   color: var(--frameFore);
   font-family: 'Jua', sans-serif;
   transition: background-color 1.5s;
@@ -183,11 +183,11 @@ body.theme-light .themeBtn {
   border-color: #0000;
 }
 body.theme-dark .themeBtn {
-  border-color: 1px solid #ffffff;
+  border-color: 1px solid #FFFFFF;
   border-color: 1px solid var(--frameFore);
 }
 .themeBtn:hover {
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
   transition: background-color 0s;
@@ -197,7 +197,7 @@ body.theme-dark .themeBtn {
   border-bottom: 7px solid var(--frameBack);
   border-radius: 4px;
   padding: 5px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
 }
 
@@ -209,7 +209,7 @@ body.theme-dark .themeBtn {
   letter-spacing: 0.16em;
 }
 .sectionTitle span {
-  border-bottom: 10px solid #ddd;
+  border-bottom: 10px solid #DDDDDD;
   border-bottom: 10px solid var(--borderCol);
 }
 
@@ -218,7 +218,7 @@ body.theme-dark .themeBtn {
   font-family: 'Noto Serif KR', serif;
   font-size: 250%;
   font-weight: 600;
-  color: #000;
+  color: #000000;
   color: var(--bonmunTextCol);
   text-align: center;
 }
@@ -264,7 +264,7 @@ body.theme-dark .themeBtn {
   height: 90%; width: 0;
   position: absolute;
   top: 5%; left: -1px;
-  border-left: 4px dotted #fff;
+  border-left: 4px dotted #FFFFFF;
   border-left: 4px dotted var(--backCol);
 }
 
@@ -358,9 +358,9 @@ header {
   margin-right: 2%;
   border-bottom-right-radius: 60px;
   text-align: center;
-  background-color: #114;
+  background-color: #111144;
   background-color: var(--frameBack);
-  color: #fff;
+  color: #FFFFFF;
   color: var(--frameFore);
 }
 header .title {
@@ -415,7 +415,7 @@ header > .namecard .box2 > * {
 }
 footer {
   margin-top: 80px;
-  border-top: 9px double #ddd;
+  border-top: 9px double #DDDDDD;
   border-top: 9px double var(--borderCol);
   padding: 60px 6% 50px 6%;
   text-align: right;
@@ -484,7 +484,7 @@ body#tt-body-index #recentNotice {
   margin: 10px 0;
   padding: 20px 60px 20px 20px;
   list-style: none;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
 }
 
@@ -525,9 +525,9 @@ body#tt-body-index #recentNotice {
   transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 .homecoverSection.train .postList > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: #ddd;
+  border-color: #DDDDDD;
   border-color: var(--borderCol);
-  box-shadow: 0px 0px 10px #ddd;
+  box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
   transition-duration: 0s;
 }
@@ -590,7 +590,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 .sidebarBox.open .sidebar ,
 .sidebar:hover ,
 #sidebar3 {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
 }
 .sidebarBox:hover ,
@@ -614,7 +614,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 /**### 사이드바1 */
 #sidebarBox1 {
   left: -304px;/* 사이드바너비 + 경계선 */
-  border-right: 4px double #ddd;
+  border-right: 4px double #DDDDDD;
   border-right: 4px double var(--borderCol);
 }
 #sidebarBox1.open ,
@@ -646,7 +646,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 }
 #sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
   left: 300px;
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
 }
@@ -684,13 +684,13 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold #sidebar2 {
   position: relative;
   margin: 20px 23px 0 23px;
-  border: 2px solid #dddddd;
+  border: 2px solid #DDDDDD;
   border: 2px solid var(--borderCol);
   border-radius: 8px;
   height: unset;
   padding: 10px 0px;
   box-shadow: 0px 0px 20px #0004;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
   overflow: scroll;
 }
@@ -771,7 +771,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 /**### 사이드바3 */
 #sidebar3 {
-  border-top: 5px double #ddd;
+  border-top: 5px double #DDDDDD;
   border-top: 5px double var(--borderCol);
   padding-top: 20px;
   text-align: center;
@@ -803,7 +803,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   font-size: 0.8em;
 }
 .sidebar .caption .semo {
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
 }
 .sidebar .bubbleBtn {
@@ -814,7 +814,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   padding-right: 10px;
 }
 .sidebar .strong {
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
   font-size: 150%;
   font-weight: bold;
@@ -824,7 +824,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .sidebar .line-in {
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDDDDD;
   border-bottom: 1px solid var(--borderCol);
   padding: 3px 12px;
 
@@ -850,15 +850,15 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #navCat .tt_category a {
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDDDDD;
   border-bottom: 1px solid var(--borderCol);
   padding: 3px 12px;
   transition: background-color 1s;
 }
 #navCat .tt_category a:hover {
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
-  border-color: #ff6644;
+  border-color: #FF6644;
   border-color: var(--pointCol);
   color: black;
   font-weight: bold;
@@ -884,7 +884,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #navCat .link_sub_item::before {
   content: '\1F4CE ';
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
 }
 #navCat .c_cnt {
@@ -911,7 +911,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   width: 2em;
 }
 #bonmunHeadingList .h2 .num {
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
 }
 #bonmunHeadingList .h4 {
@@ -919,14 +919,14 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #bonmunHeadingList .current {
   font-weight: bold;
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
 }
 /**### 사이드바아이템 - 랜덤태그 */
 .randomtag .tagcloud::before {
   content: '#';
-  color: #dddddd;
+  color: #DDDDDD;
   color: var(--borderCol);
 }
 .randomtag .tagcloud {
@@ -934,7 +934,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   word-break: keep-all;
 }
 .randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
 }
 .randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}
@@ -956,10 +956,10 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .sidebar_elementMain.description > .box {
   margin: 20px;
   padding: 10px 12px 25px 12px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
   box-shadow: 1px 1px 4px #0004;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
 }
 .sidebar_elementMain.description > .box > * {
@@ -1007,7 +1007,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .sidebar_elementMain.description .linksBox > hr {
   margin: 10px 0;
-  border: 2px dotted #ddd;
+  border: 2px dotted #DDDDDD;
   border: 2px dotted var(--borderCol);
 }
 .sidebar_elementMain.description .linksBox > span {
@@ -1015,7 +1015,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   top: 0px;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
   padding: 7px;
   font-size: 75%;
@@ -1028,14 +1028,14 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #darkmodeBtn {
   width: 1.1em;
   height: 1.1em;
-  border-color: #ddd;
+  border-color: #DDDDDD;
   border-color: var(--borderCol);
   border-width: 2px;
   border-radius: 10px;
   font-size: 360%;
-  color: #f64;
+  color: #FF6644;
   color: var(--pointCol);
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
 }
 .fontsizeBtn {
@@ -1079,7 +1079,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   margin: 16px 10px 16px auto;
   max-width: 800px;
   padding: 20px 60px 20px 20px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
   text-align: right;
 }
@@ -1139,7 +1139,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .paging a:not([href]) > button {
   background-color: transparent;
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
 }
 .no-more-prev , .no-more-next {
@@ -1207,7 +1207,7 @@ main
   width: 320px;
   padding: 10px;
   box-shadow: 1px 1px 3px #0008;
-  background-color: #fdfdfd;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
   transform: rotate(-5deg);
 }
@@ -1217,7 +1217,7 @@ main
   max-height: 300px;
   max-width: 300px;
   box-sizing: border-box;
-  border: 2px solid #ddd;
+  border: 2px solid #DDDDDD;
   border: 2px solid var(--borderCol);
 }
 #postPagePost .tape {
@@ -1253,7 +1253,7 @@ main
 }
 #postPagePost .tags a::before {
   content: '\266F';/*#*/
-  color: #f64;
+  color: #FF6644;
   color: var(--pointCol);
   font-weight: 900;
 }
@@ -1270,7 +1270,7 @@ main
 #postPagePost .underHeader {/* 헤더 아래 구분선 */
   margin: 0 auto;
   position: relative;
-  border-top: 6px solid #ddd;
+  border-top: 6px solid #DDDDDD;
   border-top: 6px solid var(--borderCol);
   width: 90%;
   transform: translateY(1.5em);
@@ -1283,7 +1283,7 @@ main
 /**##### 본문 */
 .bonmun {
   padding: 20px 3%;
-  color: #000;
+  color: #000000;
   color: var(--bonmunTextCol);
   font-family: 'Noto Serif KR', serif;
   line-height: 1.8;
@@ -1305,7 +1305,7 @@ main
 .bonmun hr {
   margin: 100px auto;
   width: 50%;
-  border-top: 4px dashed #ddd;
+  border-top: 4px dashed #DDDDDD;
   border-top: 4px dashed var(--borderCol);
 }
 /* 소제목들 */
@@ -1313,7 +1313,7 @@ main
   font-size: 0.6em;
   font-family: 'Jua', sans-serif;
   font-weight: bold;
-  color: #cba;
+  color: #CCBBAA;
   color: var(--bonmunForm);
 }
 .pmargin > h2 , 
@@ -1322,7 +1322,7 @@ main
 .pmargin > h5 , 
 .pmargin > h6 /*(h1은 포스트 제목이라 본문엔 안 씀)*/{
   border-width: 0px;
-  border-color: #114;
+  border-color: #111144;
   border-color: var(--frameBack);
 }
 .pmargin > h3 , 
@@ -1338,9 +1338,9 @@ main
 .pmargin > h2 {/* H2: frameBack색 상자, */
   border-style: none;/* 테두리 없음 */
   border-radius: 10px;/* 부드러운 모서리 */
-  background-color: #114;/* 배경색 */
+  background-color: #111144;/* 배경색 */
   background-color: var(--frameBack);
-  color: #fff;/* 글자색 */
+  color: #FFFFFF;/* 글자색 */
   color: var(--frameFore);
   text-align: center;/* 글자 가운데 */
   font-size: 179%;/* 글자 크기 */
@@ -1349,31 +1349,31 @@ main
   padding: 3px;
 }
 .pmargin > h3 {/* H3: 굵은 밑줄, 텍스트 가운데 */
-  border-bottom: 5px solid #114;/* 밑줄 */
+  border-bottom: 5px solid #111144;/* 밑줄 */
   border-bottom: 5px solid var(--frameBack);
   text-align: center;/* 글자 가운데 */
   font-size: 161%;/* 글자 크기 */
 }
 .pmargin > h3::before {
   content:'\259E\259E\00a0';
-  color: #114;
+  color: #111144;
   color: var(--frameBack);
   float: left;
 }
 .pmargin > h3::after  {
   content:'\00a0\259E\259E';
-  color: #114;
+  color: #111144;
   color: var(--frameBack);
   float: right;
 }
 .pmargin > h4 {/* H4: 점선밑줄 */
-  border-bottom: 3px dashed #114;/* 밑줄 */
+  border-bottom: 3px dashed #111144;/* 밑줄 */
   border-bottom: 3px dashed var(--frameBack);
   font-size: 144%;/* 글자 크기 */
 }
 .pmargin > h5 {/* H5: 왼쪽 작은 장식 */
   margin-top: 52px;/* 위 여백 */
-  border-left: 12px solid #114;/* 왼쪽 장식 */
+  border-left: 12px solid #111144;/* 왼쪽 장식 */
   border-left: 12px solid var(--frameBack);
   padding: 3px 0px 1px 12px;
   font-size: 118%;
@@ -1384,7 +1384,7 @@ main
 }
 .pmargin > h6::before {/* H6 */
   content: '● ';
-  color: #114;
+  color: #111144;
   color: var(--frameBack);
 }
 /* 목록 */
@@ -1397,7 +1397,7 @@ main
   list-style-type: '\2756';
 }
 .bonmun ul > li::marker {
-  color: #cba;
+  color: #CCBBAA;
   color: var(--bonmunForm);
 }
 .bonmun ol {/* ol 마커 */
@@ -1415,9 +1415,9 @@ main
   border-radius: 50px;
   /* 내부 */
   font-family: 'Jua', sans-serif;
-  background-color: #cba;
+  background-color: #CCBBAA;
   background-color: var(--bonmunForm);
-  color: #fff;
+  color: #FFFFFF;
   color: var(--backCol);
   cursor: default;
 }
@@ -1485,23 +1485,23 @@ li > dl > dt ,
 /* 강조 상자 */
 .definitionBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
-  border: 2px solid #cba;
+  border: 2px solid #CCBBAA;
   border: 2px solid var(--bonmunForm);
 }
 .conclusionBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
-  border: 2px dashed #cba;
+  border: 2px dashed #CCBBAA;
   border: 2px dashed var(--bonmunForm);
 }
 .highlightBox {
   padding: 30px 10px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
-  border: 2px dotted #cba;
+  border: 2px dotted #CCBBAA;
   border: 2px dotted var(--bonmunForm);
 }
 .codeResult {
@@ -1542,7 +1542,7 @@ li > dl > dt ,
   padding: 10px;
   border-left: 60px solid;
   text-align: right;
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
   box-shadow: 1px 1px 3px #0004;
 }
@@ -1569,7 +1569,7 @@ li > dl > dt ,
 .hidingPreview::before ,/* 숨김상자 있음을 표시하는 문자 */
 .hidingPostview ,/* 숨은상자가 있음을 표시하는 버튼 */
 .hidingPhrase:not(:hover)::before {/* 마우스 안 올려서 안 보이는 상태일 때 글귀 대신 보일 문자 */
-  color: #66aa00;
+  color: #66AA00;
   color: var(--bonmunActing);
 }
 .bonmun a {
@@ -1637,9 +1637,9 @@ li > dl > dt ,
 }
 .comment {
   position: relative;
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
   padding: 6px;
 }
@@ -1671,7 +1671,7 @@ li > dl > dt ,
 }
 .comment img {/* 프사 */
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
 }
 .comment .writer {/* 글쓴이 */
@@ -1791,10 +1791,10 @@ li > dl > dt ,
 }
 .relatedList > * {
   margin: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
   border-left-width: 0px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
 }
 .relatedList > *:hover {
@@ -1803,7 +1803,7 @@ li > dl > dt ,
 .relatedList > * a {
   display: block;
   padding: 12px;
-  border-left: 4px solid #ff6644;
+  border-left: 4px solid #FF6644;
   border-left: 4px solid var(--pointCol);
 }
 
@@ -1863,7 +1863,7 @@ main
   font-family: 'Gaegu', cursive;
 }
 #listHead .postNum {
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
   font-weight: bold;
   font-size: 120%;
@@ -1884,7 +1884,7 @@ main
   max-height: 210px;
   max-width: 280px;
   box-sizing: border-box;
-  border: 2px solid #ddd;
+  border: 2px solid #DDDDDD;
   border: 2px solid var(--borderCol);
 }
 #listHead .description {
@@ -1960,9 +1960,9 @@ ul#postList ─ li 여럿
   transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 #postList.train > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: #ddd;
+  border-color: #DDDDDD;
   border-color: var(--borderCol);
-  box-shadow: 0px 0px 10px #ddd;
+  box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
   transition-duration: 0s;
 }
@@ -2018,15 +2018,15 @@ ul#postList ─ li 여럿
 #postList.album > */*li*/ {
   margin: 1%;
   display: inline-block;
-  border: 2px solid #f4f4f4;
+  border: 2px solid #F4F4F4;
   border: 2px solid var(--listBack);
-  box-shadow: -1px 2px 5px #ddd;
+  box-shadow: -1px 2px 5px #DDDDDD;
   box-shadow: -1px 2px 5px var(--borderCol);
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
 }
 #postList.album > */*li*/:hover {/* 테두리: 마우스 올렸을 때만 */
-  border-color: #ddd;
+  border-color: #DDDDDD;
   border-color: var(--borderCol);
 }
 /* 썸네일 */
@@ -2088,9 +2088,9 @@ ul#postList ─ li 여럿
   vertical-align: middle;
   margin: 40px 12px;/* 간격 */
   box-shadow: 1px 1px 4px #0008;/* 그림자 */
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
   text-align: left;
 }
@@ -2099,9 +2099,9 @@ ul#postList ─ li 여럿
   box-sizing: content-box;
 }
 #postList.card .thumbnail {/* 썸네일 경계선 */
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
-  background-color: #ddd;
+  background-color: #DDDDDD;
   background-color: var(--borderCol);
   overflow: hidden;
 }
@@ -2165,9 +2165,10 @@ ul#postList ─ li 여럿
 }
 #postList.postit > */*li*/ {
   margin: 15px auto;/* 간격 */
+  box-shadow: 1px 1px 7px #DDDDDD;/* 그림자 */
   box-shadow: 1px 1px 7px var(--borderCol);/* 그림자 */
   position: relative;/* 날짜 위치잡기용 */
-  background-color: #fff;
+  background-color: #FFFFFF;
   background-color: var(--backCol);
 }
 #postList.postit .tape {/* 왼쪽장식 */
@@ -2218,7 +2219,7 @@ ul#postList ─ li 여럿
   /**##### 복잡 목록 detailed */
 #postList.detailed > */*li*/ {
   margin: 10px 0;
-  border-bottom: 3px double #ddd;
+  border-bottom: 3px double #DDDDDD;
   border-bottom: 3px double var(--borderCol);
 }
 #postList.detailed > */*li*/ > */*a*/ {
@@ -2251,7 +2252,7 @@ ul#postList ─ li 여럿
   margin: 0px 10px;
 }
 #postList.detailed .searchword {/* 검색어 강조 */
-  background-color: #f0ff40;
+  background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
 }
@@ -2272,16 +2273,16 @@ ul#postList ─ li 여럿
 }
 #tagBox a {
   margin: 5px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
-  border: 2px solid #ddd;
+  border: 2px solid #DDDDDD;
   border: 2px solid var(--borderCol);
   border-radius: 4px;
   padding: 2px 5px;
 }
 #tagBox .tagcloud1 {
   font-size: 180%;
-  color: #ff6644;
+  color: #FF6644;
   color: var(--pointCol);
 }
 #tagBox .tagcloud2 {
@@ -2305,14 +2306,14 @@ ul#postList ─ li 여럿
 }
 #main4.tagBoxOrdered h4 {
   font-size: 200%;
-  border-bottom: 3px dashed #ddd;
+  border-bottom: 3px dashed #DDDDDD;
   border-bottom: 3px dashed var(--borderCol);
   font-family: 'Noto Serif KR', serif;
 }
 #main4.tagBoxOrdered .list {
   padding: 10px;
   list-style: disc;
-  color: #000;
+  color: #000000;
   color: var(--bonmunTextCol);
 }
 #main4.tagBoxOrdered li {
@@ -2328,17 +2329,18 @@ ul#postList ─ li 여럿
 
 /* 첨부파일 */
 figure.fileblock, #tt-body-page figure.fileblock {
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
   border-right-width: 0px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
 }
 figure.fileblock a, #tt-body-page figure.fileblock a {
-  border-right: 8px solid #66aa00;
+  border-right: 8px solid #66AA00;
   border-right: 8px solid var(--bonmunActing);
 }
 figure.fileblock .filename, #tt-body-page figure.fileblock .filename {
+  color: #000000;
   color: var(--bonmunTextCol);
 }
 figure.fileblock a::after, #tt-body-page figure.fileblock a::after {/* 다운로드 아이콘 */
@@ -2357,17 +2359,17 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   width: 90%;
   max-width: 500px;
   min-height: 160px;
-  background-color: #f4f4f4;
+  background-color: #F4F4F4;
   background-color: var(--listBack);
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_tit_cont {
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g {
-  color: #333;
+  color: #333333;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g::after {

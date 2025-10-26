@@ -3,17 +3,18 @@
 
 /* 첨부파일 */
 figure.fileblock, #tt-body-page figure.fileblock {
-  border: 1px solid #ddd;
+  border: 1px solid {{ var.defaultColor.borderCol }};
   border: 1px solid var(--borderCol);
   border-right-width: 0px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
 }
 figure.fileblock a, #tt-body-page figure.fileblock a {
-  border-right: 8px solid #66aa00;
+  border-right: 8px solid {{ var.defaultColor.bonmunActing }};
   border-right: 8px solid var(--bonmunActing);
 }
 figure.fileblock .filename, #tt-body-page figure.fileblock .filename {
+  color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
 }
 figure.fileblock a::after, #tt-body-page figure.fileblock a::after {/* 다운로드 아이콘 */
@@ -32,17 +33,17 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   width: 90%;
   max-width: 500px;
   min-height: 160px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  color: #333;
+  color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_tit_cont {
-  color: #333;
+  color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g {
-  color: #333;
+  color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g::after {

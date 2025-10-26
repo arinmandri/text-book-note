@@ -17,7 +17,7 @@
   font-size: 0.8em;
 }
 .sidebar .caption .semo {
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
 }
 .sidebar .bubbleBtn {
@@ -28,7 +28,7 @@
   padding-right: 10px;
 }
 .sidebar .strong {
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
   font-size: 150%;
   font-weight: bold;
@@ -38,7 +38,7 @@
 }
 .sidebar .line-in {
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid {{ var.defaultColor.borderCol }};
   border-bottom: 1px solid var(--borderCol);
   padding: 3px 12px;
 

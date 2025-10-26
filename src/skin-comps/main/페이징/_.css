@@ -25,7 +25,7 @@
 }
 .paging a:not([href]) > button {
   background-color: transparent;
-  color: #333;
+  color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
 }
 .no-more-prev , .no-more-next {

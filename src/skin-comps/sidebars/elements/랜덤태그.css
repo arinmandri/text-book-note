@@ -1,7 +1,7 @@
 /**### 사이드바아이템 - 랜덤태그 */
 .randomtag .tagcloud::before {
   content: '#';
-  color: #dddddd;
+  color: {{ var.defaultColor.borderCol }};
   color: var(--borderCol);
 }
 .randomtag .tagcloud {
@@ -9,7 +9,7 @@
   word-break: keep-all;
 }
 .randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
 }
 .randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}

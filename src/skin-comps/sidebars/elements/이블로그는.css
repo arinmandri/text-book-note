@@ -2,10 +2,10 @@
 .sidebar_elementMain.description > .box {
   margin: 20px;
   padding: 10px 12px 25px 12px;
-  border: 1px solid #dddddd;
+  border: 1px solid {{ var.defaultColor.borderCol }};
   border: 1px solid var(--borderCol);
   box-shadow: 1px 1px 4px #0004;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
 }
 .sidebar_elementMain.description > .box > * {
@@ -33,7 +33,7 @@
   margin: 0 auto;
   max-width: 5em;
   max-height: 3.5em;
-  box-shadow: 0px 0px 7px #000000;
+  box-shadow: 0px 0px 7px {{ var.defaultColor.bonmunTextCol }};
   box-shadow: 0px 0px 7px var(--bonmunTextCol);
   border-radius: 50%;
 }
@@ -53,7 +53,7 @@
 }
 .sidebar_elementMain.description .linksBox > hr {
   margin: 10px 0;
-  border: 2px dotted #ddd;
+  border: 2px dotted {{ var.defaultColor.borderCol }};
   border: 2px dotted var(--borderCol);
 }
 .sidebar_elementMain.description .linksBox > span {
@@ -61,7 +61,7 @@
   top: 0px;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
   padding: 7px;
   font-size: 75%;

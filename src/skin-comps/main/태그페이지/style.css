@@ -13,16 +13,16 @@
 }
 #tagBox a {
   margin: 5px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  border: 2px solid #ddd;
+  border: 2px solid {{ var.defaultColor.borderCol }};
   border: 2px solid var(--borderCol);
   border-radius: 4px;
   padding: 2px 5px;
 }
 #tagBox .tagcloud1 {
   font-size: 180%;
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
 }
 #tagBox .tagcloud2 {
@@ -46,14 +46,14 @@
 }
 #main4.tagBoxOrdered h4 {
   font-size: 200%;
-  border-bottom: 3px dashed #ddd;
+  border-bottom: 3px dashed {{ var.defaultColor.borderCol }};
   border-bottom: 3px dashed var(--borderCol);
   font-family: {{ settings.fontFamily.serif.cssValue }};
 }
 #main4.tagBoxOrdered .list {
   padding: 10px;
   list-style: disc;
-  color: #000;
+  color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
 }
 #main4.tagBoxOrdered li {

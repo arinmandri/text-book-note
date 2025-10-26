@@ -5,6 +5,20 @@ go:
     - style.css
   out_dir: production
 
+var:
+  defaultColor:
+    backCol:       '#FFFFFF'
+    baseTextCol:   '#333333'
+    listBack:      '#F4F4F4'
+    borderCol:     '#DDDDDD'
+    frameBack:     '#111144'
+    frameFore:     '#FFFFFF'
+    pointCol:      '#FF6644'
+    bonmunTextCol: '#000000'
+    bonmunForm:    '#CCBBAA'
+    bonmunActing:  '#66AA00'
+    highlight:     '#F0FF40'
+
 headitems:
   - '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>'
 

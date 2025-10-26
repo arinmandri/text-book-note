@@ -12,7 +12,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 .sidebarBox.open .sidebar ,
 .sidebar:hover ,
 #sidebar3 {
-  background-color: #ffffff;
+  background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
 }
 .sidebarBox:hover ,

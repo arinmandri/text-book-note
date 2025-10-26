@@ -3,9 +3,9 @@ header {
   margin-right: 2%;
   border-bottom-right-radius: 60px;
   text-align: center;
-  background-color: #114;
+  background-color: {{ var.defaultColor.frameBack }};
   background-color: var(--frameBack);
-  color: #fff;
+  color: {{ var.defaultColor.frameFore }};
   color: var(--frameFore);
 }
 header .title {

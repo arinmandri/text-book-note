@@ -1,7 +1,7 @@
 /**### 사이드바1 */
 #sidebarBox1 {
   left: -304px;/* 사이드바너비 + 경계선 */
-  border-right: 4px double #ddd;
+  border-right: 4px double {{ var.defaultColor.borderCol }};
   border-right: 4px double var(--borderCol);
 }
 #sidebarBox1.open ,
@@ -33,7 +33,7 @@
 }
 #sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
   left: 300px;
-  background-color: #f0ff40;
+  background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
 }

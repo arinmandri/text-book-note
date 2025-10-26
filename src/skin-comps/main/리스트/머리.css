@@ -35,7 +35,7 @@
   font-family: {{ settings.fontFamily.handwriting.cssValue }};
 }
 #listHead .postNum {
-  color: #ff6644;
+  color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
   font-weight: bold;
   font-size: 120%;
@@ -56,7 +56,7 @@
   max-height: 210px;
   max-width: 280px;
   box-sizing: border-box;
-  border: 2px solid #ddd;
+  border: 2px solid {{ var.defaultColor.borderCol }};
   border: 2px solid var(--borderCol);
 }
 #listHead .description {

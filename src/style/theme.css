@@ -2,16 +2,16 @@
 hr.areaSeparator {
   width: 60%;
   margin: 60px auto;
-  border-top: 4px dashed #ddd;
+  border-top: 4px dashed {{ var.defaultColor.borderCol }};
   border-top: 4px dashed var(--borderCol);
 }
 
 .themeBtn {
   border-width: 1px;
   border-radius: 8px;
-  background-color: #111144;
+  background-color: {{ var.defaultColor.frameBack }};
   background-color: var(--frameBack);
-  color: #ffffff;
+  color: {{ var.defaultColor.frameFore }};
   color: var(--frameFore);
   font-family: {{ settings.fontFamily.sticker.cssValue }};
   transition: background-color 1.5s;
@@ -21,21 +21,21 @@ body.theme-light .themeBtn {
   border-color: #0000;
 }
 body.theme-dark .themeBtn {
-  border-color: 1px solid #ffffff;
+  border-color: 1px solid {{ var.defaultColor.frameFore }};
   border-color: 1px solid var(--frameFore);
 }
 .themeBtn:hover {
-  background-color: #f0ff40;
+  background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
   transition: background-color 0s;
 }
 .themeInput {
-  border-bottom: 7px solid #111144;
+  border-bottom: 7px solid {{ var.defaultColor.frameBack }};
   border-bottom: 7px solid var(--frameBack);
   border-radius: 4px;
   padding: 5px;
-  background-color: #f4f4f4;
+  background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
 }
 
@@ -47,7 +47,7 @@ body.theme-dark .themeBtn {
   letter-spacing: 0.16em;
 }
 .sectionTitle span {
-  border-bottom: 10px solid #ddd;
+  border-bottom: 10px solid {{ var.defaultColor.borderCol }};
   border-bottom: 10px solid var(--borderCol);
 }
 
@@ -56,7 +56,7 @@ body.theme-dark .themeBtn {
   font-family: {{ settings.fontFamily.serif.cssValue }};
   font-size: 250%;
   font-weight: 600;
-  color: #000;
+  color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
   text-align: center;
 }
