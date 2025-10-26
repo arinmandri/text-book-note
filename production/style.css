@@ -245,16 +245,6 @@ body.theme-dark .themeBtn {
   border: 1px solid #0003;
   pointer-events: none;
 }
-.blogLinks > * {
-  margin: 8px 4px;
-}
-.blogLinks a {
-  display: inline-block;
-}
-.blogLinks img {
-  height: 1em;
-  vertical-align: text-bottom;
-}
 /**
 메뉴 nav.blogMenu ─ ul ─ li ─ a
 */
@@ -425,6 +415,17 @@ header > .namecard .box2 {
 header > .namecard .box2 > * {
   margin: 9px;
 }
+
+header > .namecard .blogLinks > * {
+  margin: 8px 4px;
+}
+header > .namecard .blogLinks a {
+  display: inline-block;
+}
+header > .namecard .blogLinks img {
+  height: 1.2em;
+  vertical-align: text-bottom;
+}
 footer {
   margin-top: 80px;
   border-top: 9px double #DDDDDD;
@@ -448,6 +449,11 @@ footer {
   text-align: right;
   border-right: 6px solid #DDDDDD;
   border-right: 6px solid var(--borderCol);
+  padding-right: 8px;
+}
+#footerContentBox > * > hr {
+  border-top: 1px solid var(--borderCol);
+  margin: 20px 0;
 }
 
 #footerContentBox > .nuguisho > .content {
@@ -463,9 +469,21 @@ footer {
 #footerContentBox > .nuguisho .desc {
   line-height: 1.6;
 }
+#footerContentBox > .links ul {
+  padding: 0 16px;
+}
+#footerContentBox > .links li {
+  margin: 10px 0;
+}
+#footerContentBox > .links img {
+  width: 2em;
+  height: 2em;
+  vertical-align: bottom;
+}
 
 footer > .etc {
   border-top: 1px solid var(--borderCol);
+  margin-top: 30px;
 }
 footer > .etc > * {
   margin: 20px 0;

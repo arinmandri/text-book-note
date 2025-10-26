@@ -58,3 +58,14 @@ header > .namecard .box2 {
 header > .namecard .box2 > * {
   margin: 9px;
 }
+
+header > .namecard .blogLinks > * {
+  margin: 8px 4px;
+}
+header > .namecard .blogLinks a {
+  display: inline-block;
+}
+header > .namecard .blogLinks img {
+  height: 1.2em;
+  vertical-align: text-bottom;
+}

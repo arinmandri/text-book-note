@@ -21,6 +21,11 @@ footer {
   text-align: right;
   border-right: 6px solid {{ var.defaultColor.borderCol }};
   border-right: 6px solid var(--borderCol);
+  padding-right: 8px;
+}
+#footerContentBox > * > hr {
+  border-top: 1px solid var(--borderCol);
+  margin: 20px 0;
 }
 
 #footerContentBox > .nuguisho > .content {
@@ -36,9 +41,21 @@ footer {
 #footerContentBox > .nuguisho .desc {
   line-height: 1.6;
 }
+#footerContentBox > .links ul {
+  padding: 0 16px;
+}
+#footerContentBox > .links li {
+  margin: 10px 0;
+}
+#footerContentBox > .links img {
+  width: 2em;
+  height: 2em;
+  vertical-align: bottom;
+}
 
 footer > .etc {
   border-top: 1px solid var(--borderCol);
+  margin-top: 30px;
 }
 footer > .etc > * {
   margin: 20px 0;

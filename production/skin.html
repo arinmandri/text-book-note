@@ -348,7 +348,12 @@ function setSettingFixCbox( settingName, checked ){
       <h1 class="title">[##_title_##]</h1>
       <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
       <p>[##_desc_##]</p>
-      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
+      <div class="blogLinks _textRight">
+        <s_link_rep>
+          <a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a>
+          <a href="[##_rss_url_##]">RSS</a>
+        </s_link_rep>
+      </div>
     </div>
   </div>
 </header>
@@ -1667,6 +1672,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div id="footerContentBox">
     <div class="nuguisho">
       <h5 class="areaTitle">[##_title_##]</h5>
+      <hr>
       <div class="content">
         <img class="blogImg" src="[##_image_##]">
         <p class="desc">[##_desc_##]</p>
@@ -1674,56 +1680,18 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="links">
       <h5 class="areaTitle">LINKS</h5>
-      <p class="blogLinks _textRight copy-origin" data-copyname="blogLinks">
-        <s_link_rep><a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a> </s_link_rep>
-        <a href="[##_rss_url_##]">RSS</a>
-      </p>
+      <hr>
+      <ul class="blogLinks _textLeft">
+        <s_link_rep><li><a href="[##_link_url_##]" target="_blank">[##_link_site_##]</a></li></s_link_rep>
+        <li><a href="[##_rss_url_##]">RSS</a></li>
+      </ul>
     </div>
   </div>
   <div class="etc">
     <p>[##_var_footerText_##]</p>
     <p>블로그 스킨 <a href="https://github.com/arinmandri/text-book-note" target="_blank">깃허브</a></p>
   </div>
-</footer><script type="text/javascript">
-  (function () {
-    const as = document.querySelectorAll('.blogLinks a');
-    for (let a of as) {
-      let logoName;
-      //// url의 hostname으로 대응되는 로고 찾기
-      try {
-        const hostname = new URL(a.href).hostname;
-        if (a.href.endsWith('/rss')) logoName = 'rss';
-        else if (hostname === 'youtu.be') logoName = 'youtube';
-        else if (hostname === 'youtube.com') logoName = 'youtube';
-        else if (hostname.endsWith('.youtube.com')) logoName = 'youtube';
-        else if (hostname === 'instagram.com') logoName = 'instagram';
-        else if (hostname.endsWith('.instagram.com')) logoName = 'instagram';
-        else if (hostname === 'x.com') logoName = 'x';
-        else if (hostname.endsWith('.x.com')) logoName = 'x';
-        else if (hostname === 'twitter.com') logoName = 'x';
-        else if (hostname.endsWith('.twitter.com')) logoName = 'x';
-        else if (hostname === 'twitch.tv') logoName = 'twitch';
-        else if (hostname.endsWith('.twitch.tv')) logoName = 'twitch';
-        else if (hostname === 'tistory.com') logoName = 'tistory';
-        else if (hostname.endsWith('.tistory.com')) logoName = 'tistory';
-        else if (hostname === 'blog.naver.com') logoName = 'naverblog';
-        else if (hostname === 'cafe.naver.com') logoName = 'navercafe';
-        else if (hostname === 'github.com') logoName = 'github';
-        else if (hostname.endsWith('.github.com')) logoName = 'github';
-      } catch (e) {
-        return false; // 유효하지 않은 URL인 경우
-      }
-      if (logoName != null) {
-        const img = document.createElement('img');
-        img.alt = '링크 로고 - ' + logoName;
-        img.src = './images/link-' + logoName + '.png';
-        a.prepend(img);
-      } else {// 로고 없음: 기본이미지 이모지
-        a.prepend(String.fromCodePoint(0x1F517));
-      }
-    }
-  })();
-</script>
+</footer>
 
 <script>
 //
@@ -1790,6 +1758,7 @@ for( let ol of ols ){
     i+=1;
 } }
 })()
+
 //
 const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
 document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
@@ -1940,6 +1909,46 @@ function refreshSidebarVStatus(){
     }
   }
 }
+
+//// 블로그 링크(a 태그) 앞부분에 대응 이미지 태그 덧붙임.
+(function () {
+  const as = document.querySelectorAll('.blogLinks a');
+  for (let a of as) {
+    let logoName;
+    //// url의 hostname으로 대응되는 로고 찾기
+    try {
+      const hostname = new URL(a.href).hostname;
+      if (a.href.endsWith('/rss')) logoName = 'rss';
+      else if (hostname === 'youtu.be') logoName = 'youtube';
+      else if (hostname === 'youtube.com') logoName = 'youtube';
+      else if (hostname.endsWith('.youtube.com')) logoName = 'youtube';
+      else if (hostname === 'instagram.com') logoName = 'instagram';
+      else if (hostname.endsWith('.instagram.com')) logoName = 'instagram';
+      else if (hostname === 'x.com') logoName = 'x';
+      else if (hostname.endsWith('.x.com')) logoName = 'x';
+      else if (hostname === 'twitter.com') logoName = 'x';
+      else if (hostname.endsWith('.twitter.com')) logoName = 'x';
+      else if (hostname === 'twitch.tv') logoName = 'twitch';
+      else if (hostname.endsWith('.twitch.tv')) logoName = 'twitch';
+      else if (hostname === 'tistory.com') logoName = 'tistory';
+      else if (hostname.endsWith('.tistory.com')) logoName = 'tistory';
+      else if (hostname === 'blog.naver.com') logoName = 'naverblog';
+      else if (hostname === 'cafe.naver.com') logoName = 'navercafe';
+      else if (hostname === 'github.com') logoName = 'github';
+      else if (hostname.endsWith('.github.com')) logoName = 'github';
+    } catch (e) {
+      return false; // 유효하지 않은 URL인 경우
+    }
+    if (logoName != null) {
+      const img = document.createElement('img');
+      img.alt = '링크 로고 - ' + logoName;
+      img.src = './images/link-' + logoName + '.png';
+      a.prepend(img);
+    } else {// 로고 없음: 기본이미지 이모지
+      a.prepend(String.fromCodePoint(0x1F517));
+    }
+  }
+})();
 
 //// 광고차단 확인
 function isAdBlocking(){
