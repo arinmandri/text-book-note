@@ -2,6 +2,8 @@ footer {
   border-top: 9px double {{ var.defaultColor.borderCol }};
   border-top: 9px double var(--borderCol);
   padding: 60px 6% 20px 6%;
+  background-color: {{ var.defaultColor.backCol }};
+  background-color: var(--backCol);
 }
 
 #footerContentBox {

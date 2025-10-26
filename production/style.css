@@ -430,6 +430,8 @@ footer {
   border-top: 9px double #DDDDDD;
   border-top: 9px double var(--borderCol);
   padding: 60px 6% 20px 6%;
+  background-color: #FFFFFF;
+  background-color: var(--backCol);
 }
 
 #footerContentBox {
