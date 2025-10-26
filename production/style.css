@@ -487,6 +487,7 @@ footer {
   width: 2em;
   height: 2em;
   vertical-align: bottom;
+  margin-right: 5px;
 }
 
 footer > .etc {
@@ -519,7 +520,7 @@ footer > .etc > * {
 #main1 {
   position: relative;
   width: 100%;
-  padding-bottom: 120px;
+  padding-bottom: 20px;
 }
 #main2 {
   display: flex;

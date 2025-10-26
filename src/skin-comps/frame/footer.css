@@ -59,6 +59,7 @@ footer {
   width: 2em;
   height: 2em;
   vertical-align: bottom;
+  margin-right: 5px;
 }
 
 footer > .etc {

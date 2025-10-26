@@ -12,3 +12,10 @@
 	<type>BOOL</type>
 	<default><![CDATA[false]]></default>
 </variable>
+<variable>
+	<name>hideAtHome_sidebar3</name>
+	<label>홈에서 사이드바3 숨김</label>
+	<description></description>
+	<type>BOOL</type>
+	<default><![CDATA[true]]></default>
+</variable>
