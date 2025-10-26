@@ -52,7 +52,7 @@ skin:
         label: '썸네일 및 제목'
         buttonText: '&#9635;'
       postit:
-        label: '간략 목록'
+        label: '작은 메모'
         buttonText: '&#8863;'
       detailed:
         label: '복잡 목록'
