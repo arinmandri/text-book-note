@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function(){
 //// 사이드바1, 사이드바2 펼접
 let sidebar1_status;
 let sidebar2_status;
-let main2_status;
 
 //// 사이드바 펼접 상태
 //// 사이드바1 펴나, 사이드바2 펴나, 메인2 마진 중앙정렬 하나
@@ -96,7 +95,6 @@ function getSidebarVStatus(){
   return [
     ( vw >= minWidthToOpenSidebar1 ) ? true : false,
     ( vw >= minWidthToOpenSidebar2 ) ? true : false,
-    ( vw >= maxWidthOfMain2 + 2*sidebarboxVOccupyingWidth ) ? true : false,
   ];
 }
 
@@ -107,7 +105,7 @@ window.addEventListener('resize', refreshSidebarVStatus);
 
 function refreshSidebarVStatus(){
 
-  const [s1_status_new, s2_status_new, m2_status_new] = getSidebarVStatus();
+  const [s1_status_new, s2_status_new] = getSidebarVStatus();
 
   if( sidebar1_status !== s1_status_new ){// 사이드바1 펼접상태 바뀜
     sidebar1_status = s1_status_new;
@@ -115,11 +113,11 @@ function refreshSidebarVStatus(){
       sidebarBox1.classList.remove('fold');
       sidebarBox1.classList.remove('open');
       sidebarBox1.classList.add('flat');
-      main2.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
+      main2Box.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox1.classList.remove('flat');
       sidebarBox1.classList.add('fold');
-      main2.style.marginLeft = '';
+      main2Box.style.marginLeft = '0';
     }
   }
   if( sidebar2_status !== s2_status_new ){// 사이드바2 펼접상태 바뀜
@@ -130,23 +128,13 @@ function refreshSidebarVStatus(){
       sidebarBox2.classList.add('flat');
       sidebarBox2.classList.add('sidebarBoxV');
       sidebar2.classList.add('sidebarV');
-      main2.style.marginRight = sidebarboxVOccupyingWidth + 'px';
+      main2Box.style.marginRight = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox2.classList.remove('flat');
       sidebarBox2.classList.add('fold');
       sidebarBox2.classList.remove('sidebarBoxV');
       sidebar2.classList.remove('sidebarV');
-      main2.style.marginRight = '';
-    }
-  }
-  if( main2_status !== m2_status_new ){// 메인 여백(중앙정렬용)
-    main2_status = m2_status_new;
-    if( m2_status_new === true ){
-        main2.style.marginLeft = '';
-        main2.style.marginRight = '';
-    }else{
-        main2.style.marginLeft  = s1_status_new ? sidebarboxVOccupyingWidth + 'px' : '';
-        main2.style.marginRight = s2_status_new ? sidebarboxVOccupyingWidth + 'px' : '';
+      main2Box.style.marginRight = '0';
     }
   }
 }
