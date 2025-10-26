@@ -81,3 +81,7 @@ skin:
       label: '책장'
       desc: '책장처럼 넘겨본다.'
 # XXX 이원화됨. 애초에 이것들이 소스랑 분리돼 settings에 있을 이유가 있을가?
+
+meta:
+  skinname: 'Text-Note-Book'
+  version: '1.0.0-SNAPSHOT'

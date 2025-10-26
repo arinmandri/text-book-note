@@ -22,6 +22,7 @@ def main():
     for targetFilePath in settings["go"]["targets"]:
         template = env.get_template(targetFilePath)
         result = template.render({
+            'meta'     : settings['meta'],
             'settings' : settings['skin'],
             'var'      : settings['var'],
             'headitems': settings['headitems']

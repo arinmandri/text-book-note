@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Text, Book, Note</name>
-		<version>1.0.0-SNAPSHOT</version>
+		<name>{{ meta.skinname }}</name>
+		<version>{{ meta.version }}</version>
 		<description>
 			<![CDATA[책책 책기라욷]]>
 		</description>
