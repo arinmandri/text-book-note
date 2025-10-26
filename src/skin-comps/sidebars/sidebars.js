@@ -6,8 +6,9 @@ const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == nul
     || '[##_var_home_sidebar1_##]' === 'usual' )
   ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 )
   : 9999;
-const minWidthToOpenSidebar2 = document.getElementById('tt-body-index') == null
-  ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 )
+const minWidthToOpenSidebar2 = ( document.getElementById('tt-body-index') == null
+  || '[##_var_home_sidebar2_##]' === 'usual' )
+  ?getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 )
   : 9999;
 const sidebarboxVOccupyingWidth = 305;
 
