@@ -2,8 +2,12 @@
 const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
 document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
 
-const minWidthToOpenSidebar1 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 );
-const minWidthToOpenSidebar2 = getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 );
+const minWidthToOpenSidebar1 = document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
+  ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 )
+  : 9999;
+const minWidthToOpenSidebar2 = document.getElementById('tt-body-index') == null
+  ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 )
+  : 9999;
 const sidebarboxVOccupyingWidth = 305;
 
 const sidebarBox1     = document.getElementById('sidebarBox1');
