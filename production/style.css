@@ -1678,27 +1678,30 @@ li > dl > dt ,
 .commentList > li:nth-child(10n) .tape {
   left: 65px;
   transform: rotate(7deg);
-}
-.comment .area1 {
-  margin-left: 39px;
-  padding: 0.4em 0;
-  text-align: left;
-}
-.comment1 img {
+}.comment1 > .areaImg img {
   transform: rotate(-5deg);
 }
-.comment2 img {
+.comment2 > .areaImg img {
   transform: rotate(5deg);
 }
-.comment img {/* 프사 */
+.comment > .areaImg img {/* 프사 */
   vertical-align: middle;
   border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
+}
+
+.comment > .area1 {
+  margin-left: 39px;
+  padding: 0.4em 0;
+  text-align: left;
 }
 .comment .writer {/* 글쓴이 */
   font-weight: bold;
   font-family: 'Gaegu', cursive;
   vertical-align: middle;
+}
+.comment .writer > img {/* 티스토리 플러그인 - 블로그 아이콘 표시 */
+  vertical-align: text-bottom;
 }
 .comment .area2 {/* 댓글 내용 */
   padding: 5px 10px;
@@ -1784,16 +1787,16 @@ li > dl > dt ,
   height: 1.5em;
   width: 1.5em;
 }
-#commentSec.guestPage .comment .areaImg {
+#commentSec.guestPage .comment > .areaImg {
   float: left;
   padding: 4px 8px 8px 4px;
 }
-#commentSec.guestPage .comment1 img {
+#commentSec.guestPage .comment1 > .areaImg img {
   /* 댓글 프사 크기 */
   height: 4em;
   width: 4em;
 }
-#commentSec.guestPage .comment2 img {
+#commentSec.guestPage .comment2 > .areaImg img {
   /* 답글 프사 크기 */
   height: 3.2em;
   width: 3.2em;
