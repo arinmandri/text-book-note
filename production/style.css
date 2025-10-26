@@ -1071,6 +1071,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   border-radius: 5px;
   background: #F0FF40;
   background: var(--highlight);
+  color: black;
 }
 /* 인기글 최근글 최근댓글 */
 .sidebar_elementMain.popularpost a::before {

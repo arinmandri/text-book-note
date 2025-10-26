@@ -28,4 +28,5 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   border-radius: 5px;
   background: {{ var.defaultColor.highlight }};
   background: var(--highlight);
+  color: black;
 }
