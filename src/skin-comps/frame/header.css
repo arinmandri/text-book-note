@@ -39,10 +39,16 @@ header > .namecard .box1 {
   padding: 10px;
 }
 
+header > .namecard .imgBox {
+  padding: 1px;
+  border-radius: 50%;
+  background: conic-gradient(#f00, #f80, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+}
 header > .namecard .blogImg {
-  max-width: 160px;
-  max-height: 160px;
-  border-radius: 106px;
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   border: 4px solid;
 }
 
