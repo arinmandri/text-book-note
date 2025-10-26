@@ -1,5 +1,6 @@
 /**### 사이드바3 */
 #sidebar3 {
+  margin-bottom: 80px;
   border-top: 5px double {{ var.defaultColor.borderCol }};
   border-top: 5px double var(--borderCol);
   padding-top: 20px;
