@@ -431,7 +431,6 @@ footer {
   border-top: 9px double #DDDDDD;
   border-top: 9px double var(--borderCol);
   padding: 60px 6% 20px 6%;
-  text-align: right;
 }
 
 #footerContentBox {
@@ -455,19 +454,28 @@ footer {
   border-top: 1px solid var(--borderCol);
   margin: 20px 0;
 }
+#footerContentBox > * > .content {
+  text-align: left;
+}
 
 #footerContentBox > .nuguisho > .content {
-  min-height: 80px;
+  min-height: 100px;
+  line-height: 1.6;
 }
 #footerContentBox > .nuguisho .blogImg {
   width: 3em;
   height: 3em;
-  margin: 0.1em;
+  margin: 0.1em 8px 0.1em 0.1em;
   border-radius: 50%;
-  float: right;
+  float: left;
+}
+#footerContentBox > .nuguisho .blogger {
+  margin-bottom: 10px;
 }
 #footerContentBox > .nuguisho .desc {
-  line-height: 1.6;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #footerContentBox > .links ul {
   padding: 0 16px;
