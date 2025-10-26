@@ -20,16 +20,23 @@ def main():
     env = Environment(loader=FileSystemLoader("src"))
 
     for targetFilePath in settings["go"]["targets"]:
+
         template = env.get_template(targetFilePath)
+
         result = template.render({
             'settings' : settings['skin'],
             'var'      : settings['var'],
             'headitems': settings['headitems']
         })
 
-        with open(settings["go"]["out_dir"] + '/' + targetFilePath, "w", encoding="utf-8") as f:
+        # 파일 이름이 'jinja2'로 끝나면 그 부분 제외
+        targetFilePath_out = targetFilePath[:-7] \
+            if targetFilePath.endswith('.jinja2') \
+            else targetFilePath
+
+        with open(settings["go"]["out_dir"] + '/' + targetFilePath_out, "w", encoding="utf-8") as f:
             f.write(result)
 
-        print("내보냄: " + targetFilePath)
+        print("내보냄: " + targetFilePath_out)
 
 main()
