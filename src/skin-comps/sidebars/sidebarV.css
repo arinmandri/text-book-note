@@ -26,7 +26,7 @@
   max-height: 100%;
   overflow: hidden;
 }
-.sidebarV > .sidebar_element {
+.sidebarV > * {
   display: block;/* 세로로 쌓기 */
   margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
 }

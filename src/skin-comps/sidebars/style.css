@@ -49,3 +49,9 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 {% include "skin-comps/sidebars/elements/인블로그설정.css" %}
 {% include "skin-comps/sidebars/elements/포스팅달력.css" %}
 {% include "skin-comps/sidebars/elements/인기글-최근글-최근댓글.css" %}
+
+/* 티스토리 플러그인 - 이미지 배너 */
+.module_plugin > a > img {
+  width: 300px;
+  border-radius: 8px;
+}

@@ -697,10 +697,10 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold:not(.open) #sidebar2 {
   display: none;
 }
-#sidebarBox2.fold #sidebar2 > .sidebar_element {
+#sidebarBox2.fold #sidebar2 > * {
   margin-bottom: 0;
 }
-#sidebarBox2.fold #sidebar2 > .sidebar_element:not(.open) {
+#sidebarBox2.fold #sidebar2 > *:not(.open) {
   display: none;
 }
 #sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
@@ -759,7 +759,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   max-height: 100%;
   overflow: hidden;
 }
-.sidebarV > .sidebar_element {
+.sidebarV > * {
   display: block;/* 세로로 쌓기 */
   margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
 }
@@ -1095,6 +1095,12 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
 .sidebar_elementMain.recentcomment a::before {
   content: "\1F4AC";
   font-size: 80%;
+}
+
+/* 티스토리 플러그인 - 이미지 배너 */
+.module_plugin > a > img {
+  width: 300px;
+  border-radius: 8px;
 }
 
 
