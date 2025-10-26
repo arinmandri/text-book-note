@@ -360,6 +360,19 @@ function setSettingFixCbox( settingName, checked ){
 
 <!--# 메인영역1 -->
 <div id="main1">
+<div style="
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+  ">
+  <svg onclick="window.scrollTo(0, 0);" width="20px" height="35px" style="
+      position: absolute;
+      top: 0;
+      right: 100px;
+      ">
+    <polygon points="0,0 20,0 20,35 10,25 0,35" fill="var(--pointCol)" fill-opacity="0.6 " />
+  </svg>
+</div>
 
   <!--## 메인영역2 -->
   <!-- main2Box-main2 이중으로 된 이유: (스타일) main2와 main2Box는 가로크기가 같지 않고 main2를 가운데 놓으려고. -->

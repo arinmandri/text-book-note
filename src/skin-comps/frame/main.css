@@ -19,6 +19,7 @@
 　└사이드바2리모콘 div#sidebar2Remocon
 */
 #main1 {
+  position: relative;
   width: 100%;
   padding-bottom: 120px;
 }
