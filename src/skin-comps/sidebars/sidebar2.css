@@ -6,7 +6,7 @@
 #sidebarBox2.flat {
   overflow: visible;
 }
-#sidebarBox2.flat #sidebar2Remocon {
+#sidebarBox2.flat > #sidebar2Remocon {
   display: none;
 }
 /* 좁은화면: 작은 단추만으로 표현. 단추를 누르면 모달창에 해당 요소만 표시. */
@@ -29,7 +29,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   overflow: scroll;
   text-align: center;
 }
-#sidebarBox2.fold #sidebar2 {
+#sidebarBox2.fold > #sidebar2 {
   position: relative;
   margin: 20px 23px 0 23px;
   border: 2px solid {{ var.defaultColor.borderCol }};
@@ -45,11 +45,14 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold:not(.open) #sidebar2 {
   display: none;
 }
-#sidebarBox2.fold #sidebar2 > * {
+#sidebarBox2.fold > #sidebar2 > * {
   margin-bottom: 0;
 }
-#sidebarBox2.fold #sidebar2 > *:not(.open) {
+#sidebarBox2.fold > #sidebar2 > *:not(.open) {
   display: none;
+}
+#sidebarBox2.open > #sidebar2 > *:not(:first-child) {
+  margin-top: 20px;
 }
 #sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
 #sidebarBox2.fold #sidebar2X {

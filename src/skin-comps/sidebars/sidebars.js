@@ -17,9 +17,16 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
 
 //// 사이드바2: 리모콘에 버튼 모으기
 (function(){
-  const sidebarItems_fromSidebar2 = sidebar2.getElementsByClassName('sidebar_element');
+  const sidebarItems_fromSidebar2 = sidebar2.children;
+  const imgBanners = [];
   //// 사이드바2 접힘상태
   for( let sidebarItem of sidebarItems_fromSidebar2 ){
+
+    if( sidebarItem.classList.contains('module_plugin') ){// 티스토리 플러그인 - 이미지 배너
+      imgBanners.push( sidebarItem );
+      continue;
+    }
+
     const bubbleBtns = sidebarItem.getElementsByClassName('bubbleBtn');
     if( bubbleBtns.length === 0 )
       continue;
@@ -29,7 +36,7 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     }
     const bubbleBtn = bubbleBtns[0];
     bubbleBtn.addEventListener('click', ()=>{
-      const prevOpens = sidebar2.querySelectorAll('.sidebar_element.open');
+      const prevOpens = sidebar2.querySelectorAll('.open');
       prevOpens.forEach((item)=>{
         item.classList.remove('open');
       });
@@ -38,7 +45,25 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     });
     sidebar2Remocon.appendChild( bubbleBtn );
   }
-  sidebar2Remocon.appendChild( document.getElementById('sidebar2X') );
+
+  if( imgBanners.length > 0 ){
+    const bubbleBtn = document.createElement('button');
+    bubbleBtn.classList.add('bubbleBtn', 'themeBtn');
+    bubbleBtn.textContent = '배너';
+    bubbleBtn.addEventListener('click', () => {
+      const prevOpens = sidebar2.querySelectorAll('.sidebar_element.open');
+      prevOpens.forEach((item) => {
+        item.classList.remove('open');
+      });
+      sidebarBox2.classList.add('open');
+      for( let sidebarItem of imgBanners ){
+        sidebarItem.classList.add('open');
+      }
+    });
+    sidebar2Remocon.appendChild( bubbleBtn );
+  }
+
+  sidebar2Remocon.appendChild( document.getElementById('sidebar2X') );// 닫기 버튼이 맨 뒤에 있어야 하므로 새로 append함.
 })();
 
 //// 사이드바2: 접기 버튼
