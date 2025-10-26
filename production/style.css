@@ -429,12 +429,46 @@ footer {
   margin-top: 80px;
   border-top: 9px double #DDDDDD;
   border-top: 9px double var(--borderCol);
-  padding: 60px 6% 50px 6%;
+  padding: 60px 6% 20px 6%;
   text-align: right;
 }
 
-footer > .content > * {
-  margin-top: 20px;
+#footerContentBox {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#footerContentBox > * {
+  width: 300px;
+  margin-left: auto;
+  padding: 30px;
+}
+#footerContentBox > * > .areaTitle {
+  text-align: right;
+  border-right: 6px solid #DDDDDD;
+  border-right: 6px solid var(--borderCol);
+}
+
+#footerContentBox > .nuguisho > .content {
+  min-height: 80px;
+}
+#footerContentBox > .nuguisho .blogImg {
+  width: 3em;
+  height: 3em;
+  margin: 0.1em;
+  border-radius: 50%;
+  float: right;
+}
+#footerContentBox > .nuguisho .desc {
+  line-height: 1.6;
+}
+
+footer > .etc {
+  border-top: 1px solid var(--borderCol);
+}
+footer > .etc > * {
+  margin: 20px 0;
 }
 
 /**# 메인영역1
@@ -968,55 +1002,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   width: 200px;
 }
 /**### 블로그 description */
-.sidebar_elementMain.description > .box {
-  margin: 20px;
-  padding: 10px 12px 25px 12px;
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
-  box-shadow: 1px 1px 4px #0004;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
-}
-.sidebar_elementMain.description > .box > * {
-  margin: 30px 0;
-}
-.sidebar_elementMain.description > .box > *:first-child {
-  margin-top: 0;
-}
-.sidebar_elementMain.description > .box > *:last-child {
-  margin-bottom: 0;
-}
-.sidebar_elementMain.description .head > * {
-  margin: 10px 0;
-}
-.sidebar_elementMain.description .img {
-  position: relative;
-}
-.sidebar_elementMain.description .img > .blog_image {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.sidebar_elementMain.description .img > .blog_image img {
-  display: block;
-  margin: 0 auto;
-  max-width: 5em;
-  max-height: 3.5em;
-  box-shadow: 0px 0px 7px #000000;
-  box-shadow: 0px 0px 7px var(--bonmunTextCol);
-  border-radius: 50%;
-}
-.sidebar_elementMain.description .img > .ribbon {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 30px;
-  width: 108px;
-}
-.sidebar_elementMain.description .desc {
-  margin-top: 30px;
-}
 .sidebar_elementMain.description .linksBox {
   position: relative;
 }

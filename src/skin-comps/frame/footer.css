@@ -2,10 +2,44 @@ footer {
   margin-top: 80px;
   border-top: 9px double {{ var.defaultColor.borderCol }};
   border-top: 9px double var(--borderCol);
-  padding: 60px 6% 50px 6%;
+  padding: 60px 6% 20px 6%;
   text-align: right;
 }
 
-footer > .content > * {
-  margin-top: 20px;
+#footerContentBox {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#footerContentBox > * {
+  width: 300px;
+  margin-left: auto;
+  padding: 30px;
+}
+#footerContentBox > * > .areaTitle {
+  text-align: right;
+  border-right: 6px solid {{ var.defaultColor.borderCol }};
+  border-right: 6px solid var(--borderCol);
+}
+
+#footerContentBox > .nuguisho > .content {
+  min-height: 80px;
+}
+#footerContentBox > .nuguisho .blogImg {
+  width: 3em;
+  height: 3em;
+  margin: 0.1em;
+  border-radius: 50%;
+  float: right;
+}
+#footerContentBox > .nuguisho .desc {
+  line-height: 1.6;
+}
+
+footer > .etc {
+  border-top: 1px solid var(--borderCol);
+}
+footer > .etc > * {
+  margin: 20px 0;
 }
