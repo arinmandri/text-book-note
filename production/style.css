@@ -533,6 +533,7 @@ footer > .etc > * {
   }
 }
 body#tt-body-index .hideAtHome-1 ,
+body#tt-body-index .home-none-1 ,
 body#tt-body-index #recentNotice {
   display: none;
 }

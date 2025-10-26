@@ -2,7 +2,8 @@
 const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
 document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
 
-const minWidthToOpenSidebar1 = document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
+const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
+    || '[##_var_home_sidebar1_##]' === 'usual' )
   ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 )
   : 9999;
 const minWidthToOpenSidebar2 = document.getElementById('tt-body-index') == null

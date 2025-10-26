@@ -1233,7 +1233,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div></div><!-- 메인영역2 ##-->
 
 <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
-<div id="sidebarBox1"  class="sidebarBox sidebarBoxV fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
+<div id="sidebarBox1"  class="sidebarBox sidebarBoxV home-[##_var_home_sidebar1_##] fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
     <s_sidebar_element><div class="sidebar_element ">
   <!-- 메뉴 -->
@@ -1776,7 +1776,8 @@ for( let ol of ols ){
 const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
 document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
 
-const minWidthToOpenSidebar1 = document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
+const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
+    || '[##_var_home_sidebar1_##]' === 'usual' )
   ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 )
   : 9999;
 const minWidthToOpenSidebar2 = document.getElementById('tt-body-index') == null
