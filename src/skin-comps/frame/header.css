@@ -1,18 +1,60 @@
 /**# 헤더, 푸터 */
 header {
   margin-right: 2%;
-
+  border-bottom-right-radius: 60px;
   text-align: center;
   background-color: #114;
   background-color: var(--frameBack);
   color: #fff;
   color: var(--frameFore);
+}
+header .title {
   font-family: {{ settings.fontFamily.sticker.cssValue }};
+  font-weight: inherit;
 }
-header {
-  border-bottom-right-radius: 60px;
+
+body#tt-body-index header > .alt {
+  display: none;
 }
-header a {
+body:not(#tt-body-index) header > .namecard {
+  display: none;
+}
+
+header > .alt {
   display: block;
   padding: 30px 10%;
+}
+
+header > .namecard {
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+  max-width: 760px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+header > .namecard .box1 {
+  margin: auto;
+  padding: 10px;
+}
+
+header > .namecard .blogImg {
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 106px;
+  border: 4px solid;
+}
+
+header > .namecard .box1 {
+  flex-grow: 0;
+}
+header > .namecard .box2 {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+header > .namecard .box2 > * {
+  margin: 9px;
 }

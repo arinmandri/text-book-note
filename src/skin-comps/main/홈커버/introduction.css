@@ -2,38 +2,6 @@
   margin: 40px auto;
 }
 
-#blog-home-introduction > .namecard {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 72px;
-  max-width: 760px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-#blog-home-introduction > .namecard .box1 {
-  margin: auto;
-}
-
-#blog-home-introduction > .namecard .blogImg {
-  max-width: 220px;
-  max-height: 220px;
-}
-
-#blog-home-introduction > .namecard .box1 {
-  flex-grow: 0;
-}
-#blog-home-introduction > .namecard .box2 {
-  flex-grow: 1;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-#blog-home-introduction > .namecard .box2 > * {
-  margin: 9px;
-}
-
 #blog-home-introduction > .blogSearch form {
   padding: 10px;
 }

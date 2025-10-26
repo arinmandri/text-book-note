@@ -337,7 +337,20 @@ function setSettingFixCbox( settingName, checked ){
 
 <!--# 헤더 -->
 <header class="hideAtHome-[##_var_hideAtHome_Header_##]">
-  <a href="/" style="display: block">[##_title_##]</a>
+  <a class="alt title" href="/">[##_title_##]</a>
+
+  <div class="namecard">
+    <div class="box1">
+      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
+      <span class="tape"></span>
+    </div>
+    <div class="box2 _textLeft">
+      <h1 class="title">[##_title_##]</h1>
+      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+      <p>[##_desc_##]</p>
+      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
+    </div>
+  </div>
 </header>
 
 <!--# 메인영역1 -->
@@ -511,18 +524,6 @@ function setSettingFixCbox( settingName, checked ){
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
 
 <section id="blog-home-introduction" class="homecoverSection">
-  <div class="namecard">
-    <div class="box1">
-      <div class="imgBox"><img class="blogImg" src="[##_image_##]"></div>
-      <span class="tape"></span>
-    </div>
-    <div class="box2 _textLeft">
-      <h2>[##_title_##]</h2>
-      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
-      <p>[##_desc_##]</p>
-      <div class="blogLinks _textRight copy-target" data-copyname="blogLinks"></div>
-    </div>
-  </div>
 
   <nav class="blogMenu copy-target _textCenter" data-copyname="blogMenu"></nav>
 
