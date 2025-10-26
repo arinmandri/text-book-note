@@ -6,7 +6,7 @@
 }
 .randomtag .tagcloud {
   margin: 1px 3px;
-  word-break: keep-all;
+  display: inline-block;
 }
 .randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
   color: {{ var.defaultColor.pointCol }};

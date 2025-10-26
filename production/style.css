@@ -1009,7 +1009,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .randomtag .tagcloud {
   margin: 1px 3px;
-  word-break: keep-all;
+  display: inline-block;
 }
 .randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
   color: #FF6644;
