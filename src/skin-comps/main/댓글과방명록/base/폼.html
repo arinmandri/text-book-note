@@ -1,21 +1,28 @@
 <!-- {{ name }} 입력폼 -->
 <div class="formBox"><s_{{ type }}_input_form>
   <{{ s_for_member }}><p class="guest">
-      <label for="commentInput_name"     >이름:</label>
-      <input type="text"     id="commentInput_name"     class="themeInput" name="[##_{{ type }}_input_name_##]" value="[##_guest_name_##]" size="6" />
-      <label for="commentInput_password" >비밀번호:</label>
-      <input type="password" id="commentInput_password" class="themeInput" name="[##_{{ type }}_input_password_##]" value="[##_{{ type }}_password_##]" maxlength="8" size="4" />
-      <label for="commentInput_homepage" >홈페이지:</label>
-      <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_{{ type }}_input_homepage_##]" value="[##_guest_homepage_##]" size="20" />
+      <label>이름:
+        <input type="text"     id="commentInput_name"     class="themeInput" name="[##_{{ type }}_input_name_##]"     value="[##_guest_name_##]"          size="15" />
+      </label>
+      <label>
+        비밀번호:
+        <input type="password" id="commentInput_password" class="themeInput" name="[##_{{ type }}_input_password_##]" value="[##_{{ type }}_password_##]" size="12" maxlength="8" />
+      </label>
+      <label>
+        홈페이지:
+        <input type="text"     id="commentInput_homepage" class="themeInput" name="[##_{{ type }}_input_homepage_##]" value="[##_guest_homepage_##]"      size="24" />
+      </label>
   </p></{{ s_for_member }}>
   <textarea 
       class="commentInput themeInput" 
       name="{{ textarea_name }}" 
       rows="5" cols="30" 
-      placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보면서 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을 것인가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
+      placeholder="편지 한 장 쓸 때마다 두 번 세 번 읽어보며 이 편지가 번화가에 떨어져 나의 원수가 펴보더라도 내가 죄를 얻지 않을가를 생각하며 써야 하고; 또한 이 편지가 수백 년동안 전해져 안목있는 많은 사람들의 눈에 띄더라도 조롱받지 않을 만한가를 생각해본 뒤에야 비로소 봉해야 한다. -정약용"></textarea>
   <div class="submitBox">
-    <input type="checkbox" id="commentInput_secret" name="[##_{{ type }}_input_is_secret_##]" class="checkbox" />
-    <label for="commentInput_secret">귓속말로</label>
+    <label>
+      <input type="checkbox" name="[##_{{ type }}_input_is_secret_##]" class="checkbox" />
+      귓속말로
+    </label>
     <input 
         type="submit" 
         class="commentBtn themeBtn" 
