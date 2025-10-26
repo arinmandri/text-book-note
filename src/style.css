@@ -15,12 +15,24 @@ html {
   word-wrap: break-word;
   word-break: break-word;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1215px) {
+  html {font-size: 17.5px;}
+@media (max-width: 1130px) {
   html {font-size: 17px;}
-}
-@media (max-width: 800px) {
+@media (max-width: 1045px) {
+  html {font-size: 16.5px;}
+@media (max-width: 960px) {
   html {font-size: 16px;}
-}
+@media (max-width: 875px) {
+  html {font-size: 15.5px;}
+@media (max-width: 790px) {
+  html {font-size: 15px;}
+@media (max-width: 705px) {
+  html {font-size: 14.5px;}
+@media (max-width: 620px) {
+  html {font-size: 14px;}
+}}}}}}}}
+
 body {
   position: relative;
 
