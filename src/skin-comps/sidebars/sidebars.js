@@ -11,13 +11,6 @@ const sidebarBox2     = document.getElementById('sidebarBox2');
 const sidebar2        = document.getElementById('sidebar2');
 const sidebar2Remocon = document.getElementById('sidebar2Remocon');
 
-//// 사이드바1: 펼접버튼 클릭시 펴고접음
-document.querySelectorAll('.sidebarBtn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.parentElement.classList.toggle('open');
-  });
-});
-
 //// 사이드바2: 리모콘에 버튼 모으기
 (function(){
   const sidebarItems_fromSidebar2 = sidebar2.getElementsByClassName('sidebar_element');
