@@ -532,7 +532,6 @@ footer > .etc > * {
     overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
   }
 }
-body#tt-body-index .hideAtHome-1 ,
 body#tt-body-index .home-none-1 ,
 body#tt-body-index #recentNotice {
   display: none;
