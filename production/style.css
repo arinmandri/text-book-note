@@ -1669,9 +1669,10 @@ li > dl > dt ,
 .comment .tape {
   width: 30px;
   height: 45px;
-  top: -35px;
-  left: 44px;
+  top: -24px;
+  left: 65px;
   transform: rotate(-7deg);
+  z-index: 1;
 }
 .commentList > li:nth-child(10n) .tape {
   left: 65px;
@@ -1793,8 +1794,8 @@ li > dl > dt ,
 }
 #commentSec.guestPage .comment2 img {
   /* 답글 프사 크기 */
-  height: 3.6em;
-  width: 3.6em;
+  height: 3.2em;
+  width: 3.2em;
 }
 
 /**#### 관련글

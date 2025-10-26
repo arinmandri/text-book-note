@@ -59,9 +59,10 @@
 .comment .tape {
   width: 30px;
   height: 45px;
-  top: -35px;
-  left: 44px;
+  top: -24px;
+  left: 65px;
   transform: rotate(-7deg);
+  z-index: 1;
 }
 .commentList > li:nth-child(10n) .tape {
   left: 65px;
