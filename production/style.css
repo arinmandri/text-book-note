@@ -1020,26 +1020,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .sidebar_elementMain.search > form input {
   width: 200px;
 }
-/**### 블로그 description */
-.sidebar_elementMain.description .linksBox {
-  position: relative;
-}
-.sidebar_elementMain.description .linksBox > hr {
-  margin: 10px 0;
-  border: 2px dotted #DDDDDD;
-  border: 2px dotted var(--borderCol);
-}
-.sidebar_elementMain.description .linksBox > span {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
-  padding: 7px;
-  font-size: 75%;
-  color: grey;
-}
 /* 설정 */
 .sidebar_elementMain.settings > * {
   margin: 15px 8px;
