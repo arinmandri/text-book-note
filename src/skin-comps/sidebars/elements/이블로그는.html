@@ -8,7 +8,7 @@
       <p class="title _fontSerif _fontBold">[##_title_##]</p>
       <div class="img">
         <div class="blog_image">[##_blog_image_##]</div>
-        <img class="ribbon" src="./images/ribbon.png">
+        <img class="ribbon" alt="리본 장식" src="./images/ribbon.png">
       </div>
       <p class="who _fontSerif _fontSmaller">[##_blogger_##]</p>
     </div>
@@ -63,6 +63,7 @@
       }
       if( logoName != null ){
         const img = document.createElement('img');
+        img.alt = '링크 로고 - ' + logoName;
         img.src = './images/link-' + logoName + '.png';
         a.prepend(img);
       }else{// 로고 없음: 기본이미지 이모지
