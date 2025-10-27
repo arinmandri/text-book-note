@@ -438,6 +438,7 @@ footer {
   padding: 60px 6% 20px 6%;
   background-color: #FFFFFF;
   background-color: var(--backCol);
+  font-size: 90%;
 }
 
 #footerContentBox {
@@ -447,9 +448,9 @@ footer {
   align-items: flex-start;
 }
 #footerContentBox > * {
-  width: 300px;
-  margin-left: auto;
-  padding: 30px;
+  width: 260px;
+  margin: 10px 10px 30px auto;
+  padding: 10px;
 }
 #footerContentBox > * > .areaTitle {
   text-align: right;
@@ -459,7 +460,7 @@ footer {
 }
 #footerContentBox > * > hr {
   border-top: 1px solid var(--borderCol);
-  margin: 20px 0;
+  margin: 15px 0;
 }
 #footerContentBox > * > .content {
   text-align: left;
