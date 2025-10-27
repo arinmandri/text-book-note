@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.open-toggleBtn').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.dataset.opentarget);
-      console.log('opentarget:', target)
       target.classList.toggle('open');
     });
   });

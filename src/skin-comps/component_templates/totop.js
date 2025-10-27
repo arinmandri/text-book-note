@@ -3,14 +3,20 @@
 // totopBox의 height를 조절하여 구현.
 document.addEventListener('DOMContentLoaded', function () {
   const totopBox = document.getElementById('totopBox');
-  if( totopBox == null ) return;
+  const sidebarBtnBox1 = document.getElementById('sidebarBtnBox1');
 
   let lastY = window.scrollY || 0;
   window.addEventListener('scroll', function () {
     const y = window.scrollY || 0;
 
-    if      ( y < lastY ) totopBox.style.height = '40px';
-    else if ( y > lastY ) totopBox.style.height = '0px';
+    if      ( y < lastY ) {
+      totopBox.style.height = '40px';
+      sidebarBtnBox1.classList.remove('hideByScrolling');
+    }
+    else if ( y > lastY ) {
+      totopBox.style.height = '0px';
+      sidebarBtnBox1.classList.add('hideByScrolling');
+    }
 
     lastY = y;
   }, { passive: true });

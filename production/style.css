@@ -705,15 +705,19 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   left: 0px;
 }
 
-#sidebarBox1 > .sidebarBtnBox {
+#sidebarBtnBox1 {
   position: absolute;
   top: 0;
   right: -30px;
   box-sizing: border-box;
   height: 100%;
   padding: 5vh 0 10px 0;
+  transition: right 0.3s;
 }
-#sidebarBox1.flat > .sidebarBtnBox {
+#sidebarBox1.fold:not(.open) > #sidebarBtnBox1.hideByScrolling {
+  right: 0px;
+}
+#sidebarBox1.flat > #sidebarBtnBox1 {
   display: none;
 }
 #sidebarBox1 .sidebarBtn {

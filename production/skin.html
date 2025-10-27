@@ -159,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.open-toggleBtn').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.dataset.opentarget);
-      console.log('opentarget:', target)
       target.classList.toggle('open');
     });
   });
@@ -1346,7 +1345,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 </div></s_sidebar_element>
   </s_sidebar></aside>
-  <div class="sidebarBtnBox">
+  <div id="sidebarBtnBox1">
     <button class="sidebarBtn open-toggleBtn themeBtn" data-opentarget="sidebarBox1">≡</button><!-- 펼접버튼 -->
   </div>
 </div><!-- 사이드바상자1 ##-->
@@ -1927,14 +1926,20 @@ function refreshSidebarVStatus(){
 // totopBox의 height를 조절하여 구현.
 document.addEventListener('DOMContentLoaded', function () {
   const totopBox = document.getElementById('totopBox');
-  if( totopBox == null ) return;
+  const sidebarBtnBox1 = document.getElementById('sidebarBtnBox1');
 
   let lastY = window.scrollY || 0;
   window.addEventListener('scroll', function () {
     const y = window.scrollY || 0;
 
-    if      ( y < lastY ) totopBox.style.height = '40px';
-    else if ( y > lastY ) totopBox.style.height = '0px';
+    if      ( y < lastY ) {
+      totopBox.style.height = '40px';
+      sidebarBtnBox1.classList.remove('hideByScrolling');
+    }
+    else if ( y > lastY ) {
+      totopBox.style.height = '0px';
+      sidebarBtnBox1.classList.add('hideByScrolling');
+    }
 
     lastY = y;
   }, { passive: true });
