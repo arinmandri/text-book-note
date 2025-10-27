@@ -92,4 +92,4 @@ document.addEventListener('DOMContentLoaded', function(){
     // 숫자나 기타 문자
     return '#';
   }
-})();
+});
