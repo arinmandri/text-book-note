@@ -1,5 +1,23 @@
-.homecover.menubar > * {
-  margin: 40px auto;
+.homecover.menubar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 6px solid {{ var.defaultColor.frameBack }};
+  border-bottom: 6px solid var(--frameBack);
+}
+.homecover.menubar * {
+  display: inline-block;
+}
+
+.homecover.menubar > nav {
+  color:  {{ var.defaultColor.frameBack }};
+  color: var(--frameBack);
+}
+.homecover.menubar > nav a {
+  padding: 4px 8px;
+  font-family: {{ settings.fontFamily.sticker.cssValue }};
+  font-size: 135%;
 }
 
 .homecover.menubar > .blogSearch form {
