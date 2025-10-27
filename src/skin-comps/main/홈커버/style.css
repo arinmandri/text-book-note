@@ -1,5 +1,4 @@
-body#tt-body-index .home-none-1 ,
-body#tt-body-index #recentNotice {
+body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   display: none;
 }
 

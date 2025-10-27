@@ -519,8 +519,7 @@ footer > .etc > * {
     overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
   }
 }
-body#tt-body-index .home-none-1 ,
-body#tt-body-index #recentNotice {
+body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   display: none;
 }
 
@@ -550,6 +549,9 @@ body#tt-body-index #recentNotice {
 
 .homecoverSection {
   margin: 125px 0;
+}
+.homecoverSection:first-child {
+  margin-top: 20px;
 }
 .homecoverSection h1 {
   margin-left: 4%;

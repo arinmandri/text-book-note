@@ -1,6 +1,9 @@
 .homecoverSection {
   margin: 125px 0;
 }
+.homecoverSection:first-child {
+  margin-top: 20px;
+}
 .homecoverSection h1 {
   margin-left: 4%;
   margin-right: 6%;
