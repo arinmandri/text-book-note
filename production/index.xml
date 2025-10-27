@@ -367,10 +367,9 @@
 	<option><![CDATA[[
 			{"name":"usual", "value":"usual",  "label":"평소처럼 (좁은화면에서 접기기능 생김)"},
 			{"name":"fold",  "value":"fold",   "label":"넓은 화면에서도 기본 접기"},
-			{"name":"main",  "value":"TODO",   "label":"중앙에 넓게 늘어놓기"},
 			{"name":"none",  "value":"none-1", "label":"표시안함(숨김)"}
 	]]]></option>
-	<default>main</default>
+	<default>none-1</default>
 </variable>
 <variable>
 	<name>home_sidebar2</name>

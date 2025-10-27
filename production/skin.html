@@ -1786,11 +1786,11 @@ document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
 
 const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
     || '[##_var_home_sidebar1_##]' === 'usual' )
-  ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 1800 )
+  ? getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar1_##]', 1000, 9999 )
   : 9999;
 const minWidthToOpenSidebar2 = ( document.getElementById('tt-body-index') == null
   || '[##_var_home_sidebar2_##]' === 'usual' )
-  ?getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 1500 )
+  ?getTskinOptionNumVal( '[##_var_minWidthToOpenSidebar2_##]', 1000, 9999 )
   : 9999;
 const sidebarboxVOccupyingWidth = 305;
 
