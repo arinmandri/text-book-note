@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 0 2.5%;
   border-bottom: 6px solid {{ var.defaultColor.frameBack }};
   border-bottom: 6px solid var(--frameBack);
 }
@@ -20,13 +21,15 @@
   font-size: 135%;
 }
 
-.homecover.menubar > .blogSearch form {
+.homecover.menubar > .blogSearch {
   padding: 10px;
+  margin-left: auto;
 }
 .homecover.menubar > .blogSearch input {
-  width: 80%;
-  max-width: 600px;
-  font-size: 148%;
-  text-align: center;
-  padding: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: {{ var.defaultColor.listBack }};
+  background-color: var(--listBack);
+  font-size: 120%;
+  text-align: right;
 }

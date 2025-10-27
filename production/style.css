@@ -561,6 +561,7 @@ body#tt-body-index #recentNotice {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 0 2.5%;
   border-bottom: 6px solid #111144;
   border-bottom: 6px solid var(--frameBack);
 }
@@ -578,15 +579,17 @@ body#tt-body-index #recentNotice {
   font-size: 135%;
 }
 
-.homecover.menubar > .blogSearch form {
+.homecover.menubar > .blogSearch {
   padding: 10px;
+  margin-left: auto;
 }
 .homecover.menubar > .blogSearch input {
-  width: 80%;
-  max-width: 600px;
-  font-size: 148%;
-  text-align: center;
-  padding: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #F4F4F4;
+  background-color: var(--listBack);
+  font-size: 120%;
+  text-align: right;
 }
 
   .homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */

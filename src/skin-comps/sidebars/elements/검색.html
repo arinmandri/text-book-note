@@ -2,7 +2,11 @@
 {% block content %}<!-- 검색창 -->
 <button class="bubbleBtn themeBtn">&#x1F50D;</button>
 <div class="sidebar_elementMain search">
+{% with
+  inputClass='themeInput'
+%}
 {% include "skin-comps/component_templates/blogSearch.html" %}
+{% endwith %}
 </div>
 <span class="caption">찾기</span>
 {% endblock %}

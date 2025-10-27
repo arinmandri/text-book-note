@@ -11,6 +11,10 @@
   </nav>
 
   <div class="blogSearch">
+{% with
+  inputSize='12'
+%}
 {% include "skin-comps/component_templates/blogSearch.html" %}
+{% endwith %}
   </div>
 {% endblock %}
