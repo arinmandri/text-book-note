@@ -572,8 +572,8 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
 }
 
 .homecover.menubar > nav {
-  color:  #111144;
-  color: var(--frameBack);
+  color:  #333333;
+  color: var(--baseTextCol);
 }
 .homecover.menubar > nav a {
   padding: 4px 8px;

@@ -12,8 +12,8 @@
 }
 
 .homecover.menubar > nav {
-  color:  {{ var.defaultColor.frameBack }};
-  color: var(--frameBack);
+  color:  {{ var.defaultColor.baseTextCol }};
+  color: var(--baseTextCol);
 }
 .homecover.menubar > nav a {
   padding: 4px 8px;
