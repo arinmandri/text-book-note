@@ -12,8 +12,7 @@
 }
 .relatedList > * {
   margin: 10px;
-  border: 1px solid {{ var.defaultColor.borderCol }};
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   border-left-width: 0px;
   background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);

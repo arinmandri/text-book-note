@@ -38,8 +38,7 @@
 }
 .sidebar .line-in {
   display: block;
-  border-bottom: 1px solid {{ var.defaultColor.borderCol }};
-  border-bottom: 1px solid var(--borderCol);
+  border-bottom-width: 1px;
   padding: 3px 12px;
 
   /* 긴 것을 '…'로 줄임' */

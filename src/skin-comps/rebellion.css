@@ -3,7 +3,6 @@
 
 /* 첨부파일 */
 figure.fileblock, #tt-body-page figure.fileblock {
-  border: 1px solid {{ var.defaultColor.borderCol }};
   border: 1px solid var(--borderCol);
   border-right-width: 0px;
   background-color: {{ var.defaultColor.listBack }};

@@ -62,7 +62,10 @@ body > * {
 */*div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, figure, p, button */{
   margin: 0;
   padding: 0;
-  border: solid 0px #0000;
+  border-style: solid;
+  border-width: 0;
+  border-color: #DDDDDD;
+  border-color: var(--borderCol);
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
   display: block;
@@ -176,8 +179,8 @@ body:not(#tt-body-page) .onlyOnPage-page {
 hr.areaSeparator {
   width: 60%;
   margin: 60px auto;
-  border-top: 4px dashed #DDDDDD;
-  border-top: 4px dashed var(--borderCol);
+  border-top-width: 4px;
+  border-top-style: dashed;
 }
 
 .themeBtn {
@@ -221,8 +224,7 @@ body.theme-dark .themeBtn {
   letter-spacing: 0.16em;
 }
 .sectionTitle span {
-  border-bottom: 10px solid #DDDDDD;
-  border-bottom: 10px solid var(--borderCol);
+  border-bottom-width: 10px;
 }
 
 .pageTitle {
@@ -410,8 +412,8 @@ header > .namecard .blogLinks img {
   vertical-align: text-bottom;
 }
 footer {
-  border-top: 9px double #DDDDDD;
-  border-top: 9px double var(--borderCol);
+  border-top-width: 9px;
+  border-top-style: double;
   padding: 60px 6% 20px 6%;
   background-color: #FFFFFF;
   background-color: var(--backCol);
@@ -431,12 +433,11 @@ footer {
 }
 #footerContentBox > * > .areaTitle {
   text-align: right;
-  border-right: 6px solid #DDDDDD;
-  border-right: 6px solid var(--borderCol);
+  border-right-width: 6px;
   padding-right: 8px;
 }
 #footerContentBox > * > hr {
-  border-top: 1px solid var(--borderCol);
+  border-top-width: 1px;
   margin: 15px 0;
 }
 #footerContentBox > * > .content {
@@ -476,7 +477,7 @@ footer {
 }
 
 footer > .etc {
-  border-top: 1px solid var(--borderCol);
+  border-top-width: 1px;
   margin-top: 30px;
 }
 footer > .etc > * {
@@ -608,7 +609,6 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 .homecoverSection.train .postList > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: #DDDDDD;
   border-color: var(--borderCol);
   box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
@@ -697,8 +697,8 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 /**### 사이드바1 */
 #sidebarBox1 {
   left: -304px;/* 사이드바너비 + 경계선 */
-  border-right: 4px double #DDDDDD;
-  border-right: 4px double var(--borderCol);
+  border-right-width: 4px;
+  border-right-style: double;
 }
 #sidebarBox1.open ,
 #sidebarBox1.flat {
@@ -771,8 +771,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold > #sidebar2 {
   position: relative;
   margin: 20px 23px 0 23px;
-  border: 2px solid #DDDDDD;
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
   border-radius: 8px;
   height: unset;
   padding: 10px 0px;
@@ -862,8 +861,8 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 /**### 사이드바3 */
 #sidebar3 {
   margin-bottom: 80px;
-  border-top: 5px double #DDDDDD;
-  border-top: 5px double var(--borderCol);
+  border-top-style: double;
+  border-top-width: 5px;
   padding-top: 20px;
   text-align: center;
 }
@@ -915,8 +914,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .sidebar .line-in {
   display: block;
-  border-bottom: 1px solid #DDDDDD;
-  border-bottom: 1px solid var(--borderCol);
+  border-bottom-width: 1px;
   padding: 3px 12px;
 
   /* 긴 것을 '…'로 줄임' */
@@ -941,8 +939,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #navCat .tt_category a {
   display: block;
-  border-bottom: 1px solid #DDDDDD;
-  border-bottom: 1px solid var(--borderCol);
+  border-bottom-width: 1px;
   padding: 3px 12px;
   transition: background-color 1s;
 }
@@ -1074,8 +1071,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #darkmodeBtn {
   width: 1.1em;
   height: 1.1em;
-  border-color: #DDDDDD;
-  border-color: var(--borderCol);
   border-width: 2px;
   border-radius: 10px;
   font-size: 360%;
@@ -1093,7 +1088,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .sidebar_elementMain.calendar caption ,
 .sidebar_elementMain.calendar thead ,
 .sidebar_elementMain.calendar tbody {
-  border-bottom: 1px solid #DDDDDD;
   border-bottom: 1px solid var(--borderCol);
 }
 
@@ -1301,8 +1295,7 @@ main
   max-height: 300px;
   max-width: 300px;
   box-sizing: border-box;
-  border: 2px solid #DDDDDD;
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
 }
 #postPagePost .tape {
   width: 100px; height: 30px;
@@ -1354,8 +1347,7 @@ main
 #postPagePost .underHeader {/* 헤더 아래 구분선 */
   margin: 0 auto;
   position: relative;
-  border-top: 6px solid #DDDDDD;
-  border-top: 6px solid var(--borderCol);
+  border-top-width: 6px;
   width: 90%;
   transform: translateY(1.5em);
 }
@@ -1389,8 +1381,8 @@ main
 .bonmun hr {
   margin: 100px auto;
   width: 50%;
-  border-top: 4px dashed #DDDDDD;
-  border-top: 4px dashed var(--borderCol);
+  border-top-width: 4px;
+  border-top-style: dashed;
 }
 /* 소제목들 */
 .pmargin .hn {
@@ -1709,8 +1701,7 @@ li > dl > dt ,
 }
 .comment {
   position: relative;
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: #FFFFFF;
   background-color: var(--backCol);
   padding: 6px;
@@ -1738,8 +1729,7 @@ li > dl > dt ,
 }
 .comment > .areaImg img {/* 프사 */
   vertical-align: middle;
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
 }
 
 .comment > .area1 {
@@ -1871,8 +1861,7 @@ li > dl > dt ,
 }
 .relatedList > * {
   margin: 10px;
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   border-left-width: 0px;
   background-color: #FFFFFF;
   background-color: var(--backCol);
@@ -1964,8 +1953,7 @@ main
   max-height: 210px;
   max-width: 280px;
   box-sizing: border-box;
-  border: 2px solid #DDDDDD;
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
 }
 #listHead .description {
   margin-top: 10px;
@@ -2040,7 +2028,6 @@ ul#postList ─ li 여럿
   transition: box-shadow 0.6s linear, border-color 0.2s linear;
 }
 #postList.train > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: #DDDDDD;
   border-color: var(--borderCol);
   box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
@@ -2106,7 +2093,6 @@ ul#postList ─ li 여럿
   background-color: var(--backCol);
 }
 #postList.album > */*li*/:hover {/* 테두리: 마우스 올렸을 때만 */
-  border-color: #DDDDDD;
   border-color: var(--borderCol);
 }
 /* 썸네일 */
@@ -2168,8 +2154,7 @@ ul#postList ─ li 여럿
   vertical-align: middle;
   margin: 40px 12px;/* 간격 */
   box-shadow: 1px 1px 4px #0008;/* 그림자 */
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: #F4F4F4;
   background-color: var(--listBack);
   text-align: left;
@@ -2179,8 +2164,7 @@ ul#postList ─ li 여럿
   box-sizing: content-box;
 }
 #postList.card .thumbnail {/* 썸네일 경계선 */
-  border: 1px solid #DDDDDD;
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: #DDDDDD;
   background-color: var(--borderCol);
   overflow: hidden;
@@ -2299,8 +2283,8 @@ ul#postList ─ li 여럿
   /**##### 복잡 목록 detailed */
 #postList.detailed > */*li*/ {
   margin: 10px 0;
-  border-bottom: 3px double #DDDDDD;
-  border-bottom: 3px double var(--borderCol);
+  border-bottom-width: 3px;
+  border-bottom-style: double;
 }
 #postList.detailed > */*li*/ > */*a*/ {
   padding: 10px 10px;
@@ -2355,8 +2339,7 @@ ul#postList ─ li 여럿
   margin: 5px;
   background-color: #F4F4F4;
   background-color: var(--listBack);
-  border: 2px solid #DDDDDD;
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
   border-radius: 4px;
   padding: 2px 5px;
 }
@@ -2386,8 +2369,8 @@ ul#postList ─ li 여럿
 }
 #main4.tagBoxOrdered h4 {
   font-size: 200%;
-  border-bottom: 3px dashed #DDDDDD;
-  border-bottom: 3px dashed var(--borderCol);
+  border-bottom-width: 3px;
+  border-bottom-style: dashed;
   font-family: 'Noto Serif KR', serif;
 }
 #main4.tagBoxOrdered .list {
@@ -2409,7 +2392,6 @@ ul#postList ─ li 여럿
 
 /* 첨부파일 */
 figure.fileblock, #tt-body-page figure.fileblock {
-  border: 1px solid #DDDDDD;
   border: 1px solid var(--borderCol);
   border-right-width: 0px;
   background-color: #F4F4F4;

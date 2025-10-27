@@ -5,8 +5,6 @@
 #darkmodeBtn {
   width: 1.1em;
   height: 1.1em;
-  border-color: {{ var.defaultColor.borderCol }};
-  border-color: var(--borderCol);
   border-width: 2px;
   border-radius: 10px;
   font-size: 360%;

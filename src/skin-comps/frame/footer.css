@@ -1,6 +1,6 @@
 footer {
-  border-top: 9px double {{ var.defaultColor.borderCol }};
-  border-top: 9px double var(--borderCol);
+  border-top-width: 9px;
+  border-top-style: double;
   padding: 60px 6% 20px 6%;
   background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
@@ -20,12 +20,11 @@ footer {
 }
 #footerContentBox > * > .areaTitle {
   text-align: right;
-  border-right: 6px solid {{ var.defaultColor.borderCol }};
-  border-right: 6px solid var(--borderCol);
+  border-right-width: 6px;
   padding-right: 8px;
 }
 #footerContentBox > * > hr {
-  border-top: 1px solid var(--borderCol);
+  border-top-width: 1px;
   margin: 15px 0;
 }
 #footerContentBox > * > .content {
@@ -65,7 +64,7 @@ footer {
 }
 
 footer > .etc {
-  border-top: 1px solid var(--borderCol);
+  border-top-width: 1px;
   margin-top: 30px;
 }
 footer > .etc > * {

@@ -1,8 +1,8 @@
 /**##### 복잡 목록 detailed */
 #postList.detailed > */*li*/ {
   margin: 10px 0;
-  border-bottom: 3px double {{ var.defaultColor.borderCol }};
-  border-bottom: 3px double var(--borderCol);
+  border-bottom-width: 3px;
+  border-bottom-style: double;
 }
 #postList.detailed > */*li*/ > */*a*/ {
   padding: 10px 10px;

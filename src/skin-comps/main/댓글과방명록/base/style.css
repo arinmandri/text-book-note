@@ -46,8 +46,7 @@
 }
 .comment {
   position: relative;
-  border: 1px solid {{ var.defaultColor.borderCol }};
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);
   padding: 6px;
@@ -75,8 +74,7 @@
 }
 .comment > .areaImg img {/* 프사 */
   vertical-align: middle;
-  border: 1px solid {{ var.defaultColor.borderCol }};
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
 }
 
 .comment > .area1 {

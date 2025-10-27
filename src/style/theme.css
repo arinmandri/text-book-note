@@ -2,8 +2,8 @@
 hr.areaSeparator {
   width: 60%;
   margin: 60px auto;
-  border-top: 4px dashed {{ var.defaultColor.borderCol }};
-  border-top: 4px dashed var(--borderCol);
+  border-top-width: 4px;
+  border-top-style: dashed;
 }
 
 .themeBtn {
@@ -47,8 +47,7 @@ body.theme-dark .themeBtn {
   letter-spacing: 0.16em;
 }
 .sectionTitle span {
-  border-bottom: 10px solid {{ var.defaultColor.borderCol }};
-  border-bottom: 10px solid var(--borderCol);
+  border-bottom-width: 10px;
 }
 
 .pageTitle {

@@ -1,8 +1,8 @@
 /**### 사이드바1 */
 #sidebarBox1 {
   left: -304px;/* 사이드바너비 + 경계선 */
-  border-right: 4px double {{ var.defaultColor.borderCol }};
-  border-right: 4px double var(--borderCol);
+  border-right-width: 4px;
+  border-right-style: double;
 }
 #sidebarBox1.open ,
 #sidebarBox1.flat {

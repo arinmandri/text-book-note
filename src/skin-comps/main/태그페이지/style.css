@@ -15,8 +15,7 @@
   margin: 5px;
   background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  border: 2px solid {{ var.defaultColor.borderCol }};
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
   border-radius: 4px;
   padding: 2px 5px;
 }
@@ -46,8 +45,8 @@
 }
 #main4.tagBoxOrdered h4 {
   font-size: 200%;
-  border-bottom: 3px dashed {{ var.defaultColor.borderCol }};
-  border-bottom: 3px dashed var(--borderCol);
+  border-bottom-width: 3px;
+  border-bottom-style: dashed;
   font-family: {{ settings.fontFamily.serif.cssValue }};
 }
 #main4.tagBoxOrdered .list {

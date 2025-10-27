@@ -2,7 +2,10 @@
 */*div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, figure, p, button */{
   margin: 0;
   padding: 0;
-  border: solid 0px #0000;
+  border-style: solid;
+  border-width: 0;
+  border-color: #DDDDDD;
+  border-color: var(--borderCol);
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
   display: block;

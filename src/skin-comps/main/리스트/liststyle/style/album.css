@@ -19,7 +19,6 @@
   background-color: var(--backCol);
 }
 #postList.album > */*li*/:hover {/* 테두리: 마우스 올렸을 때만 */
-  border-color: {{ var.defaultColor.borderCol }};
   border-color: var(--borderCol);
 }
 /* 썸네일 */

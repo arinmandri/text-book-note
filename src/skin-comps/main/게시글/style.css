@@ -62,8 +62,7 @@ main
   max-height: 300px;
   max-width: 300px;
   box-sizing: border-box;
-  border: 2px solid {{ var.defaultColor.borderCol }};
-  border: 2px solid var(--borderCol);
+  border-width: 2px;
 }
 #postPagePost .tape {
   width: 100px; height: 30px;
@@ -115,8 +114,7 @@ main
 #postPagePost .underHeader {/* 헤더 아래 구분선 */
   margin: 0 auto;
   position: relative;
-  border-top: 6px solid {{ var.defaultColor.borderCol }};
-  border-top: 6px solid var(--borderCol);
+  border-top-width: 6px;
   width: 90%;
   transform: translateY(1.5em);
 }

@@ -12,8 +12,7 @@
   vertical-align: middle;
   margin: 40px 12px;/* 간격 */
   box-shadow: 1px 1px 4px #0008;/* 그림자 */
-  border: 1px solid {{ var.defaultColor.borderCol }};
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
   text-align: left;
@@ -23,8 +22,7 @@
   box-sizing: content-box;
 }
 #postList.card .thumbnail {/* 썸네일 경계선 */
-  border: 1px solid {{ var.defaultColor.borderCol }};
-  border: 1px solid var(--borderCol);
+  border-width: 1px;
   background-color: {{ var.defaultColor.borderCol }};
   background-color: var(--borderCol);
   overflow: hidden;

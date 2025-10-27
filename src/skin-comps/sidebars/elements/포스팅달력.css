@@ -4,7 +4,6 @@
 .sidebar_elementMain.calendar caption ,
 .sidebar_elementMain.calendar thead ,
 .sidebar_elementMain.calendar tbody {
-  border-bottom: 1px solid {{ var.defaultColor.borderCol }};
   border-bottom: 1px solid var(--borderCol);
 }
 
