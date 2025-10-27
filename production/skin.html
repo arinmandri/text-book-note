@@ -362,15 +362,24 @@ function setSettingFixCbox( settingName, checked ){
 <div style="
     position: sticky;
     top: 0px;
+    height: 40px;
     z-index: 100;
   ">
-  <svg onclick="window.scrollTo(0, 0);" width="20px" height="35px" style="
-      position: absolute;
-      top: 0;
-      right: 100px;
-      ">
-    <polygon points="0,0 20,0 20,35 10,25 0,35" fill="var(--pointCol)" fill-opacity="0.6 " />
-  </svg>
+  <div id="totopBox" style="
+      position: relative;
+      overflow: hidden;
+      height: 0px;
+      transition: height 0.3s;
+    ">
+    <svg onclick="window.scrollTo(0, 0);" width="26px" height="40px" style="
+        position: absolute;
+        top: 0;
+        right: 100px;
+        cursor: pointer;
+        ">
+      <polygon points="0,0 26,0 26,40 13,27 0,40" fill="var(--pointCol)" fill-opacity="0.6 " />
+    </svg>
+  </div>
 </div>
 
   <!--## 메인영역2 -->
@@ -1912,6 +1921,24 @@ function refreshSidebarVStatus(){
     }
   }
 }
+
+//// 스크롤 아래로: 맨위로버튼 숨김
+// 스크롤 위로: 맨위로버튼 표시
+// totopBox의 height를 조절하여 구현.
+document.addEventListener('DOMContentLoaded', function () {
+  const totopBox = document.getElementById('totopBox');
+  if( totopBox == null ) return;
+
+  let lastY = window.scrollY || 0;
+  window.addEventListener('scroll', function () {
+    const y = window.scrollY || 0;
+
+    if      ( y < lastY ) totopBox.style.height = '40px';
+    else if ( y > lastY ) totopBox.style.height = '0px';
+
+    lastY = y;
+  }, { passive: true });
+});
 
 //// 블로그 링크(a 태그) 앞부분에 대응 이미지 태그 덧붙임.
 (function () {
