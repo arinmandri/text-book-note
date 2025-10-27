@@ -1,5 +1,18 @@
 [
   {
+    "name": "menubar",
+    "title": "메뉴",
+    "dataType": "CUSTOM",
+    "data": [
+      {
+        "title": "티스토리",
+        "summary": "",
+        "url": "https://www.tistory.com",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
     "name": "train",
     "title": "최근 게시글",
     "dataType": "RECENT",

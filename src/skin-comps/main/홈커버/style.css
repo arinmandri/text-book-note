@@ -27,8 +27,6 @@ body#tt-body-index #recentNotice {
   background-color: var(--listBack);
 }
 
-{% include "skin-comps/main/홈커버/introduction.css" %}
-
 {% include "skin-comps/main/홈커버/items/base.css" %}
 {% for cover_name, value in settings.homecover.items() %}
   {% include "skin-comps/main/홈커버/items/" + cover_name + ".css" %}

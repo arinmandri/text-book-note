@@ -438,13 +438,6 @@ function setSettingFixCbox( settingName, checked ){
     <section id="main">
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
 
-<section id="blog-home-introduction" class="homecoverSection">
-
-  <nav class="blogMenu copy-target _textCenter" data-copyname="blogMenu"></nav>
-
-  <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
-</section>
-
   <div class="recentNotice">
 <svg class="pushpin" width="23px" height="45px">
   <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
@@ -454,6 +447,26 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 
   <s_cover_rep>
+
+  <s_cover name="menubar">
+  <section class="homecoverSection menubar">
+
+    <div class="homecover menubar">
+
+  <nav class="blogMenu _textCenter">
+    [##_blog_menu_##]
+    <ul>
+      <s_cover_item><li>
+        <a href="[##_cover_item_url_##]">[##_cover_item_title_##]</a>
+      </li></s_cover_item>
+    </ul>
+  </nav>
+
+  <div class="blogSearch copy-target _textCenter" data-copyname="blogSearch"></div>
+
+    </div>
+  </section>
+</s_cover>
 
   <s_cover name="train">
   <section class="homecoverSection train">
@@ -1246,7 +1259,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <s_sidebar_element><div class="sidebar_element ">
   <!-- 메뉴 -->
 <button class="bubbleBtn themeBtn">&#x1F3E0;</button>
-<nav id="navMenu" class="blogMenu sidebar_elementMain copy-origin" data-copyname="blogMenu">
+<nav id="navMenu" class="blogMenu sidebar_elementMain">
   [##_blog_menu_##]
   <script>(function(){ 
     document.querySelector('#navMenu > ul').innerHTML 

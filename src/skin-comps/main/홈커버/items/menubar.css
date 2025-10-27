@@ -1,11 +1,11 @@
-#blog-home-introduction > * {
+.homecover.menubar > * {
   margin: 40px auto;
 }
 
-#blog-home-introduction > .blogSearch form {
+.homecover.menubar > .blogSearch form {
   padding: 10px;
 }
-#blog-home-introduction > .blogSearch input {
+.homecover.menubar > .blogSearch input {
   width: 80%;
   max-width: 600px;
   font-size: 148%;

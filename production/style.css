@@ -571,27 +571,27 @@ body#tt-body-index #recentNotice {
   background-color: var(--listBack);
 }
 
-#blog-home-introduction > * {
-  margin: 40px auto;
-}
-
-#blog-home-introduction > .blogSearch form {
-  padding: 10px;
-}
-#blog-home-introduction > .blogSearch input {
-  width: 80%;
-  max-width: 600px;
-  font-size: 148%;
-  text-align: center;
-  padding: 10px;
-}
-
 .homecoverSection {
   margin: 125px 0;
 }
 .homecoverSection h1 {
   margin-left: 4%;
   margin-right: 6%;
+}
+
+  .homecover.menubar > * {
+  margin: 40px auto;
+}
+
+.homecover.menubar > .blogSearch form {
+  padding: 10px;
+}
+.homecover.menubar > .blogSearch input {
+  width: 80%;
+  max-width: 600px;
+  font-size: 148%;
+  text-align: center;
+  padding: 10px;
 }
 
   .homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
