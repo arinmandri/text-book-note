@@ -26,7 +26,7 @@
   display: block;
   margin: 0 auto;
 }
-.homecoverSection.train .thumbnail img.noThumbnail {/* 없는 썸네일 */
+.homecoverSection.train .noThumbnail {/* 없는 썸네일 */
   display: none;
 }
 .homecoverSection.train .postListItem > .itemHead {/* 제목등 */

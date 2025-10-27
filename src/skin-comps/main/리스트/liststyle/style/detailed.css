@@ -23,6 +23,9 @@
   height: 90px;
   max-width: 180px;
 }
+#postList.detailed .noThumbnail {
+  display: none;
+}
 #postList.detailed .category::before {
   content: '\007E';/* ~ */
 }

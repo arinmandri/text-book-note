@@ -32,7 +32,7 @@
   display: block;
   margin: 0 auto;
 }
-#postList.train .thumbnail img.noThumbnail {/* 없는 썸네일 */
+#postList.train .noThumbnail {/* 없는 썸네일 */
   display: none;
 }
 #postList.train .postListItem > .itemHead {/* 제목등 */

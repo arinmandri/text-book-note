@@ -12,7 +12,8 @@
   const thumbnails = document.querySelectorAll('#postList .thumbnail')
   for( let thumbnail of thumbnails ){
     if( thumbnail.getElementsByTagName('img').length == 0 ){
-      thumbnail.innerHTML = '<img class="noThumbnail" alt="썸네일 없음" src="' +noThumbnail+ '">'
+      thumbnail.classList.add('noThumbnail');
+      thumbnail.innerHTML = '<img class="noThumbnail" alt="썸네일 없음" src="' +noThumbnail+ '">';
     }
   }
 

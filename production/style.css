@@ -623,7 +623,7 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   display: block;
   margin: 0 auto;
 }
-.homecoverSection.train .thumbnail img.noThumbnail {/* 없는 썸네일 */
+.homecoverSection.train .noThumbnail {/* 없는 썸네일 */
   display: none;
 }
 .homecoverSection.train .postListItem > .itemHead {/* 제목등 */
@@ -2052,7 +2052,7 @@ ul#postList ─ li 여럿
   display: block;
   margin: 0 auto;
 }
-#postList.train .thumbnail img.noThumbnail {/* 없는 썸네일 */
+#postList.train .noThumbnail {/* 없는 썸네일 */
   display: none;
 }
 #postList.train .postListItem > .itemHead {/* 제목등 */
@@ -2314,6 +2314,9 @@ ul#postList ─ li 여럿
 #postList.detailed .thumbnail img {
   height: 90px;
   max-width: 180px;
+}
+#postList.detailed .noThumbnail {
+  display: none;
 }
 #postList.detailed .category::before {
   content: '\007E';/* ~ */
