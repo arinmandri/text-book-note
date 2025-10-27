@@ -41,3 +41,10 @@
   background-color: var(--highlight);
   color: black;
 }
+
+#sidebar1 > :first-child {
+  margin-top: 20px;
+}
+#sidebar1 > * {
+  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
+}

@@ -737,6 +737,13 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   background-color: var(--highlight);
   color: black;
 }
+
+#sidebar1 > :first-child {
+  margin-top: 20px;
+}
+#sidebar1 > * {
+  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
+}
 /**### 사이드바2 */
 /* 넓은 화면: 펴진채 */
 #sidebarBox2.sidebarBoxV {
@@ -820,6 +827,13 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
     max-height: 100vh;
   }
 }
+
+#sidebar2 > :first-child {
+  margin-top: 50px;
+}
+#sidebar2 > * {
+  margin-bottom: 80px;/* 내부 모듈들 사이 여백 */
+}
 /**### 세로 사이드바 스크롤 */
 /* 사이드바1은 항상; 사이드바2는 flat 상태만 해당 */
 .sidebarBoxV {
@@ -850,10 +864,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 .sidebarV > * {
   display: block;/* 세로로 쌓기 */
-  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
-}
-.sidebarV > *:first-child {
-  margin-top: 20px;
 }
 .sidebarBoxV:hover .sidebarV {
   overflow: auto;

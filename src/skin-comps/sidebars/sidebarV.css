@@ -28,10 +28,6 @@
 }
 .sidebarV > * {
   display: block;/* 세로로 쌓기 */
-  margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
-}
-.sidebarV > *:first-child {
-  margin-top: 20px;
 }
 .sidebarBoxV:hover .sidebarV {
   overflow: auto;
