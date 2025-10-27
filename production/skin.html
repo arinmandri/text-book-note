@@ -560,7 +560,19 @@ TODO HOMECOVER_WIDEPAGE
 </s_cover>
 
   </s_cover_rep>
-</div></s_cover_group>
+</div></s_cover_group><script>(function () {
+  const menuEl = document.querySelector('.homecover.menubar nav > ul');
+  if( menuEl == null ) return;
+
+  const li_manage = document.createElement('li');
+  const li_write  = document.createElement('li');
+  li_manage.classList.add( 't_menu_manage', 'onlyForOwner', '_fontSmaller');
+  li_write.classList.add(  't_menu_manage', 'onlyForOwner', '_fontSmaller');
+  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
+  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
+  menuEl.appendChild(li_manage);
+  menuEl.appendChild(li_write);
+})()</script>
 
 <s_notice_rep><!--◆ 공지 페이지 -->
   <div class="noticePost onlyOnPage-index">
@@ -1275,10 +1287,6 @@ document.addEventListener('DOMContentLoaded', function(){
 <nav id="navMenu" class="blogMenu sidebar_elementMain">
   [##_blog_menu_##]
   <script>(function(){ 
-    document.querySelector('#navMenu > ul').innerHTML 
-      += '<li class="t_menu_manage onlyForOwner"><a href="/manage/posts" target="_blank" class="themeBtn">관리자</a></li>'
-      +  '<li class="t_menu_post onlyForOwner"><a href="/manage/post" class="themeBtn">글쓰기</a></li>';
-
     //// 메뉴의 항목들에 클래스 추가
     const navMenus = document.querySelectorAll('#navMenu a')
     for( let navMenu of navMenus ){
