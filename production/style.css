@@ -686,6 +686,7 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   overflow: hidden;
 }
 .homecoverSection.train .content {/* 본문 */
+  line-height: 1.6;
   font-family: 'Noto Serif KR', serif;
   font-size: 1.1em;
 }
