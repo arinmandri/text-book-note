@@ -34,12 +34,10 @@
 
 {% include "skin-comps/frame/header.html" %}
 
-<!--# 메인영역1 -->
 <div id="mainV">
 {% include "skin-comps/frame/totop.html" %}
 
-  <!--## 메인영역2 -->
-  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainH와 mainHBox는 가로크기가 같지 않고 mainH를 가운데 놓으려고. -->
+  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainHBox: 좌우 사이드바 상태에 따라 좌우 여백 / mainH: Box 안에서 가운데로 -->
   <div id="mainHBox"><div id="mainH">
 
 {% include "skin-comps/최근공지/_.html" %}
@@ -60,10 +58,10 @@
     <!--### 하단 광고 -->
     <div id="under">[##_revenue_list_lower_##]</div>
 
-  </div></div><!-- 메인영역2 ##-->
+  </div></div>
 {% include "skin-comps/sidebars/sidebar1.html" %}
 {% include "skin-comps/sidebars/sidebar2.html" %}
-</div><!-- 메인영역1 #-->
+</div>
 
 {% include "skin-comps/sidebars/sidebar3.html" %}
 

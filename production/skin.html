@@ -356,7 +356,6 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 </header>
 
-<!--# 메인영역1 -->
 <div id="mainV">
 <div style="
     position: sticky;
@@ -381,8 +380,7 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 </div>
 
-  <!--## 메인영역2 -->
-  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainH와 mainHBox는 가로크기가 같지 않고 mainH를 가운데 놓으려고. -->
+  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainHBox: 좌우 사이드바 상태에 따라 좌우 여백 / mainH: Box 안에서 가운데로 -->
   <div id="mainHBox"><div id="mainH">
 
 <s_rct_notice><!--### 최근공지 -->
@@ -1277,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <!--### 하단 광고 -->
     <div id="under">[##_revenue_list_lower_##]</div>
 
-  </div></div><!-- 메인영역2 ##-->
+  </div></div>
 
 <!--## 사이드바상자1 : 왼쪽 사이드바 영역 -->
 <div id="sidebarBox1"  class="sidebarBox sidebarBoxV home-[##_var_home_sidebar1_##] fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
@@ -1650,7 +1648,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </s_sidebar></aside>
   <div id="sidebar2Remocon"></div>
 </div><!-- 사이드바상자2 ##-->
-</div><!-- 메인영역1 #-->
+</div>
 
 
 <!--### 사이드바3 -->

@@ -63,8 +63,6 @@ body > * {
 
 
 
-
-/**## 메인영역2 */
 {% include "skin-comps/최근공지/_.css" %}
 
 {% include "skin-comps/main/페이징/_.css" %}

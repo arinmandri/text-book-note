@@ -1,13 +1,13 @@
 
-/**# 메인영역1
-메인영역1 div#mainV
+/**# 세로중앙
+세로중앙 div#mainV
 │
 ├사이드바상자1 div#sidebarBox1.sidebarBox.sidebarBoxV
 │├사이드바1 aside#sidebar1.sidebar.sidebarV
 │└펼접버튼 button.sidebarBtn
 │
-├메인영역2상자 div#mainHBox
-│└메인영역2 div#mainH
+├가로메인상자 div#mainHBox
+│└가로메인 div#mainH
 │　├최근공지 div#recentNotice
 │　├메인 main#main
 │　│└(페이지마다 다른 내용물들)
