@@ -1,3 +1,60 @@
+#upperbar {
+  padding-left: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 #upperbar * {
   display: inline-block;
+}
+
+#blogMenu a {
+  margin: 0 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: 4px 10px;
+}
+body:not(.theme-dark) #blogMenu > ul > * > * {
+  border-color: transparent;
+}
+#blogMenu > ul > *:nth-child(6n+1) > * {
+  background-color: hsl(220 100% 50% / 20%);
+  border-color: hsl(220 100% 50% / 50%);
+}
+#blogMenu > ul > *:nth-child(6n+2) > * {
+  background-color: hsl(260 100% 60% / 20%);
+  border-color: hsl(260 100% 60% / 50%);
+}
+#blogMenu > ul > *:nth-child(6n+3) > * {
+  background-color: hsl(310 100% 50% / 20%);
+  border-color: hsl(310 100% 50% / 50%);
+}
+#blogMenu > ul > *:nth-child(6n+4) > * {
+  background-color: hsl(17 100% 50% / 20%);
+  border-color: hsl(17 100% 50% / 50%);
+}
+#blogMenu > ul > *:nth-child(6n+5) > * {
+  background-color: hsl(44 100% 50% / 20%);
+  border-color: hsl(44 100% 50% / 50%);
+}
+#blogMenu > ul > *:nth-child(6n) > * {
+  background-color: hsl(100 100% 50% / 20%);
+  border-color: hsl(100 100% 50% / 50%);
+}
+
+#blogSearch {
+  padding: 10px;
+  margin-left: auto;
+}
+#blogSearch input {
+  padding: 4px;
+  border-radius: 5px;
+  background-color: {{ var.defaultColor.listBack }};
+  background-color: var(--listBack);
+  font-size: 120%;
+  text-align: right;
 }
