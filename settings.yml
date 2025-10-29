@@ -57,7 +57,7 @@ skin:
       detailed:
         label: '복잡 목록'
         buttonText: '&#9636;'
-    default_base: card
+    default_base: postit
     default:
       # 화면별 기본 스타일
 #     index:             # 홈
