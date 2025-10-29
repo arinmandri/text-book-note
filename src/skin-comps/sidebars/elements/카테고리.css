@@ -13,12 +13,14 @@
 #navCat .tt_category li {
   margin: 15px auto;
 }
+#navCat .tt_category .newA ,
 #navCat .tt_category a {
   display: block;
   border-bottom-width: 1px;
   padding: 3px 12px;
   transition: background-color 1s;
 }
+#navCat .tt_category .newA:hover ,
 #navCat .tt_category a:hover {
   background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
@@ -28,28 +30,24 @@
   font-weight: bold;
   transition-duration: 0s;
 }
-#navCat .category_list > li > button {
-  float: left;
-  width: 1.6em;
-  height: 1.6em;
-  background-color: transparent;
-}
-#navCat .category_list > li > button::after {
-  content: '\1F4C1';
-}
-#navCat .category_list > li.open > button::after {
-  content: '\1F4C2';
-}
-#navCat .category_list > li.lonely > button::after {
-  content: '\1F4CB';
-}
 #navCat .category_list > li:not(.open) > .sub_category_list {
   display: none;
 }
+#navCat .newA::before {
+  content: '\1F4C1';
+}
+#navCat li.open > .newA::before {
+  content: '\1F4C2';
+}
+#navCat .link_item::before ,
 #navCat .link_sub_item::before {
-  content: '\1F4CE ';
+  content: '┣ ';
   color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
+}
+#navCat li:last-child > .link_item::before ,
+#navCat li:last-child > .link_sub_item::before {
+  content: '┗ ';
 }
 #navCat .c_cnt {
   font-size: 90%;

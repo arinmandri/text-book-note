@@ -1302,20 +1302,33 @@ document.addEventListener('DOMContentLoaded', function(){
 <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
 <nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
 <script type="text/javascript">
-  //// 펼접버튼 추가
-  (function(){
-    const category_list_list = document.querySelectorAll('#navCat .category_list > li');
-    for( let li of category_list_list ){
-      const sub_category_list = li.querySelector('ul.sub_category_list');// 하위 카테고리 (nullable)
-      const btn = document.createElement('button');
-      if( sub_category_list != null ){
-        btn.addEventListener('click', ()=>{
-          li.classList.toggle('open');
-        });
-      }else{
-        li.classList.add('lonely');
+
+  (function () {
+    const sup_lis = document.querySelectorAll('#navCat .category_list > li');
+    for (let sup_li of sup_lis) {
+
+      //// 각 상위 카테고리 하위 첫 아이템으로 전체보기 추가
+      let sub_ul = sup_li.querySelector('ul.sub_category_list');
+      if( sub_ul == null ){// 하위 카테고리 없음
+        sub_ul = document.createElement('ul');
+        sub_ul.classList.add('sub_category_list');
+        sup_li.append( sub_ul );
       }
-      li.prepend( btn );
+      const sup_a = sup_li.getElementsByTagName('a')[0];// 원래 상위카테 a 태그: 새 하위 li(전체보기)로 이동.
+      const sup_newSpan = document.createElement('span');// 원래 상위카테 a 태그를 대신함.
+      sup_newSpan.classList.add('newA');
+      sup_newSpan.textContent = sup_a.childNodes[0].textContent;
+      sup_li.prepend( sup_newSpan );
+      
+      const allLi = document.createElement('li');
+      sup_a.childNodes[0].textContent = ' 전체보기 ';
+      allLi.append( sup_a );
+      sub_ul.prepend( allLi );
+
+      //// 각 상위 카테고리 누르면 여닫상태(하위 카테고리 보이기) 토글
+      sup_newSpan.addEventListener('click', () => {
+        sup_li.classList.toggle('open');
+      });
     }
   })();
 

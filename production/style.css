@@ -996,12 +996,14 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #navCat .tt_category li {
   margin: 15px auto;
 }
+#navCat .tt_category .newA ,
 #navCat .tt_category a {
   display: block;
   border-bottom-width: 1px;
   padding: 3px 12px;
   transition: background-color 1s;
 }
+#navCat .tt_category .newA:hover ,
 #navCat .tt_category a:hover {
   background-color: #F0FF40;
   background-color: var(--highlight);
@@ -1011,28 +1013,24 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   font-weight: bold;
   transition-duration: 0s;
 }
-#navCat .category_list > li > button {
-  float: left;
-  width: 1.6em;
-  height: 1.6em;
-  background-color: transparent;
-}
-#navCat .category_list > li > button::after {
-  content: '\1F4C1';
-}
-#navCat .category_list > li.open > button::after {
-  content: '\1F4C2';
-}
-#navCat .category_list > li.lonely > button::after {
-  content: '\1F4CB';
-}
 #navCat .category_list > li:not(.open) > .sub_category_list {
   display: none;
 }
+#navCat .newA::before {
+  content: '\1F4C1';
+}
+#navCat li.open > .newA::before {
+  content: '\1F4C2';
+}
+#navCat .link_item::before ,
 #navCat .link_sub_item::before {
-  content: '\1F4CE ';
+  content: '┣ ';
   color: #FF6644;
   color: var(--pointCol);
+}
+#navCat li:last-child > .link_item::before ,
+#navCat li:last-child > .link_sub_item::before {
+  content: '┗ ';
 }
 #navCat .c_cnt {
   font-size: 90%;
