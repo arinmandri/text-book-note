@@ -411,18 +411,12 @@ function setSettingFixCbox( settingName, checked ){
   const menuEl = document.querySelector('#blogMenu > ul');
   if( menuEl == null ) return;
 
-  //// 하위 모든 공백 텍스트 노드(공백만 있는 텍스트노드)를 제거
-  const walker = document.createTreeWalker(
-    menuEl,
-    NodeFilter.SHOW_TEXT,
-    {
-      acceptNode: (node) => /^\s*$/.test(node.textContent) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT
+  // 티스토리 치환자 blog_menu 렌더링 결과에 공백 텍스트가 껴있는데 삭제.
+  for (const node of Array.from(menuEl.childNodes)) {
+    if( node.nodeType !== Node.ELEMENT_NODE ){
+      menuEl.removeChild(node);
     }
-  );
-  const toRemove = [];
-  while( walker.nextNode() )
-    toRemove.push(walker.currentNode);
-  toRemove.forEach(n => n.parentNode.removeChild(n));
+  }
 
   const li_manage = document.createElement('li');
   const li_write  = document.createElement('li');
