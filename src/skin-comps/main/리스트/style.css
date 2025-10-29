@@ -10,3 +10,7 @@ main
 */
 {% include "skin-comps/main/리스트/머리.css" %}
 {% include "skin-comps/main/리스트/목록.css" %}
+
+#postList .content {
+  line-height: 1.6;
+}

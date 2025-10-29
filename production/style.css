@@ -2334,6 +2334,10 @@ ul#postList ─ li 여럿
 }
 
 
+#postList .content {
+  line-height: 1.6;
+}
+
 
 /**### 태그 페이지 */
 /* 태그 클래스별 스타일은 랜덤태그 모듈과 같은 스타일 */
