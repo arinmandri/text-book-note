@@ -4,16 +4,4 @@
   {% include "skin-comps/main/홈커버/items/" + cover_name + ".html" %}
 {% endfor %}
   </s_cover_rep>
-</div></s_cover_group><script>(function () {
-  const menuEl = document.querySelector('.homecover.menubar nav > ul');
-  if( menuEl == null ) return;
-
-  const li_manage = document.createElement('li');
-  const li_write  = document.createElement('li');
-  li_manage.classList.add( 't_menu_manage', 'onlyForOwner', '_fontSmaller');
-  li_write.classList.add(  't_menu_manage', 'onlyForOwner', '_fontSmaller');
-  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
-  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
-  menuEl.appendChild(li_manage);
-  menuEl.appendChild(li_write);
-})()</script>
+</div></s_cover_group>

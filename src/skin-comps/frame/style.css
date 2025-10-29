@@ -2,11 +2,13 @@
 /**# 전체
 body
 ├헤더 header ─ a
+├헤더아래에 블로그 메뉴랑 검색 버튼
 ├세로메인 div#mainV
 ├사이드바3 div#sidebar3.sidebarH
 └푸터 footer
 */
 {% include "skin-comps/frame/background.css" %}
 {% include "skin-comps/frame/header.css" %}
+{% include "skin-comps/frame/upperbar.css" %}
 {% include "skin-comps/frame/footer.css" %}
 {% include "skin-comps/frame/main.css" %}

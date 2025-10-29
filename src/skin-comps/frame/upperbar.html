@@ -1,0 +1,25 @@
+<div id="upperbar">
+  <div id="blogMenu">
+    [##_blog_menu_##]
+  </div>
+
+  <div id="blogSearch">
+{% with
+  inputSize='12'
+%}
+{% include "skin-comps/component_templates/blogSearch.html" %}
+{% endwith %}
+  </div>
+</div><script>(function () {// 관리자 메뉴 추가
+  const menuEl = document.querySelector('#blogMenu > ul');
+  if( menuEl == null ) return;
+
+  const li_manage = document.createElement('li');
+  const li_write  = document.createElement('li');
+  li_manage.classList.add( 't_menu_manage', 'onlyForOwner');
+  li_write.classList.add(  't_menu_manage', 'onlyForOwner');
+  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
+  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
+  menuEl.appendChild(li_manage);
+  menuEl.appendChild(li_write);
+})()</script>

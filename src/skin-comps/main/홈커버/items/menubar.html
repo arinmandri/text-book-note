@@ -2,19 +2,10 @@
 {% block title %}{% endblock %}
 {% block content %}
   <nav>
-    [##_blog_menu_##]
     <ul>
       <s_cover_item><li>
         <a href="[##_cover_item_url_##]">[##_cover_item_title_##]</a>
       </li></s_cover_item>
     </ul>
   </nav>
-
-  <div class="blogSearch">
-{% with
-  inputSize='12'
-%}
-{% include "skin-comps/component_templates/blogSearch.html" %}
-{% endwith %}
-  </div>
 {% endblock %}

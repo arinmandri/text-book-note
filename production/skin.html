@@ -379,6 +379,48 @@ function setSettingFixCbox( settingName, checked ){
   <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainHBox: 좌우 사이드바 상태에 따라 좌우 여백 / mainH: Box 안에서 가운데로 -->
   <div id="mainHBox"><div id="mainH">
 
+<div id="upperbar">
+  <div id="blogMenu">
+    [##_blog_menu_##]
+  </div>
+
+  <div id="blogSearch">
+
+<form><s_search>
+  <input type="text" 
+    class=""
+    name="[##_search_name_##]" 
+    value="[##_search_text_##]" 
+    onkeypress="if( event.keyCode == 13 ){ [##_search_onclick_submit_##] }"
+    placeholder="검색어 입력" 
+    autocomplete=off
+    size=12
+    style="
+        vertical-align: middle;" /> 
+  <button type="button" 
+    class="submit"
+    onclick="[##_search_onclick_submit_##]" 
+    style="
+        font-size: 150%;
+        vertical-align: middle;" 
+    >&#x1F50D;</button>
+</s_search></form>
+
+  </div>
+</div><script>(function () {// 관리자 메뉴 추가
+  const menuEl = document.querySelector('#blogMenu > ul');
+  if( menuEl == null ) return;
+
+  const li_manage = document.createElement('li');
+  const li_write  = document.createElement('li');
+  li_manage.classList.add( 't_menu_manage', 'onlyForOwner');
+  li_write.classList.add(  't_menu_manage', 'onlyForOwner');
+  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
+  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
+  menuEl.appendChild(li_manage);
+  menuEl.appendChild(li_write);
+})()</script>
+
 <s_rct_notice><!--### 최근공지 -->
   <div id="recentNotice" class="recentNotice" style="position: relative">
     <input type="hidden" name="hideNotice" value="false">
@@ -439,37 +481,12 @@ function setSettingFixCbox( settingName, checked ){
     <div class="homecover menubar">
 
   <nav>
-    [##_blog_menu_##]
     <ul>
       <s_cover_item><li>
         <a href="[##_cover_item_url_##]">[##_cover_item_title_##]</a>
       </li></s_cover_item>
     </ul>
   </nav>
-
-  <div class="blogSearch">
-
-<form><s_search>
-  <input type="text" 
-    class=""
-    name="[##_search_name_##]" 
-    value="[##_search_text_##]" 
-    onkeypress="if( event.keyCode == 13 ){ [##_search_onclick_submit_##] }"
-    placeholder="검색어 입력" 
-    autocomplete=off
-    size=12
-    style="
-        vertical-align: middle;" /> 
-  <button type="button" 
-    class="submit"
-    onclick="[##_search_onclick_submit_##]" 
-    style="
-        font-size: 150%;
-        vertical-align: middle;" 
-    >&#x1F50D;</button>
-</s_search></form>
-
-  </div>
 
     </div>
   </section>
@@ -554,19 +571,7 @@ TODO HOMECOVER_WIDEPAGE
 </s_cover>
 
   </s_cover_rep>
-</div></s_cover_group><script>(function () {
-  const menuEl = document.querySelector('.homecover.menubar nav > ul');
-  if( menuEl == null ) return;
-
-  const li_manage = document.createElement('li');
-  const li_write  = document.createElement('li');
-  li_manage.classList.add( 't_menu_manage', 'onlyForOwner', '_fontSmaller');
-  li_write.classList.add(  't_menu_manage', 'onlyForOwner', '_fontSmaller');
-  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
-  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
-  menuEl.appendChild(li_manage);
-  menuEl.appendChild(li_write);
-})()</script>
+</div></s_cover_group>
 
 <s_notice_rep><!--◆ 공지 페이지 -->
   <div class="noticePost onlyOnPage-index">
@@ -1277,21 +1282,6 @@ document.addEventListener('DOMContentLoaded', function(){
 <div id="sidebarBox1"  class="sidebarBox sidebarBoxV home-[##_var_home_sidebar1_##] fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
     <s_sidebar_element><div class="sidebar_element ">
-  <!-- 메뉴 -->
-<button class="bubbleBtn themeBtn">&#x1F3E0;</button>
-<nav id="navMenu" class="blogMenu sidebar_elementMain">
-  [##_blog_menu_##]
-  <script>(function(){ 
-    //// 메뉴의 항목들에 클래스 추가
-    const navMenus = document.querySelectorAll('#navMenu a')
-    for( let navMenu of navMenus ){
-      navMenu.classList.add('themeBtn');
-    }
-  })()</script>
-</nav>
-
-</div></s_sidebar_element>
-    <s_sidebar_element><div class="sidebar_element ">
   <!-- 카테고리 -->
 <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
 <nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
@@ -1345,35 +1335,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 </script>
-
-</div></s_sidebar_element>
-    <s_sidebar_element><div class="sidebar_element ">
-  <!-- 검색창 -->
-<button class="bubbleBtn themeBtn">&#x1F50D;</button>
-<div class="sidebar_elementMain search">
-
-<form><s_search>
-  <input type="text" 
-    class="themeInput"
-    name="[##_search_name_##]" 
-    value="[##_search_text_##]" 
-    onkeypress="if( event.keyCode == 13 ){ [##_search_onclick_submit_##] }"
-    placeholder="검색어 입력" 
-    autocomplete=off
-    
-    style="
-        vertical-align: middle;" /> 
-  <button type="button" 
-    class="submit"
-    onclick="[##_search_onclick_submit_##]" 
-    style="
-        font-size: 150%;
-        vertical-align: middle;" 
-    >&#x1F50D;</button>
-</s_search></form>
-
-</div>
-<span class="caption">찾기</span>
 
 </div></s_sidebar_element>
   </s_sidebar></aside>

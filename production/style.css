@@ -251,10 +251,10 @@ body.theme-dark .themeBtn {
 
 
 
-
 /**# 전체
 body
 ├헤더 header ─ a
+├헤더아래에 블로그 메뉴랑 검색 버튼
 ├세로메인 div#mainV
 ├사이드바3 div#sidebar3.sidebarH
 └푸터 footer
@@ -410,6 +410,9 @@ header > .namecard .blogLinks a {
 header > .namecard .blogLinks img {
   height: 1.2em;
   vertical-align: text-bottom;
+}
+#upperbar * {
+  display: inline-block;
 }
 footer {
   border-top-width: 9px;
@@ -988,30 +991,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   font-size: 90%;
   font-family: 'Gaegu', cursive;
   color: grey;
-}
-/**
-메뉴 nav#navMenu ─ ul ─ li ─ a
-*/
-#navMenu {
-  padding: 10px 10px;
-}
-#navMenu li {
-  display: inline-block;
-  margin: 5px;
-  position: relative;
-}
-#navMenu li > a {
-  display: block;
-  padding: 10px 15px 10px 20px;
-  border-radius: 0;
-}
-#navMenu li::before {/* 왼쪽장식 */
-  content: '';
-  height: 90%; width: 0;
-  position: absolute;
-  top: 5%; left: -1px;
-  border-left: 4px dotted #FFFFFF;
-  border-left: 4px dotted var(--backCol);
 }
 
 /**### 목차 */

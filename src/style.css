@@ -53,7 +53,6 @@ body > * {
 {% include "style/base.css" %}
 {% include "style/styling-classes.css" %}
 {% include "style/theme.css" %}
-{% include "skin-comps/component_templates/블로그메뉴.css" %}
 
 
 
