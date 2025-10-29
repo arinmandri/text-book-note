@@ -22,6 +22,13 @@
       style="
           font-size: 150%;
           vertical-align: middle;"
-      >&#x1F50D;</button>
+      >
+{% with
+  size="1.2em",
+  color="var(--baseTextCol)"
+%}
+{% include "skin-comps/component_templates/search-icon.svg" %}
+{% endwith %}
+    </button>
   </s_search></form>
 </div>
