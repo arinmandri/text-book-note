@@ -38,12 +38,18 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     }
     const bubbleBtn = bubbleBtns[0];
     bubbleBtn.addEventListener('click', ()=>{
+      const currentlyOpen = sidebarItem.classList.contains('open');
       const prevOpens = sidebar2.querySelectorAll('.open');
       prevOpens.forEach((item)=>{
         item.classList.remove('open');
       });
-      sidebarBox2.classList.add('open');
-      sidebarItem.classList.add('open');
+      if( currentlyOpen ){// 기존에 열려있던 걸 누른 경우 닫음
+        sidebarItem.classList.remove('open');
+        sidebarBox2.classList.remove('open');
+      }else{
+        sidebarItem.classList.add('open');
+        sidebarBox2.classList.add('open');
+      }
     });
     sidebar2Remocon.appendChild( bubbleBtn );
   }
@@ -64,14 +70,7 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     });
     sidebar2Remocon.appendChild( bubbleBtn );
   }
-
-  sidebar2Remocon.appendChild( document.getElementById('sidebar2X') );// 닫기 버튼이 맨 뒤에 있어야 하므로 새로 append함.
 })();
-
-//// 사이드바2: 접기 버튼
-document.getElementById('sidebar2X').addEventListener('click', () => {
-    sidebarBox2.classList.remove('open');
-});
 
 document.addEventListener('DOMContentLoaded', function(){
   //// figure 순서 표시

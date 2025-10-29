@@ -799,8 +799,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.open > #sidebar2 > *:not(:first-child) {
   margin-top: 20px;
 }
-#sidebarBox2.fold #sidebar2Remocon .bubbleBtn ,
-#sidebarBox2.fold #sidebar2X {
+#sidebarBox2.fold #sidebar2Remocon .bubbleBtn {
   display: inline-block;
   padding: 6px 10px;
 }
@@ -810,11 +809,11 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   bottom: 0px;
   right: 0px;
   z-index: 20;
-  padding: 5px 18px 5px 10px;
+  padding-right: 14px;
   text-align: right;
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
-  margin: 10px 0 0 10px;
+  margin: 0 6px 6px 0;
 }
 @media (max-width: 800px) {/* 걍 적당히 잡은 크기 */
   #sidebar2Remocon > * {
