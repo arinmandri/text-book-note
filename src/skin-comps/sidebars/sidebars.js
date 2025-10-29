@@ -1,6 +1,6 @@
 
-const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
-document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
+const maxWidthOfmainH = getTskinOptionNumVal( '[##_var_maxWidthOfmainH_##]', 1000, 1500 );
+document.getElementById('mainH').style.maxWidth = maxWidthOfmainH + 'px';
 
 const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
     || '[##_var_home_sidebar1_##]' === 'usual' )
@@ -112,11 +112,11 @@ function refreshSidebarVStatus(){
       sidebarBox1.classList.remove('fold');
       sidebarBox1.classList.remove('open');
       sidebarBox1.classList.add('flat');
-      main2Box.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
+      mainHBox.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox1.classList.remove('flat');
       sidebarBox1.classList.add('fold');
-      main2Box.style.marginLeft = '0';
+      mainHBox.style.marginLeft = '0';
     }
   }
   if( sidebar2_status !== s2_status_new ){// 사이드바2 펼접상태 바뀜
@@ -127,13 +127,13 @@ function refreshSidebarVStatus(){
       sidebarBox2.classList.add('flat');
       sidebarBox2.classList.add('sidebarBoxV');
       sidebar2.classList.add('sidebarV');
-      main2Box.style.marginRight = sidebarboxVOccupyingWidth + 'px';
+      mainHBox.style.marginRight = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox2.classList.remove('flat');
       sidebarBox2.classList.add('fold');
       sidebarBox2.classList.remove('sidebarBoxV');
       sidebar2.classList.remove('sidebarV');
-      main2Box.style.marginRight = '0';
+      mainHBox.style.marginRight = '0';
     }
   }
 }

@@ -357,7 +357,7 @@ function setSettingFixCbox( settingName, checked ){
 </header>
 
 <!--# 메인영역1 -->
-<div id="main1">
+<div id="mainV">
 <div style="
     position: sticky;
     top: 0px;
@@ -382,8 +382,8 @@ function setSettingFixCbox( settingName, checked ){
 </div>
 
   <!--## 메인영역2 -->
-  <!-- main2Box-main2 이중으로 된 이유: (스타일) main2와 main2Box는 가로크기가 같지 않고 main2를 가운데 놓으려고. -->
-  <div id="main2Box"><div id="main2">
+  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainH와 mainHBox는 가로크기가 같지 않고 mainH를 가운데 놓으려고. -->
+  <div id="mainHBox"><div id="mainH">
 
 <s_rct_notice><!--### 최근공지 -->
   <div id="recentNotice" class="recentNotice" style="position: relative">
@@ -435,7 +435,7 @@ function setSettingFixCbox( settingName, checked ){
 </s_rct_notice>
 
     <!--### 메인 -->
-    <section id="main">
+    <main id="main">
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
   <s_cover_rep>
 
@@ -1272,7 +1272,7 @@ document.addEventListener('DOMContentLoaded', function(){
   })();</script>
 </s_paging>
 
-    </section><!-- 메인 ###-->
+    </main><!-- 메인 ###-->
 
     <!--### 하단 광고 -->
     <div id="under">[##_revenue_list_lower_##]</div>
@@ -1819,8 +1819,8 @@ for( let ol of ols ){
 })()
 
 //
-const maxWidthOfMain2 = getTskinOptionNumVal( '[##_var_maxWidthOfMain2_##]', 1000, 1500 );
-document.getElementById('main2').style.maxWidth = maxWidthOfMain2 + 'px';
+const maxWidthOfmainH = getTskinOptionNumVal( '[##_var_maxWidthOfmainH_##]', 1000, 1500 );
+document.getElementById('mainH').style.maxWidth = maxWidthOfmainH + 'px';
 
 const minWidthToOpenSidebar1 = ( document.getElementById('tt-body-index') == null// 홈화면에서만 넓은화면에서도 안 펴기
     || '[##_var_home_sidebar1_##]' === 'usual' )
@@ -1932,11 +1932,11 @@ function refreshSidebarVStatus(){
       sidebarBox1.classList.remove('fold');
       sidebarBox1.classList.remove('open');
       sidebarBox1.classList.add('flat');
-      main2Box.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
+      mainHBox.style.marginLeft = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox1.classList.remove('flat');
       sidebarBox1.classList.add('fold');
-      main2Box.style.marginLeft = '0';
+      mainHBox.style.marginLeft = '0';
     }
   }
   if( sidebar2_status !== s2_status_new ){// 사이드바2 펼접상태 바뀜
@@ -1947,13 +1947,13 @@ function refreshSidebarVStatus(){
       sidebarBox2.classList.add('flat');
       sidebarBox2.classList.add('sidebarBoxV');
       sidebar2.classList.add('sidebarV');
-      main2Box.style.marginRight = sidebarboxVOccupyingWidth + 'px';
+      mainHBox.style.marginRight = sidebarboxVOccupyingWidth + 'px';
     }else{
       sidebarBox2.classList.remove('flat');
       sidebarBox2.classList.add('fold');
       sidebarBox2.classList.remove('sidebarBoxV');
       sidebar2.classList.remove('sidebarV');
-      main2Box.style.marginRight = '0';
+      mainHBox.style.marginRight = '0';
     }
   }
 }

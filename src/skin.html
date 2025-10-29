@@ -35,17 +35,17 @@
 {% include "skin-comps/frame/header.html" %}
 
 <!--# 메인영역1 -->
-<div id="main1">
+<div id="mainV">
 {% include "skin-comps/frame/totop.html" %}
 
   <!--## 메인영역2 -->
-  <!-- main2Box-main2 이중으로 된 이유: (스타일) main2와 main2Box는 가로크기가 같지 않고 main2를 가운데 놓으려고. -->
-  <div id="main2Box"><div id="main2">
+  <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainH와 mainHBox는 가로크기가 같지 않고 mainH를 가운데 놓으려고. -->
+  <div id="mainHBox"><div id="mainH">
 
 {% include "skin-comps/최근공지/_.html" %}
 
     <!--### 메인 -->
-    <section id="main">
+    <main id="main">
 {% include "skin-comps/main/홈커버/main.html" %}
 {% include "skin-comps/main/페이지페이지.html" %}
 {% include "skin-comps/main/게시글/공지페이지.html" %}
@@ -55,7 +55,7 @@
 {% include "skin-comps/main/댓글과방명록/방명록.html" %}
 {% include "skin-comps/main/페이징/_.html" %}
 
-    </section><!-- 메인 ###-->
+    </main><!-- 메인 ###-->
 
     <!--### 하단 광고 -->
     <div id="under">[##_revenue_list_lower_##]</div>

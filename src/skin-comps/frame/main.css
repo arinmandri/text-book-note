@@ -1,13 +1,13 @@
 
 /**# 메인영역1
-메인영역1 div#main1
+메인영역1 div#mainV
 │
 ├사이드바상자1 div#sidebarBox1.sidebarBox.sidebarBoxV
 │├사이드바1 aside#sidebar1.sidebar.sidebarV
 │└펼접버튼 button.sidebarBtn
 │
-├메인영역2상자 div#main2Box
-│└메인영역2 div#main2
+├메인영역2상자 div#mainHBox
+│└메인영역2 div#mainH
 │　├최근공지 div#recentNotice
 │　├메인 main#main
 │　│└(페이지마다 다른 내용물들)
@@ -18,12 +18,12 @@
 　├사이드바2 aside#sidebar2.sidebar.sidebarV
 　└사이드바2리모콘 div#sidebar2Remocon
 */
-#main1 {
+#mainV {
   position: relative;
   width: 100%;
   padding-bottom: 20px;
 }
-#main2 {
+#mainH {
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -31,7 +31,7 @@
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {
-  #main2 {
+  #mainH {
     overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
   }
 }

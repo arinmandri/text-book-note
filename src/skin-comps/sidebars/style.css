@@ -29,7 +29,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 .sidebar::-webkit-scrollbar {/* Chrome, Edge 등 스크롤바 숨기기 */
   display: none;
 }
-#main2 {
+#mainH {
   margin: 0 auto;
 }
 
