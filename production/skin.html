@@ -356,29 +356,25 @@ function setSettingFixCbox( settingName, checked ){
   </div>
 </header>
 
-<div id="mainV">
-<div style="
-    position: sticky;
+<div id="totopBox" style="
+    position: fixed;
     top: 0px;
-    height: 40px;
+    right: 100px;
+    overflow: hidden;
+    width: 26px;
+    height: 0px;
+    transition: height 0.3s;
     z-index: 100;
   ">
-  <div id="totopBox" style="
-      position: relative;
-      overflow: hidden;
-      height: 0px;
-      transition: height 0.3s;
-    ">
-    <svg onclick="window.scrollTo(0, 0);" width="26px" height="40px" style="
-        position: absolute;
-        top: 0;
-        right: 100px;
-        cursor: pointer;
-        ">
-      <polygon points="0,0 26,0 26,40 13,27 0,40" fill="var(--pointCol)" fill-opacity="0.6 " />
-    </svg>
-  </div>
+  <svg onclick="window.scrollTo(0, 0);"
+      width="26px"
+      height="40px"
+      style="cursor: pointer;">
+    <polygon points="0,0 26,0 26,40 13,27 0,40" fill="var(--pointCol)" fill-opacity="0.6 " />
+  </svg>
 </div>
+
+<div id="mainV">
 
   <!-- mainHBox-mainH 이중으로 된 이유: (스타일) mainHBox: 좌우 사이드바 상태에 따라 좌우 여백 / mainH: Box 안에서 가운데로 -->
   <div id="mainHBox"><div id="mainH">
@@ -1968,7 +1964,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const y = window.scrollY || 0;
 
     if      ( y < lastY ) {
-      totopBox.style.height = '40px';
+      totopBox.style.height = ( y > window.innerHeight/2 ) ? '40px' : '0px';
       sidebarBtnBox1.classList.remove('hideByScrolling');
     }
     else if ( y > lastY ) {

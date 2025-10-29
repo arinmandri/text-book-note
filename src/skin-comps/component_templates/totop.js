@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const y = window.scrollY || 0;
 
     if      ( y < lastY ) {
-      totopBox.style.height = '40px';
+      totopBox.style.height = ( y > window.innerHeight/2 ) ? '40px' : '0px';
       sidebarBtnBox1.classList.remove('hideByScrolling');
     }
     else if ( y > lastY ) {
