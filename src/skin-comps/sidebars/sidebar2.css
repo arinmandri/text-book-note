@@ -50,9 +50,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebarBox2.fold > #sidebar2 > *:not(.open) {
   display: none;
 }
-#sidebarBox2.open > #sidebar2 > *:not(:first-child) {
-  margin-top: 20px;
-}
 #sidebarBox2.fold #sidebar2Remocon .bubbleBtn {
   display: inline-block;
   padding: 6px 10px;
@@ -81,7 +78,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   }
 }
 
-#sidebar2 > :first-child {
+#sidebarBox2.flat #sidebar2 > :first-child {
   margin-top: 50px;
 }
 #sidebar2 > * {
