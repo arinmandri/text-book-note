@@ -413,6 +413,7 @@ header > .namecard .blogLinks img {
 }
 #upperbar {
   padding-left: 30px;
+  padding-right: 15px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -423,7 +424,7 @@ header > .namecard .blogLinks img {
 }
 
 #blogMenu a {
-  margin: 0 5px;
+  margin: 0 5px 5px 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-left-width: 1px;
@@ -470,6 +471,9 @@ body:not(.theme-dark) #blogMenu > ul > * > * {
   background-color: var(--listBack);
   font-size: 120%;
   text-align: right;
+}
+#blogSearchForm:not(.open) #blogSearchInput {
+  display: none;
 }
 footer {
   border-top-width: 9px;
