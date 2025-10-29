@@ -1,6 +1,6 @@
 #upperbar {
   padding-left: 30px;
-  padding-right: 15px;
+  padding-right: 7%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -10,6 +10,9 @@
   display: inline-block;
 }
 
+#blogMenu {
+  vertical-align: top;
+}
 #blogMenu a {
   margin: 0 5px 5px 0;
   border-bottom-left-radius: 5px;
@@ -48,17 +51,19 @@ body:not(.theme-dark) #blogMenu > ul > * > * {
 }
 
 #blogSearch {
-  padding: 10px;
   margin-left: auto;
+}
+#blogSearch.open {
+  padding: 5px;
 }
 #blogSearch input {
   padding: 4px;
   border-radius: 5px;
   background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
-  font-size: 120%;
+  font-size: 110%;
   text-align: right;
 }
-#blogSearchForm:not(.open) #blogSearchInput {
+#blogSearch:not(.open) #blogSearchInput {
   display: none;
 }

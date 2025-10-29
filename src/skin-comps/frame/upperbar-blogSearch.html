@@ -1,5 +1,5 @@
 <div id="blogSearch">
-  <form id="blogSearchForm" onsubmit="return false;"><s_search>
+  <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
       name="[##_search_name_##]"
@@ -14,8 +14,8 @@
           vertical-align: middle;" />
     <button type="button"
       onclick="
-        if( !document.getElementById('blogSearchForm').classList.contains('open') ){
-          document.getElementById('blogSearchForm').classList.add('open')
+        if( !document.getElementById('blogSearch').classList.contains('open') ){
+          document.getElementById('blogSearch').classList.add('open')
         }else {
             if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
         }"
