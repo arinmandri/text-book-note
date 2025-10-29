@@ -418,7 +418,7 @@ header > .namecard .blogLinks img {
   justify-content: space-between;
   align-items: flex-start;
 }
-#upperbar * {
+#upperbar *:not(script) {
   display: inline-block;
 }
 
