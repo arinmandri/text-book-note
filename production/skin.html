@@ -1572,9 +1572,32 @@ document.addEventListener('DOMContentLoaded', function(){
 <div class="sidebar_elementMain settings">
 <div class="settingForm darkmode">
   <input class="settingCore" type="hidden" name="darkmode" onchange="onchangeDarkmode(this)" oninvalid="setDefaultDarkmode(this)">
-  빛깔: <button id="darkmodeBtn" class="settingAction toggle">&#x2713;</button>
+  빛깔:
+    <label class="option light"
+        style="
+          background-color:[##_var_listBack_light_##];
+          color: [##_var_baseTextCol_light_##];"
+      ><input type="radio" id="darkmodeBtn-light"
+          name="darkmode"
+          class="optionRadio settingAction clickValue"
+          value="false"
+      />해
+    </label>
+    <label class="option dark"
+        style="
+          background-color:[##_var_listBack_dark_##];
+          color: [##_var_baseTextCol_dark_##];"
+      ><input type="radio" id="darkmodeBtn-dark"
+          name="darkmode"
+          class="optionRadio settingAction clickValue"
+          value="true"
+      />검
+    </label>
   <label><input type="checkbox" class="fixCbox" oninvalid="setDefaultDarkmode()" />굄</label>
   <script type="text/javascript">
+    const darkmodeBtn_light = document.getElementById('darkmodeBtn-light');
+    const darkmodeBtn_dark  = document.getElementById('darkmodeBtn-dark');
+
     function onchangeDarkmode( settingCore ){
       setDarkmode( settingCore );
       setSettingFixCbox( settingCore.name, true );
@@ -1588,10 +1611,12 @@ document.addEventListener('DOMContentLoaded', function(){
         document.body.classList.add('theme-dark');
         document.body.classList.remove('theme-light');
         document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('darkmodeBtn-dark').checked = true;
       } else {
         document.body.classList.add('theme-light');
         document.body.classList.remove('theme-dark');
         document.documentElement.setAttribute('data-theme', 'light');
+        document.getElementById('darkmodeBtn-light').checked = true;
       }
     }
 

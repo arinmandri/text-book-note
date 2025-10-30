@@ -2,17 +2,25 @@
 .sidebar_elementMain.settings > * {
   margin: 15px 8px;
 }
-#darkmodeBtn {
-  width: 1.1em;
-  height: 1.1em;
-  border-width: 2px;
-  border-radius: 10px;
-  font-size: 360%;
-  color: {{ var.defaultColor.pointCol }};
-  color: var(--pointCol);
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
-}
 .fontsizeBtn {
   padding: 7px;
+}
+
+.settingForm.darkmode .option {
+  margin: 3px;
+  padding: 2px;
+  border-width: 2px;
+  border-radius: 10px 4px 4px 4px;
+  font-size: 120%;
+}
+.settingForm.darkmode .optionRadio {
+  appearance: none;
+}
+.settingForm.darkmode .optionRadio::before {
+  content: '\2713';
+}
+.settingForm.darkmode .optionRadio:checked {
+  color: var(--pointCol);
+  font-size: 150%;
+  font-weight: bold;
 }
