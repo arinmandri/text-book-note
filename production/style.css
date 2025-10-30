@@ -874,6 +874,10 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   right: 0px;
   z-index: 20;
   padding-right: 14px;
+  transition: transform 0.3s;
+}
+#sidebarBox2.fold:not(.open) #sidebar2Remocon.hideByScrolling {
+  transform: translate(0, 100%);
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
   margin: 0 6px 6px 0;

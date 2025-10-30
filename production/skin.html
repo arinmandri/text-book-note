@@ -1955,6 +1955,7 @@ function refreshSidebarVStatus(){
 document.addEventListener('DOMContentLoaded', function () {
   const totopBox = document.getElementById('totopBox');
   const sidebarBtnBox1 = document.getElementById('sidebarBtnBox1');
+  const sidebar2Remocon = document.getElementById('sidebar2Remocon');
 
   let lastY = window.scrollY || 0;
   window.addEventListener('scroll', function () {
@@ -1963,10 +1964,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if      ( y < lastY ) {
       totopBox.style.height = ( y > window.innerHeight/2 ) ? '40px' : '0px';
       sidebarBtnBox1.classList.remove('hideByScrolling');
+      sidebar2Remocon.classList.remove('hideByScrolling');
     }
     else if ( y > lastY ) {
       totopBox.style.height = '0px';
       sidebarBtnBox1.classList.add('hideByScrolling');
+      sidebar2Remocon.classList.add('hideByScrolling');
     }
 
     lastY = y;
