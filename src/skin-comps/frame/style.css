@@ -8,6 +8,7 @@ body
 └푸터 footer
 */
 {% include "skin-comps/frame/background.css" %}
+{% include "skin-comps/frame/blogSearch.css" %}
 {% include "skin-comps/frame/header.css" %}
 {% include "skin-comps/frame/upperbar.css" %}
 {% include "skin-comps/frame/footer.css" %}

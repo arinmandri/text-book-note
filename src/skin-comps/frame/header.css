@@ -1,7 +1,7 @@
 /**# 헤더, 푸터 */
 header {
   margin-right: 2%;
-  border-bottom-right-radius: 60px;
+  border-bottom-right-radius: 50px;
   text-align: center;
   background-color: {{ var.defaultColor.frameBack }};
   background-color: var(--frameBack);

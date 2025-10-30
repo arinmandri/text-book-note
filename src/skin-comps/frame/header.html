@@ -1,5 +1,13 @@
 <!--# 헤더 -->
 <header class="home-none-[##_var_hideAtHome_Header_##]">
+  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="blogSearch">
+{% with
+  size="32px",
+  color="var(--frameFore)"
+%}
+{% include "skin-comps/component_templates/search-icon.svg" %}
+{% endwith %}
+  </button>
   <a class="alt title" href="/">[##_title_##]</a>
 
   <div class="namecard">

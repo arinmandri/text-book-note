@@ -1,0 +1,41 @@
+
+#blogSearch:not(.open) {
+  display: none;
+}
+#blogSearch.open {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0008;
+  z-index: 100;
+}
+
+#blogSearch {
+  backdrop-filter: blur(3px);
+  text-align: center;
+  color: white;
+  font-size: 200%;
+}
+#blogSearch .close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+#blogSearch form {
+  margin-top: 40vh;
+}
+
+#blogSearchInput {
+  padding: 4px 8px;
+  border-bottom: 4px solid white;
+  border-radius: 5px;
+  background-color: #3338;
+  text-align: right;
+}
+
+#blogSearch-openBtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 6px;
+}

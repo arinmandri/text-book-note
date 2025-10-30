@@ -1,4 +1,5 @@
 <div id="blogSearch">
+  <button class="close open-toggleBtn" data-opentarget="blogSearch">&#x2715;</button>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -25,7 +26,7 @@
       >
 {% with
   size="1.2em",
-  color="var(--baseTextCol)"
+  color="#FFFFFF"
 %}
 {% include "skin-comps/component_templates/search-icon.svg" %}
 {% endwith %}

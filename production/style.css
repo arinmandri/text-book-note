@@ -80,10 +80,8 @@ label {
 }
 button, input, textarea {
   font-size: inherit;
-  background-color: #FFFFFF;
-  background-color: var(--backCol);
-  color: #333333;
-  color: var(--baseTextCol);
+  background-color: transparent;
+  color: inherit;
   font-family: inherit;
 }
 button {
@@ -334,10 +332,51 @@ body:not(.theme-dark) .backImg.dark {
   background-position: bottom 0px right 0px;
   background-repeat: no-repeat;
 }
+
+#blogSearch:not(.open) {
+  display: none;
+}
+#blogSearch.open {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0008;
+  z-index: 100;
+}
+
+#blogSearch {
+  backdrop-filter: blur(3px);
+  text-align: center;
+  color: white;
+  font-size: 200%;
+}
+#blogSearch .close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+#blogSearch form {
+  margin-top: 40vh;
+}
+
+#blogSearchInput {
+  padding: 4px 8px;
+  border-bottom: 4px solid white;
+  border-radius: 5px;
+  background-color: #3338;
+  text-align: right;
+}
+
+#blogSearch-openBtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 6px;
+}
 /**# 헤더, 푸터 */
 header {
   margin-right: 2%;
-  border-bottom-right-radius: 60px;
+  border-bottom-right-radius: 50px;
   text-align: center;
   background-color: #111144;
   background-color: var(--frameBack);
@@ -461,24 +500,6 @@ body:not(.theme-dark) #blogMenu > ul > * > * {
 #blogMenu > ul > *:nth-child(6n) > * {
   background-color: hsl(100 100% 50% / 20%);
   border-color: hsl(100 100% 50% / 50%);
-}
-
-#blogSearch {
-  margin-left: auto;
-}
-#blogSearch.open {
-  padding: 5px;
-}
-#blogSearch input {
-  padding: 4px;
-  border-radius: 5px;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
-  font-size: 110%;
-  text-align: right;
-}
-#blogSearch:not(.open) #blogSearchInput {
-  display: none;
 }
 footer {
   border-top-width: 9px;

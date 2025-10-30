@@ -49,21 +49,3 @@ body:not(.theme-dark) #blogMenu > ul > * > * {
   background-color: hsl(100 100% 50% / 20%);
   border-color: hsl(100 100% 50% / 50%);
 }
-
-#blogSearch {
-  margin-left: auto;
-}
-#blogSearch.open {
-  padding: 5px;
-}
-#blogSearch input {
-  padding: 4px;
-  border-radius: 5px;
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
-  font-size: 110%;
-  text-align: right;
-}
-#blogSearch:not(.open) #blogSearchInput {
-  display: none;
-}

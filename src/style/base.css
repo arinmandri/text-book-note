@@ -20,10 +20,8 @@ label {
 }
 button, input, textarea {
   font-size: inherit;
-  background-color: {{ var.defaultColor.backCol }};
-  background-color: var(--backCol);
-  color: {{ var.defaultColor.baseTextCol }};
-  color: var(--baseTextCol);
+  background-color: transparent;
+  color: inherit;
   font-family: inherit;
 }
 button {

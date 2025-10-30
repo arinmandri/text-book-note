@@ -334,8 +334,50 @@ function setSettingFixCbox( settingName, checked ){
   <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
 </div>
 
+<div id="blogSearch">
+  <button class="close open-toggleBtn" data-opentarget="blogSearch">&#x2715;</button>
+  <form onsubmit="return false;"><s_search>
+    <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
+    <input id="blogSearchInput" type="text"
+      name="[##_search_name_##]"
+      value="[##_search_text_##]"
+      onkeypress="if( event.keyCode == 13 ){
+        if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
+      }"
+      placeholder="블로그에서 검색"
+      autocomplete=off
+      size="12",
+      style="
+          vertical-align: middle;" />
+    <button type="button"
+      onclick="
+        if( !document.getElementById('blogSearch').classList.contains('open') ){
+          document.getElementById('blogSearch').classList.add('open')
+        }else {
+            if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
+        }"
+      style="
+          font-size: 150%;
+          vertical-align: middle;"
+      >
+
+<svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C12.8487 19 14.551 18.3729 15.9056 17.3199L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L17.3199 15.9056C18.3729 14.551 19 12.8487 19 11C19 6.58172 15.4183 3 11 3ZM5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11Z" fill="#FFFFFF"/>
+</svg>
+
+    </button>
+  </s_search></form>
+</div>
+
 <!--# 헤더 -->
 <header class="home-none-[##_var_hideAtHome_Header_##]">
+  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="blogSearch">
+
+<svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C12.8487 19 14.551 18.3729 15.9056 17.3199L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L17.3199 15.9056C18.3729 14.551 19 12.8487 19 11C19 6.58172 15.4183 3 11 3ZM5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11Z" fill="var(--frameFore)"/>
+</svg>
+
+  </button>
   <a class="alt title" href="/">[##_title_##]</a>
 
   <div class="namecard">
@@ -402,39 +444,6 @@ function setSettingFixCbox( settingName, checked ){
   menuEl.appendChild(li_manage);
   menuEl.appendChild(li_write);
 })()</script>
-<div id="blogSearch">
-  <form onsubmit="return false;"><s_search>
-    <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
-    <input id="blogSearchInput" type="text"
-      name="[##_search_name_##]"
-      value="[##_search_text_##]"
-      onkeypress="if( event.keyCode == 13 ){
-        if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
-      }"
-      placeholder="블로그에서 검색"
-      autocomplete=off
-      size="12",
-      style="
-          vertical-align: middle;" />
-    <button type="button"
-      onclick="
-        if( !document.getElementById('blogSearch').classList.contains('open') ){
-          document.getElementById('blogSearch').classList.add('open')
-        }else {
-            if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
-        }"
-      style="
-          font-size: 150%;
-          vertical-align: middle;"
-      >
-
-<svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C12.8487 19 14.551 18.3729 15.9056 17.3199L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L17.3199 15.9056C18.3729 14.551 19 12.8487 19 11C19 6.58172 15.4183 3 11 3ZM5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11Z" fill="var(--baseTextCol)"/>
-</svg>
-
-    </button>
-  </s_search></form>
-</div>
 </div>
 
 <s_rct_notice><!--### 최근공지 -->
