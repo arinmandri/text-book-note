@@ -458,7 +458,7 @@ header > .namecard .blogLinks img {
   justify-content: space-between;
   align-items: flex-start;
 }
-#upperbar *:not(script) {
+#upperbar :not(script) {
   display: inline-block;
 }
 
@@ -477,29 +477,29 @@ header > .namecard .blogLinks img {
 body:not(.theme-dark) #blogMenu > ul > * > * {
   border-color: transparent;
 }
-#blogMenu > ul > *:nth-child(6n+1) > * {
-  background-color: hsl(220 100% 50% / 20%);
-  border-color: hsl(220 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n) > * {
+  background-color: hsl(30, 100%, 50%, 20%);
+  border-color:     hsl(30, 100%, 50%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+2) > * {
-  background-color: hsl(260 100% 60% / 20%);
-  border-color: hsl(260 100% 60% / 50%);
+#blogMenu > ul > :nth-child(6n+5) > * {
+  background-color: hsl(60, 100%, 40%, 20%);
+  border-color:     hsl(60, 100%, 40%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+3) > * {
-  background-color: hsl(310 100% 50% / 20%);
-  border-color: hsl(310 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+4) > * {
+  background-color: hsl(110, 90%, 45%, 20%);
+  border-color:     hsl(110, 90%, 45%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+4) > * {
-  background-color: hsl(17 100% 50% / 20%);
-  border-color: hsl(17 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+3) > * {
+  background-color: hsl(200, 100%, 50%, 20%);
+  border-color:     hsl(200, 100%, 50%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+5) > * {
-  background-color: hsl(44 100% 50% / 20%);
-  border-color: hsl(44 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+2) > * {
+  background-color: hsl(260, 100%, 70%, 20%);
+  border-color:     hsl(260, 100%, 70%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n) > * {
-  background-color: hsl(100 100% 50% / 20%);
-  border-color: hsl(100 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+1) > * {
+  background-color: hsl(315, 90%, 50%, 20%);
+  border-color:     hsl(315, 90%, 50%, 50%);
 }
 footer {
   border-top-width: 9px;
@@ -2315,7 +2315,7 @@ ul#postList ─ li 여럿
   border-width: 0px;
   transition-duration: 0.5s;
 }
-#postList.postit > *:hover .tape {/* 마우스 올린 항목 장식 늘어남 */
+#postList.postit > :hover .tape {/* 마우스 올린 항목 장식 늘어남 */
   width: 52px;
   left: -50px;
   transition-duration: 0.1s;
@@ -2324,14 +2324,14 @@ ul#postList ─ li 여럿
   padding: 20px 10px;
 }
 /* 왼쪽장식 무지개 색 */
-#postList.postit > *:nth-child(8n+1) .tape {background-color: hsl(10, 100%, 60%, 50%);}
-#postList.postit > *:nth-child(8n+2) .tape {background-color: hsl(45, 100%, 50%, 50%);}
-#postList.postit > *:nth-child(8n+3) .tape {background-color: hsl(62, 100%, 48%, 50%);}
-#postList.postit > *:nth-child(8n+4) .tape {background-color: hsl(90, 100%, 49%, 50%);}
-#postList.postit > *:nth-child(8n+5) .tape {background-color: hsl(185, 100%, 60%, 50%);}
-#postList.postit > *:nth-child(8n+6) .tape {background-color: hsl(230, 100%, 70%, 50%);}
-#postList.postit > *:nth-child(8n+7) .tape {background-color: hsl(266, 100%, 55%, 50%);}
-#postList.postit > *:nth-child(8n)   .tape {background-color: hsl(315, 100%, 50%, 50%);}
+#postList.postit > :nth-child(8n+1) .tape {background-color: hsl(8,   100%, 60%, 50%);}
+#postList.postit > :nth-child(8n+2) .tape {background-color: hsl(38,  100%, 50%, 50%);}
+#postList.postit > :nth-child(8n+3) .tape {background-color: hsl(58,  100%, 44%, 50%);}
+#postList.postit > :nth-child(8n+4) .tape {background-color: hsl(90,   95%, 45%, 50%);}
+#postList.postit > :nth-child(8n+5) .tape {background-color: hsl(185,  90%, 45%, 50%);}
+#postList.postit > :nth-child(8n+6) .tape {background-color: hsl(230,  80%, 65%, 50%);}
+#postList.postit > :nth-child(8n+7) .tape {background-color: hsl(270,  90%, 55%, 50%);}
+#postList.postit > :nth-child(8n)   .tape {background-color: hsl(305,  90%, 50%, 50%);}
 #postList.postit .itemBody {/* 날짜 위치: 바닥 오른쪽 */
   position: absolute;
   bottom: 1px;

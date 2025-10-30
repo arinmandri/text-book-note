@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-#upperbar *:not(script) {
+#upperbar :not(script) {
   display: inline-block;
 }
 
@@ -25,27 +25,27 @@
 body:not(.theme-dark) #blogMenu > ul > * > * {
   border-color: transparent;
 }
-#blogMenu > ul > *:nth-child(6n+1) > * {
-  background-color: hsl(220 100% 50% / 20%);
-  border-color: hsl(220 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n) > * {
+  background-color: hsl(30, 100%, 50%, 20%);
+  border-color:     hsl(30, 100%, 50%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+2) > * {
-  background-color: hsl(260 100% 60% / 20%);
-  border-color: hsl(260 100% 60% / 50%);
+#blogMenu > ul > :nth-child(6n+5) > * {
+  background-color: hsl(60, 100%, 40%, 20%);
+  border-color:     hsl(60, 100%, 40%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+3) > * {
-  background-color: hsl(310 100% 50% / 20%);
-  border-color: hsl(310 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+4) > * {
+  background-color: hsl(110, 90%, 45%, 20%);
+  border-color:     hsl(110, 90%, 45%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+4) > * {
-  background-color: hsl(17 100% 50% / 20%);
-  border-color: hsl(17 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+3) > * {
+  background-color: hsl(200, 100%, 50%, 20%);
+  border-color:     hsl(200, 100%, 50%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n+5) > * {
-  background-color: hsl(44 100% 50% / 20%);
-  border-color: hsl(44 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+2) > * {
+  background-color: hsl(260, 100%, 70%, 20%);
+  border-color:     hsl(260, 100%, 70%, 50%);
 }
-#blogMenu > ul > *:nth-child(6n) > * {
-  background-color: hsl(100 100% 50% / 20%);
-  border-color: hsl(100 100% 50% / 50%);
+#blogMenu > ul > :nth-child(6n+1) > * {
+  background-color: hsl(315, 90%, 50%, 20%);
+  border-color:     hsl(315, 90%, 50%, 50%);
 }
