@@ -17,6 +17,7 @@
   height: 100%;
   padding: 5vh 0 10px 0;
   transition: right 0.3s;
+  pointer-events: none;/* 컨테이너는 투명배경이므로 클릭 무시 */
 }
 #sidebarBox1.fold:not(.open) > #sidebarBtnBox1.hideByScrolling {
   right: 0px;
@@ -24,7 +25,7 @@
 #sidebarBox1.flat > #sidebarBtnBox1 {
   display: none;
 }
-#sidebarBox1 .sidebarBtn {
+#sidebarBtnBox1 .sidebarBtn {
   position: fixed;/* 호환 */
   position: sticky;
   display: block;
@@ -34,6 +35,7 @@
   top: 5vh;
   border-radius: 0 12px 12px 0;
   border-left-width: 0;
+  pointer-events: auto;
 }
 #sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
   left: 300px;
@@ -42,6 +44,9 @@
   color: black;
 }
 
+#sidebar1 {
+  text-align: center;
+}
 #sidebar1 > :first-child {
   margin-top: 20px;
 }

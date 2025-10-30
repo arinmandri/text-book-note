@@ -723,7 +723,7 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
 접힘 상태에서 사용자 동작에 따라 펼침-접힘 상태 전환.
 html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에 따라 스타일링.
 */
-.sidebarBox.open .sidebar ,
+.sidebarBox.fold .sidebar ,
 .sidebar:hover ,
 #sidebar3 {
   background-color: #FFFFFF;
@@ -766,6 +766,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   height: 100%;
   padding: 5vh 0 10px 0;
   transition: right 0.3s;
+  pointer-events: none;/* 컨테이너는 투명배경이므로 클릭 무시 */
 }
 #sidebarBox1.fold:not(.open) > #sidebarBtnBox1.hideByScrolling {
   right: 0px;
@@ -773,7 +774,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 #sidebarBox1.flat > #sidebarBtnBox1 {
   display: none;
 }
-#sidebarBox1 .sidebarBtn {
+#sidebarBtnBox1 .sidebarBtn {
   position: fixed;/* 호환 */
   position: sticky;
   display: block;
@@ -783,6 +784,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   top: 5vh;
   border-radius: 0 12px 12px 0;
   border-left-width: 0;
+  pointer-events: auto;
 }
 #sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
   left: 300px;
@@ -791,6 +793,9 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   color: black;
 }
 
+#sidebar1 {
+  text-align: center;
+}
 #sidebar1 > :first-child {
   margin-top: 20px;
 }
@@ -798,6 +803,12 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   margin-bottom: 50px;/* 내부 모듈들 사이 여백 */
 }
 /**### 사이드바2 */
+#sidebarBox2 {
+  pointer-events: none;/* 컨테이너는 투명배경이므로 클릭 무시 */
+}
+#sidebarBox2 > * {
+  pointer-events: auto;
+}
 /* 넓은 화면: 펴진채 */
 #sidebarBox2.sidebarBoxV {
   right: 0px;
@@ -823,17 +834,19 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   right: 0;
   z-index: 20;
   margin-left: auto;
-  width: 350px;
+  width: 50%;
+  min-width: 350px;
   max-height: 60vh;
   overflow: scroll;
-  text-align: center;
+  text-align: right;
 }
 #sidebarBox2.fold > #sidebar2 {
   position: relative;
-  margin: 20px 23px 0 23px;
+  margin: 20px 23px 10px auto;
+  height: unset;
+  width: 300px;
   border-width: 2px;
   border-radius: 8px;
-  height: unset;
   padding: 10px 0px;
   box-shadow: 0px 0px 20px #0004;
   background-color: #FFFFFF;
@@ -855,12 +868,12 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #sidebarBox2.fold #sidebar2Remocon {
   position: fixed;/*호환*/
-  position: sticky;
+  position: sticky;/* 펼접 상태에서 폈을 때 아이템이 길어도 버튼은 항상 그자리 */
+  display: inline-block;
   bottom: 0px;
   right: 0px;
   z-index: 20;
   padding-right: 14px;
-  text-align: right;
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
   margin: 0 6px 6px 0;
@@ -877,6 +890,9 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   }
 }
 
+#sidebar2 {
+  text-align: center;
+}
 #sidebarBox2.flat #sidebar2 > :first-child {
   margin-top: 50px;
 }
@@ -894,7 +910,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   height: 100%;
   min-height: 100vh;
   /* 내부 */
-  text-align: center;
   transition: left 0.12s ease-out, width 0.12s ease-out;
   overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
 }

@@ -1,4 +1,11 @@
 
+/*
+사이드바1, 사이드바2 의 상태
+- 접힘 .fold
+- 펼침 .fold.open
+- 열림 .flat
+*/
+
 const maxWidthOfmainH = getTskinOptionNumVal( '[##_var_maxWidthOfmainH_##]', 1000, 1500 );
 document.getElementById('mainH').style.maxWidth = maxWidthOfmainH + 'px';
 

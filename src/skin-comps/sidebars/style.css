@@ -9,7 +9,7 @@
 접힘 상태에서 사용자 동작에 따라 펼침-접힘 상태 전환.
 html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에 따라 스타일링.
 */
-.sidebarBox.open .sidebar ,
+.sidebarBox.fold .sidebar ,
 .sidebar:hover ,
 #sidebar3 {
   background-color: {{ var.defaultColor.backCol }};

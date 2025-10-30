@@ -1,4 +1,10 @@
 /**### 사이드바2 */
+#sidebarBox2 {
+  pointer-events: none;/* 컨테이너는 투명배경이므로 클릭 무시 */
+}
+#sidebarBox2 > * {
+  pointer-events: auto;
+}
 /* 넓은 화면: 펴진채 */
 #sidebarBox2.sidebarBoxV {
   right: 0px;
@@ -24,17 +30,19 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   right: 0;
   z-index: 20;
   margin-left: auto;
-  width: 350px;
+  width: 50%;
+  min-width: 350px;
   max-height: 60vh;
   overflow: scroll;
-  text-align: center;
+  text-align: right;
 }
 #sidebarBox2.fold > #sidebar2 {
   position: relative;
-  margin: 20px 23px 0 23px;
+  margin: 20px 23px 10px auto;
+  height: unset;
+  width: 300px;
   border-width: 2px;
   border-radius: 8px;
-  height: unset;
   padding: 10px 0px;
   box-shadow: 0px 0px 20px #0004;
   background-color: {{ var.defaultColor.backCol }};
@@ -56,12 +64,12 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 #sidebarBox2.fold #sidebar2Remocon {
   position: fixed;/*호환*/
-  position: sticky;
+  position: sticky;/* 펼접 상태에서 폈을 때 아이템이 길어도 버튼은 항상 그자리 */
+  display: inline-block;
   bottom: 0px;
   right: 0px;
   z-index: 20;
   padding-right: 14px;
-  text-align: right;
 }
 #sidebarBox2.fold #sidebar2Remocon > * {
   margin: 0 6px 6px 0;
@@ -78,6 +86,9 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   }
 }
 
+#sidebar2 {
+  text-align: center;
+}
 #sidebarBox2.flat #sidebar2 > :first-child {
   margin-top: 50px;
 }

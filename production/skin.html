@@ -1378,7 +1378,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <s_sidebar_element><div class="sidebar_element datetime">
   <!-- 현재시각 -->
 <button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
-<div class="sidebar_elementMain">
+<div class="sidebar_elementMain _textCenter">
   <div style="position: relative; padding: 20px 0;">
     <!-- 시계 그림 -->
     <div style="position: absolute; top: -10px; width: 100%">
@@ -1803,6 +1803,13 @@ for( let ol of ols ){
 })()
 
 //
+/*
+사이드바1, 사이드바2 의 상태
+- 접힘 .fold
+- 펼침 .fold.open
+- 열림 .flat
+*/
+
 const maxWidthOfmainH = getTskinOptionNumVal( '[##_var_maxWidthOfmainH_##]', 1000, 1500 );
 document.getElementById('mainH').style.maxWidth = maxWidthOfmainH + 'px';
 
