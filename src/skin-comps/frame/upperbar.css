@@ -22,7 +22,7 @@
   border-bottom-width: 1px;
   padding: 4px 10px;
 }
-body.theme-light #blogMenu > ul > * > * {
+body.theme-light #blogMenu > ul > * > a {
   border-color: transparent;
 }
 #blogMenu > ul > :nth-child(6n) > a {
