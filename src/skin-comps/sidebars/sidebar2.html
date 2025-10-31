@@ -2,9 +2,13 @@
 <!--## 사이드바상자2 : 오른쪽 사이드바 영역 -->
 <div id="sidebarBox2" class="sidebarBox home-[##_var_home_sidebar2_##] fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
   <aside id="sidebar2" class="sidebar sidebarV"><s_sidebar>
-    {% include "skin-comps/sidebars/elements/현재시각.html" %}
-    {% include "skin-comps/sidebars/elements/본문목차.html" %}
-    {% include "skin-comps/sidebars/elements/인블로그설정.html" %}
+{% with
+  sidebaritems=['현재시각', '본문목차', '인블로그설정']
+%}
+{% for sidebaritem in sidebaritems %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem + ".html" %}
+{% endfor %}
+{% endwith %}
   </s_sidebar></aside>
   <div id="sidebar2Remocon"></div>
 </div><!-- 사이드바상자2 ##-->

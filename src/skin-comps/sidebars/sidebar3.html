@@ -2,11 +2,12 @@
 <!--### 사이드바3 -->
 <aside id="sidebar3" class="sidebar sidebarH home-none-[##_var_hideAtHome_sidebar3_##]">
   <s_sidebar>
-      {% include "skin-comps/sidebars/elements/랜덤태그.html" %}
-      {% include "skin-comps/sidebars/elements/인기글.html" %}
-      {% include "skin-comps/sidebars/elements/최근글.html" %}
-      {% include "skin-comps/sidebars/elements/최근댓글.html" %}
-      {% include "skin-comps/sidebars/elements/포스팅달력.html" %}
-      {% include "skin-comps/sidebars/elements/방문자수.html" %}
+{% with
+  sidebaritems=['랜덤태그', '인기글', '최근글', '최근댓글', '포스팅달력', '방문자수']
+%}
+{% for sidebaritem in sidebaritems %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem + ".html" %}
+{% endfor %}
+{% endwith %}
   </s_sidebar>
 </aside><!-- 사이드바3 ###-->
