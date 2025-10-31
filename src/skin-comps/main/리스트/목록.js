@@ -7,7 +7,7 @@
 {% endfor %}
 
   //// 썸네일 없으면 대체이미지
-  const noThumbnail = "[##_var_noThumbnail_##]" || "./images/noThumbnail-default.svg";
+  const noThumbnail = "[##_var_noThumbnail_##]" || "https://t1.daumcdn.net/tistory_admin/static/manage/images/r3/default_L.png";
 
   const thumbnails = document.querySelectorAll('#postList .thumbnail')
   for( let thumbnail of thumbnails ){
