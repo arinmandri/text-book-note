@@ -1,16 +1,6 @@
 /**### 최근공지 목록 */
-#recentNotice .pushpin {
-  position: absolute;
-  top: 8px;
-  right: 26px;
-}
 #recentNoticeListBox {
   margin: 20px 10px 20px auto;
-  max-width: 800px;
-  padding: 20px 60px 20px 20px;
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
-  text-align: right;
 }
 #recentNoticeListBox > ul {
   position: relative;

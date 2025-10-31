@@ -214,6 +214,20 @@ body.theme-dark .themeBtn {
   background-color: var(--listBack);
 }
 
+.noticeBoxStyle {
+  margin-left: auto;
+  max-width: 800px;
+  padding: 20px 60px 20px 20px;
+  background-color: #F4F4F4;
+  background-color: var(--listBack);
+  text-align: right;
+}
+.recentNotice .pushpin {
+  position: absolute;
+  top: -14px;
+  right: 15px;
+}
+
 .sectionTitle {
   margin-bottom: 52px;
   text-align: right;
@@ -613,22 +627,13 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
-  text-align: right;
-}
-#homecover .recentNotice .pushpin {
-  position: absolute;
-  top: -14px;
-  right: 15px;
 }
 #homecover .recentNotice ul {
   list-style: none;
 }
 #homecover .recentNotice li {
   margin: 10px 0;
-  padding: 20px 60px 20px 20px;
   list-style: none;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
 }
 
 .homecoverSection {
@@ -1217,18 +1222,8 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
 
 
 /**### 최근공지 목록 */
-#recentNotice .pushpin {
-  position: absolute;
-  top: 8px;
-  right: 26px;
-}
 #recentNoticeListBox {
   margin: 20px 10px 20px auto;
-  max-width: 800px;
-  padding: 20px 60px 20px 20px;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
-  text-align: right;
 }
 #recentNoticeListBox > ul {
   position: relative;
@@ -1303,10 +1298,6 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
 .noticePost {
   margin: 10px auto;
   max-width: 800px;
-  padding: 20px 60px 20px 20px;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
-  text-align: right;
 }
 
 /**### 메인 - 글보기 페이지 */

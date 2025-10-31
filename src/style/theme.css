@@ -39,6 +39,20 @@ body.theme-dark .themeBtn {
   background-color: var(--listBack);
 }
 
+.noticeBoxStyle {
+  margin-left: auto;
+  max-width: 800px;
+  padding: 20px 60px 20px 20px;
+  background-color: {{ var.defaultColor.listBack }};
+  background-color: var(--listBack);
+  text-align: right;
+}
+.recentNotice .pushpin {
+  position: absolute;
+  top: -14px;
+  right: 15px;
+}
+
 .sectionTitle {
   margin-bottom: 52px;
   text-align: right;

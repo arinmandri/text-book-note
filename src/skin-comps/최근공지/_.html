@@ -1,8 +1,7 @@
 <s_rct_notice><!--### 최근공지 -->
-  <div id="recentNotice" class="recentNotice home-none-1" style="position: relative">
-    <input type="hidden" name="hideNotice" value="false">
-{% include "skin-comps/component_templates/deco-pushpin.html" %}
-    <div id="recentNoticeListBox">
+  <div id="recentNotice" class="recentNotice home-none-1">
+    <div id="recentNoticeListBox" class="noticeBoxStyle" style="position: relative">
+      {% include "skin-comps/component_templates/deco-pushpin.html" %}
       <ul id="recentNoticeList">
         <s_rct_notice_rep><li>
           <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
@@ -10,9 +9,9 @@
       </ul>
     </div>
   </div><script type="text/javascript">
-    (function(){
-      const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
+    const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
 
+    (function(){
       if( rctNoticeList.length === 0 ){
         //// 최근공지 없으면 최근공지 상자 삭제
         document.getElementById('recentNotice').remove();

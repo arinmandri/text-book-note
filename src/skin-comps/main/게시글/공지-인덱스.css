@@ -1,8 +1,4 @@
 .noticePost {
   margin: 10px auto;
   max-width: 800px;
-  padding: 20px 60px 20px 20px;
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
-  text-align: right;
 }
