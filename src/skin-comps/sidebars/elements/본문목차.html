@@ -1,5 +1,5 @@
 {% extends "skin-comps/sidebars/elements/base.html" %}
-{% block additional_class %}bonmunContentsTable{% endblock %}
+{% block additional_class %}{{ sidebaritem.id }}{% endblock %}
 {% block content %}<!-- 본문 목차 -->
 <button class="bubbleBtn themeBtn">&#x2630;</button>
 <div class="sidebar_elementMain">
@@ -9,7 +9,7 @@
 <span class="caption">목차</span>
 <script>(function(){
   if( document.getElementById('tt-body-page') == null ){
-    document.querySelector('.sidebar_element.bonmunContentsTable').remove();
+    document.querySelector('.sidebar_element.{{ sidebaritem.id }}').remove();
   }else{// 게시글 페이지일 때만
     //// 본문 다 불러온 뒤에 목차 생성
     document.addEventListener('DOMContentLoaded', function(){

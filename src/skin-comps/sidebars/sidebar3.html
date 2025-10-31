@@ -3,10 +3,35 @@
 <aside id="sidebar3" class="sidebar sidebarH home-none-[##_var_hideAtHome_sidebar3_##]">
   <s_sidebar>
 {% with
-  sidebaritems=['랜덤태그', '인기글', '최근글', '최근댓글', '포스팅달력', '방문자수']
+  sidebaritems=[
+    {
+      'id': 'randomtag',
+      'name': '랜덤태그',
+    },
+    {
+      'id': 'popularpost',
+      'name': '인기글',
+    },
+    {
+      'id': 'recentpost',
+      'name': '최근글',
+    },
+    {
+      'id': 'recentcomment',
+      'name': '최근댓글',
+    },
+    {
+      'id': 'calendar',
+      'name': '포스팅달력',
+    },
+    {
+      'id': 'visitcount',
+      'name': '방문자수',
+    },
+  ]
 %}
 {% for sidebaritem in sidebaritems %}
-  {% include "skin-comps/sidebars/elements/" + sidebaritem + ".html" %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem.name + ".html" %}
 {% endfor %}
 {% endwith %}
   </s_sidebar>

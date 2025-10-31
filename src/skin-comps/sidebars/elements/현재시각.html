@@ -1,5 +1,5 @@
 {% extends "skin-comps/sidebars/elements/base.html" %}
-{% block additional_class %}datetime{% endblock %}
+{% block additional_class %}{{ sidebaritem.id }}{% endblock %}
 {% block content %}<!-- 현재시각 -->
 <button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
 <div class="sidebar_elementMain _textCenter">
@@ -35,7 +35,7 @@
   </div>
   <script>(function(){
     const dayList = ['일','월','화','수','목','금','토'];
-    const thisSidebarItem = document.querySelector('.sidebar_element.datetime');
+    const thisSidebarItem = document.querySelector('.sidebar_element.{{ sidebaritem.id }}');
     if( thisSidebarItem != null ){
       updateClock();
       updateClockRotation( new Date() );
