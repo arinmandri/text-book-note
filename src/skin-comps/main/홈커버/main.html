@@ -1,4 +1,7 @@
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
+
+{% include "skin-comps/main/홈커버/최근공지.html" %}
+
   <s_cover_rep>
 {% for cover_name, value in settings.homecover.items() %}
   {% include "skin-comps/main/홈커버/items/" + cover_name + ".html" %}

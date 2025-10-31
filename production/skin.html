@@ -478,20 +478,19 @@ function setSettingFixCbox( settingName, checked ){
       </ul>
     </div>
   </div><script type="text/javascript">
-    const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
+    (function(){
+      const rctNoticeList = document.querySelectorAll('#recentNoticeList li');
 
-    if( rctNoticeList.length === 0 ){
-      //// 최근공지 없으면 최근공지 상자 삭제
-      const els = document.getElementsByClassName('recentNotice');
-      for( let el of els ){
-        el.remove();
+      if( rctNoticeList.length === 0 ){
+        //// 최근공지 없으면 최근공지 상자 삭제
+        document.getElementById('recentNotice').remove();
+      }else{
+        rctNoticeList[0].classList.add('curr');
+        if( rctNoticeList.length >= 2 ){
+          setInterval(showNextItem, 5000);
+        }
       }
-    }else{
-      rctNoticeList[0].classList.add('curr');
-      if( rctNoticeList.length >= 2 ){
-        setInterval(showNextItem, 5000);
-      }
-    }
+    })();
 
     function showNextItem() {
       const prev = document.querySelector('#recentNoticeList li.prev');
@@ -515,6 +514,30 @@ function setSettingFixCbox( settingName, checked ){
     <!--### 메인 -->
     <main id="main">
 <s_cover_group><div id="homecover"><!--◆ 홈 커버 -->
+
+<s_rct_notice>
+  <div id="recentNotice-home" class="recentNotice" style="position: relative">
+    <svg class="pushpin" width="23px" height="45px">
+  <polygon points="0,0 23,0 19,25 23,30 0,30 4,25" fill="var(--pointCol)"/>
+  <polygon points="10,30 13,30 13,45 10,45" fill="var(--baseTextCol)"/>
+</svg>
+    <ul>
+      <s_rct_notice_rep><li>
+        <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+      </li></s_rct_notice_rep>
+    </ul>
+  </div><script type="text/javascript">
+    (function(){
+      const rctNoticeList = document.querySelectorAll('#recentNotice-home li');
+
+      if( rctNoticeList.length === 0 ){
+        //// 최근공지 없으면 최근공지 상자 삭제
+        document.getElementById('recentNotice-home').remove();
+      }
+    })();
+  </script>
+</s_rct_notice>
+
   <s_cover_rep>
 
   <s_cover name="menubar">

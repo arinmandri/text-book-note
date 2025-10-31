@@ -1,0 +1,19 @@
+<s_rct_notice>
+  <div id="recentNotice-home" class="recentNotice" style="position: relative">
+    {% include "skin-comps/component_templates/deco-pushpin.html" %}
+    <ul>
+      <s_rct_notice_rep><li>
+        <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+      </li></s_rct_notice_rep>
+    </ul>
+  </div><script type="text/javascript">
+    (function(){
+      const rctNoticeList = document.querySelectorAll('#recentNotice-home li');
+
+      if( rctNoticeList.length === 0 ){
+        //// 최근공지 없으면 최근공지 상자 삭제
+        document.getElementById('recentNotice-home').remove();
+      }
+    })();
+  </script>
+</s_rct_notice>
