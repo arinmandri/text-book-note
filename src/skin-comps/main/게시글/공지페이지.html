@@ -1,9 +1,9 @@
 <s_notice_rep><!--◆ 공지 페이지 -->
-  <div class="noticePost onlyOnPage-index">
+  <s_index_article_rep><div class="noticePost">
     <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
-  </div>
+  </div></s_index_article_rep>
 
-  <div class="onlyOnPage-page">
+  <s_permalink_article_rep><div>
 {% with
   type='notice',
   category_name='공지사항',
@@ -16,5 +16,5 @@
 
 {% include "skin-comps/main/댓글과방명록/댓글.html" %}
 
-  </div>
+  </div></s_permalink_article_rep>
 </s_notice_rep>
