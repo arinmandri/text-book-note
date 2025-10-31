@@ -1,11 +1,9 @@
 {% extends "skin-comps/sidebars/elements/base.html" %}
-{% block content %}<!-- 최근 글 -->
-<button class="bubbleBtn themeBtn">&#x26A1;</button>
-<ol class="sidebar_elementMain recentpost">
+{% block mainOpen %}<ol class="sidebar_elementMain {{ sidebaritem.id }}">{% endblock %}
+{% block main %}
   <s_rctps_rep><li class="line-out"><a href="[##_rctps_rep_link_##]" class="line-in">
     [##_rctps_rep_title_##]
     {# 댓글 수: [##_rctps_rep_rp_cnt_##] #}
   </a></li></s_rctps_rep>
-</ol>
-<span class="caption">최근 글</span>
 {% endblock %}
+{% block mainClose %}</ol>{% endblock %}

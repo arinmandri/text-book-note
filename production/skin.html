@@ -1319,10 +1319,15 @@ document.addEventListener('DOMContentLoaded', function(){
   <aside id="sidebar1" class="sidebar sidebarV"><s_sidebar>
 
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 카테고리 -->
-<button class="bubbleBtn themeBtn">&#x1F6AA;</button>
-<nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
+  <s_sidebar_element><!--  -->
+  <div class="sidebar_element category">
+    <button class="bubbleBtn themeBtn">&#x1F6AA;</button>
+    <nav id="navCat" class="sidebar_elementMain">
+      [##_category_list_##]
+    
+</nav>
+
+    
 <script type="text/javascript">
 
   (function () {
@@ -1387,7 +1392,9 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 </script>
 
-</div></s_sidebar_element>
+
+  </div>
+</s_sidebar_element>
 
 
   </s_sidebar></aside>
@@ -1401,10 +1408,11 @@ document.addEventListener('DOMContentLoaded', function(){
   <aside id="sidebar2" class="sidebar sidebarV"><s_sidebar>
 
 
-  <s_sidebar_element><div class="sidebar_element datetime">
-  <!-- 현재시각 -->
-<button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
-<div class="sidebar_elementMain _textCenter">
+  <s_sidebar_element><!-- 현재시각 -->
+  <div class="sidebar_element datetime">
+    <button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
+    <div class="sidebar_elementMain _textCenter">
+      
   <div style="position: relative; padding: 20px 0;">
     <!-- 시계 그림 -->
     <div style="position: absolute; top: -10px; width: 100%">
@@ -1435,63 +1443,70 @@ document.addEventListener('DOMContentLoaded', function(){
       <span class="second strong"></span>초
     </p>
   </div>
-  <script>(function(){
-    const dayList = ['일','월','화','수','목','금','토'];
-    const thisSidebarItem = document.querySelector('.sidebar_element.datetime');
-    if( thisSidebarItem != null ){
-      updateClock();
-      updateClockRotation( new Date() );
-      setTimeout( updateClock, 1000 );
 
-      //// 시계 업데이트
-      function updateClock() {
+    
+</div><script>(function(){
+  const dayList = ['일','월','화','수','목','금','토'];
+  const thisSidebarItem = document.querySelector('.sidebar_element.datetime');
+  if( thisSidebarItem != null ){
+    updateClock();
+    updateClockRotation( new Date() );
+    setTimeout( updateClock, 1000 );
 
-        const now = new Date();// 현재 시각
+    //// 시계 업데이트
+    function updateClock() {
 
-        thisSidebarItem.getElementsByClassName('second')[0].innerText = now.getSeconds();
-        const hour   = (now.getHours() == 12) ? 12 : (now.getHours())%12;
-        const minute = now.getMinutes()
-        thisSidebarItem.getElementsByClassName('year')[0].innerText = now.getFullYear();
-        thisSidebarItem.getElementsByClassName('month')[0].innerText = now.getMonth()+1;
-        thisSidebarItem.getElementsByClassName('date')[0].innerText = now.getDate();
-        thisSidebarItem.getElementsByClassName('day')[0].innerText = dayList[now.getDay()];
-        thisSidebarItem.getElementsByClassName('hour')[0].innerText = hour;
-        thisSidebarItem.getElementsByClassName('ampm')[0].innerText = (now.getHours() < 12) ? '오전' : '오후';
-        thisSidebarItem.getElementsByClassName('minute')[0].innerText = minute;
-        document.getElementById('bubbleBtnHour').innerText   = hour   < 10 ? '0'+hour   : hour  ;
-        document.getElementById('bubbleBtnMinute').innerText = minute < 10 ? '0'+minute : minute;
-        updateClockRotation( now );
+      const now = new Date();// 현재 시각
 
-        let tt = Date.now();
-        const nextTick = Math.floor( tt/1000 ) * 1000 + 1000;
-        let timeToWaitForNextTick = nextTick - tt;
-        if( timeToWaitForNextTick < 1 ){
-          timeToWaitForNextTick = 1000
-        }
-        setTimeout( updateClock, timeToWaitForNextTick );
+      thisSidebarItem.getElementsByClassName('second')[0].innerText = now.getSeconds();
+      const hour   = (now.getHours() == 12) ? 12 : (now.getHours())%12;
+      const minute = now.getMinutes()
+      thisSidebarItem.getElementsByClassName('year')[0].innerText = now.getFullYear();
+      thisSidebarItem.getElementsByClassName('month')[0].innerText = now.getMonth()+1;
+      thisSidebarItem.getElementsByClassName('date')[0].innerText = now.getDate();
+      thisSidebarItem.getElementsByClassName('day')[0].innerText = dayList[now.getDay()];
+      thisSidebarItem.getElementsByClassName('hour')[0].innerText = hour;
+      thisSidebarItem.getElementsByClassName('ampm')[0].innerText = (now.getHours() < 12) ? '오전' : '오후';
+      thisSidebarItem.getElementsByClassName('minute')[0].innerText = minute;
+      document.getElementById('bubbleBtnHour').innerText   = hour   < 10 ? '0'+hour   : hour  ;
+      document.getElementById('bubbleBtnMinute').innerText = minute < 10 ? '0'+minute : minute;
+      updateClockRotation( now );
+
+      let tt = Date.now();
+      const nextTick = Math.floor( tt/1000 ) * 1000 + 1000;
+      let timeToWaitForNextTick = nextTick - tt;
+      if( timeToWaitForNextTick < 1 ){
+        timeToWaitForNextTick = 1000
       }
-
-      //// 시계원 회전
-      function updateClockRotation( now ){
-        thisSidebarItem.getElementsByClassName('circle')[0]
-          .style.transform 
-          = 'rotate('+(-45-now.getHours()*15-now.getMinutes()*0.25)+'deg)'
-      }
+      setTimeout( updateClock, timeToWaitForNextTick );
     }
-  })();</script>
-</div>
-<span class="caption">현재시각</span>
 
-</div></s_sidebar_element>
+    //// 시계원 회전
+    function updateClockRotation( now ){
+      thisSidebarItem.getElementsByClassName('circle')[0]
+        .style.transform 
+        = 'rotate('+(-45-now.getHours()*15-now.getMinutes()*0.25)+'deg)'
+    }
+  }
+})();</script>
 
-  <s_sidebar_element><div class="sidebar_element bonmunContentsTable">
-  <!-- 본문 목차 -->
-<button class="bubbleBtn themeBtn">&#x2630;</button>
-<div class="sidebar_elementMain">
+    
+
+    <span class="caption">현재시각</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!--  -->
+  <div class="sidebar_element bonmunContentsTable">
+    <button class="bubbleBtn themeBtn">&#x2630;</button>
+    <div class="sidebar_elementMain bonmunContentsTable">
+      
   <!-- 게시글 보기 페이지에서만 나타난다. hn 태그들을 인식해서 목차를 만든다. -->
   <ol id="bonmunHeadingList" class="_textLeft"></ol>
-</div>
-<span class="caption">목차</span>
+
+    </div>
+    
 <script>(function(){
   if( document.getElementById('tt-body-page') == null ){
     document.querySelector('.sidebar_element.bonmunContentsTable').remove();
@@ -1583,13 +1598,16 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 })();</script>
 
-</div></s_sidebar_element>
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 설정 -->
-<button class="bubbleBtn themeBtn">&#x2699;&#xFE0F;</button>
-<div class="sidebar_elementMain settings">
-<div class="settingForm darkmode">
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 설정 -->
+  <div class="sidebar_element settings">
+    <button class="bubbleBtn themeBtn">&#x2699;&#xFE0F;</button>
+    <div class="sidebar_elementMain settings">
+      
+  <div class="settingForm darkmode">
   <input class="settingCore" type="hidden" name="darkmode" onchange="onchangeDarkmode(this)" oninvalid="setDefaultDarkmode(this)">
   빛깔:
     <label class="option light"
@@ -1655,7 +1673,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   </script>
 </div>
-<div class="fontsize settingForm">
+  <div class="fontsize settingForm">
   <input type="hidden" class="settingCore" name="fontsize" value="100" onchange="onchangeFontsize(this)" />
   글자: 
   <button class="fontsizeBtn fontsizeBtnDown  " onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
@@ -1680,10 +1698,14 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   </script>
 </div>
-</div>
-<span class="caption">설정</span>
 
-</div></s_sidebar_element>
+    </div>
+    
+
+    <span class="caption">설정</span>
+
+  </div>
+</s_sidebar_element>
 
 
   </s_sidebar></aside>
@@ -1697,76 +1719,107 @@ document.addEventListener('DOMContentLoaded', function(){
   <s_sidebar>
 
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 랜덤태그 -->
-<button class="bubbleBtn themeBtn">&#x2601;&#xFE0F;</button>
-<div class="sidebar_elementMain randomtag">
+  <s_sidebar_element><!-- 랜덤태그 -->
+  <div class="sidebar_element randomtag">
+    <button class="bubbleBtn themeBtn">&#x2601;&#xFE0F;</button>
+    <div class="sidebar_elementMain randomtag">
+      
   <p class="padding">
     <s_random_tags><a href="[##_tag_link_##]" class="tagcloud tag[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags>
   </p>
-</div>
-<span class="caption">랜덤태그</span>
 
-</div></s_sidebar_element>
+    </div>
+    
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 인기글 -->
-<button class="bubbleBtn themeBtn">&#x1F525;</button>
-<ol class="sidebar_elementMain popularpost">
+    <span class="caption">랜덤태그</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 인기글 -->
+  <div class="sidebar_element popularpost">
+    <button class="bubbleBtn themeBtn">&#x1F525;</button>
+    <ol class="sidebar_elementMain popularpost">
+      
   <s_rctps_popular_rep><li class="line-out"><a href="[##_rctps_rep_link_##]" class="line-in">
     [##_rctps_rep_title_##]
     
   </a></li></s_rctps_popular_rep>
-</ol>
-<span class="caption">인기글</span>
 
-</div></s_sidebar_element>
+    </ol>
+    
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 최근 글 -->
-<button class="bubbleBtn themeBtn">&#x26A1;</button>
-<ol class="sidebar_elementMain recentpost">
+    <span class="caption">인기글</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 최근글 -->
+  <div class="sidebar_element recentpost">
+    <button class="bubbleBtn themeBtn">&#x26A1;</button>
+    <ol class="sidebar_elementMain recentpost">
+      
   <s_rctps_rep><li class="line-out"><a href="[##_rctps_rep_link_##]" class="line-in">
     [##_rctps_rep_title_##]
     
   </a></li></s_rctps_rep>
-</ol>
-<span class="caption">최근 글</span>
 
-</div></s_sidebar_element>
+    </ol>
+    
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 최근 댓글 -->
-<button class="bubbleBtn themeBtn">&#x1F4AC;</button>
-<ol class="sidebar_elementMain recentcomment">
+    <span class="caption">최근글</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 최근댓글 -->
+  <div class="sidebar_element recentcomment">
+    <button class="bubbleBtn themeBtn">&#x1F4AC;</button>
+    <ol class="sidebar_elementMain recentcomment">
+      
   <s_rctrp_rep><li class="line-out"><a href="[##_rctrp_rep_link_##]" class="line-in">
     [##_rctrp_rep_desc_##]
   </a></li></s_rctrp_rep>
-</ol>
-<span class="caption">최근 댓글</span>
 
-</div></s_sidebar_element>
+    </ol>
+    
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 포스팅달력 -->
-<div class="sidebar_elementMain calendar">
+    <span class="caption">최근댓글</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 달력 -->
+  <div class="sidebar_element calendar">
+    <button class="bubbleBtn themeBtn">달력</button>
+    <div class="sidebar_elementMain calendar">
+      
   [##_calendar_##]
-</div>
-<span class="caption">달력</span>
 
-</div></s_sidebar_element>
+    </div>
+    
 
-  <s_sidebar_element><div class="sidebar_element ">
-  <!-- 방문자 수 -->
-<button class="bubbleBtn themeBtn">&#x1F465;</button>
-<div class="sidebar_elementMain visitcount">
+    <span class="caption">달력</span>
+
+  </div>
+</s_sidebar_element>
+
+  <s_sidebar_element><!-- 손님의 수 -->
+  <div class="sidebar_element visitcount">
+    <button class="bubbleBtn themeBtn">&#x1F465;</button>
+    <div class="sidebar_elementMain visitcount">
+      
   <p class="padding" style="font-size: 0.9em">
     감사하게도 어제 <span class="strong">[##_count_yesterday_##]</span>분, 오늘 <span class="strong">[##_count_today_##]</span>분으로 이제까지 총 <span class="strong">[##_count_total_##]</span>분이 우리 블로그를 찾아주셨습니다.
   </p>
-</div>
-<span class="caption">손님의 수</span>
 
-</div></s_sidebar_element>
+    </div>
+    
+
+    <span class="caption">손님의 수</span>
+
+  </div>
+</s_sidebar_element>
 
 
   </s_sidebar>

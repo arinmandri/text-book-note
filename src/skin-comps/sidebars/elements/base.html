@@ -1,3 +1,12 @@
-<s_sidebar_element><div class="sidebar_element {% block additional_class %}{% endblock %}">
-  {% block content %}{% endblock %}
-</div></s_sidebar_element>
+<s_sidebar_element><!-- {{ sidebaritem.caption }} -->
+  <div class="sidebar_element {{ sidebaritem.id }}">
+    {% block bubbleBtn %}<button class="bubbleBtn themeBtn">{{ sidebaritem.bubbleBtn }}</button>{% endblock %}
+    {% block mainOpen %}<div class="sidebar_elementMain {{ sidebaritem.id }}">{% endblock %}
+      {% block main %}{% endblock %}
+    {% block mainClose %}</div>{% endblock %}
+    {% block script %}{% endblock %}
+{% if sidebaritem.caption %}
+    <span class="caption">{{ sidebaritem.caption }}</span>
+{% endif %}
+  </div>
+</s_sidebar_element>

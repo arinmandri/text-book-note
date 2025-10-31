@@ -1,8 +1,7 @@
 {% extends "skin-comps/sidebars/elements/base.html" %}
-{% block additional_class %}{{ sidebaritem.id }}{% endblock %}
-{% block content %}<!-- 현재시각 -->
-<button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>
-<div class="sidebar_elementMain _textCenter">
+{% block bubbleBtn %}<button class="bubbleBtn themeBtn"><span id="bubbleBtnHour"></span>:<span id="bubbleBtnMinute"></span></button>{% endblock %}
+{% block mainOpen %}<div class="sidebar_elementMain _textCenter">{% endblock %}
+{% block main %}
   <div style="position: relative; padding: 20px 0;">
     <!-- 시계 그림 -->
     <div style="position: absolute; top: -10px; width: 100%">
@@ -33,50 +32,50 @@
       <span class="second strong"></span>초
     </p>
   </div>
-  <script>(function(){
-    const dayList = ['일','월','화','수','목','금','토'];
-    const thisSidebarItem = document.querySelector('.sidebar_element.{{ sidebaritem.id }}');
-    if( thisSidebarItem != null ){
-      updateClock();
-      updateClockRotation( new Date() );
-      setTimeout( updateClock, 1000 );
+{% endblock %}
+{% block mainClose %}
+</div><script>(function(){
+  const dayList = ['일','월','화','수','목','금','토'];
+  const thisSidebarItem = document.querySelector('.sidebar_element.{{ sidebaritem.id }}');
+  if( thisSidebarItem != null ){
+    updateClock();
+    updateClockRotation( new Date() );
+    setTimeout( updateClock, 1000 );
 
-      //// 시계 업데이트
-      function updateClock() {
+    //// 시계 업데이트
+    function updateClock() {
 
-        const now = new Date();// 현재 시각
+      const now = new Date();// 현재 시각
 
-        thisSidebarItem.getElementsByClassName('second')[0].innerText = now.getSeconds();
-        const hour   = (now.getHours() == 12) ? 12 : (now.getHours())%12;
-        const minute = now.getMinutes()
-        thisSidebarItem.getElementsByClassName('year')[0].innerText = now.getFullYear();
-        thisSidebarItem.getElementsByClassName('month')[0].innerText = now.getMonth()+1;
-        thisSidebarItem.getElementsByClassName('date')[0].innerText = now.getDate();
-        thisSidebarItem.getElementsByClassName('day')[0].innerText = dayList[now.getDay()];
-        thisSidebarItem.getElementsByClassName('hour')[0].innerText = hour;
-        thisSidebarItem.getElementsByClassName('ampm')[0].innerText = (now.getHours() < 12) ? '오전' : '오후';
-        thisSidebarItem.getElementsByClassName('minute')[0].innerText = minute;
-        document.getElementById('bubbleBtnHour').innerText   = hour   < 10 ? '0'+hour   : hour  ;
-        document.getElementById('bubbleBtnMinute').innerText = minute < 10 ? '0'+minute : minute;
-        updateClockRotation( now );
+      thisSidebarItem.getElementsByClassName('second')[0].innerText = now.getSeconds();
+      const hour   = (now.getHours() == 12) ? 12 : (now.getHours())%12;
+      const minute = now.getMinutes()
+      thisSidebarItem.getElementsByClassName('year')[0].innerText = now.getFullYear();
+      thisSidebarItem.getElementsByClassName('month')[0].innerText = now.getMonth()+1;
+      thisSidebarItem.getElementsByClassName('date')[0].innerText = now.getDate();
+      thisSidebarItem.getElementsByClassName('day')[0].innerText = dayList[now.getDay()];
+      thisSidebarItem.getElementsByClassName('hour')[0].innerText = hour;
+      thisSidebarItem.getElementsByClassName('ampm')[0].innerText = (now.getHours() < 12) ? '오전' : '오후';
+      thisSidebarItem.getElementsByClassName('minute')[0].innerText = minute;
+      document.getElementById('bubbleBtnHour').innerText   = hour   < 10 ? '0'+hour   : hour  ;
+      document.getElementById('bubbleBtnMinute').innerText = minute < 10 ? '0'+minute : minute;
+      updateClockRotation( now );
 
-        let tt = Date.now();
-        const nextTick = Math.floor( tt/1000 ) * 1000 + 1000;
-        let timeToWaitForNextTick = nextTick - tt;
-        if( timeToWaitForNextTick < 1 ){
-          timeToWaitForNextTick = 1000
-        }
-        setTimeout( updateClock, timeToWaitForNextTick );
+      let tt = Date.now();
+      const nextTick = Math.floor( tt/1000 ) * 1000 + 1000;
+      let timeToWaitForNextTick = nextTick - tt;
+      if( timeToWaitForNextTick < 1 ){
+        timeToWaitForNextTick = 1000
       }
-
-      //// 시계원 회전
-      function updateClockRotation( now ){
-        thisSidebarItem.getElementsByClassName('circle')[0]
-          .style.transform 
-          = 'rotate('+(-45-now.getHours()*15-now.getMinutes()*0.25)+'deg)'
-      }
+      setTimeout( updateClock, timeToWaitForNextTick );
     }
-  })();</script>
-</div>
-<span class="caption">현재시각</span>
+
+    //// 시계원 회전
+    function updateClockRotation( now ){
+      thisSidebarItem.getElementsByClassName('circle')[0]
+        .style.transform 
+        = 'rotate('+(-45-now.getHours()*15-now.getMinutes()*0.25)+'deg)'
+    }
+  }
+})();</script>
 {% endblock %}

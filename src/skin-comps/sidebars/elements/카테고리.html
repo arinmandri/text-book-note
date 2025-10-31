@@ -1,7 +1,10 @@
 {% extends "skin-comps/sidebars/elements/base.html" %}
-{% block content %}<!-- 카테고리 -->
-<button class="bubbleBtn themeBtn">&#x1F6AA;</button>
-<nav id="navCat" class="sidebar_elementMain">[##_category_list_##]</nav>
+{% block mainOpen %}<nav id="navCat" class="sidebar_elementMain">{% endblock %}
+{% block main %}[##_category_list_##]{% endblock %}
+{% block mainClose %}
+</nav>
+{% endblock %}
+{% block script %}
 <script type="text/javascript">
 
   (function () {
