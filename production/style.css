@@ -1134,9 +1134,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 .sidebar_elementMain.settings > * {
   margin: 15px 8px;
 }
-.fontsizeBtn {
-  padding: 7px;
-}
 
 .settingForm.darkmode .option {
   margin: 3px;
@@ -1155,6 +1152,13 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   color: var(--pointCol);
   font-size: 150%;
   font-weight: bold;
+}
+
+.fontsizeBtn {
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: var(--listBack);
+  padding: 4px;
 }
 .sidebar_elementMain.calendar table {
   border-collapse: collapse;
