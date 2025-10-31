@@ -189,7 +189,7 @@ hr.areaSeparator {
   color: #FFFFFF;
   color: var(--frameFore);
   font-family: 'Jua', sans-serif;
-  transition: background-color 1.5s;
+  transition: background-color 0.5s;
   line-height: 1;
 }
 body.theme-light .themeBtn {
@@ -1034,7 +1034,7 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   display: block;
   border-bottom-width: 1px;
   padding: 3px 12px;
-  transition: background-color 1s;
+  transition: background-color 0.5s;
 }
 #navCat .tt_category .newA:hover ,
 #navCat .tt_category a:hover {
