@@ -10,11 +10,11 @@
   display: inline-block;
 }
 
-#blogMenu {
+#blogMenu > ul > * {
+  margin: 0 5px 5px 0;
   vertical-align: top;
 }
 #blogMenu a {
-  margin: 0 5px 5px 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-left-width: 1px;
@@ -22,30 +22,30 @@
   border-bottom-width: 1px;
   padding: 4px 10px;
 }
-body:not(.theme-dark) #blogMenu > ul > * > * {
+body.theme-light #blogMenu > ul > * > * {
   border-color: transparent;
 }
-#blogMenu > ul > :nth-child(6n) > * {
+#blogMenu > ul > :nth-child(6n) > a {
   background-color: hsl(30, 100%, 50%, 20%);
   border-color:     hsl(30, 100%, 50%, 50%);
 }
-#blogMenu > ul > :nth-child(6n+5) > * {
+#blogMenu > ul > :nth-child(6n+5) > a {
   background-color: hsl(60, 100%, 40%, 20%);
   border-color:     hsl(60, 100%, 40%, 50%);
 }
-#blogMenu > ul > :nth-child(6n+4) > * {
+#blogMenu > ul > :nth-child(6n+4) > a {
   background-color: hsl(110, 90%, 45%, 20%);
   border-color:     hsl(110, 90%, 45%, 50%);
 }
-#blogMenu > ul > :nth-child(6n+3) > * {
+#blogMenu > ul > :nth-child(6n+3) > a {
   background-color: hsl(200, 100%, 50%, 20%);
   border-color:     hsl(200, 100%, 50%, 50%);
 }
-#blogMenu > ul > :nth-child(6n+2) > * {
-  background-color: hsl(260, 100%, 70%, 20%);
-  border-color:     hsl(260, 100%, 70%, 50%);
+#blogMenu > ul > :nth-child(6n+2) > a {
+  background-color: hsl(265, 100%, 70%, 20%);
+  border-color:     hsl(265, 100%, 70%, 50%);
 }
-#blogMenu > ul > :nth-child(6n+1) > * {
+#blogMenu > ul > :nth-child(6n+1) > a {
   background-color: hsl(315, 90%, 50%, 20%);
   border-color:     hsl(315, 90%, 50%, 50%);
 }

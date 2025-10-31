@@ -380,15 +380,6 @@ function setSettingFixCbox( settingName, checked ){
 
 <!--# 헤더 -->
 <header class="home-none-[##_var_hideAtHome_Header_##]">
-  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="blogSearch"
-      onfocus="blogSearchFocus()"
-  >
-
-<svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C12.8487 19 14.551 18.3729 15.9056 17.3199L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L17.3199 15.9056C18.3729 14.551 19 12.8487 19 11C19 6.58172 15.4183 3 11 3ZM5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11Z" fill="var(--frameFore)"/>
-</svg>
-
-  </button>
   <a class="alt title" href="/">[##_title_##]</a>
 
   <div class="namecard">
@@ -435,7 +426,17 @@ function setSettingFixCbox( settingName, checked ){
 <div id="upperbar">
 <div id="blogMenu">
   [##_blog_menu_##]
-</div><script>(function () {// 관리자 메뉴 추가
+
+  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="blogSearch"
+      onfocus="blogSearchFocus()"
+  >
+
+<svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C12.8487 19 14.551 18.3729 15.9056 17.3199L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L17.3199 15.9056C18.3729 14.551 19 12.8487 19 11C19 6.58172 15.4183 3 11 3ZM5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11Z" fill="currentColor"/>
+</svg>
+
+  </button>
+</div><script>(function () {
   const menuEl = document.querySelector('#blogMenu > ul');
   if (menuEl == null) return;
 
@@ -446,6 +447,7 @@ function setSettingFixCbox( settingName, checked ){
     }
   }
 
+  //// 관리자 메뉴 추가
   const li_manage = document.createElement('li');
   const li_write = document.createElement('li');
   li_manage.classList.add('t_menu_manage', 'onlyForOwner');
@@ -454,6 +456,11 @@ function setSettingFixCbox( settingName, checked ){
   li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
   menuEl.appendChild(li_manage);
   menuEl.appendChild(li_write);
+
+  //// 검색버튼을 ul 안에
+  const li_blogSearch = document.createElement('li');
+  li_blogSearch.appendChild( document.getElementById('blogSearch-openBtn') );
+  menuEl.appendChild(li_blogSearch);
 })()</script>
 </div>
 
