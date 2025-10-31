@@ -607,8 +607,6 @@ footer > .etc > * {
 }
 #mainH {
   margin: 0 auto;
-  display: flex;
-  flex-flow: column nowrap;
   min-height: 100vh;
   padding-bottom: 40px;
 }
@@ -761,9 +759,6 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 .sidebarBox::-webkit-scrollbar ,
 .sidebar::-webkit-scrollbar {/* Chrome, Edge 등 스크롤바 숨기기 */
   display: none;
-}
-#mainH {
-  margin: 0 auto;
 }
 
 /**### 사이드바1 */
@@ -1222,8 +1217,11 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
 
 
 /**### 최근공지 목록 */
+#recentNotice {
+  padding: 20px 10px 20px 10px;
+}
 #recentNoticeListBox {
-  margin: 20px 10px 20px auto;
+  margin-left: auto;
 }
 #recentNoticeListBox > ul {
   position: relative;

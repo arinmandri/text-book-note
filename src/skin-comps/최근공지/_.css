@@ -1,6 +1,9 @@
 /**### 최근공지 목록 */
+#recentNotice {
+  padding: 20px 10px 20px 10px;
+}
 #recentNoticeListBox {
-  margin: 20px 10px 20px auto;
+  margin-left: auto;
 }
 #recentNoticeListBox > ul {
   position: relative;
