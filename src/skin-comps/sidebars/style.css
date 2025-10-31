@@ -41,12 +41,12 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 
 
 {% include "skin-comps/sidebars/elements/base.css" %}
-{% include "skin-comps/sidebars/elements/카테고리.css" %}
-{% include "skin-comps/sidebars/elements/본문목차.css" %}
-{% include "skin-comps/sidebars/elements/랜덤태그.css" %}
-{% include "skin-comps/sidebars/elements/인블로그설정.css" %}
-{% include "skin-comps/sidebars/elements/포스팅달력.css" %}
-{% include "skin-comps/sidebars/elements/인기글-최근글-최근댓글.css" %}
+{% include "skin-comps/sidebars/elements/category.css" %}
+{% include "skin-comps/sidebars/elements/bonmunContentsTable.css" %}
+{% include "skin-comps/sidebars/elements/randomtag.css" %}
+{% include "skin-comps/sidebars/elements/settings.css" %}
+{% include "skin-comps/sidebars/elements/calendar.css" %}
+{% include "skin-comps/sidebars/elements/post.css" %}
 
 /* 티스토리 플러그인 - 이미지 배너 */
 .module_plugin > a > img {

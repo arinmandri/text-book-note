@@ -7,7 +7,6 @@
     {
       'id': 'datetime',
       'name': '현재시각',
-      'caption': '현재시각',
     },
     {
       'id': 'bonmunContentsTable',
@@ -16,14 +15,13 @@
     },
     {
       'id': 'settings',
-      'name': '인블로그설정',
-      'caption': '설정',
+      'name': '설정',
       'bubbleBtn': '&#x2699;&#xFE0F;',
     },
   ]
 %}
 {% for sidebaritem in sidebaritems %}
-  {% include "skin-comps/sidebars/elements/" + sidebaritem.name + ".html" %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem.id + ".html" %}
 {% endfor %}
 {% endwith %}
   </s_sidebar></aside>

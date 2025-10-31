@@ -1,12 +1,12 @@
-<s_sidebar_element><!-- {{ sidebaritem.caption }} -->
+<s_sidebar_element><!-- {{ sidebaritem.name }} -->
   <div class="sidebar_element {{ sidebaritem.id }}">
     {% block bubbleBtn %}<button class="bubbleBtn themeBtn">{{ sidebaritem.bubbleBtn }}</button>{% endblock %}
     {% block mainOpen %}<div class="sidebar_elementMain {{ sidebaritem.id }}">{% endblock %}
       {% block main %}{% endblock %}
     {% block mainClose %}</div>{% endblock %}
     {% block script %}{% endblock %}
-{% if sidebaritem.caption %}
-    <span class="caption">{{ sidebaritem.caption }}</span>
+{% if sidebaritem.hascaption | default(true) %}
+    <span class="caption">{{ sidebaritem.name }}</span>
 {% endif %}
   </div>
 </s_sidebar_element>

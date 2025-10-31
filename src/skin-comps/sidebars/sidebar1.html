@@ -8,11 +8,12 @@
       'id': 'category',
       'name': '카테고리',
       'bubbleBtn': '&#x1F6AA;',
+      'hascaption': False,
     },
   ]
 %}
 {% for sidebaritem in sidebaritems %}
-  {% include "skin-comps/sidebars/elements/" + sidebaritem.name + ".html" %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem.id + ".html" %}
 {% endfor %}
 {% endwith %}
   </s_sidebar></aside>

@@ -7,43 +7,37 @@
     {
       'id': 'randomtag',
       'name': '랜덤태그',
-      'caption': '랜덤태그',
       'bubbleBtn': '&#x2601;&#xFE0F;',
     },
     {
       'id': 'popularpost',
       'name': '인기글',
-      'caption': '인기글',
       'bubbleBtn': '&#x1F525;',
     },
     {
       'id': 'recentpost',
       'name': '최근글',
-      'caption': '최근글',
       'bubbleBtn': '&#x26A1;',
     },
     {
       'id': 'recentcomment',
       'name': '최근댓글',
-      'caption': '최근댓글',
       'bubbleBtn': '&#x1F4AC;',
     },
     {
       'id': 'calendar',
       'name': '포스팅달력',
-      'caption': '달력',
       'bubbleBtn': '달력',
     },
     {
       'id': 'visitcount',
-      'name': '방문자수',
-      'caption': '손님의 수',
+      'name': '손님의 수',
       'bubbleBtn': '&#x1F465;',
     },
   ]
 %}
 {% for sidebaritem in sidebaritems %}
-  {% include "skin-comps/sidebars/elements/" + sidebaritem.name + ".html" %}
+  {% include "skin-comps/sidebars/elements/" + sidebaritem.id + ".html" %}
 {% endfor %}
 {% endwith %}
   </s_sidebar>
