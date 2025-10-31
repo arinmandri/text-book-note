@@ -179,14 +179,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.body.classList.add('login-' + T.config.ROLE);
 
 (function(){
-  //// 리스트 페이지들 공통 body 클래스 (카테고리 글 리스트, 보관함 글 리스트, 태그 리스트, 검색결과 리스트) (스타일 공통적용 목적)
-  let                 _body = document.getElementById('tt-body-category');
-  if( _body == null ) _body = document.getElementById('tt-body-tag');
-  if( _body == null ) _body = document.getElementById('tt-body-archive');
-  if( _body == null ) _body = document.getElementById('tt-body-search');
-  if( _body == null ) _body = document.getElementById('tt-body-index');
-
-  const body = _body;
+  //// 리스트 페이지들 공통 body 클래스
+  const body
+    =  document.getElementById('tt-body-category')// 카테고리
+    || document.getElementById('tt-body-tag')// 태그 모음, 태그 검색 결과
+    || document.getElementById('tt-body-archive')// 보관함
+    || document.getElementById('tt-body-search')// 검색 결과
+    || document.getElementById('tt-body-index');// 홈화면, 공지사항 목록
   if( body != null ) body.classList.add('tt-body-list');
 
   //// close-onclick-outside: 자신의 바깥을 클릭시 닫음
