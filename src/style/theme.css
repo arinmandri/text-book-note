@@ -1,9 +1,9 @@
-
 hr.areaSeparator {
-  width: 60%;
-  margin: 60px auto;
-  border-top-width: 4px;
-  border-top-style: dashed;
+  margin: 100px auto;
+  width: 10px;
+  height: 10px;
+  background-color: var(--pointCol);
+  transform: rotate(45deg);
 }
 
 .themeBtn {

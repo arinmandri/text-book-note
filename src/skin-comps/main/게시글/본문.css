@@ -1,7 +1,7 @@
 
 /**##### 본문 */
 .bonmun {
-  padding: 20px 3%;
+  padding: 50px 3%;
   color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
   font-family: {{ settings.fontFamily.serif.cssValue }};
