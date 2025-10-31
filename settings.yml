@@ -44,19 +44,14 @@ skin:
     options:
       train:
         label: '큼직 한 줄'
-        buttonText: '&#9632;'
       album:
         label: '썸네일만'
-        buttonText: '&#8862;'
       card:
         label: '썸네일 및 제목'
-        buttonText: '&#9635;'
       postit:
         label: '작은 메모'
-        buttonText: '&#8863;'
       detailed:
         label: '복잡 목록'
-        buttonText: '&#9636;'
     default_base: postit
     default:
       # 화면별 기본 스타일

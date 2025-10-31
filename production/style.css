@@ -2053,7 +2053,12 @@ main
   text-align: right;
 }
 #listStyleBtns button {
-  padding: 8px;
+  vertical-align: middle;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 7px;
+  background-color: #F4F4F4;
+  background-color: var(--listBack);
 }
 /*
 ul#postList ─ li 여럿

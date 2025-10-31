@@ -3,8 +3,9 @@
   <input type="hidden" class="settingCore" name="listStyle" value="[##_list_style_##]" onchange="onchangeListStyle(this)" />
   <menu id="listStyleBtns">
     <span style="font-family: {{ settings.fontFamily.handwriting.cssValue }};">보임새: </span>
-{% for name, value in settings.liststyle.options.items() %}
-    <button class="settingAction clickValue themeBtn" value="{{ name }}">{{ value.buttonText }}</button>
+{% for id, value in settings.liststyle.options.items() %}
+    <button class="settingAction clickValue" value="{{ id }}"
+  >{% include "skin-comps/main/리스트/liststyle/controller/button-" + id + ".html" %}</button>
 {% endfor %}
     <input type="checkbox" class="fixCbox" /><label class="fixCboxLabel">굄</label>
     <script>
