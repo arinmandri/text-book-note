@@ -12,12 +12,12 @@
   display: inline-block;
 }
 #tagBox a {
-  margin: 5px;
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
-  border-width: 2px;
-  border-radius: 4px;
-  padding: 2px 5px;
+  margin: 10px;
+}
+#tagBox a::before {
+  content: '#';
+  color: {{ var.defaultColor.borderCol }};
+  color: var(--borderCol);
 }
 #tagBox .tagcloud1 {
   font-size: 180%;
