@@ -173,11 +173,19 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .purpleBack { background-color: #81f4 }
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
-hr.areaSeparator {
+body.theme-dark hr.areaSeparator {
   margin: 100px auto;
   width: 10px;
   height: 10px;
   background-color: var(--pointCol);
+  transform: rotate(45deg);
+}
+body.theme-light hr.areaSeparator {
+  margin: 97px auto;
+  width: 10px;
+  height: 10px;
+  border: 3px solid currentColor;
+  background-color: #FFF8;
   transform: rotate(45deg);
 }
 
