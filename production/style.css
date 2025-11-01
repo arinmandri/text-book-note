@@ -694,10 +694,12 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
 .homecoverSection.train .postList > */*li*/ > a {/* 항목의 안쪽 스타일 */
   padding: 30px 20px;
   border: 2px solid #8880;
-  transition: box-shadow 0.6s linear, border-color 0.2s linear;
+  transition: box-shadow 0.6s linear, background-color 0.6s linear, border-color 0.2s linear;
 }
 .homecoverSection.train .postList > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
   border-color: var(--borderCol);
+  background-color: #FFFFFF;
+  background-color: var(--backCol);
   box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
   transition-duration: 0s;
@@ -719,8 +721,14 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   margin-bottom: 22px;
 }
 .homecoverSection.train .title {/* 제목 */
-  display: inline-block;
+  display: block;
   font-size: 1.8em;
+}
+.homecoverSection.train .category {
+  display: block;
+  padding-right: 3%;
+  text-align: right;
+  font-size: 90%;
 }
 .homecoverSection.train .category::before {
   content: '/';
@@ -2105,10 +2113,12 @@ ul#postList ─ li 여럿
 #postList.train > */*li*/ > a {/* 항목의 안쪽 스타일 */
   padding: 30px 20px;
   border: 2px solid #8880;
-  transition: box-shadow 0.6s linear, border-color 0.2s linear;
+  transition: box-shadow 0.6s linear, background-color 0.6s linear, border-color 0.2s linear;
 }
 #postList.train > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
   border-color: var(--borderCol);
+  background-color: #FFFFFF;
+  background-color: var(--backCol);
   box-shadow: 0px 0px 10px #DDDDDD;
   box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
   transition-duration: 0s;
@@ -2130,8 +2140,14 @@ ul#postList ─ li 여럿
   margin-bottom: 22px;
 }
 #postList.train .title {/* 제목 */
-  display: inline-block;
+  display: block;
   font-size: 1.8em;
+}
+#postList.train .category {
+  display: block;
+  padding-right: 3%;
+  text-align: right;
+  font-size: 90%;
 }
 #postList.train .category::before {
   content: '/';
