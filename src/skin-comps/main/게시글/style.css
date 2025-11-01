@@ -12,15 +12,10 @@ main
 │
 └관련글영역 div.relatedSec
 */
-.areaTitle {
+body#tt-body-page .areaTitle {
   margin-top: 30px;
   margin-bottom: 30px;
-
   text-align: center;
-  font-family: {{ settings.fontFamily.serif.cssValue }};
-  font-size: 120%;
-  font-weight: bold;
-  letter-spacing: 0.2em;
 }
 /**#### 게시글
 게시글 article#postPagePost

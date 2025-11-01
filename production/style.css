@@ -173,6 +173,39 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .purpleBack { background-color: #81f4 }
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
+.pageTitle {
+  margin: 80px auto;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 250%;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #000000;
+  color: var(--bonmunTextCol);
+  text-align: center;
+  text-shadow:
+    2px 0 10px var(--backCol),
+    -2px 0 10px var(--backCol),
+    0 2px 10px var(--backCol),
+    0 -2px 10px var(--backCol);
+}
+
+.sectionTitle {
+  text-align: right;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 180%;
+  letter-spacing: 0.12em;
+}
+.sectionTitle span {
+  border-bottom-width: 10px;
+}
+
+.areaTitle {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 120%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
 body.theme-dark hr.areaSeparator {
   margin: 100px auto;
   width: 10px;
@@ -234,32 +267,6 @@ body.theme-dark .themeBtn {
   position: absolute;
   top: -14px;
   right: 15px;
-}
-
-.sectionTitle {
-  text-align: right;
-  font-family: 'Noto Serif KR', serif;
-  font-size: 180%;
-  letter-spacing: 0.12em;
-}
-.sectionTitle span {
-  border-bottom-width: 10px;
-}
-
-.pageTitle {
-  margin: 80px auto;
-  font-family: 'Noto Serif KR', serif;
-  font-size: 250%;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  color: #000000;
-  color: var(--bonmunTextCol);
-  text-align: center;
-  text-shadow:
-    2px 0 10px var(--backCol),
-    -2px 0 10px var(--backCol),
-    0 2px 10px var(--backCol),
-    0 -2px 10px var(--backCol);
 }
 
 .decoBox {
@@ -542,16 +549,16 @@ footer .sectionTitle {
 #footerContentBox > * {
   width: 260px;
   margin: 10px 10px 30px auto;
-  padding: 10px;
+  padding: 20px 10px;
 }
 #footerContentBox > * > .areaTitle {
-  text-align: right;
   border-right-width: 6px;
   padding-right: 8px;
+  text-align: right;
 }
 #footerContentBox > * > hr {
   border-top-width: 1px;
-  margin: 15px 0;
+  margin: 20px 0 30px 0;
 }
 #footerContentBox > * > .content {
   text-align: left;
@@ -1340,15 +1347,10 @@ main
 │
 └관련글영역 div.relatedSec
 */
-.areaTitle {
+body#tt-body-page .areaTitle {
   margin-top: 30px;
   margin-bottom: 30px;
-
   text-align: center;
-  font-family: 'Noto Serif KR', serif;
-  font-size: 120%;
-  font-weight: bold;
-  letter-spacing: 0.2em;
 }
 /**#### 게시글
 게시글 article#postPagePost
