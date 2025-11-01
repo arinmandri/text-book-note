@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(){
     btn.textContent = key;
     btn.onclick = (function(){
       document.getElementById( 'tag-initial--' + key )
-        .scrollIntoView({ behavior: 'smooth' });
+        .scrollIntoView();
     });
     return btn;
   }

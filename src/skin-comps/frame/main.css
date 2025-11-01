@@ -29,7 +29,8 @@
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {
-  #mainH {
+  body#tt-body-category #mainH ,
+  body#tt-body-page #mainH {
     overflow-x: hidden;/* decoBox의 기울임때문에 조금 삐져나감 */
   }
 }

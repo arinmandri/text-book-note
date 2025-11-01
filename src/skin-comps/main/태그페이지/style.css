@@ -35,15 +35,20 @@
   display: none;
 }
 
-#tagChosongsBox {
+#tagChosongsBoxOuter {
   position: sticky;
-  top: 0px;
+  top: -16px;
   z-index: 1;
   text-align: center;
+}
+#tagChosongsBox {
+  position: relative;
+  bottom: -16px;
 }
 #tagChosongsBox button {
   padding: 5px 6px;
   margin: 3px;
+  min-width: 24px;
 }
 
 #main4.tagBoxOrdered {
