@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', function(){
   );
 
   //// 결과 구성: 키 가나다순으로 버킷에서 HTML 요소 만들어 추가
-  const tagBoxOrdered = document.getElementById('main4');// 생성된 요소들이 들어갈 곳
+  const tagChosongsBox = document.getElementById('tagChosongsBox');// 초성버튼모음
+  const tagBoxOrdered  = document.getElementById('main4');// 생성된 요소들이 들어갈 곳
   const sortedKeys = Object.keys(grouped).sort((a, b) => {
     return a.localeCompare(b, 'ko-KR');
   });
   sortedKeys.forEach(key => {
+    tagChosongsBox.appendChild( createChosongBtn(key) );
     tagBoxOrdered.appendChild( createBucketElement(key) );
   });
 
@@ -46,6 +48,23 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     return grouped;
+  }
+
+  /**
+   * 초성버튼 생성
+   * 
+   * @param key 버킷 키 즉 초성
+   */
+  function createChosongBtn( key ){
+
+    const btn = document.createElement('button');
+    btn.classList.add('themeBtn');
+    btn.textContent = key;
+    btn.onclick = (function(){
+      document.getElementById( 'tag-initial--' + key )
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+    return btn;
   }
 
   /**

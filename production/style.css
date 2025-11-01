@@ -2464,6 +2464,17 @@ ul#postList ─ li 여럿
   display: none;
 }
 
+#tagChosongsBox {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  text-align: center;
+}
+#tagChosongsBox button {
+  padding: 5px 6px;
+  margin: 3px;
+}
+
 #main4.tagBoxOrdered {
   font-size: 135%;/* 모듈에서보단 좀 크게 보이기 */
 }
