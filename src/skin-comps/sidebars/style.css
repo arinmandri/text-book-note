@@ -38,12 +38,12 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
 
 
 {% include "skin-comps/sidebars/elements/base.css" %}
-{% include "skin-comps/sidebars/elements/category.css" %}
+{% include "skin-comps/sidebars/elements/categories.css" %}
 {% include "skin-comps/sidebars/elements/bonmunContentsTable.css" %}
-{% include "skin-comps/sidebars/elements/randomtag.css" %}
+{% include "skin-comps/sidebars/elements/randomtags.css" %}
 {% include "skin-comps/sidebars/elements/settings.css" %}
 {% include "skin-comps/sidebars/elements/calendar.css" %}
-{% include "skin-comps/sidebars/elements/post.css" %}
+{% include "skin-comps/sidebars/elements/posts.css" %}
 
 /* 티스토리 플러그인 - 이미지 배너 */
 .module_plugin > a > img {

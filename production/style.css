@@ -1144,25 +1144,25 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   color: black;
 }
 /**### 사이드바아이템 - 랜덤태그 */
-.randomtag .tagcloud::before {
+.randomtags .tagcloud::before {
   content: '#';
   color: #DDDDDD;
   color: var(--borderCol);
 }
-.randomtag .tagcloud {
+.randomtags .tagcloud {
   margin: 1px 3px;
   display: inline-block;
 }
-.randomtag .tagcloud1 {font-size: 120%; font-weight: bold;
+.randomtags .tagcloud1 {font-size: 120%; font-weight: bold;
   color: #FF6644;
   color: var(--pointCol);
 }
-.randomtag .tagcloud2 {font-size: 120%; font-weight: bold;}
-.randomtag .tagcloud3 {font-size: 120%; font-weight: bold;}
-.randomtag .tagcloud4 {font-size: 100%;}
-.randomtag .tagcloud5 {font-size: 75%;}
-.randomtag .tagcloud1::after ,
-.randomtag .tagcloud2::after {
+.randomtags .tagcloud2 {font-size: 120%; font-weight: bold;}
+.randomtags .tagcloud3 {font-size: 120%; font-weight: bold;}
+.randomtags .tagcloud4 {font-size: 100%;}
+.randomtags .tagcloud5 {font-size: 75%;}
+.randomtags .tagcloud1::after ,
+.randomtags .tagcloud2::after {
   content: '★';
 }
 /* 설정 */
@@ -1227,7 +1227,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   color: black;
 }
 /* 인기글 최근글 최근댓글 */
-.sidebar_elementMain.popularpost a::before {
+.sidebar_elementMain.popularposts a::before {
   content: "hot";
   padding: 1px 3px;
   border-radius: 3px;
@@ -1236,7 +1236,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   color: white;
   font-weight: bold;
 }
-.sidebar_elementMain.recentpost a::before {
+.sidebar_elementMain.recentposts a::before {
   content: "new";
   padding: 1px 3px;
   border-radius: 3px;
@@ -1245,7 +1245,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   color: white;
   font-weight: bold;
 }
-.sidebar_elementMain.recentcomment a::before {
+.sidebar_elementMain.recentcomments a::before {
   content: "\1F4AC";
   font-size: 80%;
 }
