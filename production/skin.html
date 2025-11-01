@@ -342,6 +342,7 @@ function setSettingFixCbox( settingName, checked ){
   <aside class="content">
 
 <div id="blogSearch">
+  <h3 class="areaTitle">탐색</h3>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -377,6 +378,12 @@ function setSettingFixCbox( settingName, checked ){
     document.getElementById('blogSearchInput').focus();
   }
 </script>
+<div class="randomtags">
+  <h3 class="areaTitle">랜덤태그</h3>
+  <p>
+    <s_random_tags><a href="[##_tag_link_##]" class="tagcloud tag[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags>
+  </p>
+</div>
 
   </aside>
 </div><script>
