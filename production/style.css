@@ -1959,6 +1959,11 @@ li > dl > dt ,
   height: 1.5em;
   width: 1.5em;
 }
+body#tt-body-guestbook main .areaTitle {
+  margin: 30px 0;
+  text-align: center;
+}
+
 #commentSec.guestPage .comment > .areaImg {
   float: left;
   padding: 4px 8px 8px 4px;
