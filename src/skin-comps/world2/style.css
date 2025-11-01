@@ -1,32 +1,39 @@
-
-#blogSearch:not(.open) {
+#world2:not(.open) {
   display: none;
 }
-#blogSearch.open {
+#world2.open {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #0008;
   z-index: 100;
 }
-
-#blogSearch {
+#world2 {
   backdrop-filter: blur(3px);
   text-align: center;
+  background-color: #0008;
   color: white;
-  font-size: 200%;
+  font-size: 160%;
 }
-#blogSearch .close {
+
+#world2 > .close {
   position: absolute;
   top: 2%;
   right: 2%;
+  height: 4%;
 }
-#blogSearch form {
-  margin-top: 40vh;
+#world2 > .content {
+  position: absolute;
+  top: 8%;
+  left: 2%;
+  width: 96%;
+  height: 90%;
 }
 
 #blogSearchInput {
   padding: 4px 8px;
+  width: 50%;
+  min-width: 200px;
+  max-width: 500px;
   border-bottom: 4px solid white;
   border-radius: 5px;
   background-color: #3338;

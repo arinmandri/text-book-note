@@ -337,8 +337,11 @@ function setSettingFixCbox( settingName, checked ){
   <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
 </div>
 
+<div id="world2">
+  <button class="close open-toggleBtn" data-opentarget="world2">&#x2715;</button>
+  <aside class="content">
+
 <div id="blogSearch">
-  <button class="close open-toggleBtn" data-opentarget="blogSearch">&#x2715;</button>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -349,7 +352,6 @@ function setSettingFixCbox( settingName, checked ){
       }"
       placeholder="블로그에서 검색"
       autocomplete=off
-      size="12",
       style="
           vertical-align: middle;" />
     <button type="button"
@@ -372,9 +374,18 @@ function setSettingFixCbox( settingName, checked ){
   </s_search></form>
 </div><script>
   function blogSearchFocus(){
-    console.log(document.getElementById('blogSearchInput'));
     document.getElementById('blogSearchInput').focus();
   }
+</script>
+
+  </aside>
+</div><script>
+    //// ESC 누르면 world2 닫기
+  document.addEventListener('keydown', function( e ){
+    if( e.key === 'Escape' ){
+      document.getElementById('world2').classList.remove('open');
+    }
+  });
 </script>
 
 <!--# 헤더 -->
@@ -426,7 +437,7 @@ function setSettingFixCbox( settingName, checked ){
 <div id="blogMenu">
   [##_blog_menu_##]
 
-  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="blogSearch"
+  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="world2"
       onfocus="blogSearchFocus()"
   >
 

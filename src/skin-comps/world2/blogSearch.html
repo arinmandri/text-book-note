@@ -1,5 +1,4 @@
 <div id="blogSearch">
-  <button class="close open-toggleBtn" data-opentarget="blogSearch">&#x2715;</button>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -10,7 +9,6 @@
       }"
       placeholder="블로그에서 검색"
       autocomplete=off
-      size="12",
       style="
           vertical-align: middle;" />
     <button type="button"
@@ -34,7 +32,6 @@
   </s_search></form>
 </div><script>
   function blogSearchFocus(){
-    console.log(document.getElementById('blogSearchInput'));
     document.getElementById('blogSearchInput').focus();
   }
 </script>

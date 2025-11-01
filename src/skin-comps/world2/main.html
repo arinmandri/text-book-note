@@ -1,0 +1,15 @@
+<div id="world2">
+  <button class="close open-toggleBtn" data-opentarget="world2">&#x2715;</button>
+  <aside class="content">
+
+{% include "skin-comps/world2/blogSearch.html" %}
+
+  </aside>
+</div><script>
+    //// ESC 누르면 world2 닫기
+  document.addEventListener('keydown', function( e ){
+    if( e.key === 'Escape' ){
+      document.getElementById('world2').classList.remove('open');
+    }
+  });
+</script>
