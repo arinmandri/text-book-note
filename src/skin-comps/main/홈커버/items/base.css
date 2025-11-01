@@ -1,6 +1,9 @@
 .homecoverSection {
   margin: 125px 0;
 }
+.homecoverSection .sectionTitle {
+  margin-bottom: 52px;
+}
 .homecoverSection:first-child {
   margin-top: 20px;
 }

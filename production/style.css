@@ -237,11 +237,10 @@ body.theme-dark .themeBtn {
 }
 
 .sectionTitle {
-  margin-bottom: 52px;
   text-align: right;
   font-family: 'Noto Serif KR', serif;
   font-size: 180%;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 .sectionTitle span {
   border-bottom-width: 10px;
@@ -252,9 +251,15 @@ body.theme-dark .themeBtn {
   font-family: 'Noto Serif KR', serif;
   font-size: 250%;
   font-weight: 600;
+  letter-spacing: 0.16em;
   color: #000000;
   color: var(--bonmunTextCol);
   text-align: center;
+  text-shadow:
+    2px 0 10px var(--backCol),
+    -2px 0 10px var(--backCol),
+    0 2px 10px var(--backCol),
+    0 -2px 10px var(--backCol);
 }
 
 .decoBox {
@@ -524,6 +529,9 @@ footer {
   background-color: var(--backCol);
   font-size: 90%;
 }
+footer .sectionTitle {
+  margin-bottom: 52px;
+}
 
 #footerContentBox {
   display: flex;
@@ -644,6 +652,9 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
 
 .homecoverSection {
   margin: 125px 0;
+}
+.homecoverSection .sectionTitle {
+  margin-bottom: 52px;
 }
 .homecoverSection:first-child {
   margin-top: 20px;
@@ -1381,12 +1392,6 @@ main
 }
 #postPagePost .title {/* 제목 */
   text-align: center;
-  letter-spacing: 0.1em;
-  text-shadow:
-    2px 0 10px var(--backCol),
-    -2px 0 10px var(--backCol),
-    0 2px 10px var(--backCol),
-    0 -2px 10px var(--backCol);
 }
 #postPagePost .title:first-letter {/* 제목 첫글자 꾸밈  */
   font-size: 135%;

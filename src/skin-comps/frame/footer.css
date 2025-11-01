@@ -6,6 +6,9 @@ footer {
   background-color: var(--backCol);
   font-size: 90%;
 }
+footer .sectionTitle {
+  margin-bottom: 52px;
+}
 
 #footerContentBox {
   display: flex;
