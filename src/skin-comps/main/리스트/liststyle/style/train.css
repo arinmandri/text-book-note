@@ -44,6 +44,8 @@
 #postList.train .title {/* 제목 */
   display: block;
   font-size: 1.8em;
+  text-shadow: 1px 1px 3px {{ var.defaultColor.backCol }};
+  text-shadow: 1px 1px 3px var(--backCol);
 }
 #postList.train .category {
   display: block;

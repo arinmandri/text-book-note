@@ -26,6 +26,10 @@
 #postList.detailed .noThumbnail {
   display: none;
 }
+#postList.detailed .title {
+  text-shadow: 1px 1px 3px {{ var.defaultColor.backCol }};
+  text-shadow: 1px 1px 3px var(--backCol);
+}
 #postList.detailed .category::before {
   content: '\007E';/* ~ */
 }

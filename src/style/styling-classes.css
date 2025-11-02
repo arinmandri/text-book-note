@@ -54,3 +54,8 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .purpleBack { background-color: #81f4 }
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
+
+._textShadowBackcol {
+  text-shadow: 1px 1px 3px {{ var.defaultColor.backCol }};
+  text-shadow: 1px 1px 3px var(--backCol);
+}
