@@ -366,6 +366,42 @@ body:not(.theme-dark) .backImg.dark {
   background-position: bottom 0px right 0px;
   background-repeat: no-repeat;
 }
+#backImgBox .backImgType_X1 ,
+#backImgBox .backImgType_X3 ,
+#backImgBox .backImgType_X5 ,
+#backImgBox .backImgType_X7 ,
+#backImgBox .backImgType_X9 {
+  background-size: 50% auto;
+}
+@media (max-aspect-ratio: 1/1) {
+  #backImgBox .backImgType_X1 ,
+  #backImgBox .backImgType_X3 ,
+  #backImgBox .backImgType_X5 ,
+  #backImgBox .backImgType_X7 ,
+  #backImgBox .backImgType_X9 {
+    background-size: auto 50%;
+  }
+}
+#backImgBox .backImgType_X4 ,
+#backImgBox .backImgType_X6 {
+  background-size: 50% auto;
+}
+@media (min-aspect-ratio: 1/1) {
+  #backImgBox .backImgType_X4 ,
+  #backImgBox .backImgType_X6 {
+    background-size: 30% auto;
+  }
+}
+#backImgBox .backImgType_X2 ,
+#backImgBox .backImgType_X8 {
+  background-size: auto 50%;
+}
+@media (max-aspect-ratio: 1/1) {
+  #backImgBox .backImgType_X2 ,
+  #backImgBox .backImgType_X8 {
+    background-size: auto 30%;
+  }
+}
 #world2:not(.open) {
   display: none;
 }
