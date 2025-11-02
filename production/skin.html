@@ -582,35 +582,38 @@ function setSettingFixCbox( settingName, checked ){
 <ul class="postList">
   <s_cover_item>
     <s_cover_item_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
-        <div class="thumbnail">
-          <s_cover_item_thumbnail><img loading="lazy" alt="게시글 썸네일" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
-        </div>
-        <div class="itemHead">
-          <h2 class="title">[##_cover_item_title_##]</h2>
-          <span class="category">[##_cover_item_category_##]</span>
-        </div>
-        <div class="itemBody">
-          <span class="content">[##_cover_item_summary_##]</span>
-          <span class="itemTail">
-            <span class="date">[##_cover_item_simple_date_##].</span>
-          </span>
-        </div>
-      </article></a></li>
+      <li>
+        <s_cover_item_thumbnail>
+          <div class="thumbnail" style="background-image: url('[##_cover_item_thumbnail_##]');"></div>
+        </s_cover_item_thumbnail>
+        <a href="[##_cover_item_url_##]" class="_textShadowBackcol" style="display: block"><article class="postListItem">
+          <div class="itemHead">
+            <h2 class="title _fontSerif _textCenter">[##_cover_item_title_##]</h2>
+          </div>
+          <div class="itemBody">
+            <span class="content">[##_cover_item_summary_##]</span>
+            <span class="itemTail">
+              <span class="date">[##_cover_item_simple_date_##].</span>
+            </span>
+          </div>
+        </article>
+      </a></li>
     </s_cover_item_article_info>
 
     <s_cover_item_not_article_info>
-      <li><a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
-        <div class="thumbnail">
-          <s_cover_item_thumbnail><img loading="lazy" alt="게시글 썸네일" src="[##_cover_item_thumbnail_##]"></s_cover_item_thumbnail>
-        </div>
-        <div class="itemHead">
-          <h2 class="title">[##_cover_item_title_##]</h2>
-        </div>
-        <div class="itemBody">
-          <span class="content">[##_cover_item_summary_##]</span>
-        </div>
-      </article></a></li>
+      <li>
+        <s_cover_item_thumbnail>
+          <div class="thumbnail" style="background-image: url('[##_cover_item_thumbnail_##]');"></div>
+        </s_cover_item_thumbnail>
+        <a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
+          <div class="itemHead">
+            <h2 class="title">[##_cover_item_title_##]</h2>
+          </div>
+          <div class="itemBody">
+            <span class="content">[##_cover_item_summary_##]</span>
+          </div>
+        </article>
+      </a></li>
     </s_cover_item_not_article_info>
   </s_cover_item>
 </ul>

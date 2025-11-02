@@ -1,61 +1,42 @@
-.homecoverSection.train .postList > */*li*/ {/* 항목의 바깥쪽 스타일 */
+.homecoverSection.train .postList > * {
   margin: 80px auto;
   max-width: 900px;
   position: relative;
+  backdrop-filter: blur(5px);
 }
 .homecoverSection.train .postList > *:first-child {
   margin-top: 0;
 }
-.homecoverSection.train .postList > */*li*/ > a {/* 항목의 안쪽 스타일 */
-  padding: 30px 20px;
-  border: 2px solid #8880;
-  transition: box-shadow 0.6s linear, background-color 0.6s linear, border-color 0.2s linear;
-}
-.homecoverSection.train .postList > */*li*/ > a:hover {/* 마우스 올린 항목 테두리 테두리 표시 */
-  border-color: var(--borderCol);
-  background-color: {{ var.defaultColor.backCol }};
-  background-color: var(--backCol);
-  box-shadow: 0px 0px 10px {{ var.defaultColor.borderCol }};
-  box-shadow: 0px 0px 10px var(--borderCol);/* 그림자 */
-  transition-duration: 0s;
-}
-.homecoverSection.train .postListItem > .thumbnail {/* 썸네일 */
-  max-height: 100vw;
-  overflow: hidden;
-}
-.homecoverSection.train .thumbnail img {/* 썸네일 */
+.homecoverSection.train .thumbnail {/* 썸네일 */
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+  height: 100%;
   width: 100%;
-  display: block;
-  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  opacity: 25%;
 }
-.homecoverSection.train .noThumbnail {/* 없는 썸네일 */
-  display: none;
+
+.homecoverSection.train .postList > * > a {
+  padding: 45px 35px 40px 35px;
+  border-width: 1px;
 }
 .homecoverSection.train .postListItem > .itemHead {/* 제목등 */
-  margin-top: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 35px;
 }
 .homecoverSection.train .title {/* 제목 */
   display: block;
+  padding: 0 7%;
   font-size: 1.8em;
-}
-.homecoverSection.train .category {
-  display: block;
-  padding-right: 3%;
-  text-align: right;
-  font-size: 90%;
-}
-.homecoverSection.train .category::before {
-  content: '/';
+  letter-spacing: 0.06em;
 }
 .homecoverSection.train .postListItem > .itemBody {/* 본문등 */
-  margin-bottom: 22px;
-  max-height: 6.6em;/* 본문 크기 제한 */
+  max-height: 6.4em;/* 본문 크기 제한 */
   overflow: hidden;
 }
 .homecoverSection.train .content {/* 본문 */
   line-height: 1.6;
-  font-family: {{ settings.fontFamily.serif.cssValue }};
   font-size: 1.1em;
 }
 .homecoverSection.train .itemTail {/* 날짜등 */
