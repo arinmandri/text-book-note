@@ -583,18 +583,22 @@ function setSettingFixCbox( settingName, checked ){
   <s_cover_item>
     <s_cover_item_article_info>
       <li>
+        <div class="_backColSlightly"></div>
         <s_cover_item_thumbnail>
-          <div class="thumbnail" style="background-image: url('[##_cover_item_thumbnail_##]');"></div>
+          <div class="_backColSlightly" style="
+              background-color: unset;
+              background-image: url('[##_cover_item_thumbnail_##]');
+              background-size: cover;
+              background-position: center;
+          "></div>
         </s_cover_item_thumbnail>
-        <a href="[##_cover_item_url_##]" class="_textShadowBackcol" style="display: block"><article class="postListItem">
+        <a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
           <div class="itemHead">
-            <h2 class="title _fontSerif _textCenter">[##_cover_item_title_##]</h2>
+            <h2 class="title _fontSerif _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
           </div>
           <div class="itemBody">
             <span class="content">[##_cover_item_summary_##]</span>
-            <span class="itemTail">
-              <span class="date">[##_cover_item_simple_date_##].</span>
-            </span>
+            <span class="date">[##_cover_item_simple_date_##].</span>
           </div>
         </article>
       </a></li>
@@ -602,12 +606,18 @@ function setSettingFixCbox( settingName, checked ){
 
     <s_cover_item_not_article_info>
       <li>
+        <div class="_backColSlightly"></div>
         <s_cover_item_thumbnail>
-          <div class="thumbnail" style="background-image: url('[##_cover_item_thumbnail_##]');"></div>
+          <div class="_backColSlightly" style="
+              background-color: unset;
+              background-image: url('[##_cover_item_thumbnail_##]');
+              background-size: cover;
+              background-position: center;
+          "></div>
         </s_cover_item_thumbnail>
         <a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
           <div class="itemHead">
-            <h2 class="title">[##_cover_item_title_##]</h2>
+            <h2 class="title _fontSerif _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
           </div>
           <div class="itemBody">
             <span class="content">[##_cover_item_summary_##]</span>
@@ -702,6 +712,7 @@ TODO HOMECOVER_WIDEPAGE
 
   <!-- 게시글 본문 -->
   <div id="main4" class="bonmun">
+    <div class="_backColSlightly"></div>
     [##_notice_rep_desc_##]
   </div>
 </article>
@@ -865,6 +876,7 @@ TODO HOMECOVER_WIDEPAGE
 
   <!-- 게시글 본문 -->
   <div id="main4" class="bonmun">
+    <div class="_backColSlightly"></div>
     [##_article_rep_desc_##]
   </div>
 </article>
@@ -1202,7 +1214,9 @@ TODO HOMECOVER_WIDEPAGE
   <section style="position: relative;">
     <h2 class="pageTitle">전체 태그 가나다순</h2>
     <div id="tagChosongsBoxOuter"><div id="tagChosongsBox"></div></div>
-    <div id="main4" class="tagBoxOrdered"></div>
+    <div id="main4" class="tagBoxOrdered">
+      <div class="_backColSlightly"></div>
+    </div>
   </section>
 
   <script type="text/javascript">

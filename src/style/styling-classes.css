@@ -55,6 +55,17 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
 
+._backColSlightly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 25%;
+  background-color: {{ var.defaultColor.backCol }};
+  background-color: var(--backCol);
+}
 ._textShadowBackcol {
   text-shadow: 1px 1px 3px {{ var.defaultColor.backCol }};
   text-shadow: 1px 1px 3px var(--backCol);

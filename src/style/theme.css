@@ -80,6 +80,17 @@ body.theme-dark .themeBtn {
   background-color: var(--listBack);
 }
 
+.decoBox {
+  z-index: 10;
+}
+.tape {
+  position: absolute;
+  display: block;
+  background-color: #fff4;
+  border: 1px solid #0003;
+  pointer-events: none;
+}
+
 .noticeBoxStyle {
   margin-left: auto;
   max-width: 800px;
@@ -92,15 +103,4 @@ body.theme-dark .themeBtn {
   position: absolute;
   top: -14px;
   right: 15px;
-}
-
-.decoBox {
-  z-index: 10;
-}
-.tape {
-  position: absolute;
-  display: block;
-  background-color: #fff4;
-  border: 1px solid #0003;
-  pointer-events: none;
 }
