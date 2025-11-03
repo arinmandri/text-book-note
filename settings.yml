@@ -41,18 +41,14 @@ fonts:
 
 skin:
   font: # REFERENCES fonts
-    sans: sans
-    serif: serif
-    handwriting: handwriting
-    monospace: monospace
+    base: sans
+    title: serif
     sticker: thick
-    # base: sans
-    # title: serif
-    # sticker: thick
-    # deco: handwriting
-    # bonmun_base: serif
-    # bonmun_littleTitle: sans
-    # code: monospace
+    deco: handwriting
+    bonmun_base: serif
+    bonmun_littleTitle: sans
+    bonmun_deco: thick
+    code: monospace
 
   liststyle:
     options:

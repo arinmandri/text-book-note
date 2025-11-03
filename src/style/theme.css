@@ -1,6 +1,6 @@
 .pageTitle {
   margin: 80px auto;
-  font-family: {{ settings.font.serif }};
+  font-family: {{ settings.font.title }};
   font-size: 250%;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -16,7 +16,7 @@
 
 .sectionTitle {
   text-align: right;
-  font-family: {{ settings.font.serif }};
+  font-family: {{ settings.font.title }};
   font-size: 180%;
   letter-spacing: 0.12em;
 }
@@ -25,7 +25,7 @@
 }
 
 .areaTitle {
-  font-family: {{ settings.font.serif }};
+  font-family: {{ settings.font.title }};
   font-size: 120%;
   font-weight: bold;
   letter-spacing: 0.2em;

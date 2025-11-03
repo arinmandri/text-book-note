@@ -32,15 +32,6 @@ body:not(#tt-body-page) .onlyOnPage-page {
 ._fontBold {
   font-weight: bold;
 }
-._fontSans {
-  font-family: {{ settings.font.sans }};
-}
-._fontSerif {
-  font-family: {{ settings.font.serif }};
-}
-._fontCursive {
-  font-family: {{ settings.font.handwriting }};
-}
 /* 글자색 */
 .red        { color:            #d04 }
 .redBack    { background-color: #d044 }

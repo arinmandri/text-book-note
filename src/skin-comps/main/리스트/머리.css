@@ -30,7 +30,7 @@
 }
 #listHead .subtitle {
   margin-top: 15px;
-  font-family: {{ settings.font.handwriting }};
+  font-family: {{ settings.font.deco }};
 }
 #listHead .postNum {
   color: {{ var.defaultColor.pointCol }};

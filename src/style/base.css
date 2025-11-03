@@ -45,11 +45,11 @@ small {
   color: grey;
 }
 strong {
-  font-family: {{ settings.font.sans }};
+  font-size: 110%;
   font-weight: bold;
 }
 pre , code {
-  font-family: {{ settings.font.monospace }};
+  font-family: {{ settings.font.code }};
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */

@@ -84,7 +84,7 @@
 }
 .comment .writer {/* 글쓴이 */
   font-weight: bold;
-  font-family: {{ settings.font.handwriting }};
+  font-family: {{ settings.font.deco }};
   vertical-align: middle;
 }
 .comment .writer > img {/* 티스토리 플러그인 - 블로그 아이콘 표시 */
@@ -100,10 +100,11 @@
 .comment .date {/* 날짜 */
   vertical-align: bottom;
   font-size: 0.8em;
-  font-family: {{ settings.font.handwriting }};
+  font-family: {{ settings.font.deco }};
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
-  font-family: {{ settings.font.sans }};
+  font-size: 120%;
+  font-family: {{ settings.font.sticker }};
 }
 .comment .themeBtn {/* 버튼 */
   display: inline-block;
@@ -159,7 +160,6 @@
 #commentSec .formMsg {
   margin: 40px 0;
   text-align: center;
-  font-family: {{ settings.font.serif }};
 }
 
 

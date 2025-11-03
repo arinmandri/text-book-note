@@ -8,7 +8,7 @@
 html {
   width: 100%;
   height: 100%;
-  font-family: {{ settings.font.sans }};
+  font-family: {{ settings.font.base }};
   font-size: 18px;
   font-weight: 300;
   line-height: 1.2;

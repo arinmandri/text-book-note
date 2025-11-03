@@ -105,7 +105,7 @@ small {
   color: grey;
 }
 strong {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 110%;
   font-weight: bold;
 }
 pre , code {
@@ -150,15 +150,6 @@ body:not(#tt-body-page) .onlyOnPage-page {
 }
 ._fontBold {
   font-weight: bold;
-}
-._fontSans {
-  font-family: 'Nanum Gothic', sans-serif;
-}
-._fontSerif {
-  font-family: 'Noto Serif KR', serif;
-}
-._fontCursive {
-  font-family: 'Gaegu', cursive;
 }
 /* 글자색 */
 .red        { color:            #d04 }
@@ -1904,7 +1895,8 @@ li > dl > dt ,
   font-family: 'Gaegu', cursive;
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
-  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 120%;
+  font-family: 'Jua', sans-serif;
 }
 .comment .themeBtn {/* 버튼 */
   display: inline-block;
@@ -1960,7 +1952,6 @@ li > dl > dt ,
 #commentSec .formMsg {
   margin: 40px 0;
   text-align: center;
-  font-family: 'Noto Serif KR', serif;
 }
 
 
