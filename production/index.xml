@@ -143,23 +143,23 @@
 		<description>썸네일이 없는 게시글의 썸네일 표시</description>
 		<type>SELECT</type>
 		<option><![CDATA[[
-				{"name":"backImgType_cover", "value":"backImgType_cover", "label":"가득덮기"},
-				{"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
-				{"name":"backImgType_VH", "value":"backImgType_VH", "label":"바둑판식 배열"},
-				{"name":"backImgType_HT", "value":"backImgType_HT", "label":"위 가로 반복"},
-				{"name":"backImgType_HB", "value":"backImgType_HB", "label":"아래 가로 반복"},
-				{"name":"backImgType_VL", "value":"backImgType_VL", "label":"왼쪽 세로 반복"},
-				{"name":"backImgType_VR", "value":"backImgType_VR", "label":"오른쪽 세로 반복"},
-				{"name":"backImgType_X1", "value":"backImgType_X1", "label":"↖"},
-				{"name":"backImgType_X2", "value":"backImgType_X2", "label":"↑"},
-				{"name":"backImgType_X3", "value":"backImgType_X3", "label":"↗"},
-				{"name":"backImgType_X4", "value":"backImgType_X4", "label":"←"},
-				{"name":"backImgType_X5", "value":"backImgType_X5", "label":"한가운데"},
-				{"name":"backImgType_X6", "value":"backImgType_X6", "label":"→"},
-				{"name":"backImgType_X7", "value":"backImgType_X7", "label":"↙"},
-				{"name":"backImgType_X8", "value":"backImgType_X8", "label":"↓"},
-				{"name":"backImgType_X9", "value":"backImgType_X9", "label":"↘"}
-		]]]></option>
+	{"name":"backImgType_cover",   "value":"backImgType_cover",   "label":"가득덮기"},
+	{"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
+	{"name":"backImgType_VH",      "value":"backImgType_VH",      "label":"가로세로반복(바둑판식)"},
+	{"name":"backImgType_HT",      "value":"backImgType_HT",      "label":"↑ 가로반복"},
+	{"name":"backImgType_HB",      "value":"backImgType_HB",      "label":"↓ 가로반복"},
+	{"name":"backImgType_VL",      "value":"backImgType_VL",      "label":"← 세로반복"},
+	{"name":"backImgType_VR",      "value":"backImgType_VR",      "label":"→ 세로반복"},
+	{"name":"backImgType_X1",      "value":"backImgType_X1",      "label":"↖"},
+	{"name":"backImgType_X2",      "value":"backImgType_X2",      "label":"↑"},
+	{"name":"backImgType_X3",      "value":"backImgType_X3",      "label":"↗"},
+	{"name":"backImgType_X4",      "value":"backImgType_X4",      "label":"←"},
+	{"name":"backImgType_X5",      "value":"backImgType_X5",      "label":"한가운데"},
+	{"name":"backImgType_X6",      "value":"backImgType_X6",      "label":"→"},
+	{"name":"backImgType_X7",      "value":"backImgType_X7",      "label":"↙"},
+	{"name":"backImgType_X8",      "value":"backImgType_X8",      "label":"↓"},
+	{"name":"backImgType_X9",      "value":"backImgType_X9",      "label":"↘"}
+]]]></option>
 		<default>backImgType_VH</default>
 	</variable>
 	<variable>
@@ -254,23 +254,23 @@
 		<description>썸네일이 없는 게시글의 썸네일 표시</description>
 		<type>SELECT</type>
 		<option><![CDATA[[
-				{"name":"backImgType_cover", "value":"backImgType_cover", "label":"가득덮기"},
-				{"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
-				{"name":"backImgType_VH", "value":"backImgType_VH", "label":"바둑판식 배열"},
-				{"name":"backImgType_HT", "value":"backImgType_HT", "label":"위 가로 반복"},
-				{"name":"backImgType_HB", "value":"backImgType_HB", "label":"아래 가로 반복"},
-				{"name":"backImgType_VL", "value":"backImgType_VL", "label":"왼쪽 세로 반복"},
-				{"name":"backImgType_VR", "value":"backImgType_VR", "label":"오른쪽 세로 반복"},
-				{"name":"backImgType_X1", "value":"backImgType_X1", "label":"↖"},
-				{"name":"backImgType_X2", "value":"backImgType_X2", "label":"↑"},
-				{"name":"backImgType_X3", "value":"backImgType_X3", "label":"↗"},
-				{"name":"backImgType_X4", "value":"backImgType_X4", "label":"←"},
-				{"name":"backImgType_X5", "value":"backImgType_X5", "label":"한가운데"},
-				{"name":"backImgType_X6", "value":"backImgType_X6", "label":"→"},
-				{"name":"backImgType_X7", "value":"backImgType_X7", "label":"↙"},
-				{"name":"backImgType_X8", "value":"backImgType_X8", "label":"↓"},
-				{"name":"backImgType_X9", "value":"backImgType_X9", "label":"↘"}
-		]]]></option>
+	{"name":"backImgType_cover",   "value":"backImgType_cover",   "label":"가득덮기"},
+	{"name":"backImgType_stretch", "value":"backImgType_stretch", "label":"늘리기"},
+	{"name":"backImgType_VH",      "value":"backImgType_VH",      "label":"가로세로반복(바둑판식)"},
+	{"name":"backImgType_HT",      "value":"backImgType_HT",      "label":"↑ 가로반복"},
+	{"name":"backImgType_HB",      "value":"backImgType_HB",      "label":"↓ 가로반복"},
+	{"name":"backImgType_VL",      "value":"backImgType_VL",      "label":"← 세로반복"},
+	{"name":"backImgType_VR",      "value":"backImgType_VR",      "label":"→ 세로반복"},
+	{"name":"backImgType_X1",      "value":"backImgType_X1",      "label":"↖"},
+	{"name":"backImgType_X2",      "value":"backImgType_X2",      "label":"↑"},
+	{"name":"backImgType_X3",      "value":"backImgType_X3",      "label":"↗"},
+	{"name":"backImgType_X4",      "value":"backImgType_X4",      "label":"←"},
+	{"name":"backImgType_X5",      "value":"backImgType_X5",      "label":"한가운데"},
+	{"name":"backImgType_X6",      "value":"backImgType_X6",      "label":"→"},
+	{"name":"backImgType_X7",      "value":"backImgType_X7",      "label":"↙"},
+	{"name":"backImgType_X8",      "value":"backImgType_X8",      "label":"↓"},
+	{"name":"backImgType_X9",      "value":"backImgType_X9",      "label":"↘"}
+]]]></option>
 		<default>backImgType_VH</default>
 	</variable>
 	<variable>
