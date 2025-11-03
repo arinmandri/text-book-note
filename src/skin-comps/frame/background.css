@@ -10,102 +10,57 @@ body:not(.theme-light) .backImg.light {
 body:not(.theme-dark) .backImg.dark {
   display: none;
 }
-#backImgBox .backImgType_cover {
+#backImgBox .backImg.cover {
   background-position: center;
   background-size: cover;
 }
-#backImgBox .backImgType_stretch {
+#backImgBox .backImg.stretch {
   background-size: 100vw 100vh;
 }
-#backImgBox .backImgType_VH {
+#backImgBox .backImg.pos_1 {
+  background-position: top left;
+}
+#backImgBox .backImg.pos_2 {
+  background-position: top center;
+}
+#backImgBox .backImg.pos_3 {
+  background-position: top right;
+}
+#backImgBox .backImg.pos_4 {
+  background-position: center left;
+}
+#backImgBox .backImg.pos_5 {
   background-position: center;
+}
+#backImgBox .backImg.pos_6 {
+  background-position: center right;
+}
+#backImgBox .backImg.pos_7 {
+  background-position: bottom left;
+}
+#backImgBox .backImg.pos_8 {
+  background-position: bottom center;
+}
+#backImgBox .backImg.pos_9 {
+  background-position: bottom right;
+}
+#backImgBox .backImg {
+  background-repeat: no-repeat;
+}
+#backImgBox .backImg.repeat_x {
+  background-repeat: repeat-x;
+}
+#backImgBox .backImg.repeat_y {
+  background-repeat: repeat-y;
+}
+#backImgBox .backImg.repeat_x.repeat_y {
   background-repeat: repeat;
 }
-#backImgBox .backImgType_HT {
-  background-position: top;
-  background-repeat: repeat-x;
-}
-#backImgBox .backImgType_HB {
-  background-position: bottom;
-  background-repeat: repeat-x;
-}
-#backImgBox .backImgType_VL {
-  background-position: left;
-  background-repeat: repeat-y;
-}
-#backImgBox .backImgType_VR {
-  background-position: right;
-  background-repeat: repeat-y;
-}
-#backImgBox .backImgType_X1 {
-  background-position: top 0px left 0px;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X2 {
-  background-position: top;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X3 {
-  background-position: top 0px right 0px;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X4 {
-  background-position: left;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X5 {
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X6 {
-  background-position: right;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X7 {
-  background-position: top 0px right 0px;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X8 {
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X9 {
-  background-position: bottom 0px right 0px;
-  background-repeat: no-repeat;
-}
-#backImgBox .backImgType_X1 ,
-#backImgBox .backImgType_X3 ,
-#backImgBox .backImgType_X5 ,
-#backImgBox .backImgType_X7 ,
-#backImgBox .backImgType_X9 {
-  background-size: 50% auto;
+#backImgBox .backImg.fit {
+  background-size: auto 100%;
 }
 @media (max-aspect-ratio: 1/1) {
-  #backImgBox .backImgType_X1 ,
-  #backImgBox .backImgType_X3 ,
-  #backImgBox .backImgType_X5 ,
-  #backImgBox .backImgType_X7 ,
-  #backImgBox .backImgType_X9 {
-    background-size: auto 50%;
-  }
-}
-#backImgBox .backImgType_X4 ,
-#backImgBox .backImgType_X6 {
-  background-size: 50% auto;
-}
-@media (min-aspect-ratio: 1/1) {
-  #backImgBox .backImgType_X4 ,
-  #backImgBox .backImgType_X6 {
-    background-size: 30% auto;
-  }
-}
-#backImgBox .backImgType_X2 ,
-#backImgBox .backImgType_X8 {
-  background-size: auto 50%;
-}
-@media (max-aspect-ratio: 1/1) {
-  #backImgBox .backImgType_X2 ,
-  #backImgBox .backImgType_X8 {
-    background-size: auto 30%;
+  #backImgBox .backImg.fit {
+    background-size: 100% auto;
   }
 }
