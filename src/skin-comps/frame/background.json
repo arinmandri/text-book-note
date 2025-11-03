@@ -14,5 +14,7 @@
 	{"name":"", "label":"↑ 가로반복", "value":"repeat_x pos_2"},
 	{"name":"", "label":"↓ 가로반복", "value":"repeat_x pos_8"},
 	{"name":"", "label":"← 세로반복", "value":"repeat_y pos_4"},
-	{"name":"", "label":"→ 세로반복", "value":"repeat_y pos_6"}
+	{"name":"", "label":"→ 세로반복", "value":"repeat_y pos_6"},
+	{"name":"", "label":"← 스크롤",   "value":"scroll left"},
+	{"name":"", "label":"→ 스크롤",   "value":"scroll right"}
 ]

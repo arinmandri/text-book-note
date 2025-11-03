@@ -1,4 +1,60 @@
 <div id="backImgBox">
   <s_if_var_backImg_light><div class="backImg light [##_var_backImgType_light_##]" style="background-image: url('[##_var_backImg_light_##]');" ></div></s_if_var_backImg_light>
   <s_if_var_backImg_dark><div  class="backImg dark  [##_var_backImgType_dark_##]"  style="background-image: url('[##_var_backImg_dark_##]');"  ></div></s_if_var_backImg_dark>
-</div>
+</div><script>
+  /// 스크롤 스타일만의 기능: 스크롤시 위치 조정, 리사이즈시 배경도 리사이즈(스크롤 길이 길 수록 작아짐).
+  (function (){
+    const domEl = document.documentElement;
+
+    const backImgScroll = ( elToStyle , pos )=>{// pos: 'left'|'right'
+      const scrollHeight = domEl.scrollHeight - domEl.clientHeight;
+      console.log('+++++++++++++++ backImgScroll', scrollHeight);
+      if( scrollHeight <= 0 ) return;
+
+      const scrollTop  = window.scrollY || domEl.scrollTop;
+      const scrollPercent = ( scrollTop / scrollHeight ) * 100;
+
+      elToStyle.style.backgroundPosition = pos + ' ' + (100-scrollPercent) + '%';
+      console.log('+++++++++++++++ backImgScroll', elToStyle, scrollPercent);
+    };
+
+    const backImgResize = ( elToStyle )=>{// 스크롤길이 길 수록 배경 작아지게 하고 싶은데 걍 y=1/x 하니까 생각보다 넘 작네. y=b/(x+a)로 간다.
+      const a = 23;
+      const x = domEl.scrollHeight / domEl.clientHeight;
+      const y = (a+1) / (x+a);// (1, 1); b=a+1
+      elToStyle.style.backgroundSize = 'auto ' + (y*100) + '%';
+    };
+
+    const backImgScrollable_l = document.querySelector('#backImgBox .backImg.scroll.light');
+    if( backImgScrollable_l != null ){
+      const lr = backImgScrollable_l.classList.contains('left') ? 'left' : 'right';
+      document.addEventListener('DOMContentLoaded', ()=>{
+        backImgResize( backImgScrollable_l );
+        backImgScroll( backImgScrollable_l, lr );
+      });
+      window.addEventListener('resize', ()=>{
+        backImgResize( backImgScrollable_l );
+        backImgScroll( backImgScrollable_l, lr );
+      });
+      window.addEventListener('scroll', ()=>{
+        backImgScroll( backImgScrollable_l, lr );
+      });
+    }
+
+    const backImgScrollable_d = document.querySelector('#backImgBox .backImg.scroll.dark');
+    if( backImgScrollable_d != null ){
+      const lr = backImgScrollable_d.classList.contains('left') ? 'left' : 'right';
+      document.addEventListener('DOMContentLoaded', ()=>{
+        backImgResize( backImgScrollable_d );
+        backImgScroll( backImgScrollable_d, lr );
+      });
+      window.addEventListener('resize', ()=>{
+        backImgResize( backImgScrollable_d );
+        backImgScroll( backImgScrollable_d, lr );
+      });
+      window.addEventListener('scroll', ()=>{
+        backImgScroll( backImgScrollable_d, lr );
+      });
+    }
+  })();
+</script>
