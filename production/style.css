@@ -1405,7 +1405,7 @@ main
 │
 └관련글영역 div.relatedSec
 */
-body#tt-body-page .areaTitle {
+body#tt-body-page main .areaTitle {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
