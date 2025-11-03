@@ -74,12 +74,14 @@ body#tt-body-page main .areaTitle {
 #postPagePost .info {/* 정보  */
   margin: 10px 5%;
   text-align: right;
+  font-family: {{ settings.font.deco }};
 }
 #postPagePost .info .date ,
 #postPagePost .info .author {
   display: inline-block;
   font-size: 1rem;
   transform: translateY(-0.2em);
+  font-family: {{ settings.font.base }};
 }
 #postPagePost .tags a {
   display: inline-block;

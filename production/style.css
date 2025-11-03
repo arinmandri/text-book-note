@@ -498,6 +498,9 @@ header .title {
   font-family: 'Jua', sans-serif;
   font-weight: inherit;
 }
+header .blogger {
+  font-family: 'Noto Serif KR', serif;
+}
 
 body#tt-body-index header > .alt {
   display: none;
@@ -660,6 +663,9 @@ footer .sectionTitle {
 #footerContentBox > .nuguisho .blogger {
   margin-bottom: 10px;
 }
+#footerContentBox > .nuguisho .blogger .name {
+  font-family: 'Noto Serif KR', serif;
+}
 #footerContentBox > .nuguisho .desc {
   width: 86%;
   margin-left: auto;
@@ -791,6 +797,7 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   padding: 0 7%;
   font-size: 1.8em;
   letter-spacing: 0.06em;
+  font-family: 'Noto Serif KR', serif;
 }
 .homecoverSection.train .postListItem > .itemBody {/* 본문등 */
   max-height: 6.4em;/* 본문 크기 제한 */
@@ -1458,12 +1465,14 @@ body#tt-body-page main .areaTitle {
 #postPagePost .info {/* 정보  */
   margin: 10px 5%;
   text-align: right;
+  font-family: 'Gaegu', cursive;
 }
 #postPagePost .info .date ,
 #postPagePost .info .author {
   display: inline-block;
   font-size: 1rem;
   transform: translateY(-0.2em);
+  font-family: 'Nanum Gothic', sans-serif;
 }
 #postPagePost .tags a {
   display: inline-block;
@@ -2066,10 +2075,10 @@ main
   font-family: 'Gaegu', cursive;
 }
 #listHead .postNum {
+  font-size: 120%;
   color: #FF6644;
   color: var(--pointCol);
-  font-weight: bold;
-  font-size: 120%;
+  font-family: 'Jua', sans-serif;
 }
 #listHead .decoBox {/* 꾸밈상자 */
   margin: 20px 50px;
@@ -2096,6 +2105,7 @@ main
   background-color: var(--listBack);
   overflow: hidden;
   font-size: 0.9rem;
+  font-family: 'Gaegu', cursive;
 }
 #listHead .tape {
   width: 100px; height: 30px;

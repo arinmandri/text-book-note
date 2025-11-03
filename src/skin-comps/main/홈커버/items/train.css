@@ -20,6 +20,7 @@
   padding: 0 7%;
   font-size: 1.8em;
   letter-spacing: 0.06em;
+  font-family: {{ settings.font.title }};
 }
 .homecoverSection.train .postListItem > .itemBody {/* 본문등 */
   max-height: 6.4em;/* 본문 크기 제한 */

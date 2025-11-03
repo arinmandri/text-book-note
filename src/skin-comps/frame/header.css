@@ -12,6 +12,9 @@ header .title {
   font-family: {{ settings.font.sticker }};
   font-weight: inherit;
 }
+header .blogger {
+  font-family: {{ settings.font.userName }};
+}
 
 body#tt-body-index header > .alt {
   display: none;

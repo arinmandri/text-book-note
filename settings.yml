@@ -42,6 +42,7 @@ fonts:
 skin:
   font: # REFERENCES fonts
     base: sans
+    userName: serif
     title: serif
     sticker: thick
     deco: handwriting

@@ -405,7 +405,7 @@ function setSettingFixCbox( settingName, checked ){
     </div>
     <div class="box2 _textLeft">
       <h1 class="title">[##_title_##]</h1>
-      <div class="_fontLarger _fontSerif">[##_blogger_##]</div>
+      <div class="blogger _fontLarger">[##_blogger_##]</div>
       <p>[##_desc_##]</p>
       <div class="blogLinks _textRight">
         <s_link_rep>
@@ -594,7 +594,7 @@ function setSettingFixCbox( settingName, checked ){
         </s_cover_item_thumbnail>
         <a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
           <div class="itemHead">
-            <h2 class="title _fontSerif _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
+            <h2 class="title _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
           </div>
           <div class="itemBody">
             <span class="content">[##_cover_item_summary_##]</span>
@@ -617,7 +617,7 @@ function setSettingFixCbox( settingName, checked ){
         </s_cover_item_thumbnail>
         <a href="[##_cover_item_url_##]" style="display: block"><article class="postListItem">
           <div class="itemHead">
-            <h2 class="title _fontSerif _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
+            <h2 class="title _textCenter _textShadowBackcol">[##_cover_item_title_##]</h2>
           </div>
           <div class="itemBody">
             <span class="content">[##_cover_item_summary_##]</span>
@@ -694,9 +694,11 @@ TODO HOMECOVER_WIDEPAGE
       <h1 class="title pageTitle">[##_notice_rep_title_##]</h1>
     </div>
     <!-- 게시글 정보 -->
-    <div class="info _fontCursive">
-      <span class="date _fontSans">[##_notice_rep_simple_date_##]</span><span>에</span>
-      <span class="author _fontSerif">[##_notice_rep_author_##]</span><span>이가 씀.</span>
+    <div class="info">
+      <div>
+        <span class="date">[##_notice_rep_simple_date_##]</span><span>에</span>
+        <span class="author">[##_notice_rep_author_##]</span><span>이가 씀.</span>
+      </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
     </div>
   </div>
@@ -858,9 +860,11 @@ TODO HOMECOVER_WIDEPAGE
       <h1 class="title pageTitle">[##_article_rep_title_##]</h1>
     </div>
     <!-- 게시글 정보 -->
-    <div class="info _fontCursive">
-      <span class="date _fontSans">[##_article_rep_simple_date_##]</span><span>에</span>
-      <span class="author _fontSerif">[##_article_rep_author_##]</span><span>이가 씀.</span>
+    <div class="info">
+      <div>
+        <span class="date">[##_article_rep_simple_date_##]</span><span>에</span>
+        <span class="author">[##_article_rep_author_##]</span><span>이가 씀.</span>
+      </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
     </div>
   </div>
@@ -1010,7 +1014,7 @@ TODO HOMECOVER_WIDEPAGE
     <h1 class="title pageTitle">[##_list_conform_##]</h1>
     <div class="subtitle">
       <span id="listPage-head-pagetype" class="pagetype"></span>
-      <span class="postNum _fontSans">[##_list_count_##]</span>개
+      <span class="postNum">[##_list_count_##]</span>개
       <script>(function(){ // 페이지별 문구 다르게
         const a = document.getElementById('listPage-head-pagetype')
         if( document.getElementById('tt-body-category') != null )
@@ -1033,7 +1037,7 @@ TODO HOMECOVER_WIDEPAGE
       <s_list_image><img loading="lazy" class="image" alt="대표 이미지" src="[##_list_image_##]"></s_list_image>
     </div>
     <!-- 설명 -->
-    <p class="description _fontCursive">[##_list_description_##]</p>
+    <p class="description">[##_list_description_##]</p>
     <!-- 꾸밈테이프 -->
     <span class="tape tape1"></span>
     <span class="tape tape2"></span>
@@ -1982,7 +1986,7 @@ document.addEventListener('DOMContentLoaded', function(){
       <h6 class="areaTitle">Nuguishŏyo?</h6>
       <hr>
       <div class="content">
-        <p class="blogger _textLeft">블로거 ⚜️ <span class="_fontSerif _fontLarger">[##_blogger_##]</span></p>
+        <p class="blogger _textLeft">블로거 ⚜️ <span class="name _fontLarger">[##_blogger_##]</span></p>
         <img class="blogImg" src="[##_image_##]">
         <p class="desc">[##_desc_##]</p>
       </div>
