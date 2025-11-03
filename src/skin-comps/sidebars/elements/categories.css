@@ -24,8 +24,6 @@
 #navCat .tt_category a:hover {
   background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
-  border-color: {{ var.defaultColor.pointCol }};
-  border-color: var(--pointCol);
   color: black;
   font-weight: bold;
   transition-duration: 0s;

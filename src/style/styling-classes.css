@@ -55,6 +55,10 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
 
+._backCol {
+  background-color: {{ var.defaultColor.backCol }};
+  background-color: var(--backCol);
+}
 ._backColSlightly {
   position: absolute;
   top: 0;

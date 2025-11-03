@@ -174,6 +174,10 @@ body:not(#tt-body-page) .onlyOnPage-page {
 .grey       { color:            #888 }
 .bold       { font-weight:      bold; }
 
+._backCol {
+  background-color: #FFFFFF;
+  background-color: var(--backCol);
+}
 ._backColSlightly {
   position: absolute;
   top: 0;
@@ -621,8 +625,6 @@ footer {
   border-top-width: 9px;
   border-top-style: double;
   padding: 60px 6% 20px 6%;
-  background-color: #FFFFFF;
-  background-color: var(--backCol);
   font-size: 90%;
 }
 footer .sectionTitle {
@@ -770,10 +772,6 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   display: inline-block;
 }
 
-.homecover.menubar > nav {
-  color:  #333333;
-  color: var(--baseTextCol);
-}
 .homecover.menubar > nav a {
   padding: 4px 8px;
   font-family: 'Jua', sans-serif;
@@ -1135,8 +1133,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #navCat .tt_category a:hover {
   background-color: #F0FF40;
   background-color: var(--highlight);
-  border-color: #FF6644;
-  border-color: var(--pointCol);
   color: black;
   font-weight: bold;
   transition-duration: 0s;
@@ -1373,6 +1369,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   height: 36px;
 }
 .paging a:not([href]) > button {
+  border-color: transparent;
   background-color: transparent;
   color: #333333;
   color: var(--baseTextCol);
@@ -2017,11 +2014,6 @@ body#tt-body-guestbook main .areaTitle {
   margin: 10px;
   border-width: 1px;
   border-left-width: 0px;
-  background-color: #FFFFFF;
-  background-color: var(--backCol);
-}
-.relatedList > *:hover {
-  box-shadow: 0px 0px 3px #0004;
 }
 .relatedList > * a {
   display: block;

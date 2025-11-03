@@ -24,6 +24,7 @@
   height: 36px;
 }
 .paging a:not([href]) > button {
+  border-color: transparent;
   background-color: transparent;
   color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);

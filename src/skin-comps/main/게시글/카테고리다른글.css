@@ -14,11 +14,6 @@
   margin: 10px;
   border-width: 1px;
   border-left-width: 0px;
-  background-color: {{ var.defaultColor.backCol }};
-  background-color: var(--backCol);
-}
-.relatedList > *:hover {
-  box-shadow: 0px 0px 3px #0004;
 }
 .relatedList > * a {
   display: block;

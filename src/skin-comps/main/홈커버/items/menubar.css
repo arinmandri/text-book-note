@@ -7,10 +7,6 @@
   display: inline-block;
 }
 
-.homecover.menubar > nav {
-  color:  {{ var.defaultColor.baseTextCol }};
-  color: var(--baseTextCol);
-}
 .homecover.menubar > nav a {
   padding: 4px 8px;
   font-family: {{ settings.fontFamily.sticker.cssValue }};
