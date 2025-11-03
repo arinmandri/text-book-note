@@ -1751,10 +1751,11 @@ li > dl > dt ,
   display: block;
   padding: 10px;
   border-left: 60px solid;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
   text-align: right;
   background-color: #FFFFFF;
   background-color: var(--backCol);
-  box-shadow: 1px 1px 3px #0004;
 }
 .linkBefore    {border-left-color: #46f8}
 .linkAfter     {border-left-color: #f468;}
