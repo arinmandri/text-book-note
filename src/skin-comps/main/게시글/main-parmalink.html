@@ -10,11 +10,19 @@ category_link='[##_article_rep_category_link_##]'
 {% include "skin-comps/main/게시글/게시글.html" %}
 {% endwith %}
 
-  <hr class="areaSeparator">
+  <!-- 여기에 자동으로 namecard 생긴다. -->
 
 {% include "skin-comps/main/댓글과방명록/댓글.html" %}
 
   <hr class="areaSeparator">
 
 {% include "skin-comps/main/게시글/카테고리다른글.html" %}
+
+  <script>(function (){
+    //// namecard 밑에 hr 추가 (html 편집으로는 namecard 위치를 커스텀 불가함.)
+    const hrUnderNamecard = document.createElement('hr');
+    hrUnderNamecard.classList.add('areaSeparator');
+    document.getElementById('commentSec')
+      .prepend( hrUnderNamecard );
+  })();</script>
 </s_permalink_article_rep>

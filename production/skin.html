@@ -882,7 +882,7 @@ TODO HOMECOVER_WIDEPAGE
 </article>
 
 
-  <hr class="areaSeparator">
+  <!-- 여기에 자동으로 namecard 생긴다. -->
 
 <s_rp><!--▶ 댓글 --><div id="commentSec" class="postPage">
   <h1 class="areaTitle">댓글</h1>
@@ -990,6 +990,14 @@ TODO HOMECOVER_WIDEPAGE
     </li></s_article_related_rep>
   </ul>
 </div></s_article_related>
+
+  <script>(function (){
+    //// namecard 밑에 hr 추가 (html 편집으로는 namecard 위치를 커스텀 불가함.)
+    const hrUnderNamecard = document.createElement('hr');
+    hrUnderNamecard.classList.add('areaSeparator');
+    document.getElementById('commentSec')
+      .prepend( hrUnderNamecard );
+  })();</script>
 </s_permalink_article_rep>
 </s_article_rep>
 
