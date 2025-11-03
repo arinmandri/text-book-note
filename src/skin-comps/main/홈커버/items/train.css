@@ -30,7 +30,7 @@
   font-size: 1.1em;
 }
 .homecoverSection.train .date {/* 날짜등 */
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   position: absolute;
   right: 2px;
   bottom: 2px;

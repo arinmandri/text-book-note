@@ -33,13 +33,13 @@ body:not(#tt-body-page) .onlyOnPage-page {
   font-weight: bold;
 }
 ._fontSans {
-  font-family: {{ settings.fontFamily.sans.cssValue }};
+  font-family: {{ settings.font.sans }};
 }
 ._fontSerif {
-  font-family: {{ settings.fontFamily.serif.cssValue }};
+  font-family: {{ settings.font.serif }};
 }
 ._fontCursive {
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
 }
 /* 글자색 */
 .red        { color:            #d04 }

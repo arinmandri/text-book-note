@@ -63,7 +63,7 @@
   font-size: 200%;
   border-bottom-width: 3px;
   border-bottom-style: dashed;
-  font-family: {{ settings.fontFamily.serif.cssValue }};
+  font-family: {{ settings.font.serif }};
 }
 #main4.tagBoxOrdered .list {
   padding: 10px;

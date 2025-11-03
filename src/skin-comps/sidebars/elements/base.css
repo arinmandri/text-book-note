@@ -12,7 +12,7 @@
 .sidebar .caption {/* ▴ figure 0: blahblah 이거 */
   display: block;
   text-align: center;
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   margin-top: 12px;
   font-size: 0.8em;
 }

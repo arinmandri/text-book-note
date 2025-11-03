@@ -9,7 +9,7 @@ header {
   color: var(--frameFore);
 }
 header .title {
-  font-family: {{ settings.fontFamily.sticker.cssValue }};
+  font-family: {{ settings.font.sticker }};
   font-weight: inherit;
 }
 

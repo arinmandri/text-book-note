@@ -62,11 +62,11 @@
   overflow: hidden;
 }
 #postList.train .content {/* 본문 */
-  font-family: {{ settings.fontFamily.serif.cssValue }};
+  font-family: {{ settings.font.serif }};
   font-size: 1.1em;
 }
 #postList.train .itemTail {/* 날짜등 */
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   position: absolute;
   right: 2px;
   bottom: 2px;

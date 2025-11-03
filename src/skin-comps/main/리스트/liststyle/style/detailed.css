@@ -36,7 +36,7 @@
 #postList.detailed .category ,
 #postList.detailed .date ,
 #postList.detailed .writer {
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   font-size: 0.8em;
   margin: 0px 10px;
 }

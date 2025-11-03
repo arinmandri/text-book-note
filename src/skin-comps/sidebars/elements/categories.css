@@ -49,6 +49,6 @@
 }
 #navCat .c_cnt {
   font-size: 90%;
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   color: grey;
 }

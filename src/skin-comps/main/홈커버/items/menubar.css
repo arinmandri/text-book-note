@@ -9,6 +9,6 @@
 
 .homecover.menubar > nav a {
   padding: 4px 8px;
-  font-family: {{ settings.fontFamily.sticker.cssValue }};
+  font-family: {{ settings.font.sticker }};
   font-size: 135%;
 }

@@ -52,7 +52,7 @@
   bottom: 1px;
   right: 5px;
   text-align: right;
-  font-family: {{ settings.fontFamily.handwriting.cssValue }};
+  font-family: {{ settings.font.handwriting }};
   font-size: 0.9em;
   line-height: 1;
 }
