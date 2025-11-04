@@ -47,7 +47,7 @@
   font-size: 110%;
   font-weight: normal;
 }
-#postList.card .itemBody {/* 날짜 */
+#postList.card .itemTail {/* 날짜 */
   position: absolute;
   bottom: 1px;
   right: 5px;

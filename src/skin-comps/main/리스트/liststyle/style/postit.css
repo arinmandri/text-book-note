@@ -42,12 +42,6 @@
 #postList.postit > :nth-child(8n+6) .tape {background-color: hsl(230,  80%, 65%, 50%);}
 #postList.postit > :nth-child(8n+7) .tape {background-color: hsl(270,  90%, 55%, 50%);}
 #postList.postit > :nth-child(8n)   .tape {background-color: hsl(305,  90%, 50%, 50%);}
-#postList.postit .itemBody {/* 날짜 위치: 바닥 오른쪽 */
-  position: absolute;
-  bottom: 1px;
-  right: 5px;
-  font-size: 0.8em;/* 날짜 작게 */
-}
 #postList.postit .title {/* 제목 */
   display: inline;
   font-size: 120%;
@@ -60,4 +54,10 @@
 }
 #postList.postit .category::before {
   content: '~';
+}
+#postList.postit .itemTail {/* 날짜 위치: 바닥 오른쪽 */
+  position: absolute;
+  bottom: 1px;
+  right: 5px;
+  font-size: 0.8em;/* 날짜 작게 */
 }

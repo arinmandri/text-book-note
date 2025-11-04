@@ -2,6 +2,7 @@
 #postList.album .itemHead ,
 #postList.album .category ,
 #postList.album .itemBody ,
+#postList.album .itemTail ,
 #postList.album .tape {
   display: none;
 }

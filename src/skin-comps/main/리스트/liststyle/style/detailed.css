@@ -5,7 +5,7 @@
   border-bottom-style: double;
 }
 #postList.detailed > */*li*/ > */*a*/ {
-  padding: 10px 10px;
+  padding: 19px 10px;
   min-height: 98px;
 }
 #postList.detailed .thumbnail ,/* 줄줄이 다 inline */
@@ -20,7 +20,7 @@
   float: left;
 }
 #postList.detailed .thumbnail img {
-  height: 90px;
+  height: 6em;
   max-width: 180px;
 }
 #postList.detailed .noThumbnail {
@@ -32,6 +32,12 @@
 }
 #postList.detailed .category::before {
   content: '\007E';/* ~ */
+}
+#postList.detailed .itemTail {
+  text-align: right;
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
 }
 #postList.detailed .category ,
 #postList.detailed .date ,
