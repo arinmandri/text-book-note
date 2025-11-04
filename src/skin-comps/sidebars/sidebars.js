@@ -24,6 +24,14 @@ const sidebarBox2     = document.getElementById('sidebarBox2');
 const sidebar2        = document.getElementById('sidebar2');
 const sidebar2Remocon = document.getElementById('sidebar2Remocon');
 
+function sidebarBox2Close(){
+  sidebar2.querySelectorAll('.open').forEach((item)=>{
+    item.classList.remove('open');
+  });
+  sidebarBox2.classList.remove('open');
+}
+sidebarBox2.afterClose = sidebarBox2Close;
+
 //// 사이드바2: 리모콘에 버튼 모으기
 (function(){
   const sidebarItems_fromSidebar2 = sidebar2.children;
@@ -46,14 +54,8 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     const bubbleBtn = bubbleBtns[0];
     bubbleBtn.addEventListener('click', ()=>{
       const currentlyOpen = sidebarItem.classList.contains('open');
-      const prevOpens = sidebar2.querySelectorAll('.open');
-      prevOpens.forEach((item)=>{
-        item.classList.remove('open');
-      });
-      if( currentlyOpen ){// 기존에 열려있던 걸 누른 경우 닫음
-        sidebarItem.classList.remove('open');
-        sidebarBox2.classList.remove('open');
-      }else{
+      sidebarBox2Close();
+      if( !currentlyOpen ){
         sidebarItem.classList.add('open');
         sidebarBox2.classList.add('open');
       }
@@ -66,10 +68,7 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     bubbleBtn.classList.add('bubbleBtn', 'themeBtn');
     bubbleBtn.textContent = '배너';
     bubbleBtn.addEventListener('click', () => {
-      const prevOpens = sidebar2.querySelectorAll('.sidebar_element.open');
-      prevOpens.forEach((item) => {
-        item.classList.remove('open');
-      });
+      sidebarBox2Close();
       sidebarBox2.classList.add('open');
       for( let sidebarItem of imgBanners ){
         sidebarItem.classList.add('open');

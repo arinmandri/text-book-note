@@ -11,14 +11,4 @@ document.body.classList.add('login-' + T.config.ROLE);
     || document.getElementById('tt-body-search')// 검색 결과
     || document.getElementById('tt-body-index');// 홈화면, 공지사항 목록
   if( body != null ) body.classList.add('tt-body-list');
-
-  //// close-onclick-outside: 자신의 바깥을 클릭시 닫음
-  document.addEventListener('click', (e) => {
-    const clicked = e.target;
-    document.querySelectorAll('.close-onclick-outside.open').forEach(el => {
-      if (!el.contains(clicked)) {
-        el.classList.remove('open');
-      }
-    });
-  });
 })();

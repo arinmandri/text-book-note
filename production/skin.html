@@ -152,6 +152,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+////// close-onclick-outside: 자신의 바깥을 클릭시 닫음
+//// open 클래스 제거.
+//// afterClose 동작 있으면 실행.
+document.addEventListener('click', (e) => {
+  const clicked = e.target;
+  document.querySelectorAll('.close-onclick-outside.open').forEach(el => {
+    if( !el.contains(clicked) ){
+      el.classList.remove('open');
+      if( el.afterClose != null ){
+        el.afterClose();
+      }
+    }
+  });
+});
 ////// open 토글버튼
 //// <button class="open-toggleBtn" data-opentarget="대상요소id">OPEN</button>
 //// 대상 요소의 class 중 open을 넣거나 뺀다.
@@ -187,16 +201,6 @@ document.body.classList.add('login-' + T.config.ROLE);
     || document.getElementById('tt-body-search')// 검색 결과
     || document.getElementById('tt-body-index');// 홈화면, 공지사항 목록
   if( body != null ) body.classList.add('tt-body-list');
-
-  //// close-onclick-outside: 자신의 바깥을 클릭시 닫음
-  document.addEventListener('click', (e) => {
-    const clicked = e.target;
-    document.querySelectorAll('.close-onclick-outside.open').forEach(el => {
-      if (!el.contains(clicked)) {
-        el.classList.remove('open');
-      }
-    });
-  });
 })();
 ////// 다크모드 - body
 (function(){
@@ -1611,7 +1615,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </div><!-- 사이드바상자1 ##-->
 
 <!--## 사이드바상자2 : 오른쪽 사이드바 영역 -->
-<div id="sidebarBox2" class="sidebarBox home-[##_var_home_sidebar2_##] fold close-onclick-outside"><!-- 클래스 초기상태: 모두 접힘 -->
+<div id="sidebarBox2" class="sidebarBox home-[##_var_home_sidebar2_##] fold close-onclick-outside">
   <aside id="sidebar2" class="sidebar sidebarV"><s_sidebar>
 
 
@@ -2154,6 +2158,14 @@ const sidebarBox2     = document.getElementById('sidebarBox2');
 const sidebar2        = document.getElementById('sidebar2');
 const sidebar2Remocon = document.getElementById('sidebar2Remocon');
 
+function sidebarBox2Close(){
+  sidebar2.querySelectorAll('.open').forEach((item)=>{
+    item.classList.remove('open');
+  });
+  sidebarBox2.classList.remove('open');
+}
+sidebarBox2.afterClose = sidebarBox2Close;
+
 //// 사이드바2: 리모콘에 버튼 모으기
 (function(){
   const sidebarItems_fromSidebar2 = sidebar2.children;
@@ -2176,14 +2188,8 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     const bubbleBtn = bubbleBtns[0];
     bubbleBtn.addEventListener('click', ()=>{
       const currentlyOpen = sidebarItem.classList.contains('open');
-      const prevOpens = sidebar2.querySelectorAll('.open');
-      prevOpens.forEach((item)=>{
-        item.classList.remove('open');
-      });
-      if( currentlyOpen ){// 기존에 열려있던 걸 누른 경우 닫음
-        sidebarItem.classList.remove('open');
-        sidebarBox2.classList.remove('open');
-      }else{
+      sidebarBox2Close();
+      if( !currentlyOpen ){
         sidebarItem.classList.add('open');
         sidebarBox2.classList.add('open');
       }
@@ -2196,10 +2202,7 @@ const sidebar2Remocon = document.getElementById('sidebar2Remocon');
     bubbleBtn.classList.add('bubbleBtn', 'themeBtn');
     bubbleBtn.textContent = '배너';
     bubbleBtn.addEventListener('click', () => {
-      const prevOpens = sidebar2.querySelectorAll('.sidebar_element.open');
-      prevOpens.forEach((item) => {
-        item.classList.remove('open');
-      });
+      sidebarBox2Close();
       sidebarBox2.classList.add('open');
       for( let sidebarItem of imgBanners ){
         sidebarItem.classList.add('open');
