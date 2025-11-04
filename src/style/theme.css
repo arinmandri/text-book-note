@@ -79,6 +79,15 @@ body.theme-dark .thickBtn {
   background-color: {{ var.defaultColor.listBack }};
   background-color: var(--listBack);
 }
+.softBtn {
+  border-radius: 6px;
+  border-width: 3px;
+  background-color: var(--listBack);
+}
+.softBtn:hover {
+  color: var(--listBack);
+  background-color: var(--baseTextCol);
+}
 
 .decoBox {
   z-index: 10;

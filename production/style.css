@@ -268,6 +268,15 @@ body.theme-dark .thickBtn {
   background-color: #F4F4F4;
   background-color: var(--listBack);
 }
+.softBtn {
+  border-radius: 6px;
+  border-width: 3px;
+  background-color: var(--listBack);
+}
+.softBtn:hover {
+  color: var(--listBack);
+  background-color: var(--baseTextCol);
+}
 
 .decoBox {
   z-index: 10;
@@ -2092,11 +2101,7 @@ main
 }
 #listStyleBtns button {
   vertical-align: middle;
-  border-width: 2px;
-  border-radius: 5px;
   padding: 7px;
-  background-color: #F4F4F4;
-  background-color: var(--listBack);
 }
 /*
 ul#postList ─ li 여럿

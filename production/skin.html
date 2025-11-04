@@ -1130,7 +1130,7 @@ TODO HOMECOVER_WIDEPAGE
   <menu id="listStyleBtns">
     <span style="font-family: 'Gaegu', cursive;">보임새: </span>
 
-    <button class="settingAction clickValue" value="train"
+    <button class="settingAction clickValue softBtn" value="train"
   ><div style="
   display: block;
   position: relative;
@@ -1141,7 +1141,7 @@ TODO HOMECOVER_WIDEPAGE
   <span style="display: block; position: absolute; box-sizing: border-box; width: 20px; height: 8px; bottom: 0px; left:  0px; border: 2px solid grey; border-bottom-width: 0px; background-color: var(--backCol);"></span>
 </div></button>
 
-    <button class="settingAction clickValue" value="album"
+    <button class="settingAction clickValue softBtn" value="album"
   ><div style="
   display: block;
   position: relative;
@@ -1154,7 +1154,7 @@ TODO HOMECOVER_WIDEPAGE
   <span style="display: block; position: absolute; width: 7px; height: 7px; bottom: 0px; right: 0px; border: 1px solid grey; background-color: var(--backCol);"></span>
 </div></button>
 
-    <button class="settingAction clickValue" value="card"
+    <button class="settingAction clickValue softBtn" value="card"
   ><div style="
   display: block;
   position: relative;
@@ -1166,7 +1166,7 @@ TODO HOMECOVER_WIDEPAGE
   <span style="display: block; position: absolute; left:  8px; top:  0px; box-sizing: border-box; width:  4px; height:  6px; border-width: 1px;     background-color: #FFF4;           border-color: #888a;"></span>
 </div></button>
 
-    <button class="settingAction clickValue" value="postit"
+    <button class="settingAction clickValue softBtn" value="postit"
   ><div style="
   display: block;
   position: relative;
@@ -1178,7 +1178,7 @@ TODO HOMECOVER_WIDEPAGE
   <span style="display: block; position: absolute; left:  0px; top: 14px; box-sizing: border-box; width: 100%; height: 5px; background-color: var(--backCol); border-bottom: 1px solid #888a; border-left: 2px solid #38d;"></span>
 </div></button>
 
-    <button class="settingAction clickValue" value="detailed"
+    <button class="settingAction clickValue softBtn" value="detailed"
   ><div style="
   display: block;
   position: relative;
@@ -1889,9 +1889,9 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="fontsize settingForm">
   <input type="hidden" class="settingCore" name="fontsize" value="100" onchange="onchangeFontsize(this)" />
   글자: 
-  <button class="fontsizeBtn fontsizeBtnDown  " onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
-  <button class="fontsizeBtn fontsizeBtnReset " onclick="clickFontsizeBtn( 0)" >보통</button>
-  <button class="fontsizeBtn fontsizeBtnUp    " onclick="clickFontsizeBtn( 1)"  style="font-size: 135%;">크게</button>
+  <button class="fontsizeBtn fontsizeBtnDown  softBtn" onclick="clickFontsizeBtn(-1)" style="font-size: 75%;">작게</button>
+  <button class="fontsizeBtn fontsizeBtnReset softBtn" onclick="clickFontsizeBtn( 0)" >보통</button>
+  <button class="fontsizeBtn fontsizeBtnUp    softBtn" onclick="clickFontsizeBtn( 1)"  style="font-size: 135%;">크게</button>
   <label><input type="checkbox" class="fixCbox" />굄</label>
   <script type="text/javascript">
     function onchangeFontsize( settingCore ) {

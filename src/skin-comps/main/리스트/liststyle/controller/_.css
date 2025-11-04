@@ -6,9 +6,5 @@
 }
 #listStyleBtns button {
   vertical-align: middle;
-  border-width: 2px;
-  border-radius: 5px;
   padding: 7px;
-  background-color: {{ var.defaultColor.listBack }};
-  background-color: var(--listBack);
 }
