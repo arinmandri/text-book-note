@@ -1,8 +1,9 @@
 <s_cover name="{{ cover_name }}">
   <section class="homecoverSection {{ cover_name }}">
-{% block title %}<h1 class="sectionTitle"><span>[##_cover_title_##]<s_cover_url> <a href="[##_cover_url_##]">#</a></s_cover_url></span></h1>{% endblock %}
+{% block title %}<h1 class="sectionTitle"><span>[##_cover_title_##]</span></h1>{% endblock %}
     <div class="homecover {{ cover_name }}">
 {% block content %}{% endblock %}
     </div>
+    <s_cover_url><a class="more" href="[##_cover_url_##]">더보기</a></s_cover_url>
   </section>
 </s_cover>
