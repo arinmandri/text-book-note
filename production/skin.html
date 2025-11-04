@@ -346,14 +346,12 @@ function setSettingFixCbox( settingName, checked ){
 
     const backImgScroll = ( elToStyle , pos )=>{// pos: 'left'|'right'
       const scrollHeight = domEl.scrollHeight - domEl.clientHeight;
-      console.log('+++++++++++++++ backImgScroll', scrollHeight);
       if( scrollHeight <= 0 ) return;
 
       const scrollTop  = window.scrollY || domEl.scrollTop;
       const scrollPercent = ( scrollTop / scrollHeight ) * 100;
 
       elToStyle.style.backgroundPosition = pos + ' ' + (100-scrollPercent) + '%';
-      console.log('+++++++++++++++ backImgScroll', elToStyle, scrollPercent);
     };
 
     const backImgResize = ( elToStyle )=>{// 스크롤길이 길 수록 배경 작아지게 하고 싶은데 걍 y=1/x 하니까 생각보다 넘 작네. y=b/(x+a)로 간다.
