@@ -108,6 +108,9 @@ strong {
   font-size: 110%;
   font-weight: bold;
 }
+dfn {
+  font-style: inherit;
+}
 pre , code {
   font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
   word-break: keep-all;

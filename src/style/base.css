@@ -48,6 +48,9 @@ strong {
   font-size: 110%;
   font-weight: bold;
 }
+dfn {
+  font-style: inherit;
+}
 pre , code {
   font-family: {{ settings.font.code }};
   word-break: keep-all;
