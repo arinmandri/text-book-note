@@ -236,7 +236,7 @@ body.theme-light hr.areaSeparator {
   transform: rotate(45deg);
 }
 
-.themeBtn {
+.thickBtn {
   border-width: 1px;
   border-radius: 8px;
   background-color: #111144;
@@ -247,20 +247,20 @@ body.theme-light hr.areaSeparator {
   transition: background-color 0.5s;
   line-height: 1;
 }
-body.theme-light .themeBtn {
+body.theme-light .thickBtn {
   border-color: #0000;
 }
-body.theme-dark .themeBtn {
+body.theme-dark .thickBtn {
   border-color: 1px solid #FFFFFF;
   border-color: 1px solid var(--frameFore);
 }
-.themeBtn:hover {
+.thickBtn:hover {
   background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
   transition: background-color 0s;
 }
-.themeInput {
+.thickInput {
   border-bottom: 7px solid #111144;
   border-bottom: 7px solid var(--frameBack);
   border-radius: 4px;
@@ -856,7 +856,7 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   border-left-width: 0;
   pointer-events: auto;
 }
-#sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
+#sidebarBox1.open .sidebarBtn {/* >>thickBtn:hover */
   left: 300px;
   background-color: #F0FF40;
   background-color: var(--highlight);
@@ -1202,9 +1202,6 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 }
 
 .fontsizeBtn {
-  border-radius: 5px;
-  border-width: 2px;
-  background-color: var(--listBack);
   padding: 4px;
 }
 .sidebar_elementMain.calendar table {
@@ -1873,7 +1870,7 @@ li > dl > dt ,
   font-size: 120%;
   font-family: 'Jua', sans-serif;
 }
-.comment .themeBtn {/* 버튼 */
+.comment .thickBtn {/* 버튼 */
   display: inline-block;
   height: 1.5em;
   width: 1.5em;

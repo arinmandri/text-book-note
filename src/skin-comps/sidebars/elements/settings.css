@@ -23,8 +23,5 @@
 }
 
 .fontsizeBtn {
-  border-radius: 5px;
-  border-width: 2px;
-  background-color: var(--listBack);
   padding: 4px;
 }

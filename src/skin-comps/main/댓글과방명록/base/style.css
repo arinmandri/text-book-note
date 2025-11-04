@@ -106,7 +106,7 @@
   font-size: 120%;
   font-family: {{ settings.font.sticker }};
 }
-.comment .themeBtn {/* 버튼 */
+.comment .thickBtn {/* 버튼 */
   display: inline-block;
   height: 1.5em;
   width: 1.5em;

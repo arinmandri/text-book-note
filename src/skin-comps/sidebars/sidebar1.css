@@ -37,7 +37,7 @@
   border-left-width: 0;
   pointer-events: auto;
 }
-#sidebarBox1.open .sidebarBtn {/* >>themeBtn:hover */
+#sidebarBox1.open .sidebarBtn {/* >>thickBtn:hover */
   left: 300px;
   background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);

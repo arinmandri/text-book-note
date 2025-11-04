@@ -65,7 +65,7 @@ sidebarBox2.afterClose = sidebarBox2Close;
 
   if( imgBanners.length > 0 ){
     const bubbleBtn = document.createElement('button');
-    bubbleBtn.classList.add('bubbleBtn', 'themeBtn');
+    bubbleBtn.classList.add('bubbleBtn', 'thickBtn');
     bubbleBtn.textContent = '배너';
     bubbleBtn.addEventListener('click', () => {
       sidebarBox2Close();

@@ -47,7 +47,7 @@ body.theme-light hr.areaSeparator {
   transform: rotate(45deg);
 }
 
-.themeBtn {
+.thickBtn {
   border-width: 1px;
   border-radius: 8px;
   background-color: {{ var.defaultColor.frameBack }};
@@ -58,20 +58,20 @@ body.theme-light hr.areaSeparator {
   transition: background-color 0.5s;
   line-height: 1;
 }
-body.theme-light .themeBtn {
+body.theme-light .thickBtn {
   border-color: #0000;
 }
-body.theme-dark .themeBtn {
+body.theme-dark .thickBtn {
   border-color: 1px solid {{ var.defaultColor.frameFore }};
   border-color: 1px solid var(--frameFore);
 }
-.themeBtn:hover {
+.thickBtn:hover {
   background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
   transition: background-color 0s;
 }
-.themeInput {
+.thickInput {
   border-bottom: 7px solid {{ var.defaultColor.frameBack }};
   border-bottom: 7px solid var(--frameBack);
   border-radius: 4px;
