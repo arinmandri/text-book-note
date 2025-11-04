@@ -9,8 +9,12 @@
 }
 
 .homecoverSection.train .postList > * > a {
-  padding: 45px 35px 40px 35px;
+  padding: 45px 3% 40px 3%;
   border-width: 1px;
+  box-shadow: 0px 0px 6px #0002;
+}
+.homecoverSection.train .postList > * > a:hover {
+  box-shadow: 0px 0px 18px #0002;
 }
 .homecoverSection.train .postListItem > .itemHead {/* 제목등 */
   margin-bottom: 35px;
