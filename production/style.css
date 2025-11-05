@@ -1830,9 +1830,9 @@ li > dl > dt ,
 .comment {
   position: relative;
   border-width: 1px;
+  padding: 6px 6px 2em 6px;
   background-color: #FFFFFF;
   background-color: var(--backCol);
-  padding: 6px;
 }
 .comment.rp_secret ,
 .comment.guest_secret {
@@ -1877,23 +1877,42 @@ li > dl > dt ,
   padding: 5px 10px;
   line-height: 1.4;
 }
+
 .comment .area3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1.6em;
+  padding-right: 10px;
   text-align: right;
 }
-.comment .date {/* 날짜 */
+.comment .area3 * {
+  display: inline-block;
   vertical-align: bottom;
-  font-size: 0.8em;
+}
+.comment .date {/* 날짜 */
+  margin-right: 6px;
+  font-size: 80%;
   font-family: 'Gaegu', cursive;
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
   font-size: 120%;
   font-family: 'Jua', sans-serif;
 }
-.comment .thickBtn {/* 버튼 */
-  display: inline-block;
-  height: 1.5em;
-  width: 1.5em;
-  margin: 0 0 0 7px;
+.comment button {/* 버튼 */
+  position: relative;
+  top: 1px;
+  height: 100%;
+  margin: 0 0 0 8px;
+  padding: 0 6px;
+
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--listBack);
+
+  font-family: 'Jua', sans-serif;
 }
 .rp_admin .writer::before ,
 .guest_admin .writer::before {
