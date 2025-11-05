@@ -24,8 +24,8 @@ headitems:
 
 fonts:
   sans:
-    url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'
-    cssValue: "'Nanum Gothic', sans-serif"
+    url: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'
+    cssValue: "'Noto Sans KR', sans-serif"
   serif:
     url: 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap'
     cssValue: "'Noto Serif KR', serif"
