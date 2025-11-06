@@ -116,9 +116,10 @@ pre , code {
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */
+  color: black;
+  text-shadow: none;
   background-color: #F0FF40;
   background-color: var(--highlight);
-  color: black;
 }
 
 body:not(.login-owner) .onlyForOwner {
@@ -2511,6 +2512,7 @@ ul#postList ─ li 여럿
   background-color: #F0FF40;
   background-color: var(--highlight);
   color: black;
+  text-shadow: none;
 }
 
 
@@ -2658,7 +2660,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-164231)::after {
+#skin-version:not(.v25-11-06-172819)::after {
   color: #eb0;
-  content: "v25-11-06-164231";
+  content: "v25-11-06-172819";
 }

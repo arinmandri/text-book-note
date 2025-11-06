@@ -50,4 +50,5 @@
   background-color: {{ var.defaultColor.highlight }};
   background-color: var(--highlight);
   color: black;
+  text-shadow: none;
 }
