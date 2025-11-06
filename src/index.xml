@@ -2,7 +2,7 @@
 <skin>
 	<information>
 		<name>{{ meta.skinname }}</name>
-		<version>{{ meta.version }}</version>
+		<version>{{ meta.version_s }}</version>
 		<description>
 			<![CDATA[책책 책기라욷]]>
 		</description>

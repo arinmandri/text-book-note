@@ -1,6 +1,7 @@
 import os
 import yaml
 from jinja2 import Environment, FileSystemLoader
+from datetime import datetime
 
 def load_settings():
     if os.path.exists("settings.yml"):
@@ -27,6 +28,9 @@ def main():
     env = Environment(loader=FileSystemLoader("src"))
 
     refers_fonts(settings)
+
+    settings['meta']['version_s'] = datetime.now().strftime("%y-%m-%d")
+    settings['meta']['version_l'] = datetime.now().strftime("%y-%m-%d-%H%M%S")
 
     for targetFilePath in settings["go"]["targets"]:
         template = env.get_template(targetFilePath)

@@ -87,3 +87,8 @@ body > * {
 
 
 {% include "skin-comps/rebellion.css" %}
+
+#skin-version:not(.v{{ meta.version_l }})::after {
+  color: #eb0;
+  content: "v{{ meta.version_l }}";
+}
