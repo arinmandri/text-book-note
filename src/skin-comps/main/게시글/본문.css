@@ -2,10 +2,11 @@
 /**##### 본문 */
 .bonmun {
   padding: 50px 3%;
+  line-height: 1.8;
+  font-weight: 400;
+  font-family: {{ settings.font.bonmun_base }};
   color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
-  font-family: {{ settings.font.bonmun_base }};
-  line-height: 1.8;
 }
 /* a */
 .bonmun a[target]::after {/* 외부 링크 (외부링크인 경우 새 페이지에서 열리게 target속성을 스크립트에서 조작함) */
