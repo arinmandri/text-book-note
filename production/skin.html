@@ -1242,7 +1242,7 @@ TODO HOMECOVER_WIDEPAGE
 <s_list_empty><div>텅</div><!-- TODO --></s_list_empty>
 
   <ul id="postList" class="[##_list_style_##]">
-<s_list_rep><li><a href="[##_list_rep_link_##]" style="display: block"><article class="postListItem">
+<s_list_rep><li><a class="postAnchor" href="[##_list_rep_link_##]" style="display: block"><article class="postListItem">
   <div class="thumbnail">
     <s_list_rep_thumbnail><img loading="lazy" alt="게시글 썸네일" src="[##_list_rep_thumbnail_##]"></s_list_rep_thumbnail>
   </div>
@@ -1285,21 +1285,25 @@ TODO HOMECOVER_WIDEPAGE
 
   //// 검색어 강조
   if( document.getElementById('tt-body-search') != null ){//검색 페이지일 때만
-    var searchword = document.querySelector('#listHead .title').innerText;// 검색어
+    const searchword = document.querySelector('#listHead .title').innerText;// 검색어
 
-    let targets = document.querySelectorAll('#postList .title');// 검색어 강조할 곳 1: 글제목
-    for( let target of targets )
-      target.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
-        = target.innerHTML.replaceAll(
+    const titles = document.querySelectorAll('#postList .title');// 검색어 강조할 곳 1: 글제목
+    for( let e of titles )
+      e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+        = e.innerHTML.replaceAll(
           searchword, 
           '<span class="searchword">'+searchword+'</span>');
 
-    targets = document.querySelectorAll('#postList .content')// 검색어 강조할 곳 1: 글본문
-    for( let target of targets )
-      target.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
-        = target.innerHTML.replaceAll(
+    const contents = document.querySelectorAll('#postList .content')// 검색어 강조할 곳 1: 글본문
+    for( let e of contents )
+      e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+        = e.innerHTML.replaceAll(
           searchword, 
           '<span class="searchword">'+searchword+'</span>');
+
+    const anchors = document.querySelectorAll('#postList .postAnchor')// 링크에 파라미터로 검색어 추가
+    for( let a of anchors )
+      a.href = a.href + '?searchword=' + searchword;
   }
 
 })()
@@ -2095,7 +2099,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-172819">v25-11-06-172819</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-173845">v25-11-06-173845</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
@@ -2107,6 +2111,17 @@ document.addEventListener('DOMContentLoaded', function(){
 const bonmuns = document.querySelectorAll('.bonmun .contents_style');
 for( let bonmun of bonmuns ){
   bonmun.classList.add('pmargin');
+}
+
+//// searchword 강조
+const searchword = param.searchword;
+if( searchword ){
+  for( let e of document.getElementsByClassName('bonmun') ){
+    e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+      = e.innerHTML.replaceAll(
+        searchword, 
+        '<span class="searchword">'+searchword+'</span>');
+  }
 }
 
 //// 숨김상자미리보기, 숨은상자 클릭하면 부모인 숨김상자가 열렸다 닫혔다 한다

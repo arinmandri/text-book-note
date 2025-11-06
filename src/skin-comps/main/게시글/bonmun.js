@@ -5,6 +5,17 @@ for( let bonmun of bonmuns ){
   bonmun.classList.add('pmargin');
 }
 
+//// searchword 강조
+const searchword = param.searchword;
+if( searchword ){
+  for( let e of document.getElementsByClassName('bonmun') ){
+    e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+      = e.innerHTML.replaceAll(
+        searchword, 
+        '<span class="searchword">'+searchword+'</span>');
+  }
+}
+
 //// 숨김상자미리보기, 숨은상자 클릭하면 부모인 숨김상자가 열렸다 닫혔다 한다
 const hidingBoxes = document.querySelectorAll('.hidingBox');
 for( let hidingBox of hidingBoxes ){

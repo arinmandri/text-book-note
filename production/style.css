@@ -304,6 +304,13 @@ body.theme-dark .thickBtn {
   right: 15px;
 }
 
+.searchword {/* 검색어 강조 */
+  background-color: #F0FF40;
+  background-color: var(--highlight);
+  color: black;
+  text-shadow: none;
+}
+
 .blogger::before {
   content: "\269C\FE0F ";/*⚜️*/
 }
@@ -2508,12 +2515,6 @@ ul#postList ─ li 여럿
   font-size: 0.8em;
   margin: 0px 10px;
 }
-#postList.detailed .searchword {/* 검색어 강조 */
-  background-color: #F0FF40;
-  background-color: var(--highlight);
-  color: black;
-  text-shadow: none;
-}
 
 
 #postList .content {
@@ -2660,7 +2661,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-172819)::after {
+#skin-version:not(.v25-11-06-173845)::after {
   color: #eb0;
-  content: "v25-11-06-172819";
+  content: "v25-11-06-173845";
 }

@@ -19,21 +19,25 @@
 
   //// 검색어 강조
   if( document.getElementById('tt-body-search') != null ){//검색 페이지일 때만
-    var searchword = document.querySelector('#listHead .title').innerText;// 검색어
+    const searchword = document.querySelector('#listHead .title').innerText;// 검색어
 
-    let targets = document.querySelectorAll('#postList .title');// 검색어 강조할 곳 1: 글제목
-    for( let target of targets )
-      target.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
-        = target.innerHTML.replaceAll(
+    const titles = document.querySelectorAll('#postList .title');// 검색어 강조할 곳 1: 글제목
+    for( let e of titles )
+      e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+        = e.innerHTML.replaceAll(
           searchword, 
           '<span class="searchword">'+searchword+'</span>');
 
-    targets = document.querySelectorAll('#postList .content')// 검색어 강조할 곳 1: 글본문
-    for( let target of targets )
-      target.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
-        = target.innerHTML.replaceAll(
+    const contents = document.querySelectorAll('#postList .content')// 검색어 강조할 곳 1: 글본문
+    for( let e of contents )
+      e.innerHTML // 문자열 치환: 검색어들을 span 태그로 감싸기
+        = e.innerHTML.replaceAll(
           searchword, 
           '<span class="searchword">'+searchword+'</span>');
+
+    const anchors = document.querySelectorAll('#postList .postAnchor')// 링크에 파라미터로 검색어 추가
+    for( let a of anchors )
+      a.href = a.href + '?searchword=' + searchword;
   }
 
 })()
