@@ -6,9 +6,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
@@ -2129,6 +2129,7 @@ main
   margin-right: 10%;
   margin-bottom: 20px;
   text-align: right;
+  font-family: 'Gaegu', cursive;
 }
 #listStyleBtns button {
   vertical-align: middle;

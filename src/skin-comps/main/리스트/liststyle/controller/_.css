@@ -3,6 +3,7 @@
   margin-right: 10%;
   margin-bottom: 20px;
   text-align: right;
+  font-family: {{ settings.font.deco }};
 }
 #listStyleBtns button {
   vertical-align: middle;
