@@ -1068,8 +1068,9 @@ TODO HOMECOVER_WIDEPAGE
     //// namecard 밑에 hr 추가 (html 편집으로는 namecard 위치를 커스텀 불가함.)
     const hrUnderNamecard = document.createElement('hr');
     hrUnderNamecard.classList.add('areaSeparator');
-    document.getElementById('commentSec')
-      .prepend( hrUnderNamecard );
+    const beforeThis = document.getElementById('commentSec').parentNode;
+    document.getElementById('main')
+      .insertBefore( hrUnderNamecard, beforeThis );
   })();</script>
 </s_permalink_article_rep>
 </s_article_rep>
@@ -2071,7 +2072,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-122037">v25-11-06-122037</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-130025">v25-11-06-130025</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>

@@ -2643,7 +2643,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-122037)::after {
+#skin-version:not(.v25-11-06-130025)::after {
   color: #eb0;
-  content: "v25-11-06-122037";
+  content: "v25-11-06-130025";
 }
