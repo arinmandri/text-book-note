@@ -725,14 +725,12 @@ body#tt-body-index .home-none-1 {/* 홈화면에서 숨기기 옵션 */
   margin: 125px 0;
 }
 .homecoverSection .sectionTitle {
-  margin-bottom: 52px;
+  max-width: 900px;
+  margin: 0 auto 52px auto;
+  padding: 0 1.5%;
 }
 .homecoverSection:first-child {
   margin-top: 20px;
-}
-.homecoverSection h1 {
-  margin-left: 4%;
-  margin-right: 6%;
 }
 
   .homecover.menubar {
@@ -2660,7 +2658,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-155639)::after {
+#skin-version:not(.v25-11-06-164231)::after {
   color: #eb0;
-  content: "v25-11-06-155639";
+  content: "v25-11-06-164231";
 }
