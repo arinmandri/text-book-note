@@ -140,6 +140,18 @@
   content: '\1F512';/*자물쇠 */
   font-size: 65%;
 }
+/* fragment 요소 표시 */
+#commentSec :target > .comment {
+  border-color: {{ var.defaultColor.pointCol }};
+  border-color: var(--pointCol);
+  box-shadow: inset 0 0 5px var(--highlight);
+}
+#commentSec :target > .comment button {
+  border-color: var(--pointCol);
+}
+.commentList > li {/* rebellion - 배경 깜빡임 효과 무시 */
+  background-color: unset !important;
+}
 
 /*
 댓글or방명록 폼 div.formBox
