@@ -88,6 +88,9 @@ body#tt-body-page main .areaTitle {
   transform: translateY(-0.2em);
   font-family: {{ settings.font.base }};
 }
+#postPagePost .linkStr {
+  font-family: {{ settings.font.code }};
+}
 #postPagePost .tags a {
   display: inline-block;
   border-radius: 3px;

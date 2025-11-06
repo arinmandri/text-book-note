@@ -1471,6 +1471,9 @@ body#tt-body-page main .areaTitle {
   transform: translateY(-0.2em);
   font-family: 'Noto Sans KR', sans-serif;
 }
+#postPagePost .linkStr {
+  font-family: 'D2Coding', 'Nanum Gothic Coding', consolas, monospace;
+}
 #postPagePost .tags a {
   display: inline-block;
   border-radius: 3px;
@@ -2661,7 +2664,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-173845)::after {
+#skin-version:not(.v25-11-06-174240)::after {
   color: #eb0;
-  content: "v25-11-06-173845";
+  content: "v25-11-06-174240";
 }
