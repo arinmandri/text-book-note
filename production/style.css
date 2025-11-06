@@ -149,7 +149,7 @@ body:not(#tt-body-page) .onlyOnPage-page {
   font-size: 120%;
 }
 ._fontSmaller {
-  font-size: 75%;
+  font-size: 80%;
 }
 ._fontBold {
   font-weight: bold;
@@ -1451,6 +1451,11 @@ body#tt-body-page main .areaTitle {
 #postPagePost .info {/* 정보  */
   margin: 10px 5%;
   text-align: right;
+}
+#postPagePost .info > * {
+  margin: 8px 0;
+}
+#postPagePost .info > .authorBox {
   font-family: 'Gaegu', cursive;
 }
 #postPagePost .info .date ,
@@ -2655,7 +2660,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-06-142251)::after {
+#skin-version:not(.v25-11-06-155639)::after {
   color: #eb0;
-  content: "v25-11-06-142251";
+  content: "v25-11-06-155639";
 }

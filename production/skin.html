@@ -44,6 +44,7 @@ html[data-theme="dark"] {
 <script>
 //
 const thisHostname = new URL(window.location.href).hostname;
+const thisOrigin   = new URL(window.location.href).origin;
 
 const gt0 = Date.now();
 
@@ -758,12 +759,23 @@ TODO HOMECOVER_WIDEPAGE
     </div>
     <!-- 게시글 정보 -->
     <div class="info">
-      <div>
+      <div class="authorBox">
         <span class="date">[##_notice_rep_simple_date_##]</span><span>에</span>
-        <span class="author">[##_notice_rep_author_##]</span><span>이가
+        <span class="author userName">[##_notice_rep_author_##]</span><span>이가
           <s_ad_div><span class="status">[##_s_ad_s1_label_##]</span>적으로</s_ad_div>
         씀.</span>
-        
+      </div>
+      <div class="linkBox">
+        주소: <span class="linkStr _fontSmaller">[##_article_rep_link_##]</span>
+        <button class="link-copy _fontLarger"
+            data-link="[##_article_rep_link_##]"
+            onclick="
+              const linkStr = this.dataset.link;
+              navigator.clipboard.writeText( thisOrigin + linkStr );
+              this.parentNode.getElementsByClassName('msg')[0].innerText = '복사했습니다.';
+              return false;"
+        >&#x1F5D0;</button>
+        <p class="msg"></p>
       </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
     </div>
@@ -927,12 +939,23 @@ TODO HOMECOVER_WIDEPAGE
     </div>
     <!-- 게시글 정보 -->
     <div class="info">
-      <div>
+      <div class="authorBox">
         <span class="date">[##_article_rep_simple_date_##]</span><span>에</span>
-        <span class="author">[##_article_rep_author_##]</span><span>이가
+        <span class="author userName">[##_article_rep_author_##]</span><span>이가
           <s_ad_div><span class="status">[##_s_ad_s1_label_##]</span>적으로</s_ad_div>
         씀.</span>
-        
+      </div>
+      <div class="linkBox">
+        주소: <span class="linkStr _fontSmaller">[##_article_rep_link_##]</span>
+        <button class="link-copy _fontLarger"
+            data-link="[##_article_rep_link_##]"
+            onclick="
+              const linkStr = this.dataset.link;
+              navigator.clipboard.writeText( thisOrigin + linkStr );
+              this.parentNode.getElementsByClassName('msg')[0].innerText = '복사했습니다.';
+              return false;"
+        >&#x1F5D0;</button>
+        <p class="msg"></p>
       </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
     </div>
@@ -2072,7 +2095,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-142251">v25-11-06-142251</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-155639">v25-11-06-155639</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
@@ -2142,7 +2165,12 @@ for( let ol of ols ){
     olli.prepend(temp);
     i+=1;
 } }
-})()
+
+//// decode linkStr
+for( let el of document.getElementsByClassName('linkStr') ){
+  el.innerText = decodeURI(el.innerText);
+}
+})();
 
 //
 /*

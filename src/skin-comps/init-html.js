@@ -1,5 +1,6 @@
 
 const thisHostname = new URL(window.location.href).hostname;
+const thisOrigin   = new URL(window.location.href).origin;
 
 const gt0 = Date.now();
 

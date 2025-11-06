@@ -74,6 +74,11 @@ body#tt-body-page main .areaTitle {
 #postPagePost .info {/* 정보  */
   margin: 10px 5%;
   text-align: right;
+}
+#postPagePost .info > * {
+  margin: 8px 0;
+}
+#postPagePost .info > .authorBox {
   font-family: {{ settings.font.deco }};
 }
 #postPagePost .info .date ,

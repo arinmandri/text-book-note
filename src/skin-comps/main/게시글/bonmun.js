@@ -61,4 +61,9 @@ for( let ol of ols ){
     olli.prepend(temp);
     i+=1;
 } }
-})()
+
+//// decode linkStr
+for( let el of document.getElementsByClassName('linkStr') ){
+  el.innerText = decodeURI(el.innerText);
+}
+})();

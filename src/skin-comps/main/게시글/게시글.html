@@ -18,12 +18,23 @@
     </div>
     <!-- 게시글 정보 -->
     <div class="info">
-      <div>
+      <div class="authorBox">
         <span class="date">[##_{{ type }}_rep_simple_date_##]</span><span>에</span>
-        <span class="author">[##_{{ type }}_rep_author_##]</span><span>이가
+        <span class="author userName">[##_{{ type }}_rep_author_##]</span><span>이가
           <s_ad_div><span class="status">[##_s_ad_s1_label_##]</span>적으로</s_ad_div>
         씀.</span>
-        
+      </div>
+      <div class="linkBox">
+        주소: <span class="linkStr _fontSmaller">[##_article_rep_link_##]</span>
+        <button class="link-copy _fontLarger"
+            data-link="[##_article_rep_link_##]"
+            onclick="
+              const linkStr = this.dataset.link;
+              navigator.clipboard.writeText( thisOrigin + linkStr );
+              this.parentNode.getElementsByClassName('msg')[0].innerText = '복사했습니다.';
+              return false;"
+        >&#x1F5D0;</button>
+        <p class="msg"></p>
       </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
     </div>
