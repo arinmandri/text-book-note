@@ -43,10 +43,10 @@ footer .sectionTitle {
   border-radius: 50%;
   float: left;
 }
-#footerContentBox > .nuguisho .blogger {
+#footerContentBox > .nuguisho .bloggerBox {
   margin-bottom: 10px;
 }
-#footerContentBox > .nuguisho .blogger .name {
+#footerContentBox > .nuguisho .bloggerBox .name {
   font-family: {{ settings.font.userName }};
 }
 #footerContentBox > .nuguisho .desc {

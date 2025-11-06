@@ -113,3 +113,7 @@ body.theme-dark .thickBtn {
   top: -14px;
   right: 15px;
 }
+
+.blogger::before {
+  content: "\269C\FE0F ";/*⚜️*/
+}
