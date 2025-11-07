@@ -197,11 +197,22 @@ body:not(#tt-body-page) .onlyOnPage-page {
   color: #000000;
   color: var(--bonmunTextCol);
   text-align: center;
+}
+body.theme-light .pageTitle {
   text-shadow:
-    2px 0 10px var(--backCol),
-    -2px 0 10px var(--backCol),
-    0 2px 10px var(--backCol),
-    0 -2px 10px var(--backCol);
+    2px 0 3px white,
+    -2px 0 3px white,
+    0 2px 3px white,
+    0 -2px 3px white;
+}
+body.theme-dark .pageTitle {
+  text-shadow:
+    1px 0 0 grey,
+    -1px 0 0 grey,
+    0 1px 0 grey,
+    0 -1px 0 grey,
+    0 0 10px grey,
+    0 0 50px white;
 }
 
 .sectionTitle {
@@ -2674,7 +2685,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-07-223216)::after {
+#skin-version:not(.v25-11-07-223324)::after {
   color: #eb0;
-  content: "v25-11-07-223216";
+  content: "v25-11-07-223324";
 }

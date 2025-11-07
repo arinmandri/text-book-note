@@ -7,11 +7,22 @@
   color: {{ var.defaultColor.bonmunTextCol }};
   color: var(--bonmunTextCol);
   text-align: center;
+}
+body.theme-light .pageTitle {
   text-shadow:
-    2px 0 10px var(--backCol),
-    -2px 0 10px var(--backCol),
-    0 2px 10px var(--backCol),
-    0 -2px 10px var(--backCol);
+    2px 0 3px white,
+    -2px 0 3px white,
+    0 2px 3px white,
+    0 -2px 3px white;
+}
+body.theme-dark .pageTitle {
+  text-shadow:
+    1px 0 0 grey,
+    -1px 0 0 grey,
+    0 1px 0 grey,
+    0 -1px 0 grey,
+    0 0 10px grey,
+    0 0 50px white;
 }
 
 .sectionTitle {
