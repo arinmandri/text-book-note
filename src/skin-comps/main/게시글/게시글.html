@@ -33,7 +33,14 @@
               navigator.clipboard.writeText( thisOrigin + linkStr );
               this.parentNode.getElementsByClassName('msg')[0].innerText = '복사했습니다.';
               return false;"
-        >&#x1F5D0;</button>
+        >
+{% with
+  size="1em",
+  color="currentColor"
+%}
+{% include "skin-comps/component_templates/copy-icon.svg" %}
+{% endwith %}
+        </button>
         <p class="msg"></p>
       </div>
       <s_tag_label><div class="tags">[##_tag_label_rep_##]</div></s_tag_label>
