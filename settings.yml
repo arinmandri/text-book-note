@@ -8,7 +8,7 @@ go:
 var:
   defaultColor:
     backCol:       '#FFFFFF'
-    baseTextCol:   '#333333'
+    baseTextCol:   '#666666'
     listBack:      '#F4F4F4'
     borderCol:     '#DDDDDD'
     frameBack:     '#111144'

@@ -51,7 +51,7 @@ body {
 
   background-color: #FFFFFF;
   background-color: var(--backCol);
-  color: #333333;
+  color: #666666;
   color: var(--baseTextCol);
 }
 body > * {
@@ -1382,7 +1382,7 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
 .paging a:not([href]) > button {
   border-color: transparent;
   background-color: transparent;
-  color: #333333;
+  color: #666666;
   color: var(--baseTextCol);
 }
 .no-more-prev , .no-more-next {
@@ -2662,15 +2662,15 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   min-height: 160px;
   background-color: #F4F4F4;
   background-color: var(--listBack);
-  color: #333333;
+  color: #666666;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_tit_cont {
-  color: #333333;
+  color: #666666;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g {
-  color: #333333;
+  color: #666666;
   color: var(--baseTextCol);
 }
 .tt_box_namecard .tt_btn_subscribe .tt_txt_g::after {
@@ -2685,7 +2685,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-07-223324)::after {
+#skin-version:not(.v25-11-08-141420)::after {
   color: #eb0;
-  content: "v25-11-07-223324";
+  content: "v25-11-08-141420";
 }

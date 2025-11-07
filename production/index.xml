@@ -2,7 +2,7 @@
 <skin>
 	<information>
 		<name>Text-Note-Book</name>
-		<version>25-11-07</version>
+		<version>25-11-08</version>
 		<description>
 			<![CDATA[책책 책기라욷]]>
 		</description>
@@ -127,20 +127,17 @@
 	<variable>
 		<name>backCol_light</name>
 		<label>바닥색</label>
-		<description><![CDATA[기본값은 #ffffff]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ffffff]]></default>
+		<default><![CDATA[#FFFFFF]]></default>
 	</variable>
 	<variable>
 		<name>backImg_light</name>
 		<label>바닥 그림</label>
-		<description>바닥 그림</description>
 		<type>IMAGE</type>
 	</variable>
 	<variable>
 		<name>backImgType_light</name>
 		<label>바닥 그림 놓임새</label>
-		<description>썸네일이 없는 게시글의 썸네일 표시</description>
 		<type>SELECT</type>
 		<option><![CDATA[[
 	{"name":"", "label":"늘리기",     "value":"stretch"},
@@ -167,72 +164,62 @@
 	<variable>
 		<name>baseTextCol_light</name>
 		<label>본문외 글자색</label>
-		<description><![CDATA[기본값은 #666666]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#666666]]></default>
 	</variable>
 	<variable>
 		<name>listBack_light</name>
 		<label>항목 밑색</label>
-		<description><![CDATA[기본값은 #f4f4f4]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#f4f4f4]]></default>
+		<default><![CDATA[#F4F4F4]]></default>
 	</variable>
 	<variable>
 		<name>borderCol_light</name>
 		<label>금색</label>
-		<description><![CDATA[기본값은 #dddddd]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#dddddd]]></default>
+		<default><![CDATA[#DDDDDD]]></default>
 	</variable>
 	<variable>
 		<name>frameBack_light</name>
 		<label>딱지 밑색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #111144]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#111144]]></default>
 	</variable>
 	<variable>
 		<name>frameFore_light</name>
 		<label>딱지 글자색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ffffff]]></default>
+		<default><![CDATA[#FFFFFF]]></default>
 	</variable>
 	<variable>
 		<name>pointCol_light</name>
 		<label>강조 요소</label>
-		<description><![CDATA[기본값은 #ff6644]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ff6644]]></default>
+		<default><![CDATA[#FF6644]]></default>
 	</variable>
 	<variable>
 		<name>bonmunTextCol_light</name>
 		<label>본문 글자</label>
-		<description><![CDATA[기본값은 #000000]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#000000]]></default>
 	</variable>
 	<variable>
 		<name>bonmunForm_light</name>
 		<label>본문 서식요소</label>
-		<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ccbbaa]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ccbbaa]]></default>
+		<default><![CDATA[#CCBBAA]]></default>
 	</variable>
 	<variable>
 		<name>bonmunActing_light</name>
 		<label>본문 상호작용</label>
-		<description><![CDATA[a태그 등. 기본값은 #66aa00]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#66aa00]]></default>
+		<default><![CDATA[#66AA00]]></default>
 	</variable>
 	<variable>
 		<name>highlight_light</name>
 		<label>형광펜</label>
-		<description><![CDATA[기본값은 #f0ff40]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#f0ff40]]></default>
+		<default><![CDATA[#F0FF40]]></default>
 	</variable>
 </variablegroup>
 
@@ -240,20 +227,17 @@
 	<variable>
 		<name>backCol_dark</name>
 		<label>바닥색</label>
-		<description><![CDATA[기본값은 #000000]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#000000]]></default>
 	</variable>
 	<variable>
 		<name>backImg_dark</name>
 		<label>바닥 그림</label>
-		<description>바닥 그림</description>
 		<type>IMAGE</type>
 	</variable>
 	<variable>
 		<name>backImgType_dark</name>
 		<label>바닥 그림 놓임새</label>
-		<description>썸네일이 없는 게시글의 썸네일 표시</description>
 		<type>SELECT</type>
 		<option><![CDATA[[
 	{"name":"", "label":"늘리기",     "value":"stretch"},
@@ -280,70 +264,60 @@
 	<variable>
 		<name>baseTextCol_dark</name>
 		<label>본문외 글자색</label>
-		<description><![CDATA[기본값은 #bbbbbb]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#bbbbbb]]></default>
 	</variable>
 	<variable>
 		<name>listBack_dark</name>
 		<label>항목 밑색</label>
-		<description><![CDATA[기본값은 #333]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#333]]></default>
 	</variable>
 	<variable>
 		<name>borderCol_dark</name>
 		<label>금색</label>
-		<description><![CDATA[기본값은 #444444]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#444444]]></default>
 	</variable>
 	<variable>
 		<name>frameBack_dark</name>
 		<label>딱지 밑색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #666666aa]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#666666aa]]></default>
 	</variable>
 	<variable>
 		<name>frameFore_dark</name>
 		<label>딱지 글자색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ffffff]]></default>
 	</variable>
 	<variable>
 		<name>pointCol_dark</name>
 		<label>강조 요소</label>
-		<description><![CDATA[기본값은 #ffee00]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ffee00]]></default>
 	</variable>
 	<variable>
 		<name>bonmunTextCol_dark</name>
 		<label>본문 글자</label>
-		<description><![CDATA[기본값은 #fffafa]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#fffafa]]></default>
 	</variable>
 	<variable>
 		<name>bonmunForm_dark</name>
 		<label>본문 서식요소</label>
-		<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ffdd44]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ffdd44]]></default>
 	</variable>
 	<variable>
 		<name>bonmunActing_dark</name>
 		<label>본문 상호작용</label>
-		<description><![CDATA[a태그 등. 기본값은 #ff6655]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#ff6655]]></default>
 	</variable>
 	<variable>
 		<name>highlight_dark</name>
 		<label>형광펜</label>
-		<description><![CDATA[기본값은 #00ccff]]></description>
 		<type>COLOR</type>
 		<default><![CDATA[#00ccff]]></default>
 	</variable>

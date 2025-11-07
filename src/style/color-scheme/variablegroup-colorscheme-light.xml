@@ -3,20 +3,17 @@
 	<variable>
 		<name>backCol_light</name>
 		<label>바닥색</label>
-		<description><![CDATA[기본값은 #ffffff]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ffffff]]></default>
+		<default><![CDATA[{{ var.defaultColor.backCol }}]]></default>
 	</variable>
 	<variable>
 		<name>backImg_light</name>
 		<label>바닥 그림</label>
-		<description>바닥 그림</description>
 		<type>IMAGE</type>
 	</variable>
 	<variable>
 		<name>backImgType_light</name>
 		<label>바닥 그림 놓임새</label>
-		<description>썸네일이 없는 게시글의 썸네일 표시</description>
 		<type>SELECT</type>
 		<option><![CDATA[{% include "skin-comps/frame/background.json" %}]]></option>
 		<default>cover</default>
@@ -24,71 +21,61 @@
 	<variable>
 		<name>baseTextCol_light</name>
 		<label>본문외 글자색</label>
-		<description><![CDATA[기본값은 #666666]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#666666]]></default>
+		<default><![CDATA[{{ var.defaultColor.baseTextCol }}]]></default>
 	</variable>
 	<variable>
 		<name>listBack_light</name>
 		<label>항목 밑색</label>
-		<description><![CDATA[기본값은 #f4f4f4]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#f4f4f4]]></default>
+		<default><![CDATA[{{ var.defaultColor.listBack }}]]></default>
 	</variable>
 	<variable>
 		<name>borderCol_light</name>
 		<label>금색</label>
-		<description><![CDATA[기본값은 #dddddd]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#dddddd]]></default>
+		<default><![CDATA[{{ var.defaultColor.borderCol }}]]></default>
 	</variable>
 	<variable>
 		<name>frameBack_light</name>
 		<label>딱지 밑색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 바닥색. 기본값은 #111144]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#111144]]></default>
+		<default><![CDATA[{{ var.defaultColor.frameBack }}]]></default>
 	</variable>
 	<variable>
 		<name>frameFore_light</name>
 		<label>딱지 글자색</label>
-		<description><![CDATA[헤더, 푸터, 버튼 등의 글자색. 기본값은 #ffffff]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ffffff]]></default>
+		<default><![CDATA[{{ var.defaultColor.frameFore }}]]></default>
 	</variable>
 	<variable>
 		<name>pointCol_light</name>
 		<label>강조 요소</label>
-		<description><![CDATA[기본값은 #ff6644]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ff6644]]></default>
+		<default><![CDATA[{{ var.defaultColor.pointCol }}]]></default>
 	</variable>
 	<variable>
 		<name>bonmunTextCol_light</name>
 		<label>본문 글자</label>
-		<description><![CDATA[기본값은 #000000]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#000000]]></default>
+		<default><![CDATA[{{ var.defaultColor.bonmunTextCol }}]]></default>
 	</variable>
 	<variable>
 		<name>bonmunForm_light</name>
 		<label>본문 서식요소</label>
-		<description>목차 번호, 목록 마커 등. <![CDATA[기본값은 #ccbbaa]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#ccbbaa]]></default>
+		<default><![CDATA[{{ var.defaultColor.bonmunForm }}]]></default>
 	</variable>
 	<variable>
 		<name>bonmunActing_light</name>
 		<label>본문 상호작용</label>
-		<description><![CDATA[a태그 등. 기본값은 #66aa00]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#66aa00]]></default>
+		<default><![CDATA[{{ var.defaultColor.bonmunActing }}]]></default>
 	</variable>
 	<variable>
 		<name>highlight_light</name>
 		<label>형광펜</label>
-		<description><![CDATA[기본값은 #f0ff40]]></description>
 		<type>COLOR</type>
-		<default><![CDATA[#f0ff40]]></default>
+		<default><![CDATA[{{ var.defaultColor.highlight }}]]></default>
 	</variable>
 </variablegroup>
