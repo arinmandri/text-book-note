@@ -1051,7 +1051,13 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #sidebar3 > * {
   display: inline-block;
   margin: 30px 2px;
+  padding: 10px;
   vertical-align: top;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 20px var(--listBack);
+}
+#sidebar3 .revenue_unit_wrap {
+  border-width: 2px;
 }
 
 
@@ -2663,12 +2669,12 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none;
 }
 
-/* 아니시발 상단에 광고는 안 켰는데 왜 나와 본문이랑 같이 렌더링되네 미쳤나봐 진짜 */
+/* 미친 */
 .adsbygoogle {
   display: none !important;
 }
 
-#skin-version:not(.v25-11-07-211600)::after {
+#skin-version:not(.v25-11-07-223216)::after {
   color: #eb0;
-  content: "v25-11-07-211600";
+  content: "v25-11-07-223216";
 }

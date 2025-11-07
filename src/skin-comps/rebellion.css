@@ -52,7 +52,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none;
 }
 
-/* 아니시발 상단에 광고는 안 켰는데 왜 나와 본문이랑 같이 렌더링되네 미쳤나봐 진짜 */
+/* 미친 */
 .adsbygoogle {
   display: none !important;
 }

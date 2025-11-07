@@ -9,5 +9,11 @@
 #sidebar3 > * {
   display: inline-block;
   margin: 30px 2px;
+  padding: 10px;
   vertical-align: top;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 20px var(--listBack);
+}
+#sidebar3 .revenue_unit_wrap {
+  border-width: 2px;
 }
