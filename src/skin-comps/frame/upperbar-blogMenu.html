@@ -22,15 +22,28 @@
     }
   }
 
+  //// 로그인 버튼
+  if( T.config.ROLE === 'guest' ){// 비로그인상태
+    const li_login = document.createElement('li');
+    li_login.classList.add('t_menu');
+    const anchor = document.createElement('a');
+    anchor.innerText = '로그인';
+    anchor.href = T.config.LOGIN_URL;
+    li_login.appendChild( anchor );
+    menuEl.appendChild(li_login);
+  }
+
   //// 관리자 메뉴 추가
-  const li_manage = document.createElement('li');
-  const li_write = document.createElement('li');
-  li_manage.classList.add('t_menu_manage', 'onlyForOwner');
-  li_write.classList.add('t_menu_manage', 'onlyForOwner');
-  li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
-  li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
-  menuEl.appendChild(li_manage);
-  menuEl.appendChild(li_write);
+  if( T.config.ROLE === 'owner' ){
+    const li_manage = document.createElement('li');
+    const li_write = document.createElement('li');
+    li_manage.classList.add('t_menu_manage');
+    li_write.classList.add('t_menu_manage');
+    li_manage.innerHTML = '<a href="/manage/posts" target="_blank">관리</a>';
+    li_write.innerHTML  = '<a href="/manage/post"  target="_blank">글쓰기</a>';
+    menuEl.appendChild(li_manage);
+    menuEl.appendChild(li_write);
+  }
 
   //// 검색버튼을 ul 안에
   const li_blogSearch = document.createElement('li');
