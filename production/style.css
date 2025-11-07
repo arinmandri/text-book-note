@@ -1907,9 +1907,12 @@ li > dl > dt ,
   text-align: left;
 }
 .comment .writer {/* 글쓴이 */
-  font-weight: bold;
-  font-family: 'Gaegu', cursive;
+  font-size: 85%;
   vertical-align: middle;
+  font-family: 'Gaegu', cursive;
+}
+.guest_admin .writer {
+  font-family: 'Noto Serif KR', serif;
 }
 .comment .writer > img {/* 티스토리 플러그인 - 블로그 아이콘 표시 */
   vertical-align: text-bottom;

@@ -83,9 +83,12 @@
   text-align: left;
 }
 .comment .writer {/* 글쓴이 */
-  font-weight: bold;
-  font-family: {{ settings.font.deco }};
+  font-size: 85%;
   vertical-align: middle;
+  font-family: {{ settings.font.deco }};
+}
+.guest_admin .writer {
+  font-family: {{ settings.font.userName }};
 }
 .comment .writer > img {/* 티스토리 플러그인 - 블로그 아이콘 표시 */
   vertical-align: text-bottom;
