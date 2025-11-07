@@ -19,7 +19,7 @@
     const backImgResize = ( elToStyle )=>{// 스크롤길이 길 수록 배경 작아지게 하고 싶은데 걍 y=1/x 하니까 생각보다 넘 작네. y=b/(x+a)로 간다.
       const a = 23;
       const x = domEl.scrollHeight / domEl.clientHeight;
-      const y = (a+1) / (x+a);// (1, 1); b=a+1
+      const y = (a+1)/2 / (x+a) + 0.5;// (1, 1); b=(a+1)/2
       elToStyle.style.backgroundSize = 'auto ' + (y*100) + '%';
     };
 

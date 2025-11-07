@@ -358,7 +358,7 @@ function setSettingFixCbox( settingName, checked ){
     const backImgResize = ( elToStyle )=>{// 스크롤길이 길 수록 배경 작아지게 하고 싶은데 걍 y=1/x 하니까 생각보다 넘 작네. y=b/(x+a)로 간다.
       const a = 23;
       const x = domEl.scrollHeight / domEl.clientHeight;
-      const y = (a+1) / (x+a);// (1, 1); b=a+1
+      const y = (a+1)/2 / (x+a) + 0.5;// (1, 1); b=(a+1)/2
       elToStyle.style.backgroundSize = 'auto ' + (y*100) + '%';
     };
 
@@ -2099,7 +2099,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-06-174240">v25-11-06-174240</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-07-203706">v25-11-07-203706</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
