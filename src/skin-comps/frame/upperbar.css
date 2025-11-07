@@ -50,3 +50,7 @@ body.theme-light #blogMenu > ul > * > a {
   background-color: hsl(315, 90%, 50%, 20%);
   border-color:     hsl(315, 90%, 50%, 50%);
 }
+
+#blogSearch-openBtn {
+  padding: 0px 6px;
+}

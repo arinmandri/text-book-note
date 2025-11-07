@@ -598,6 +598,10 @@ body.theme-light #blogMenu > ul > * > a {
   background-color: hsl(315, 90%, 50%, 20%);
   border-color:     hsl(315, 90%, 50%, 50%);
 }
+
+#blogSearch-openBtn {
+  padding: 0px 6px;
+}
 footer {
   border-top-width: 9px;
   border-top-style: double;
@@ -2664,7 +2668,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-07-205252)::after {
+#skin-version:not(.v25-11-07-211600)::after {
   color: #eb0;
-  content: "v25-11-07-205252";
+  content: "v25-11-07-211600";
 }
