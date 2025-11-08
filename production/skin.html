@@ -440,12 +440,65 @@ function setSettingFixCbox( settingName, checked ){
 <div id="tagSearch">
   <form onsubmit="return false;">
     <input id="tagSearchInput" type="text"
+      onfocus="tagSearchFocus(); return false;"
       placeholder="태그 검색 (아직 만드는 중)"
       autocomplete=off
       style="
           vertical-align: middle;" />
   </form>
+  <div class="result">
+    <div class="msg"></div>
+    <div class="tagBoxBox">
+      <div class="tagBox-all"></div>
+      <h5 class="areaTitle">인기</h5>
+      <div class="tagBox-pop"></div>
+    </div>
+  </div>
 </div><script>
+  const tagSearch = document.getElementById('tagSearch');
+  const tagSearch_result = tagSearch.getElementsByClassName('result')[0];
+  const tagSearch_msg    = tagSearch.getElementsByClassName('msg')[0];
+  let tagSearch_fetched = false;
+  let tagAList = [];// tagBox-alpha의 내용물 a 태그들
+
+  function tagSearchFocus(){
+    if( tagSearch_fetched ) return;
+
+    tagSearch_msg.innerText = '태그 목록 불러오는 중.';
+    fetch( T.config.DEFAULT_URL + '/tag', {
+      method: 'GET'
+    }).then(response => {
+      if (!response.ok) throw new Error('HTTP error ' + response.status);
+      return response.text();// HTML 텍스트
+    }).then(htmlText => {
+      const tagDoc = (new DOMParser()).parseFromString( htmlText, 'text/html' );// HTML 텍스트 → DOM
+      const tagBox = tagDoc.getElementById('tagBox');
+      if( tagBox == null ){
+        throw new Error('불러온 문서에 tagBox 없음.');
+      }
+      tagAList = Array.from( tagBox.getElementsByTagName('a') );
+      tagAList.sort((a, b) => a.textContent.localeCompare( b.textContent, 'ko' ));
+      const tagBox_all = tagSearch.getElementsByClassName('tagBox-all')[0];
+      const tagBox_pop = tagSearch.getElementsByClassName('tagBox-pop')[0];
+
+      for( let tagA of tagAList ){
+        tagA = document.adoptNode( tagA );
+        tagBox_all.appendChild( tagA );
+        if( tagA.classList.contains('tagcloud1')
+         || tagA.classList.contains('tagcloud2')
+         || tagA.classList.contains('tagcloud3') ){
+          tagBox_pop.appendChild( tagA.cloneNode(true) );
+        }
+      }
+
+      tagSearch_fetched = true;
+      tagSearch_msg.innerHTML = '';
+      tagSearch_result.classList.add('fetched');
+    }).catch(error => {
+      console.error(error);
+      tagSearch_msg.innerHTML = '태그 목록 불러오기 실패';
+    });
+  }
 </script>
 
   </aside>
@@ -2111,7 +2164,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-153812">v25-11-08-153812</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-174206">v25-11-08-174206</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>

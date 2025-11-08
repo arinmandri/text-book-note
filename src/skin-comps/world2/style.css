@@ -73,3 +73,7 @@
   margin: 0 auto;
   max-width: 1000px;
 }
+
+#world2 .result:not(.fetched) .tagBoxBox {
+  display: none;
+}
