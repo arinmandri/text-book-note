@@ -190,8 +190,8 @@ body:not(#tt-body-page) .onlyOnPage-page {
   background-color: var(--backCol);
 }
 ._textShadowBackcol {
-  text-shadow: 1px 1px 3px #FFFFFF;
-  text-shadow: 1px 1px 3px var(--backCol);
+  text-shadow: 1px 1px 0px #FFFFFF;
+  text-shadow: 0px 0px 5px var(--backCol), 1px 1px 0 var(--backCol);
 }
 .pageTitle {
   margin: 80px auto;
@@ -212,11 +212,12 @@ body.theme-light .pageTitle {
 }
 body.theme-dark .pageTitle {
   text-shadow:
-    1px 0 0 grey,
-    -1px 0 0 grey,
-    0 1px 0 grey,
-    0 -1px 0 grey,
-    0 0 10px grey,
+    1.5px 0 0 #0009,
+    -1.5px 0 0 #0009,
+    0 1.5px 0 #0009,
+    0 -1.5px 0 #0009,
+    0 0 10px #0009,
+    0 0 20px #fff4,
     0 0 50px white;
 }
 
@@ -2698,7 +2699,7 @@ ul#postList ─ li 여럿
   bottom: -16px;
 }
 #tagChosongsBox button {
-  padding: 5px 6px;
+  padding: 3px 4px;
   margin: 3px;
   min-width: 24px;
 }
@@ -2794,7 +2795,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-09-001553)::after {
+#skin-version:not(.v25-11-09-010258)::after {
   color: #eb0;
-  content: "v25-11-09-001553";
+  content: "v25-11-09-010258";
 }

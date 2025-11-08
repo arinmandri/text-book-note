@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
   function createChosongBtn( key ){
 
     const btn = document.createElement('button');
-    btn.classList.add('thickBtn');
+    btn.classList.add('softBtn');
     btn.textContent = key;
     btn.onclick = (function(){
       document.getElementById( 'tag-initial--' + key )

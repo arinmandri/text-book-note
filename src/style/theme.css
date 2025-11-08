@@ -17,11 +17,12 @@ body.theme-light .pageTitle {
 }
 body.theme-dark .pageTitle {
   text-shadow:
-    1px 0 0 grey,
-    -1px 0 0 grey,
-    0 1px 0 grey,
-    0 -1px 0 grey,
-    0 0 10px grey,
+    1.5px 0 0 #0009,
+    -1.5px 0 0 #0009,
+    0 1.5px 0 #0009,
+    0 -1.5px 0 #0009,
+    0 0 10px #0009,
+    0 0 20px #fff4,
     0 0 50px white;
 }
 
