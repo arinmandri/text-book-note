@@ -73,6 +73,7 @@ body.world2 #world2 {
 }
 #tagSearch .areaTitle {
   margin-bottom: 20px;
+  font-size: 110%;
 }
 #tagSearch .result:not(.fetched) .tagBoxBox {
   display: none;
