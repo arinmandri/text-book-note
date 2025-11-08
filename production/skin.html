@@ -479,8 +479,6 @@ function setSettingFixCbox( settingName, checked ){
         throw new Error('불러온 문서에 tagBox 없음.');
       }
       tagAList = Array.from( tagBox.getElementsByTagName('a') );
-      tagAList.sort((a, b) => a.textContent.localeCompare( b.textContent, 'ko' ));
-      const tagBox_all = tagSearch.getElementsByClassName('tagBox-all')[0];
       const tagBox_pop = tagSearch.getElementsByClassName('tagBox-pop')[0];
 
       for( let tagA of tagAList ){
@@ -491,6 +489,8 @@ function setSettingFixCbox( settingName, checked ){
           tagBox_pop.appendChild( tagA.cloneNode(true) );
         }
       }
+
+      tagAList.sort((a, b) => a.textContent.localeCompare( b.textContent, 'ko' ));
 
       tagSearch_fetched = true;
       tagSearch_msg.innerHTML = '';
