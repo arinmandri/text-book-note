@@ -550,6 +550,15 @@ body.world2 #world2 {
   color: #F0FF40;
   color: var(--highlight);
 }
+
+#tagSearch > .toTagPage {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  border-width: 1px;
+}
 /**# 헤더, 푸터 */
 header {
   margin-right: 2%;
@@ -2795,7 +2804,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-09-012842)::after {
+#skin-version:not(.v25-11-09-013437)::after {
   color: #eb0;
-  content: "v25-11-09-012842";
+  content: "v25-11-09-013437";
 }
