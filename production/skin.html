@@ -441,7 +441,8 @@ function setSettingFixCbox( settingName, checked ){
   <form onsubmit="return false;">
     <input id="tagSearchInput" type="text"
       onfocus="tagSearchFocus(); return false;"
-      placeholder="태그 검색 (아직 만드는 중)"
+      oninput="tagSearchInputHandler( this.value ); return false;"
+      placeholder="태그 검색"
       autocomplete=off
       style="
           vertical-align: middle;" />
@@ -449,17 +450,31 @@ function setSettingFixCbox( settingName, checked ){
   <div class="result">
     <div class="msg"></div>
     <div class="tagBoxBox">
-      <div class="tagBox-all"></div>
+      <div class="searchResult">
+        <div class="tagBox-alpha"><!-- 가나다순; 검색어 시작 부분 일치 항목들만 표시. --></div>
+        <hr>
+        <div class="tagBox-contains"><!-- 검색어 시작 외 부분 일치 항목만 인기순 표시. -->
+          <div><!-- tagcloud1 --></div>
+          <div><!-- tagcloud2 --></div>
+          <div><!-- tagcloud3 --></div>
+          <div><!-- tagcloud4 --></div>
+          <div><!-- tagcloud5 --></div>
+        </div>
+      </div>
       <h5 class="areaTitle">인기</h5>
-      <div class="tagBox-pop"></div>
+      <div class="tagBox-pop"><!-- 인기태그만 검색어 관계없이 노출. --></div>
     </div>
   </div>
 </div><script>
   const tagSearch = document.getElementById('tagSearch');
   const tagSearch_result = tagSearch.getElementsByClassName('result')[0];
   const tagSearch_msg    = tagSearch.getElementsByClassName('msg')[0];
+  const tagBox_alpha     = tagSearch.getElementsByClassName('tagBox-alpha')[0];
+  const tagBox_contains  = tagSearch.getElementsByClassName('tagBox-contains')[0];
+  const tagBox_pop       = tagSearch.getElementsByClassName('tagBox-pop')[0];
+  let tagAList = [];// a 태그들 (미부착)
+  let tagSearch_timer = null;
   let tagSearch_fetched = false;
-  let tagAList = [];// tagBox-alpha의 내용물 a 태그들
 
   function tagSearchFocus(){
     if( tagSearch_fetched ) return;
@@ -483,7 +498,6 @@ function setSettingFixCbox( settingName, checked ){
 
       for( let tagA of tagAList ){
         tagA = document.adoptNode( tagA );
-        tagBox_all.appendChild( tagA );
         if( tagA.classList.contains('tagcloud1')
          || tagA.classList.contains('tagcloud2')
          || tagA.classList.contains('tagcloud3') ){
@@ -494,10 +508,57 @@ function setSettingFixCbox( settingName, checked ){
       tagSearch_fetched = true;
       tagSearch_msg.innerHTML = '';
       tagSearch_result.classList.add('fetched');
+      tagSearchInputHandler(
+        document.getElementById('tagSearchInput').value
+      );// 기다리는 동안 벌써 검색어를 입력했을 수도 있으니까 함 실행해줘야지.
     }).catch(error => {
       console.error(error);
       tagSearch_msg.innerHTML = '태그 목록 불러오기 실패';
     });
+  }
+
+  function tagSearchInputHandler( searchword ){
+    searchword = searchword.trim();
+    if( tagSearch_timer != null ) clearTimeout( tagSearch_timer );// 즉각 동작 안 하고 0.1초 뜸.(빠른 타자 기다림)
+
+    tagSearch_timer = setTimeout(()=>{
+      //// tagBox-alpha 에 전체 태그 있다. 검색어에 따라 클래스로 노출 여부 조작.
+      //// tagBox-alpha 에 미해당 항목들 중 tagBox-contains 해당 것들을 복사하여 넣음.
+
+      //// 초기화
+      tagBox_alpha.innerHTML = '';
+      for( let tagBox_contains_n of tagBox_contains.children ){
+        tagBox_contains_n.innerHTML = '';
+      }
+
+      if( searchword === '' ){
+        return;
+      }
+
+      searchword = searchword.toLowerCase();
+      for( let tagA of tagAList ){
+        const tagText = tagA.textContent.toLowerCase();
+        if( tagText.includes( searchword ) ){
+          const clone = tagA.cloneNode(true);
+          clone.innerHTML = clone.innerHTML.toLowerCase()
+            .replace( searchword, `<span class="match">${searchword}</span>` );// 검색어 일치 부분 강조
+          if( tagText.startsWith( searchword ) ){// 검색어 시작부분 일치
+            tagBox_alpha.appendChild( clone );
+          }
+          // 그밖에 검색어 포함
+          else if( clone.classList.contains('tagcloud1') )
+            tagBox_contains.children[0].appendChild( clone );
+          else if( clone.classList.contains('tagcloud2') )
+            tagBox_contains.children[1].appendChild( clone );
+          else if( clone.classList.contains('tagcloud3') )
+            tagBox_contains.children[2].appendChild( clone );
+          else if( clone.classList.contains('tagcloud4') )
+            tagBox_contains.children[3].appendChild( clone );
+          else if( clone.classList.contains('tagcloud5') )
+            tagBox_contains.children[4].appendChild( clone );
+        }
+      }
+    }, 100);
   }
 </script>
 
@@ -2164,7 +2225,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-174206">v25-11-08-174206</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-184123">v25-11-08-184123</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>

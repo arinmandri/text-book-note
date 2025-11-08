@@ -464,9 +464,6 @@ body:not(.theme-dark) .backImg.dark {
 #blogSearchInput ,
 #tagSearchInput {
   padding: 4px 8px;
-  width: 50%;
-  min-width: 300px;
-  max-width: 700px;
   border-bottom: 4px solid white;
   border-radius: 5px;
   background-color: #3338;
@@ -474,16 +471,57 @@ body:not(.theme-dark) .backImg.dark {
   font-size: 120%;
 }
 
-#world2 .randomtags .tagcloud {
-  margin: 0.2em 15px;
-}
-#world2 .randomtags p {
-  margin: 0 auto;
-  max-width: 1000px;
+#blogSearchInput {
+  width: 50%;
+  min-width: 300px;
+  max-width: 700px;
 }
 
-#world2 .result:not(.fetched) .tagBoxBox {
+#tagSearchInput {
+  width: 300px;
+}
+#tagSearch .areaTitle {
+  margin-bottom: 20px;
+}
+#tagSearch .result:not(.fetched) .tagBoxBox {
   display: none;
+}
+#tagSearch .tagcloud::before {
+  content: '#';
+  color: grey;
+}
+#tagSearch .tagcloud::after {
+  font-size: 60%;
+  color: grey;
+}
+#tagSearch .tagcloud1::after {  content: '★★★';  color: var(--highlight);}
+#tagSearch .tagcloud2::after {  content: '★★';}
+#tagSearch .tagcloud3::after {  content: '★';}
+#tagSearch .tagcloud4::after {  content: '☆';}
+#tagSearch .searchResult {
+  margin: 0 auto 30px auto;
+  max-width: 300px;
+  text-align: left;
+}
+#tagSearch .searchResult .tagcloud {
+  margin: 8px 0;
+  display: block;
+}
+#tagSearch .tagBox-pop .tagcloud {
+  margin: 5px 8px;
+  display: inline-block;
+  position: relative;
+}
+#tagSearch .tagBox-pop .tagcloud::after {
+  display: block;
+}
+#tagSearch .searchResult > hr {
+  border-top: 1px dotted grey;
+}
+#tagSearch > .result .match {
+  font-weight: bold;
+  color: #F0FF40;
+  color: var(--highlight);
 }
 /**# 헤더, 푸터 */
 header {
@@ -2701,7 +2739,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-08-174206)::after {
+#skin-version:not(.v25-11-08-184123)::after {
   color: #eb0;
-  content: "v25-11-08-174206";
+  content: "v25-11-08-184123";
 }
