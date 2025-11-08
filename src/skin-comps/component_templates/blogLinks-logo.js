@@ -10,6 +10,7 @@
       else if (hostname === 'youtu.be') logoName = 'youtube';
       else if (hostname === 'youtube.com') logoName = 'youtube';
       else if (hostname.endsWith('.youtube.com')) logoName = 'youtube';
+      else if (hostname === 'drive.google.com') logoName = 'gdrive';
       else if (hostname === 'instagram.com') logoName = 'instagram';
       else if (hostname.endsWith('.instagram.com')) logoName = 'instagram';
       else if (hostname === 'x.com') logoName = 'x';
@@ -29,7 +30,7 @@
     }
     if (logoName != null) {
       const img = document.createElement('img');
-      img.alt = '링크 로고 - ' + logoName;
+      img.alt = logoName + '의 로고';
       img.src = './images/link-' + logoName + '.png';
       a.prepend(img);
     } else {// 로고 없음: 기본이미지 이모지

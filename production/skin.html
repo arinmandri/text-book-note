@@ -2223,7 +2223,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-201217">v25-11-08-201217</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-210901">v25-11-08-210901</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
@@ -2496,6 +2496,7 @@ document.addEventListener('DOMContentLoaded', function () {
       else if (hostname === 'youtu.be') logoName = 'youtube';
       else if (hostname === 'youtube.com') logoName = 'youtube';
       else if (hostname.endsWith('.youtube.com')) logoName = 'youtube';
+      else if (hostname === 'drive.google.com') logoName = 'gdrive';
       else if (hostname === 'instagram.com') logoName = 'instagram';
       else if (hostname.endsWith('.instagram.com')) logoName = 'instagram';
       else if (hostname === 'x.com') logoName = 'x';
@@ -2515,7 +2516,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (logoName != null) {
       const img = document.createElement('img');
-      img.alt = '링크 로고 - ' + logoName;
+      img.alt = logoName + '의 로고';
       img.src = './images/link-' + logoName + '.png';
       a.prepend(img);
     } else {// 로고 없음: 기본이미지 이모지
