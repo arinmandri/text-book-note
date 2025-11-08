@@ -593,16 +593,29 @@ header > .namecard .box1 {
 }
 
 header > .namecard .imgBox {
-  padding: 1px;
+  position: relative;
+  padding: 2px;
   border-radius: 50%;
   background: conic-gradient(#f00, #f80, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
 }
 header > .namecard .blogImg {
+  position: relative;
   display: block;
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 4px solid;
+  border: 4px solid currentColor;
+  z-index: 1;
+}
+header > .namecard .blogImgBack {
+  position: absolute;
+  top: 4px;/* imgBox padding + blogImg border/2 */
+  left: 4px;
+  display: block;
+  width: 164px;/* blogImg size + blogImg border */
+  height: 164px;
+  border-radius: 50%;
+  background-color: currentColor;
 }
 
 header > .namecard .box1 {
@@ -2780,7 +2793,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-08-224909)::after {
+#skin-version:not(.v25-11-09-001553)::after {
   color: #eb0;
-  content: "v25-11-08-224909";
+  content: "v25-11-09-001553";
 }

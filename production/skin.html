@@ -576,7 +576,10 @@ function setSettingFixCbox( settingName, checked ){
 
   <div class="namecard">
     <div class="box1">
-      <div class="imgBox"><img class="blogImg" alt="블로그 프사" src="[##_image_##]"></div>
+      <div class="imgBox">
+        <div class="blogImgBack"><!-- 이것은 분명 시각적인 버그이다…. 요소를 둥글게 하면 본체랑 둘레선 사이에 틈이 있어서, 그 틈으로 부모 요소의 배경이 보인단 말이야? --></div>
+        <img class="blogImg" alt="블로그 프사" src="[##_image_##]">
+      </div>
     </div>
     <div class="box2 _textLeft">
       <h1 class="title">[##_title_##]</h1>
@@ -2223,7 +2226,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-224909">v25-11-08-224909</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-09-001553">v25-11-09-001553</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
