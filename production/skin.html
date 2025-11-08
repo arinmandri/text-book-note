@@ -495,7 +495,7 @@ function setSettingFixCbox( settingName, checked ){
       tagSearch_fetched = true;
       tagSearch_msg.innerHTML = '';
       tagSearch_result.classList.add('fetched');
-      tagSearchInputHandler(
+      tagSearch_search(
         document.getElementById('tagSearchInput').value
       );// 기다리는 동안 벌써 검색어를 입력했을 수도 있으니까 함 실행해줘야지.
     }).catch(error => {
@@ -508,44 +508,46 @@ function setSettingFixCbox( settingName, checked ){
     searchword = searchword.trim();
     if( tagSearch_timer != null ) clearTimeout( tagSearch_timer );// 즉각 동작 안 하고 0.1초 뜸.(빠른 타자 기다림)
 
-    tagSearch_timer = setTimeout(()=>{
-      //// tagBox-alpha 에 전체 태그 있다. 검색어에 따라 클래스로 노출 여부 조작.
-      //// tagBox-alpha 에 미해당 항목들 중 tagBox-contains 해당 것들을 복사하여 넣음.
+    tagSearch_timer = setTimeout( tagSearch_search, 100, searchword );
+  }
 
-      //// 초기화
-      tagBox_alpha.innerHTML = '';
-      for( let tagBox_contains_n of tagBox_contains.children ){
-        tagBox_contains_n.innerHTML = '';
-      }
+  function tagSearch_search( searchword ){
+    //// tagBox-alpha 에 전체 태그 있다. 검색어에 따라 클래스로 노출 여부 조작.
+    //// tagBox-alpha 에 미해당 항목들 중 tagBox-contains 해당 것들을 복사하여 넣음.
 
-      if( searchword === '' ){
-        return;
-      }
+    //// 초기화
+    tagBox_alpha.innerHTML = '';
+    for( let tagBox_contains_n of tagBox_contains.children ){
+      tagBox_contains_n.innerHTML = '';
+    }
 
-      searchword = searchword.toLowerCase();
-      for( let tagA of tagAList ){
-        const tagText = tagA.textContent.toLowerCase();
-        if( tagText.includes( searchword ) ){
-          const clone = tagA.cloneNode(true);
-          clone.innerHTML = clone.innerHTML.toLowerCase()
-            .replace( searchword, `<span class="match">${searchword}</span>` );// 검색어 일치 부분 강조
-          if( tagText.startsWith( searchword ) ){// 검색어 시작부분 일치
-            tagBox_alpha.appendChild( clone );
-          }
-          // 그밖에 검색어 포함
-          else if( clone.classList.contains('tagcloud1') )
-            tagBox_contains.children[0].appendChild( clone );
-          else if( clone.classList.contains('tagcloud2') )
-            tagBox_contains.children[1].appendChild( clone );
-          else if( clone.classList.contains('tagcloud3') )
-            tagBox_contains.children[2].appendChild( clone );
-          else if( clone.classList.contains('tagcloud4') )
-            tagBox_contains.children[3].appendChild( clone );
-          else if( clone.classList.contains('tagcloud5') )
-            tagBox_contains.children[4].appendChild( clone );
+    if( searchword === '' ){
+      return;
+    }
+
+    searchword = searchword.toLowerCase();
+    for( let tagA of tagAList ){
+      const tagText = tagA.textContent.toLowerCase();
+      if( tagText.includes( searchword ) ){
+        const clone = tagA.cloneNode(true);
+        clone.innerHTML = clone.innerHTML.toLowerCase()
+          .replace( searchword, `<span class="match">${searchword}</span>` );// 검색어 일치 부분 강조
+        if( tagText.startsWith( searchword ) ){// 검색어 시작부분 일치
+          tagBox_alpha.appendChild( clone );
         }
+        // 그밖에 검색어 포함
+        else if( clone.classList.contains('tagcloud1') )
+          tagBox_contains.children[0].appendChild( clone );
+        else if( clone.classList.contains('tagcloud2') )
+          tagBox_contains.children[1].appendChild( clone );
+        else if( clone.classList.contains('tagcloud3') )
+          tagBox_contains.children[2].appendChild( clone );
+        else if( clone.classList.contains('tagcloud4') )
+          tagBox_contains.children[3].appendChild( clone );
+        else if( clone.classList.contains('tagcloud5') )
+          tagBox_contains.children[4].appendChild( clone );
       }
-    }, 100);
+    }
   }
 </script>
 
@@ -2221,7 +2223,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-190848">v25-11-08-190848</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-194436">v25-11-08-194436</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
