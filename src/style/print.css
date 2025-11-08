@@ -1,0 +1,20 @@
+@media print {
+
+.sidebarBox ,
+.sidebar ,
+#upperbar ,
+#recentNotice ,
+#recentNotice-home {
+  display: none !important;
+}
+
+#mainHBox {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#backImgBox .backImg {
+  position: absolute !important;
+}
+
+}

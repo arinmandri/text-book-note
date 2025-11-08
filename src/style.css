@@ -58,6 +58,7 @@ body > * {
 {% include "style/base.css" %}
 {% include "style/styling-classes.css" %}
 {% include "style/theme.css" %}
+{% include "style/print.css" %}
 
 
 
