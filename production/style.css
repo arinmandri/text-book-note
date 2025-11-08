@@ -2557,6 +2557,7 @@ ul#postList ─ li 여럿
   margin: 0 auto;
   text-align: center;
   line-height: 1.9;
+  font-weight: 400;
 }
 #tagBox li {
   display: inline-block;
@@ -2603,13 +2604,14 @@ ul#postList ─ li 여럿
 
 #main4.tagBoxOrdered {
   font-size: 135%;/* 모듈에서보단 좀 크게 보이기 */
+  font-weight: 400;
 }
 #main4.tagBoxOrdered .bucket {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 #main4.tagBoxOrdered h4 {
+  padding-top: 60px;
   font-size: 200%;
   border-bottom-width: 3px;
   border-bottom-style: dashed;
@@ -2623,6 +2625,9 @@ ul#postList ─ li 여럿
 }
 #main4.tagBoxOrdered li {
   margin: 10px;
+}
+#main4.tagBoxOrdered li::first-letter {
+  color: var(--pointCol);
 }
 
 
