@@ -1,10 +1,10 @@
 
 (function(){
   //// 태그 개수
-  document.getElementById('tagCount').innerText = 
-    '인기 태그 '
-    +(document.getElementById('tagBox').querySelectorAll('.tagcloud1,.tagcloud2,.tagcloud3').length)
-    +'개';
+  const count_pop = document.getElementById('tagBox').querySelectorAll('.tagcloud1,.tagcloud2,.tagcloud3').length;
+  const count_all = document.getElementById('tagBox').getElementsByClassName('tagcloud').length;
+  document.getElementById('tagCount-pop').innerText = count_pop;
+  document.getElementById('tagCount-all').innerText = count_all;
 })();
 
 document.addEventListener('DOMContentLoaded', function(){
