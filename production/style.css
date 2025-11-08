@@ -1229,7 +1229,17 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   padding: 0;
 }
 #navCat .tt_category li {
-  margin: 15px auto;
+  position: relative;
+  padding: 15px 0 0 0;
+}
+#navCat .sub_category_list > li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: block;
+  height: 100%;
+  border-left: 3px double var(--borderCol);
 }
 #navCat .tt_category .newA ,
 #navCat .tt_category a {
@@ -1246,6 +1256,9 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
   font-weight: bold;
   transition-duration: 0s;
 }
+#navCat .sub_category_list > li > a {
+  padding-left: 32px;
+}
 #navCat .category_list > li:not(.open) > .sub_category_list {
   display: none;
 }
@@ -1255,17 +1268,8 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 #navCat li.open > .newA::before {
   content: '\1F4C2';
 }
-#navCat .link_item::before ,
-#navCat .link_sub_item::before {
-  content: '┣ ';
-  color: #FF6644;
-  color: var(--pointCol);
-}
-#navCat li:last-child > .link_item::before ,
-#navCat li:last-child > .link_sub_item::before {
-  content: '┗ ';
-}
 #navCat .c_cnt {
+  vertical-align: bottom;
   font-size: 90%;
   font-family: 'Gaegu', cursive;
   color: grey;
