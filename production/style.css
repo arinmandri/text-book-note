@@ -1569,14 +1569,30 @@ body#tt-body-page main .areaTitle {
   display: inline-block;
   position: relative;
 }
-#postPagePost .postbtn_like {/* 본문 밑에 공감 등 있는 그거 */
+
+/* rebellion 본문에 가까이붙지마라광고주제에. */
+#postPagePost #main4 > .revenue_unit_wrap {/* 본문 상하단 */
+  margin: 0 0 150px 0;
+}
+#postPagePost #main4 > .contents_style + .revenue_unit_wrap {/* 본문 하단 */
+  margin: 150px 0 0 0;
+}
+/* rebellion 본문 밑에 공감 등 있는 그거 */
+body .container_postbtn .postbtn_like {
   margin: 0 auto;
+  border-radius: 6px;
+  background-color: var(--backCol);
+}
+body .container_postbtn {
+  padding: 0;
+  transform: translateY(50%);
 }
 
 
 /**##### 본문 */
 .bonmun {
-  padding: 50px 3%;
+  margin-bottom: 100px;
+  padding: 50px 3% 0 3%;
   line-height: 1.8;
   font-weight: 400;
   font-family: 'Noto Serif KR', serif;
@@ -2744,7 +2760,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-08-213301)::after {
+#skin-version:not(.v25-11-08-222916)::after {
   color: #eb0;
-  content: "v25-11-08-213301";
+  content: "v25-11-08-222916";
 }

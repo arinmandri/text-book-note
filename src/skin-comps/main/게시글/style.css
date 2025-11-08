@@ -114,8 +114,23 @@ body#tt-body-page main .areaTitle {
   display: inline-block;
   position: relative;
 }
-#postPagePost .postbtn_like {/* 본문 밑에 공감 등 있는 그거 */
+
+/* rebellion 본문에 가까이붙지마라광고주제에. */
+#postPagePost #main4 > .revenue_unit_wrap {/* 본문 상하단 */
+  margin: 0 0 150px 0;
+}
+#postPagePost #main4 > .contents_style + .revenue_unit_wrap {/* 본문 하단 */
+  margin: 150px 0 0 0;
+}
+/* rebellion 본문 밑에 공감 등 있는 그거 */
+body .container_postbtn .postbtn_like {
   margin: 0 auto;
+  border-radius: 6px;
+  background-color: var(--backCol);
+}
+body .container_postbtn {
+  padding: 0;
+  transform: translateY(50%);
 }
 
 {% include "skin-comps/main/게시글/본문.css" %}
