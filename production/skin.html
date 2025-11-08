@@ -170,15 +170,11 @@ document.addEventListener('click', (e) => {
 ////// open 토글버튼
 //// <button class="open-toggleBtn" data-opentarget="대상요소id">OPEN</button>
 //// 대상 요소의 class 중 open을 넣거나 뺀다.
-//// 그 다음 버튼의 onfocus를 실행.
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.open-toggleBtn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.dataset.opentarget);
+      const target = document.getElementById( btn.dataset.opentarget );
       target.classList.toggle('open');
-      if( btn.onfocus != null ){
-        btn.onfocus();
-      }
     });
   });
 });
@@ -397,7 +393,7 @@ function setSettingFixCbox( settingName, checked ){
 </script>
 
 <div id="world2">
-  <button class="close open-toggleBtn" data-opentarget="world2">&#x2715;</button>
+  <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
   <aside class="content">
 
     <h1 class="pageTitle">탐색</h3>
@@ -415,12 +411,7 @@ function setSettingFixCbox( settingName, checked ){
       style="
           vertical-align: middle;" />
     <button type="button"
-      onclick="
-        if( !document.getElementById('blogSearch').classList.contains('open') ){
-          document.getElementById('blogSearch').classList.add('open');
-        }else {
-          if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
-        }"
+      onclick="if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }"
       style="
           font-size: 150%;
           vertical-align: middle;"
@@ -432,11 +423,7 @@ function setSettingFixCbox( settingName, checked ){
 
     </button>
   </s_search></form>
-</div><script>
-  function blogSearchFocus(){
-    document.getElementById('blogSearchInput').focus();
-  }
-</script>
+</div>
 <div id="tagSearch">
   <form onsubmit="return false;">
     <input id="tagSearchInput" type="text"
@@ -564,10 +551,19 @@ function setSettingFixCbox( settingName, checked ){
 
   </aside>
 </div><script>
+  const world2 = document.getElementById('world2');
+
+  function openWorld2(){
+    document.body.classList.add('world2');
+    document.getElementById('blogSearchInput').focus();
+  }
+  function closeWorld2(){
+    document.body.classList.remove('world2');
+  }
     //// ESC 누르면 world2 닫기
   document.addEventListener('keydown', function( e ){
     if( e.key === 'Escape' ){
-      document.getElementById('world2').classList.remove('open');
+      closeWorld2()
     }
   });
 </script>
@@ -621,8 +617,8 @@ function setSettingFixCbox( settingName, checked ){
 <div id="blogMenu" class="_textShadowBackcol">
   [##_blog_menu_##]
 
-  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="world2"
-      onfocus="blogSearchFocus()"
+  <button id="world2-openBtn"
+      onclick="openWorld2(); return false;"
   >
 
 <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -632,12 +628,12 @@ function setSettingFixCbox( settingName, checked ){
   </button>
 </div><script>(function () {
   const menuEl = document.querySelector('#blogMenu > ul');
-  if (menuEl == null) return;
+  if( menuEl == null ) return;
 
   // 티스토리 치환자 blog_menu 렌더링 결과에 공백 텍스트가 껴있는데 삭제.
-  for (const node of Array.from(menuEl.childNodes)) {
-    if (node.nodeType !== Node.ELEMENT_NODE) {
-      menuEl.removeChild(node);
+  for( const node of Array.from(menuEl.childNodes) ){
+    if( node.nodeType !== Node.ELEMENT_NODE ){
+      menuEl.removeChild( node );
     }
   }
 
@@ -653,7 +649,7 @@ function setSettingFixCbox( settingName, checked ){
 
   //// 검색버튼을 ul 안에
   const li_blogSearch = document.createElement('li');
-  li_blogSearch.appendChild( document.getElementById('blogSearch-openBtn') );
+  li_blogSearch.appendChild( document.getElementById('world2-openBtn') );
   menuEl.appendChild(li_blogSearch);
 })()</script>
 </div>
@@ -2225,7 +2221,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-184123">v25-11-08-184123</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-190848">v25-11-08-190848</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>

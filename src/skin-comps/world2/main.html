@@ -1,5 +1,5 @@
 <div id="world2">
-  <button class="close open-toggleBtn" data-opentarget="world2">&#x2715;</button>
+  <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
   <aside class="content">
 
     <h1 class="pageTitle">탐색</h3>
@@ -8,10 +8,19 @@
 
   </aside>
 </div><script>
+  const world2 = document.getElementById('world2');
+
+  function openWorld2(){
+    document.body.classList.add('world2');
+    document.getElementById('blogSearchInput').focus();
+  }
+  function closeWorld2(){
+    document.body.classList.remove('world2');
+  }
     //// ESC 누르면 world2 닫기
   document.addEventListener('keydown', function( e ){
     if( e.key === 'Escape' ){
-      document.getElementById('world2').classList.remove('open');
+      closeWorld2()
     }
   });
 </script>

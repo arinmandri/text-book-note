@@ -12,12 +12,7 @@
       style="
           vertical-align: middle;" />
     <button type="button"
-      onclick="
-        if( !document.getElementById('blogSearch').classList.contains('open') ){
-          document.getElementById('blogSearch').classList.add('open');
-        }else {
-          if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
-        }"
+      onclick="if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }"
       style="
           font-size: 150%;
           vertical-align: middle;"
@@ -30,8 +25,4 @@
 {% endwith %}
     </button>
   </s_search></form>
-</div><script>
-  function blogSearchFocus(){
-    document.getElementById('blogSearchInput').focus();
-  }
-</script>
+</div>

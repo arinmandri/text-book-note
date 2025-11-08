@@ -1,8 +1,8 @@
 <div id="blogMenu" class="_textShadowBackcol">
   [##_blog_menu_##]
 
-  <button id="blogSearch-openBtn" class="open-toggleBtn" data-opentarget="world2"
-      onfocus="blogSearchFocus()"
+  <button id="world2-openBtn"
+      onclick="openWorld2(); return false;"
   >
 {% with
   size="32px",
@@ -13,12 +13,12 @@
   </button>
 </div><script>(function () {
   const menuEl = document.querySelector('#blogMenu > ul');
-  if (menuEl == null) return;
+  if( menuEl == null ) return;
 
   // 티스토리 치환자 blog_menu 렌더링 결과에 공백 텍스트가 껴있는데 삭제.
-  for (const node of Array.from(menuEl.childNodes)) {
-    if (node.nodeType !== Node.ELEMENT_NODE) {
-      menuEl.removeChild(node);
+  for( const node of Array.from(menuEl.childNodes) ){
+    if( node.nodeType !== Node.ELEMENT_NODE ){
+      menuEl.removeChild( node );
     }
   }
 
@@ -34,6 +34,6 @@
 
   //// 검색버튼을 ul 안에
   const li_blogSearch = document.createElement('li');
-  li_blogSearch.appendChild( document.getElementById('blogSearch-openBtn') );
+  li_blogSearch.appendChild( document.getElementById('world2-openBtn') );
   menuEl.appendChild(li_blogSearch);
 })()</script>
