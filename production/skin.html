@@ -380,13 +380,14 @@ function setSettingFixCbox( settingName, checked ){
       document.addEventListener('DOMContentLoaded', ()=>{
         backImgResize( backImgScrollable_d );
         backImgScroll( backImgScrollable_d, lr );
-      });
-      window.addEventListener('resize', ()=>{
-        backImgResize( backImgScrollable_d );
-        backImgScroll( backImgScrollable_d, lr );
-      });
-      window.addEventListener('scroll', ()=>{
-        backImgScroll( backImgScrollable_d, lr );
+
+        window.addEventListener('resize', ()=>{
+          backImgResize( backImgScrollable_d );
+          backImgScroll( backImgScrollable_d, lr );
+        });
+        window.addEventListener('scroll', ()=>{
+          backImgScroll( backImgScrollable_d, lr );
+        });
       });
     }
   })();
@@ -435,7 +436,7 @@ function setSettingFixCbox( settingName, checked ){
           vertical-align: middle;" />
   </form>
   <div class="result">
-    <div class="msg"></div>
+    <div class="msg _fontSmaller"></div>
     <div class="tagBoxBox">
       <div class="searchResult">
         <div class="tagBox-alpha"><!-- 가나다순; 검색어 시작 부분 일치 항목들만 표시. --></div>
@@ -466,7 +467,7 @@ function setSettingFixCbox( settingName, checked ){
   function tagSearchFocus(){
     if( tagSearch_fetched ) return;
 
-    tagSearch_msg.innerText = '태그 목록 불러오는 중.';
+    tagSearch_msg.textContent = '태그 목록 불러오는 중.';
     fetch( T.config.DEFAULT_URL + '/tag', {
       method: 'GET'
     }).then(response => {
@@ -493,14 +494,13 @@ function setSettingFixCbox( settingName, checked ){
       tagAList.sort((a, b) => a.textContent.localeCompare( b.textContent, 'ko' ));
 
       tagSearch_fetched = true;
-      tagSearch_msg.innerHTML = '';
       tagSearch_result.classList.add('fetched');
       tagSearch_search(
         document.getElementById('tagSearchInput').value
       );// 기다리는 동안 벌써 검색어를 입력했을 수도 있으니까 함 실행해줘야지.
     }).catch(error => {
       console.error(error);
-      tagSearch_msg.innerHTML = '태그 목록 불러오기 실패';
+      tagSearch_msg.textContent = '태그 목록 불러오기 실패';
     });
   }
 
@@ -522,13 +522,16 @@ function setSettingFixCbox( settingName, checked ){
     }
 
     if( searchword === '' ){
+      tagSearch_msg.textContent = `전체 태그 ${tagAList.length}개`;
       return;
     }
 
     searchword = searchword.toLowerCase();
+    let count = 0;
     for( let tagA of tagAList ){
       const tagText = tagA.textContent.toLowerCase();
       if( tagText.includes( searchword ) ){
+        count += 1;
         const clone = tagA.cloneNode(true);
         clone.innerHTML = clone.innerHTML.toLowerCase()
           .replace( searchword, `<span class="match">${searchword}</span>` );// 검색어 일치 부분 강조
@@ -547,6 +550,11 @@ function setSettingFixCbox( settingName, checked ){
         else if( clone.classList.contains('tagcloud5') )
           tagBox_contains.children[4].appendChild( clone );
       }
+    }
+    if( count > 0){
+      tagSearch_msg.textContent = `검색된 태그 ${count}개`;
+    }else{
+      tagSearch_msg.textContent = '그 부분을 포함한 태그가 없습니다.';
     }
   }
 </script>
@@ -2226,7 +2234,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-09-010258">v25-11-09-010258</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-09-012842">v25-11-09-012842</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
