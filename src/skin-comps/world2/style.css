@@ -39,18 +39,22 @@
 #world2 > .content > * {
   margin-bottom: 100px;
 }
-#world2 .areaTitle {
+#world2 .pageTitle {
   margin-bottom: 40px;
+  font-size: 120%;
+  text-shadow: unset;
+  color: inherit;
 }
-#world2 .areaTitle::before ,
-#world2 .areaTitle::after {
+#world2 .pageTitle::before ,
+#world2 .pageTitle::after {
   content: ' ◆ ';
   vertical-align: middle;
   font-size: 60%;
   color: var(--pointCol);
 }
 
-#blogSearchInput {
+#blogSearchInput ,
+#tagSearchInput {
   padding: 4px 8px;
   width: 50%;
   min-width: 300px;

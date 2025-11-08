@@ -1,5 +1,4 @@
 <div id="blogSearch">
-  <h3 class="areaTitle">탐색</h3>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -8,16 +7,16 @@
       onkeypress="if( event.keyCode == 13 ){
         if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
       }"
-      placeholder="블로그에서 검색"
+      placeholder="글귀 검색"
       autocomplete=off
       style="
           vertical-align: middle;" />
     <button type="button"
       onclick="
         if( !document.getElementById('blogSearch').classList.contains('open') ){
-          document.getElementById('blogSearch').classList.add('open')
+          document.getElementById('blogSearch').classList.add('open');
         }else {
-            if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
+          if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
         }"
       style="
           font-size: 150%;

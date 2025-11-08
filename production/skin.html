@@ -400,8 +400,8 @@ function setSettingFixCbox( settingName, checked ){
   <button class="close open-toggleBtn" data-opentarget="world2">&#x2715;</button>
   <aside class="content">
 
+    <h1 class="pageTitle">탐색</h3>
 <div id="blogSearch">
-  <h3 class="areaTitle">탐색</h3>
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
     <input id="blogSearchInput" type="text"
@@ -410,16 +410,16 @@ function setSettingFixCbox( settingName, checked ){
       onkeypress="if( event.keyCode == 13 ){
         if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
       }"
-      placeholder="블로그에서 검색"
+      placeholder="글귀 검색"
       autocomplete=off
       style="
           vertical-align: middle;" />
     <button type="button"
       onclick="
         if( !document.getElementById('blogSearch').classList.contains('open') ){
-          document.getElementById('blogSearch').classList.add('open')
+          document.getElementById('blogSearch').classList.add('open');
         }else {
-            if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
+          if( document.getElementById('blogSearchInput').value !== '' ){ [##_search_onclick_submit_##] }
         }"
       style="
           font-size: 150%;
@@ -437,12 +437,16 @@ function setSettingFixCbox( settingName, checked ){
     document.getElementById('blogSearchInput').focus();
   }
 </script>
-<div class="randomtags">
-  <h3 class="areaTitle">랜덤태그</h3>
-  <p>
-    <s_random_tags><a href="[##_tag_link_##]" class="tagcloud tag[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags>
-  </p>
-</div>
+<div id="tagSearch">
+  <form onsubmit="return false;">
+    <input id="tagSearchInput" type="text"
+      placeholder="태그 검색 (아직 만드는 중)"
+      autocomplete=off
+      style="
+          vertical-align: middle;" />
+  </form>
+</div><script>
+</script>
 
   </aside>
 </div><script>
@@ -2107,7 +2111,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-141420">v25-11-08-141420</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-08-153812">v25-11-08-153812</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>
