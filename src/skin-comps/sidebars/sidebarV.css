@@ -1,16 +1,12 @@
 /**### 세로 사이드바 스크롤 */
 /* 사이드바1은 항상; 사이드바2는 flat 상태만 해당 */
 .sidebarBoxV {
-  /* 위치 크기 */
   position: absolute;
   top: 0px;
   box-sizing: border-box;
   min-width: 300px;
   height: 100%;
   min-height: 100vh;
-  /* 내부 */
-  transition: left 0.12s ease-out, width 0.12s ease-out;
-  overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
 }
 .sidebarBoxV.flat ,
 .sidebarBoxV.open {

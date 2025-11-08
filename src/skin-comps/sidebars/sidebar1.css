@@ -3,6 +3,10 @@
   left: -304px;/* 사이드바너비 + 경계선 */
   border-right-width: 4px;
   border-right-style: double;
+  transition: left 0.16s ease-out;
+}
+#sidebarBox1.flat {
+  transition: none;
 }
 #sidebarBox1.open ,
 #sidebarBox1.flat {

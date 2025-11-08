@@ -918,6 +918,10 @@ html 파일에서 스크립트로 클래스를 조작; css에서는 클래스에
   left: -304px;/* 사이드바너비 + 경계선 */
   border-right-width: 4px;
   border-right-style: double;
+  transition: left 0.16s ease-out;
+}
+#sidebarBox1.flat {
+  transition: none;
 }
 #sidebarBox1.open ,
 #sidebarBox1.flat {
@@ -1072,16 +1076,12 @@ html 파일에서 버튼은 각 사이드바아이템 안에 있지만 스크립
 /**### 세로 사이드바 스크롤 */
 /* 사이드바1은 항상; 사이드바2는 flat 상태만 해당 */
 .sidebarBoxV {
-  /* 위치 크기 */
   position: absolute;
   top: 0px;
   box-sizing: border-box;
   min-width: 300px;
   height: 100%;
   min-height: 100vh;
-  /* 내부 */
-  transition: left 0.12s ease-out, width 0.12s ease-out;
-  overflow: hidden;/* 스크롤 위치가 보존되는 게 이거뿐이다. */
 }
 .sidebarBoxV.flat ,
 .sidebarBoxV.open {
@@ -2744,7 +2744,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-08-194436)::after {
+#skin-version:not(.v25-11-08-201217)::after {
   color: #eb0;
-  content: "v25-11-08-194436";
+  content: "v25-11-08-201217";
 }
