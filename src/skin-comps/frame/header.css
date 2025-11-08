@@ -9,11 +9,11 @@ header {
   color: var(--frameFore);
 }
 header .title {
-  font-family: {{ settings.font.sticker }};
+  font-family: {{ var.font.sticker }};
   font-weight: inherit;
 }
 header .blogger {
-  font-family: {{ settings.font.userName }};
+  font-family: {{ var.font.userName }};
 }
 
 body#tt-body-index header > .alt {

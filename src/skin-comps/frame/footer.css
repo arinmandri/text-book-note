@@ -47,7 +47,7 @@ footer .sectionTitle {
   margin-bottom: 10px;
 }
 #footerContentBox > .nuguisho .bloggerBox .name {
-  font-family: {{ settings.font.userName }};
+  font-family: {{ var.font.userName }};
 }
 #footerContentBox > .nuguisho .desc {
   width: 86%;

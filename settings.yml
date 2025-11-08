@@ -19,27 +19,6 @@ var:
     bonmunActing:  '#66AA00'
     highlight:     '#F0FF40'
 
-headitems:
-  - '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>'
-
-fonts:
-  sans:
-    url: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'
-    cssValue: "'Noto Sans KR', sans-serif"
-  serif:
-    url: 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap'
-    cssValue: "'Noto Serif KR', serif"
-  monospace:
-    url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap'
-    cssValue: "'D2Coding', 'Nanum Gothic Coding', consolas, monospace"
-  handwriting:
-    url: 'https://fonts.googleapis.com/css2?family=Gaegu&display=swap'
-    cssValue: "'Gaegu', cursive"
-  thick:
-    url: 'https://fonts.googleapis.com/css2?family=Jua&display=swap'
-    cssValue: "'Jua', sans-serif"
-
-skin:
   font: # REFERENCES fonts
     base: sans
     userName: serif
@@ -51,6 +30,10 @@ skin:
     bonmun_deco: thick
     code: monospace
 
+headitems:
+  - '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>'
+
+skin:
   liststyle:
     options:
       train:
@@ -90,6 +73,23 @@ skin:
       label: '책장'
       desc: '책장처럼 넘겨본다.'
 # XXX 이원화됨. 애초에 이것들이 소스랑 분리돼 settings에 있을 이유가 있을가?
+
+fonts:
+  sans:
+    url: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'
+    cssValue: "'Noto Sans KR', sans-serif"
+  serif:
+    url: 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap'
+    cssValue: "'Noto Serif KR', serif"
+  monospace:
+    url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap'
+    cssValue: "'D2Coding', 'Nanum Gothic Coding', consolas, monospace"
+  handwriting:
+    url: 'https://fonts.googleapis.com/css2?family=Gaegu&display=swap'
+    cssValue: "'Gaegu', cursive"
+  thick:
+    url: 'https://fonts.googleapis.com/css2?family=Jua&display=swap'
+    cssValue: "'Jua', sans-serif"
 
 meta:
   skinname: 'Text-Note-Book'

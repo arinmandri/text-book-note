@@ -79,17 +79,17 @@ body#tt-body-page main .areaTitle {
   margin: 8px 0;
 }
 #postPagePost .info > .authorBox {
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
 }
 #postPagePost .info .date ,
 #postPagePost .info .author {
   display: inline-block;
   font-size: 1rem;
   transform: translateY(-0.2em);
-  font-family: {{ settings.font.base }};
+  font-family: {{ var.font.base }};
 }
 #postPagePost .linkStr {
-  font-family: {{ settings.font.code }};
+  font-family: {{ var.font.code }};
 }
 #postPagePost .tags a {
   display: inline-block;

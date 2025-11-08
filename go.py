@@ -16,10 +16,10 @@ def make_output_dir_if_not_exists(settings):
 
 def refers_fonts(settings):
     fonts = settings['fonts']
-    skin_font = settings['skin']['font']
+    var_font = settings['var']['font']
 
-    for fname, ref in skin_font.items():
-        skin_font[fname] = fonts[ref]['cssValue']
+    for fname, ref in var_font.items():
+        var_font[fname] = fonts[ref]['cssValue']
 
 def main():
     settings = load_settings()

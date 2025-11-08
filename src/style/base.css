@@ -52,7 +52,7 @@ dfn {
   font-style: inherit;
 }
 pre , code {
-  font-family: {{ settings.font.code }};
+  font-family: {{ var.font.code }};
   word-break: keep-all;
 }
 ::selection {/* 커서로 긁은 부분 텍스트 색 */

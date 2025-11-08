@@ -56,7 +56,7 @@
   display: block;
 }
 #postList.album .itemHead h2 {
-  font-family: {{ settings.font.title }};
+  font-family: {{ var.font.title }};
   font-size: 120%;
   font-weight: 600;
   color: white;

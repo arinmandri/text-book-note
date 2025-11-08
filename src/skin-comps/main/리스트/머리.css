@@ -30,13 +30,13 @@
 }
 #listHead .subtitle {
   margin-top: 15px;
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
 }
 #listHead .postNum {
   font-size: 120%;
   color: {{ var.defaultColor.pointCol }};
   color: var(--pointCol);
-  font-family: {{ settings.font.sticker }};
+  font-family: {{ var.font.sticker }};
 }
 #listHead .decoBox {/* 꾸밈상자 */
   margin: 20px 50px;
@@ -63,7 +63,7 @@
   background-color: var(--listBack);
   overflow: hidden;
   font-size: 0.9rem;
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
 }
 #listHead .tape {
   width: 100px; height: 30px;

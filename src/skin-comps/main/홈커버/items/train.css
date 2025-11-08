@@ -23,7 +23,7 @@
   padding: 0 7%;
   font-size: 1.8em;
   letter-spacing: 0.06em;
-  font-family: {{ settings.font.title }};
+  font-family: {{ var.font.title }};
 }
 .homecoverSection.train .postListItem > .itemBody {/* 본문등 */
   max-height: 6.4em;/* 본문 크기 제한 */
@@ -34,7 +34,7 @@
   font-size: 1.1em;
 }
 .homecoverSection.train .date {/* 날짜등 */
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
   position: absolute;
   right: 2px;
   bottom: 2px;

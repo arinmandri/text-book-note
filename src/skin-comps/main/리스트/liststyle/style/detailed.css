@@ -42,7 +42,7 @@
 #postList.detailed .category ,
 #postList.detailed .date ,
 #postList.detailed .writer {
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
   font-size: 0.8em;
   margin: 0px 10px;
 }

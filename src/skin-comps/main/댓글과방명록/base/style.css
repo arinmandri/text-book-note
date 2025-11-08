@@ -85,10 +85,10 @@
 .comment .writer {/* 글쓴이 */
   font-size: 85%;
   vertical-align: middle;
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
 }
 .guest_admin .writer {
-  font-family: {{ settings.font.userName }};
+  font-family: {{ var.font.userName }};
 }
 .comment .writer > img {/* 티스토리 플러그인 - 블로그 아이콘 표시 */
   vertical-align: text-bottom;
@@ -113,11 +113,11 @@
 .comment .date {/* 날짜 */
   margin-right: 6px;
   font-size: 80%;
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
 }
 .comment .date > a {/* (티스토리 자동생성) 신고 버튼 */
   font-size: 120%;
-  font-family: {{ settings.font.sticker }};
+  font-family: {{ var.font.sticker }};
 }
 .comment button {/* 버튼 */
   position: relative;
@@ -132,7 +132,7 @@
   border-radius: 5px 5px 0 0;
   background-color: var(--listBack);
 
-  font-family: {{ settings.font.sticker }};
+  font-family: {{ var.font.sticker }};
 }
 .rp_admin .writer::before ,
 .guest_admin .writer::before {

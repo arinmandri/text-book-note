@@ -46,10 +46,10 @@
   display: inline;
   font-size: 120%;
   font-weight: normal;
-  font-family: {{ settings.font.title }};
+  font-family: {{ var.font.title }};
 }
 #postList.postit .category {/* 카테고리 */
-  font-family: {{ settings.font.deco }};
+  font-family: {{ var.font.deco }};
   font-size: 90%;
 }
 #postList.postit .category::before {
