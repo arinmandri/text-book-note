@@ -31,3 +31,9 @@ ul#postList ─ li 여럿
 {% for name, value in settings.liststyle.options.items() %}
   {% include "skin-comps/main/리스트/liststyle/style/" + name + ".css" %}
 {% endfor %}
+
+#postList-empty {
+  padding: 125px 0;
+  text-align: center;
+  font-size: 150%;
+}

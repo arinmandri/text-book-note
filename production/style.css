@@ -2735,6 +2735,12 @@ ul#postList ─ li 여럿
 }
 
 
+#postList-empty {
+  padding: 125px 0;
+  text-align: center;
+  font-size: 150%;
+}
+
 #postList .content {
   line-height: 1.6;
 }
@@ -2884,7 +2890,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-09-123038)::after {
+#skin-version:not(.v25-11-09-124307)::after {
   color: #eb0;
-  content: "v25-11-09-123038";
+  content: "v25-11-09-124307";
 }
