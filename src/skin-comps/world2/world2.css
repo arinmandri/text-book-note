@@ -11,7 +11,7 @@ body.world2 #world2 {
   text-align: center;
   background-color: #000b;
   color: white;
-  font-size: 135%;
+  font-size: 125%;
 }
 
 #world2 > .close {
@@ -123,4 +123,53 @@ body.world2 #world2 {
   padding: 5px;
   text-align: center;
   border-width: 1px;
+}
+
+#catsInWorld2 > .areaTitle::before ,
+#catsInWorld2 > .areaTitle::after {
+  content: ' ▼ ';
+  color: var(--pointCol);
+  font-size: 60%;
+}
+#catsInWorld2:not(.open) > .areaTitle::before {
+  content: '▷ ';
+}
+#catsInWorld2:not(.open) > .areaTitle::after {
+  content: ' ◁';
+}
+#catsInWorld2 > .areaTitle + * {
+  margin-top: 12px;
+}
+#catsInWorld2:not(.open) > div {
+  display: none;
+}
+#catsInWorld2 li {
+  margin: 5px 0;
+}
+#catsInWorld2 .category_list {
+  margin: 12px auto;
+  width: 94%;
+  display: flex;
+  flex-flow: row wrap;
+}
+#catsInWorld2 .category_list > * {
+  margin: 3px;
+}
+#catsInWorld2 .link_item {/* 상위 */
+  display: block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: #eee;
+  font-weight: 600;
+  color: black;
+}
+#catsInWorld2 .sub_category_list {
+  list-style: disc;
+  text-align: left;
+}
+#catsInWorld2 .sub_category_list > li {
+  margin-left: 32px;
+}
+#catsInWorld2 .c_cnt {
+  font-size: 72%;
 }
