@@ -39,7 +39,6 @@ body {
   width: 100%;
   min-width: 350px;
   max-width: 100vw;
-  min-height: 100vh;
 
   background-color: {{ var.defaultColor.backCol }};
   background-color: var(--backCol);

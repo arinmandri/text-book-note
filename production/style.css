@@ -47,7 +47,6 @@ body {
   width: 100%;
   min-width: 350px;
   max-width: 100vw;
-  min-height: 100vh;
 
   background-color: #FFFFFF;
   background-color: var(--backCol);
@@ -884,11 +883,11 @@ footer > .etc > * {
 #mainV {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   padding-bottom: 20px;
 }
 #mainH {
   margin: 0 auto;
-  min-height: 100vh;
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {

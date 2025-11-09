@@ -21,11 +21,11 @@
 #mainV {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   padding-bottom: 20px;
 }
 #mainH {
   margin: 0 auto;
-  min-height: 100vh;
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {
