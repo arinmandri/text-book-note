@@ -1,14 +1,16 @@
-<div id="world2">
-  <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
-  <aside class="content">
+<aside id="world2">
+  <div class="upperbar">
+    <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
+    <h1 class="pageTitle">탐색</h1>
+  </div>
+  <div class="content">
 
-    <h1 class="pageTitle">탐색</h3>
 {% include "skin-comps/world2/blogSearch.html" %}
 {% include "skin-comps/world2/categories.html" %}
 {% include "skin-comps/world2/tagSearch.html" %}
 
-  </aside>
-</div><script>
+  </div>
+</aside><script>
   const world2 = document.getElementById('world2');
 
   function openWorld2(){

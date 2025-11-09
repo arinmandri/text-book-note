@@ -393,11 +393,13 @@ function setSettingFixCbox( settingName, checked ){
   })();
 </script>
 
-<div id="world2">
-  <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
-  <aside class="content">
+<aside id="world2">
+  <div class="upperbar">
+    <button class="close" onclick="closeWorld2(); return false;">&#x2715;</button>
+    <h1 class="pageTitle">탐색</h1>
+  </div>
+  <div class="content">
 
-    <h1 class="pageTitle">탐색</h3>
 <div id="blogSearch">
   <form onsubmit="return false;"><s_search>
     <!-- search_onclick_submit 치환자가 s_search 태그 밖에서는 랜더링되지 않기 때문에 스크립트를 HTML 태그 안에 다 적어야 함. -->
@@ -564,8 +566,8 @@ function setSettingFixCbox( settingName, checked ){
   }
 </script>
 
-  </aside>
-</div><script>
+  </div>
+</aside><script>
   const world2 = document.getElementById('world2');
 
   function openWorld2(){
@@ -2239,7 +2241,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   <div class="etc _textRight">
     <p>[##_var_footerText_##]</p>
-    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-09-100700">v25-11-09-100700</span><br>
+    <p>블로그 스킨 「Text-Note-Book」 <span id="skin-version" class="v25-11-09-103427">v25-11-09-103427</span><br>
       <a href="https://github.com/arinmandri/text-note-book" target="_blank">#깃허브</a>
     </p>
   </div>

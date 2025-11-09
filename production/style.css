@@ -456,13 +456,28 @@ body.world2 #world2 {
   font-size: 125%;
 }
 
-#world2 > .close {
+#world2 > .upperbar > .close {
   position: absolute;
-  top: 2%;
   right: 2%;
-  height: 4%;
-  font-size: 150%;
+  padding: 10px;
+  font-size: 180%;
 }
+#world2 > .upperbar > .pageTitle {
+  margin: 0;
+  padding: 20px;
+  font-size: 120%;
+  text-shadow: unset;
+  color: inherit;
+}
+#world2 > .upperbar > .pageTitle::before ,
+#world2 > .upperbar > .pageTitle::after {
+  content: ' ◆ ';
+  vertical-align: middle;
+  font-size: 60%;
+  color: var(--pointCol);
+}
+
+
 #world2 > .content {
   position: absolute;
   top: 8%;
@@ -472,6 +487,7 @@ body.world2 #world2 {
   overflow-y: auto;
 }
 #world2 > .content {
+  padding: 40px 0 10px 0;
   scrollbar-width: none;/* Firefox 스크롤바 숨기기 */
 }
 #world2 > .content::-webkit-scrollbar {/* Chrome, Edge 등 스크롤바 숨기기 */
@@ -479,19 +495,6 @@ body.world2 #world2 {
 }
 #world2 > .content > * {
   margin-bottom: 100px;
-}
-#world2 .pageTitle {
-  margin-bottom: 40px;
-  font-size: 120%;
-  text-shadow: unset;
-  color: inherit;
-}
-#world2 .pageTitle::before ,
-#world2 .pageTitle::after {
-  content: ' ◆ ';
-  vertical-align: middle;
-  font-size: 60%;
-  color: var(--pointCol);
 }
 
 #blogSearchInput ,
@@ -504,6 +507,9 @@ body.world2 #world2 {
   font-size: 120%;
 }
 
+#blogSearch {
+  padding: 10px 0;
+}
 #blogSearchInput {
   width: 50%;
   min-width: 300px;
@@ -593,6 +599,7 @@ body.world2 #world2 {
   width: 94%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 #catsInWorld2 .category_list > * {
   margin: 3px;
@@ -2864,7 +2871,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-09-100700)::after {
+#skin-version:not(.v25-11-09-103427)::after {
   color: #eb0;
-  content: "v25-11-09-100700";
+  content: "v25-11-09-103427";
 }
