@@ -613,6 +613,8 @@ body.world2 #world2 {
 }
 #catsInWorld2 .category_list > * {
   margin: 3px;
+  display: inline-block;
+  vertical-align: top;
 }
 #catsInWorld2 .link_item {/* 상위 */
   display: block;
