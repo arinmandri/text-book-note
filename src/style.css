@@ -46,10 +46,12 @@ body {
   color: {{ var.defaultColor.baseTextCol }};
   color: var(--baseTextCol);
 }
-body.world2 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+@media screen {
+  body.world2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 body > * {
   position: relative;

@@ -5,7 +5,8 @@
 .sidebar ,
 #upperbar ,
 #recentNotice ,
-#recentNotice-home {
+#recentNotice-home ,
+#world2 {
   display: none !important;
 }
 
@@ -14,8 +15,12 @@
   margin-right: 0 !important;
 }
 
-#backImgBox .backImg {
-  position: absolute !important;
+body > * {
+  z-index: 1;/* 왜지???? 배경요소랑 다른 애들이랑 z-index 값 다 똑같이 0으로 하면 2페이지부터 배경이 다른 애들을 가리고, 1 이상 하면 정상임. 상대값만 중요한 게 아니야???? */
+}
+
+html {
+  background-color: var(--backCol) !important;
 }
 
 }
