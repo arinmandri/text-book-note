@@ -83,8 +83,11 @@ header > .namecard .box2 > * {
   margin: 9px;
 }
 
+header > .namecard .blogLinks {
+  padding-left: 20%;
+}
 header > .namecard .blogLinks > * {
-  margin: 8px 4px;
+  margin: 8px 6px;
 }
 header > .namecard .blogLinks a {
   display: inline-block;
@@ -92,4 +95,5 @@ header > .namecard .blogLinks a {
 header > .namecard .blogLinks img {
   height: 1.2em;
   vertical-align: text-bottom;
+  margin-right: 0.2em;
 }
