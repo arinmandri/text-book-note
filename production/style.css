@@ -350,7 +350,8 @@ body.theme-dark .thickBtn {
 #upperbar ,
 #recentNotice ,
 #recentNotice-home ,
-#world2 {
+#world2 ,
+.revenue_unit_wrap {
   display: none !important;
 }
 
@@ -2893,7 +2894,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-09-233715)::after {
+#skin-version:not(.v25-11-10-174035)::after {
   color: #eb0;
-  content: "v25-11-09-233715";
+  content: "v25-11-10-174035";
 }

@@ -6,7 +6,8 @@
 #upperbar ,
 #recentNotice ,
 #recentNotice-home ,
-#world2 {
+#world2 ,
+.revenue_unit_wrap {
   display: none !important;
 }
 
