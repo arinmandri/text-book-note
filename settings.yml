@@ -82,8 +82,8 @@ fonts:
     url: 'https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap'
     cssValue: "'Noto Serif KR', serif"
   monospace:
-    url: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap'
-    cssValue: "'D2Coding', 'Nanum Gothic Coding', consolas, monospace"
+    url: 'https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css'
+    cssValue: "'D2Coding', consolas, monospace"
   handwriting:
     url: 'https://fonts.googleapis.com/css2?family=Gaegu&display=swap'
     cssValue: "'Gaegu', cursive"

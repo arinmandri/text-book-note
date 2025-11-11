@@ -85,6 +85,7 @@ header > .namecard .box2 > * {
 
 header > .namecard .blogLinks {
   padding-left: 20%;
+  font-family: {{ var.font.code }};
 }
 header > .namecard .blogLinks > * {
   margin: 8px 6px;
