@@ -1734,12 +1734,13 @@ body .container_postbtn {
 }
 /* 여백 */
 .pmargin > * {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
-.lessermargin > * {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.lessermargin > * ,
+.pmargin > dl > div {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
 }
 /* 경계선 */
 .bonmun hr {
