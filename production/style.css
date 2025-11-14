@@ -1533,6 +1533,11 @@ body:not(#tt-body-archive) .cal_day4 {/* 오늘 */
   position: relative;
   top: 0%;
 }
+.recentNotice li .prefix {
+  font-weight: 650;
+  color: #FF6644;
+  color: var(--pointCol);
+}
 
 /**### 페이징
 페이징상자 div.paging
@@ -2896,7 +2901,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-12-073813)::after {
+#skin-version:not(.v25-11-14-094021)::after {
   color: #eb0;
-  content: "v25-11-12-073813";
+  content: "v25-11-14-094021";
 }
