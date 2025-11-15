@@ -206,20 +206,20 @@ body:not(#tt-body-page) .onlyOnPage-page {
 }
 body.theme-light .pageTitle {
   text-shadow:
-    2px 0 3px white,
-    -2px 0 3px white,
-    0 2px 3px white,
-    0 -2px 3px white;
+    2px 0 5px white,
+    -2px 0 5px white,
+    0 2px 5px white,
+    0 -2px 5px white,
+    2px 1px 0 white;
 }
 body.theme-dark .pageTitle {
   text-shadow:
-    1.5px 0 0 #0009,
-    -1.5px 0 0 #0009,
-    0 1.5px 0 #0009,
-    0 -1.5px 0 #0009,
-    0 0 10px #0009,
-    0 0 20px #fff4,
-    0 0 50px white;
+    1.5px 0 0 #0008,
+    -1.5px 0 0 #0008,
+    0 1.5px 0 #0008,
+    0 -1.5px 0 #0008,
+    0 0 7px black,
+    0 0 20px black;
 }
 
 .sectionTitle {
@@ -2901,7 +2901,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-14-094021)::after {
+#skin-version:not(.v25-11-15-175117)::after {
   color: #eb0;
-  content: "v25-11-14-094021";
+  content: "v25-11-15-175117";
 }

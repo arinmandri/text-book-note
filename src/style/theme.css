@@ -10,20 +10,20 @@
 }
 body.theme-light .pageTitle {
   text-shadow:
-    2px 0 3px white,
-    -2px 0 3px white,
-    0 2px 3px white,
-    0 -2px 3px white;
+    2px 0 5px white,
+    -2px 0 5px white,
+    0 2px 5px white,
+    0 -2px 5px white,
+    2px 1px 0 white;
 }
 body.theme-dark .pageTitle {
   text-shadow:
-    1.5px 0 0 #0009,
-    -1.5px 0 0 #0009,
-    0 1.5px 0 #0009,
-    0 -1.5px 0 #0009,
-    0 0 10px #0009,
-    0 0 20px #fff4,
-    0 0 50px white;
+    1.5px 0 0 #0008,
+    -1.5px 0 0 #0008,
+    0 1.5px 0 #0008,
+    0 -1.5px 0 #0008,
+    0 0 7px black,
+    0 0 20px black;
 }
 
 .sectionTitle {
