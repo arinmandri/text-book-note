@@ -191,8 +191,12 @@ body:not(#tt-body-page) .onlyOnPage-page {
   background-color: var(--backCol);
 }
 ._textShadowBackcol {
-  text-shadow: 1px 1px 0px #FFFFFF;
-  text-shadow: 0px 0px 5px var(--backCol), 1px 1px 0 var(--backCol);
+  text-shadow:
+    1px 1px 0px #FFFFFF;
+  text-shadow:
+    1px 1px 0   var(--backCol),
+    2px 2px 0   var(--backCol),
+    0   0   5px var(--backCol);
 }
 .pageTitle {
   margin: 80px auto;
@@ -2901,7 +2905,7 @@ figure.fileblock .image, #tt-body-page figure.fileblock .image {/* 첨부파일 
   display: none !important;
 }
 
-#skin-version:not(.v25-11-15-175117)::after {
+#skin-version:not(.v25-11-20-093915)::after {
   color: #eb0;
-  content: "v25-11-15-175117";
+  content: "v25-11-20-093915";
 }
